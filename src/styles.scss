@@ -1,0 +1,102 @@
+@import './assets/styles/import-tailwind.css';
+@import './assets/font-awesome/fontawesome.min.css';
+@import './assets/font-awesome/solid.min.css';
+@import './assets/font-awesome/brands.min.css';
+
+@keyframes fadeInSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeInSlideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes fadeInSlideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+body {
+  font-family: 'Noto Sans', Noto, sans-serif !important;
+}
+
+.animate-slide-down {
+  opacity: 0;
+  animation: 0.4s fadeInSlideDown forwards;
+}
+
+.animate-slide-right {
+  opacity: 0;
+  animation: 0.4s fadeInSlideRight forwards;
+}
+
+.animate-slide-left {
+  opacity: 0;
+  animation: 0.4s fadeInSlideLeft forwards;
+}
+
+.wait100ms {
+  animation-delay: 0.1s;
+}
+
+.wait200ms {
+  animation-delay: 0.2s;
+}
+
+.wait300ms {
+  animation-delay: 0.3s;
+}
+
+.wait400ms {
+  animation-delay: 0.4s;
+}
+
+.glasspane-card {
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.3);
+
+  &.strong-bg {
+    backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.65);
+  }
+
+  &.smaller-card {
+    padding: 15px;
+  }
+}
+
+.glasspane-card-dark {
+  padding: 40px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.08);
+  color: white;
+
+  &.smaller-card {
+    padding: 15px;
+  }
+}

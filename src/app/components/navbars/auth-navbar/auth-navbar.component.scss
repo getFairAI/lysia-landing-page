@@ -1,0 +1,20 @@
+.logo-img-wrapper {
+  width: 100%;
+  max-width: 150px;
+  padding: 6px 15px;
+  box-sizing: border-box;
+  transition: 0.3s all;
+  border-radius: 16px;
+
+  &:hover {
+    background-color: white;
+    box-shadow: 0px 0px 6px lightgrey;
+    transform: scale(1.03);
+  }
+
+  .logo-img {
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+  }
+}

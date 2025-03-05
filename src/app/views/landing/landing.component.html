@@ -1,0 +1,536 @@
+<app-auth-navbar></app-auth-navbar>
+
+<div class="background-wrapper fixed top-0 left-0 w-full h-full" style="z-index: -100">
+  <div class="bg-center bg-cover w-full h-full">
+    <!-- <span id="blackOverlay" class="w-full h-full absolute opacity-25 bg-black"></span> -->
+  </div>
+</div>
+
+<main>
+  <div class="relative pt-16 pb-32 flex content-center items-center justify-center min-h-screen-75">
+    <div class="container relative mx-auto">
+      <div class="items-center flex flex-wrap">
+        <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
+          <div class="logo-img-wrapper animate-slide-right wait200ms">
+            <img src="./assets/img/logos/lysiallabs_logo_transp_greyed.png" alt="LYSIA Labs Logo" class="logo-img" style="filter: drop-shadow(0px 0px 16px white)" />
+          </div>
+
+          <div class="pr-10" style="text-shadow: 0px 0px 8px #ffffff">
+            <h1 class="font-medium text-3xl animate-slide-left wait300ms text-gray-700" style="line-height: 1.2"> It's time for something better.</h1>
+            <p class="mt-1 font-medium text-lg animate-slide-down wait400ms text-gray-700"> Digitalize your business without changing the way you work. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="-mt-20 relative">
+    <div class="stripe-bg-wrapper">
+      <div class="stripe-background"> </div>
+    </div>
+
+    <div class="w-full px-4 text-slate-600">
+      <div class="w-full flex justify-center flex-wrap gap-10">
+        <div class="mt-[-100px] w-full max-w-[450px] text-center">
+          <div class="w-full mb-8 glasspane-card smaller-card strong-bg animate-slide-down wait300ms">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-[#3aaaaa] text-xl p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-5 shadow-lg rounded-full bg-white">
+                <i class="fas fa-award"></i>
+              </div>
+              <h6 class="text-2xl font-semibold">Precision & Innovation</h6>
+              <p class="mt-2 mb-4"> We combine cutting-edge technology with extensive business expertise to provide seamless, scalable solutions, tailored to your needs. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[-120px] w-full max-w-[450px] text-center">
+          <div class="w-full mb-8 glasspane-card smaller-card strong-bg animate-slide-down wait300ms">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-[#3aaaaa] text-xl p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-5 shadow-lg rounded-full bg-white">
+                <i class="fas fa-cube"></i>
+              </div>
+              <h6 class="text-2xl font-semibold">Smart & Simple</h6>
+              <p class="mt-2 mb-4"> Our approach is straightforward: Technology should enhance your business, not complicate it. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-[-140px] w-full max-w-[450px] text-center">
+          <div class="w-full mb-8 glasspane-card smaller-card strong-bg animate-slide-down wait400ms">
+            <div class="px-4 py-5 flex-auto">
+              <div class="text-[#3aaaaa] text-xl p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-5 shadow-lg rounded-full bg-white">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <h6 class="text-2xl font-semibold">Future-Ready</h6>
+              <p class="mt-2 mb-4"> We empower companies with efficiency and innovation without changing what already works. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative mt-12">
+    <div class="w-full flex justify-center px-6">
+      <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
+        <div class="flex flex-nowrap gap-4 items-center justify-center w-full">
+          <div class="inline-flex items-center justify-center w-14 h-14 shadow-lg rounded-full bg-white mb-2">
+            <i class="fas fa-location-dot text-2xl text-[#3aaaaa]"></i>
+          </div>
+          <h3 class="text-3xl mb-2 font-semibold leading-normal text-white"> Our services </h3>
+        </div>
+        <div class="text-white font-medium text-lg text-center mt-4"
+          >We don’t believe in one-size-fits-all solutions. <br />
+          Our team analyzes your business, its challenges, and its context to design a fully customized AI-powered solution. We help you revolutionize your workflows without disrupting the way you
+          already work.</div
+        >
+      </div>
+    </div>
+
+    <div class="w-[100vw] mt-5 container-scroll-arrows">
+      <div class="scroll-arrows">
+        <div class="arrow-left" (click)="scrollLeft()">
+          <i class="fas fa-arrow-left"></i>
+        </div>
+        <div class="arrow-right" (click)="scrollRight()">
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+
+      <div class="flex flex-nowrap pl-[30%] pr-[30%] py-5 gap-8 overflow-y-auto relative scroll-smooth" id="scrollable-div">
+        <div class="glasspane-card strong-bg items-center flex flex-nowrap w-full max-w-[95vw] lg:w-[900px] flex-shrink-0 flex-grow-0">
+          <div class="w-full pr-4">
+            <img
+              alt="..."
+              class="max-w-full rounded-lg shadow-lg"
+              src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+          </div>
+          <div class="w-full pl-4 h-full pt-6">
+            <div class="flex flex-col gap-1">
+              <div class="w-full flex flex-nowrap items-center gap-4">
+                <div class="inline-flex items-center justify-center w-12 h-12 flex-shrink-0 shadow-lg rounded-full bg-white">
+                  <i class="fas fa-book text-xl text-[#3aaaaa]"></i>
+                </div>
+                <h3 class="text-2xl font-semibold">Intelligent Document Management</h3>
+              </div>
+
+              <p class="mt-6 px-2 text-lg leading-relaxed text-slate-600">
+                Eliminate manual document handling with AI-driven automation. Extract insights, organize data, and connect with your existing tools effortlessly.
+              </p>
+
+              <div class="flex flex-col mt-6 gap-3">
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600"> AI-powered document processing and organization.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">Seamless integration with your current workflows.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">Faster access to critical business information.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glasspane-card strong-bg items-center flex flex-nowrap w-full max-w-[95vw] lg:w-[900px] flex-shrink-0 flex-grow-0">
+          <div class="w-full pr-4">
+            <img
+              alt="..."
+              class="max-w-full rounded-lg shadow-lg"
+              src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+          </div>
+          <div class="w-full pl-4 h-full pt-6">
+            <div class="flex flex-col gap-1">
+              <div class="w-full flex flex-nowrap items-center gap-4">
+                <div class="inline-flex items-center justify-center w-12 h-12 flex-shrink-0 shadow-lg rounded-full bg-white">
+                  <i class="fas fa-crosshairs text-xl text-[#3aaaaa]"></i>
+                </div>
+                <h3 class="text-2xl font-semibold">Extract Meaningful Insights</h3>
+              </div>
+
+              <p class="mt-6 px-2 text-lg leading-relaxed text-slate-600">
+                AI-driven document intelligence transforms raw data into strategic insights. Enhance decision-making at the executive level while keeping teams aligned with real-time, relevant
+                information.
+              </p>
+
+              <div class="flex flex-col mt-6 gap-3">
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600"> Analytics powered by AI for data-driven decisions.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">Improve business alignment with up-to-the-minute insights.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">Easily extract key information.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glasspane-card strong-bg items-center flex flex-nowrap w-full max-w-[95vw] lg:w-[900px] flex-shrink-0 flex-grow-0">
+          <div class="w-full pr-4">
+            <img
+              alt="..."
+              class="max-w-full rounded-lg shadow-lg"
+              src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+          </div>
+          <div class="w-full pl-4 h-full pt-6">
+            <div class="flex flex-col gap-1">
+              <div class="w-full flex flex-nowrap items-center gap-4">
+                <div class="inline-flex items-center justify-center w-12 h-12 flex-shrink-0 shadow-lg rounded-full bg-white">
+                  <i class="fas fa-lightbulb text-xl text-[#3aaaaa]"></i>
+                </div>
+                <h3 class="text-2xl font-semibold">Predictive Insights for Smarter Decisions</h3>
+              </div>
+
+              <p class="mt-6 px-2 text-lg leading-relaxed text-slate-600">
+                Foresee trends, identify patterns, and make data-driven decisions with AI-driven predictions. Stay ahead of the competition with ease.
+              </p>
+
+              <div class="flex flex-col mt-6 gap-3">
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600"> Forecast market trends and shifts in demand.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">Spot risks and opportunities for optimization.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">AI-enhanced insights for strategic planning.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glasspane-card strong-bg items-center flex flex-nowrap w-full max-w-[95vw] lg:w-[900px] flex-shrink-0 flex-grow-0">
+          <div class="w-full pr-4">
+            <img
+              alt="..."
+              class="max-w-full rounded-lg shadow-lg"
+              src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
+          </div>
+          <div class="w-full pl-4 h-full pt-6">
+            <div class="flex flex-col gap-1">
+              <div class="w-full flex flex-nowrap items-center gap-4">
+                <div class="inline-flex items-center justify-center w-12 h-12 flex-shrink-0 shadow-lg rounded-full bg-white">
+                  <i class="fas fa-bolt text-xl text-[#3aaaaa]"></i>
+                </div>
+                <h3 class="text-2xl font-semibold">Process Automation </h3>
+              </div>
+
+              <p class="mt-6 px-2 text-lg leading-relaxed text-slate-600"> Bid farewell to repetitive tasks and free your team to concentrate on what truly matters. </p>
+
+              <div class="flex flex-col mt-6 gap-3">
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600"> Automate workflows and eradicate inefficiencies.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">Liberate valuable time for high-impact work.</h4>
+                  </div>
+                </div>
+                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
+                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
+                    <i class="fas fa-check text-white"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-slate-600">Boost operational efficiency with AI.</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-40 pt-14 mb-48 relative">
+    <div class="stripe-bg-wrapper">
+      <div class="stripe-background no-rotation gradient-white" style="height: 640px !important"></div>
+    </div>
+    <div class="w-full flex justify-center px-6">
+      <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
+        <div class="flex flex-nowrap gap-4 items-center justify-center w-full">
+          <div class="inline-flex items-center justify-center w-14 h-14 shadow-lg rounded-full bg-white mb-2">
+            <i class="fas fa-microchip text-2xl text-[#3aaaaa]"></i>
+          </div>
+          <h3 class="text-3xl mb-2 font-semibold leading-normal text-slate-700"> Our tech stack </h3>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center px-8 items-center gap-4 flex-wrap">
+      <div class="technologies-images">
+        <img src="./assets/img/technologies/angular.png" />
+        <img src="./assets/img/technologies/react.png" />
+        <img src="./assets/img/technologies/tensorflow.png" />
+        <img src="./assets/img/technologies/node.png" />
+        <img src="./assets/img/technologies/mysql.png" />
+        <img src="./assets/img/technologies/python-3.png" />
+        <img src="./assets/img/technologies/pytorch.png" />
+        <img src="./assets/img/technologies/graphql.png" />
+        <img src="./assets/img/technologies/keras.png" />
+      </div>
+    </div>
+  </section>
+
+  <section class="pt-14 pb-48 relative">
+    <div class="stripe-bg-wrapper">
+      <div class="stripe-background no-rotation gradient-white" style="height: 700px !important"></div>
+    </div>
+    <div class="container mx-auto px-4 text-slate-700">
+      <div class="flex flex-wrap justify-center text-center mb-24">
+        <div class="w-full max-w-[800px] flex flex-col items-center px-4">
+          <div class="flex items-center gap-4">
+            <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+              <i class="text-xl text-[#3aaaaa] fas fa-users"></i>
+            </div>
+            <h2 class="text-3xl font-semibold">Meet the team</h2>
+          </div>
+          <p class="text-lg m-4 text-slate-600"
+            >We're a group of AI, design, and technology specialists who love solving big challenges. <br />
+            With worldwide experience in large-scale projects, we build smart and scalable solutions that fit seamlessly into your business.</p
+          >
+        </div>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+          <div class="px-6">
+            <img alt="..." src="assets/img/team/Tiago_Ferreira.png" class="shadow-lg rounded-full mx-auto w-[120px]" />
+            <div class="pt-6 text-center">
+              <h5 class="text-xl font-bold">Tiago Ferreira</h5>
+              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CEO</p>
+              <div class="mt-6">
+                <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-dribbble"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+          <div class="px-6">
+            <img alt="..." src="assets/img/team/marcio.jpg" class="shadow-lg rounded-full mx-auto w-[120px]" />
+            <div class="pt-6 text-center">
+              <h5 class="text-xl font-bold">Márcio Guia</h5>
+              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> COO </p>
+              <div class="mt-6">
+                <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-google"></i>
+                </button>
+                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+          <div class="px-6">
+            <img alt="..." src="assets/img/team/luis.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
+            <div class="pt-6 text-center">
+              <h5 class="text-xl font-bold">Luís Silvestre</h5>
+              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CTO </p>
+              <div class="mt-6">
+                <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-google"></i>
+                </button>
+                <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button class="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-instagram"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+          <div class="px-6">
+            <img alt="..." src="assets/img/team/eduardo_correia.png" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
+            <div class="pt-6 text-center">
+              <h5 class="text-xl font-bold">Eduardo Correia</h5>
+              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CXO </p>
+              <div class="mt-6">
+                <button class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-dribbble"></i>
+                </button>
+                <button class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-google"></i>
+                </button>
+                <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button class="bg-slate-700 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-instagram"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pb-20 relative block mt-40">
+    <div class="stripe-bg-wrapper">
+      <div class="stripe-background mirrored"></div>
+    </div>
+
+    <div class="container mx-auto px-4 lg:pt-24 lg:pb-64" id="contact-us-wrapper">
+      <div class="flex flex-wrap text-center justify-center -mt-40">
+        <div class="w-full max-w-[800px] glasspane-card strong-bg">
+          <div class="flex gap-4 items-center justify-center text-slate-700">
+            <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+              <i class="text-xl text-[#3aaaaa] fas fa-rocket"></i>
+            </div>
+            <h2 class="text-3xl font-semibold">AI that seamlessly adapts to you.</h2>
+          </div>
+          <p class="text-lg leading-relaxed mt-4 px-4">Digitize and automate easily. Keep what works and improve what matters. </p>
+        </div>
+      </div>
+      <div class="flex flex-wrap mt-20 justify-center text-white">
+        <div class="w-full lg:w-3/12 px-4 text-center">
+          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+            <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
+          </div>
+          <h6 class="text-xl mt-5 font-semibold"> Smart Solutions </h6>
+          <p class="mt-2 mb-4"> We automate repetitive tasks and enhance workflows, allowing you to focus on what truly matters. </p>
+        </div>
+        <div class="w-full lg:w-3/12 px-4 text-center">
+          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+            <i class="text-xl text-[#3aaaaa] fas fa-arrow-trend-up"></i>
+          </div>
+          <h5 class="text-xl mt-5 font-semibold"> Easy Growth </h5>
+          <p class="mt-2 mb-4"> Our solutions adapt to your business needs, enabling you to scale without complications. </p>
+        </div>
+        <div class="w-full lg:w-3/12 px-4 text-center">
+          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+            <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
+          </div>
+          <h5 class="text-xl mt-5 font-semibold"> Seamless Integration </h5>
+          <p class="mt-2 mb-4"> We integrate AI into your operations effortlessly, ensuring efficiency without interruptions. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="relative">
+    <div class="w-full px-4 flex justify-center flex-wrap gap-8 lg:-mt-64 -mt-48">
+      <div class="w-full max-w-[600px]">
+        <div class="shadow-lg glasspane-card strong-bg h-[800px] text-slate-600">
+          <h4 class="text-2xl font-semibold">Let's discuss your project.</h4>
+          <p class="leading-relaxed mt-1 mb-4">Choose a time that works for you (scroll down). </p>
+
+          <div class="w-full h-[650px] rounded-xl overflow-hidden shadow-lg">
+            <app-calendly-widget></app-calendly-widget>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full max-w-[600px]">
+        <div class="w-full flex flex-col shadow-lg glasspane-card strong-bg h-[580px] text-slate-600">
+          <h4 class="text-2xl font-semibold">Not ready for a call? Send us a message.</h4>
+          <p class="leading-relaxed mt-1 mb-4">We'll respond to you shortly, typically within an hour.</p>
+          <div class="relative w-full mb-3 mt-8">
+            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> Full Name </label>
+            <input
+              type="text"
+              class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              placeholder="How should we call you?" />
+          </div>
+
+          <div class="relative w-full mb-3">
+            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="email"> Email </label>
+            <input
+              type="email"
+              class="border-0 px-3 py-3 text-slate-600 bg-white placeholder-slate-400 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+              placeholder="Where can we reach you?" />
+          </div>
+
+          <div class="relative w-full mb-3">
+            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="message"> Message </label>
+            <textarea
+              rows="4"
+              cols="40"
+              maxlength="2000"
+              class="border-0 px-3 py-3 placeholder-slate-400 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
+              placeholder="How can we help? Feel free to share any details."></textarea>
+          </div>
+          <div class="text-center mt-10">
+            <button
+              class="bg-slate-500 text-white hover:bg-slate-600 text-sm font-bold uppercase px-6 py-3 rounded-xl outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              type="button">
+              Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="mt-40">
+  <app-footer></app-footer>
+</div>
