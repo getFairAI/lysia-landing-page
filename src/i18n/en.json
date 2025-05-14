@@ -1,17 +1,95 @@
 {
+  "TEAM_DESCRIPTION1": "We're a group of AI, design, and technology specialists who love solving big challenges.",
+  "TEAM_DESCRIPTION2": "With worldwide experience in large-scale projects, we build smart and scalable solutions that fit seamlessly into your business.",
+  "CONTACT_SECTION": {
+    "SECTION_TITLE": "AI that seamlessly adapts to you.",
+    "SECTION_SUBTITLE": "Digitize and automate easily. Keep what works and improve what matters.",
+    "SECTION_CARDS": {
+      "CARD1": {
+        "TITLE": "Smart Solutions",
+        "DESCRIPTION": "We automate repetitive tasks and enhance workflows, allowing you to focus on what truly matters."
+      },
+      "CARD2": {
+        "TITLE": "Easy Growth",
+        "DESCRIPTION": "Our solutions adapt to your business needs, enabling you to scale without complications."
+      },
+      "CARD3": {
+        "TITLE": "Seamless Integration",
+        "DESCRIPTION": "We integrate AI into your operations effortlessly, ensuring efficiency without interruptions."
+      }
+    },
+    "CONTACT_FORMS_CARDS": {
+      "CARD1": {
+        "TITLE": "Let's discuss your project.",
+        "SUBTITLE": "Choose a time that works for you (scroll down)."
+      },
+      "CARD2": {
+        "TITLE": "Not ready for a call? Send us a message.",
+        "SUBTITLE": "We'll respond to you shortly, typically within an hour."
+      },
+      "CONTACT_FORM_INPUTS": {
+        "FULLNAME": "FULL NAME",
+        "FULLNAMEPLACEHOLDER": "How should we call you?",
+        "EMAIL": "EMAIL",
+        "EMAILPLACEHOLDER": "Where can we reach you?",
+        "MESSAGE": "MESSAGE",
+        "MESSAGEPLACEHOLDER": "How can we help? Fell free to share any details."
+      }
+    }
+  },
   "CARDS": {
     "CARD1": {
       "TITLE": "Commercial Intelligence Assistant",
       "SUBTITLE": "Close More Deals, Faster.",
+      "VIDEO_URL": "5yfsQKWMG_8",
       "ITEMS": ["Stay informed and never miss an opportunity.", "Get alerts when it's the right time to reach out to inactive clients.", "And let the assistant find new leads for you — no hassle."]
     },
     "CARD2": {
       "TITLE": "Specialized Knowledge Assistant",
       "SUBTITLE": "The Right Knowledge, Always at Hand.",
+      "VIDEO_URL": "fiX02g0uoAg",
       "ITEMS": [
         "Capture and share the expertise of your top team members.",
         "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
       ]
+    },
+    "CARD3": {
+      "TITLE": "Budget Planning Assistant",
+      "SUBTITLE": "Decide Faster, Plan Better, Deliver with Confidence.",
+      "VIDEO_URL": "m-bHcaCOoJU",
+      "ITEMS": [
+        "Helps you create clearer budgets and plan more effectively.",
+        "Simulate scenarios, view real-time data, manage stock levels, and make sure nothing goes wrong with deliveries - all in minutes, not days."
+      ]
+    },
+    "CARD4": {
+      "TITLE": "Smart Maintenance Assistant",
+      "SUBTITLE": "Less Downtime. More Control.",
+      "VIDEO_URL": "EUVHxbCVzy8",
+      "ITEMS": [
+        "Get alerts about potential failures and see how similar issues were resolved in the past.",
+        "Support your team in preventing breakdowns and reducing costs with more efficient maintenance."
+      ]
+    },
+    "CARD5": {
+      "TITLE": "Intelligent Analysis Assistant",
+      "SUBTITLE": "Understand what’s happening, without wasting time.",
+      "VIDEO_URL": "CBzl82FzhEQ",
+      "ITEMS": [
+        "Turn simple questions into clear, visual answers, even when the data is complex or extensive.",
+        "Whether in production, quality, maintenance, or executive management, quickly analyze large volumes of information, identify patterns, and make informed decisions.",
+        "All in seconds, without relying on lengthy reports or technical analysis."
+      ]
+    }
+  },
+  "FOOTER": {
+    "SLOGAN": "Follow our journey.",
+    "SLOGAN_SUBTITLE": "Stay in touch with LYSIA Labs.",
+    "LINKS_LIST1": {
+      "TITLE": "Related Projects"
+    },
+    "LINKS_LIST2": {
+      "TITLE": "Useful Links"
     }
   }
 }

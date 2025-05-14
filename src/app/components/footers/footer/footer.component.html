@@ -2,27 +2,31 @@
   <div class="container mx-auto px-4 text-slate-600">
     <div class="flex flex-wrap text-center lg:text-left">
       <div class="w-full lg:w-6/12 px-4">
-        <h4 class="text-2xl font-semibold">Follow our journey.</h4>
-        <h5 class="mb-2 text-slate-500"> Stay in touch with LYSIA Labs. </h5>
+        <h4 class="text-2xl font-semibold">{{ 'FOOTER.SLOGAN' | translate }}</h4>
+        <h5 class="mb-2 text-slate-500"> {{ 'FOOTER.SLOGAN_SUBTITLE' | translate }} </h5>
         <div class="mt-6 lg:mb-0 mb-6 flex gap-4 text-lg">
           <button
             class="bg-white text-slate-800 shadow-md font-normal h-12 w-12 items-center justify-center align-center rounded-full outline-none focus:outline-none hover:outline-slate-600 transition-all"
-            type="button">
+            type="button"
+            (click)="openLinkNewTab('https://x.com/getFairAI/')">
             <i class="fab fa-x-twitter"></i>
           </button>
           <button
             class="bg-white text-sky-600 shadow-md font-normal h-12 w-12 items-center justify-center align-center rounded-full outline-none focus:outline-none hover:outline-slate-600 transition-all"
-            type="button">
+            type="button"
+            (click)="openLinkNewTab('https://www.linkedin.com/company/getfairai')">
             <i class="fab fa-linkedin"></i>
           </button>
           <button
             class="bg-white text-red-600 shadow-md font-normal h-12 w-12 items-center justify-center align-center rounded-full outline-none focus:outline-none hover:outline-slate-600 transition-all"
-            type="button">
+            type="button"
+            (click)="openLinkNewTab('https://www.youtube.com/@FairProtocol')">
             <i class="fab fa-youtube"></i>
           </button>
           <button
             class="bg-white text-blueGray-800 shadow-md font-normal h-12 w-12 items-center justify-center align-center rounded-full outline-none focus:outline-none hover:outline-slate-600 transition-all"
-            type="button">
+            type="button"
+            (click)="openLinkNewTab('https://github.com/getFairAI/')">
             <i class="fab fa-github"></i>
           </button>
         </div>
@@ -30,27 +34,32 @@
       <div class="w-full lg:w-6/12 px-4">
         <div class="flex flex-wrap items-top mb-6">
           <div class="w-full lg:w-4/12 px-4 ml-auto">
-            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"> Product </span>
-            <ul class="list-unstyled footer-list-items">
-              <li class="list-item">
-                <a class="text-blueGray-600 bg-transparent hover:bg-slate-600 hover:text-white rounded-md font-semibold block p-2 text-sm" href="">
+            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"> {{ 'FOOTER.LINKS_LIST1.TITLE' | translate }} </span>
+            <ul class="list-unstyled footer-list-items"
+              ><li class="list-item">
+                <a class="text-blueGray-600 bg-transparent hover:bg-slate-600 hover:text-white rounded-md font-semibold block p-2 text-sm" href="https://getfair.ai" target="_blank">
+                  <mat-icon style="font-size: 10px; height: 10px; width: 12px">fiber_manual_record</mat-icon> FairAI
+                </a>
+              </li>
+              <!-- <li class="list-item">
+                <a class="text-blueGray-600 bg-transparent hover:bg-slate-600 hover:text-white rounded-md font-semibold block p-2 text-sm">
                   <mat-icon style="font-size: 10px; height: 10px; width: 12px">fiber_manual_record</mat-icon> About Us
                 </a>
-              </li>
+              </li> -->
               <li class="list-item">
-                <a class="text-blueGray-600 bg-transparent hover:bg-slate-600 hover:text-white rounded-md font-semibold block p-2 text-sm" href="">
-                  <mat-icon style="font-size: 10px; height: 10px; width: 12px">fiber_manual_record</mat-icon> Blog
+                <a class="text-blueGray-600 bg-transparent hover:bg-slate-600 hover:text-white rounded-md font-semibold block p-2 text-sm" href="https://blog.getfair.ai/" target="_blank">
+                  <mat-icon style="font-size: 10px; height: 10px; width: 12px">fiber_manual_record</mat-icon> FairAI Blog
                 </a>
               </li>
-              <li class="list-item">
+              <!-- <li class="list-item">
                 <a class="text-blueGray-600 bg-transparent hover:bg-slate-600 hover:text-white rounded-md font-semibold block p-2 text-sm" href="">
                   <mat-icon style="font-size: 10px; height: 10px; width: 12px">fiber_manual_record</mat-icon> Github
                 </a>
-              </li>
+              </li> -->
             </ul>
           </div>
           <div class="w-full lg:w-4/12 px-4">
-            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"> About </span>
+            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2"> {{ 'FOOTER.LINKS_LIST2.TITLE' | translate }} </span>
             <ul class="list-unstyled footer-list-items">
               <!-- <li class="list-item">
                 <a

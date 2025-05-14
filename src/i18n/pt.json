@@ -5,12 +5,54 @@
   "Digitalize": "Digitalize",
   "your business": "o seu negócio",
   "without changing": "sem alterar",
+  "Send Message": "Enviar Mensagem",
   "the way you work.": "a forma como trabalha.",
   "Learn More": "Saber Mais",
+  "Our tech stack": "As nossas tecnologias",
+  "Meet the team": "A nossa equipa",
+  "TEAM_DESCRIPTION1": "Somos uma equipa especializada em IA, e especialistas em tecnologias que resolvem grandes problemas de forma eficaz e eficiente.",
+  "TEAM_DESCRIPTION2": "Com experiência mundial em projetos de larga escala, construímos soluções inteligentes e expansíveis que se integram perfeitamente nos seus projetos.",
+  "CONTACT_SECTION": {
+    "SECTION_TITLE": "IA que se adapta a si.",
+    "SECTION_SUBTITLE": "Digitalize e automatize com facilidade. Melhore o que interessa, sem alterar o seu trabalho.",
+    "SECTION_CARDS": {
+      "CARD1": {
+        "TITLE": "Soluções Inteligentes",
+        "DESCRIPTION": "Automatizamos tarefas repetitivas e melhoramos workflows, para que se foque no que realmente interessa."
+      },
+      "CARD2": {
+        "TITLE": "Adaptável e Expansível",
+        "DESCRIPTION": "As nossas soluções adaptam-se à necessidades da sua empresa, permitindo que crescam juntos sem complicações."
+      },
+      "CARD3": {
+        "TITLE": "Integração Completa",
+        "DESCRIPTION": "Integramos IA nos seus projetos de forma fluída, garantido eficiência sem interrupções."
+      }
+    },
+    "CONTACT_FORMS_CARDS": {
+      "CARD1": {
+        "TITLE": "Vamos debater ideias.",
+        "SUBTITLE": "Escolha um horário conveniente para si (scroll para baixo)"
+      },
+      "CARD2": {
+        "TITLE": "Ainda não preparado? Envie-nos uma mensagem.",
+        "SUBTITLE": "Iremos responder rapidamente, dentro de umas horas."
+      },
+      "CONTACT_FORM_INPUTS": {
+        "FULLNAME": "NOME COMPLETO",
+        "FULLNAMEPLACEHOLDER": "Como lhe devemos chamar?",
+        "EMAIL": "EMAIL",
+        "EMAILPLACEHOLDER": "Para onde poderemos comunicar?",
+        "MESSAGE": "MENSAGEM",
+        "MESSAGEPLACEHOLDER": "Como podemos ajudar? Esteja à vontade para partilhar quaisquer detalhes."
+      }
+    }
+  },
   "CARDS": {
     "CARD1": {
-      "TITLE": "Assistente de Inteligência Comercial",
+      "TITLE": "Assistente de Soluções Inteligentes",
       "SUBTITLE": "Feche Mais Negócios, Mais Rápido.",
+      "VIDEO_URL": "SxteyMHuY1c",
       "ITEMS": [
         "Esteja sempre a par e não deixe escapar nenhuma possibilidade.",
         "Receba avisos quando for o momento certo para falar com clientes inativos e deixe que se encontrem novas oportunidades de negócio por si, sem complicações."
@@ -19,10 +61,46 @@
     "CARD2": {
       "TITLE": "Assistente de Conhecimento Especializado",
       "SUBTITLE": "O conhecimento certo, sempre à mão.",
+      "VIDEO_URL": "jU1CVlUsC-A",
       "ITEMS": [
         "Guarde e partilhe experiência com os seus melhores colaboradores.",
         "Ajude novos funcionários a aprender mais rápido e assegure que o conhecimento permanece acessível e relevante ao longo do tempo, independentemente de quem esteja na empresa."
       ]
+    },
+    "CARD3": {
+      "TITLE": "Assistente de Planeamento Orçamental",
+      "SUBTITLE": "Decida mais rápido, planeie melhor e garanta as entregas.",
+      "VIDEO_URL": "dVWhK3Kos54",
+      "ITEMS": [
+        "Ajude a fazer orçamentos mais claros e a planear melhor.",
+        "Simule cenários, veja os dados em tempo real, controle os stocks e assegure que nada falha nas entregas. Tudo em minutos, não em dias."
+      ]
+    },
+    "CARD4": {
+      "TITLE": "Assistente de Manutenção Inteligente",
+      "SUBTITLE": "Menos paragens. Mais controlo.",
+      "VIDEO_URL": "5vtU03nUvGU",
+      "ITEMS": ["Perceba facilmente quando há risco de avarias e como foram resolvidos problemas no passado.", "Ajude a equipa a prevenir falhas e reduzir custos com uma manutenção mais eficiente."]
+    },
+    "CARD5": {
+      "TITLE": "Assistente de Análise Inteligente",
+      "SUBTITLE": "Entenda o que se passa, sem perder tempo.",
+      "VIDEO_URL": "MTjN3Rnu71s",
+      "ITEMS": [
+        "Transforme perguntas simples em respostas claras e visuais, mesmo quando os dados são complexos ou extensos.",
+        "Seja na produção, qualidade, manutenção ou gestão de topo, analise rapidamente grandes volumes de informação, identifique padrões e tome decisões informadas.",
+        "Tudo em segundos, sem depender de relatórios demorados ou análises técnicas."
+      ]
+    }
+  },
+  "FOOTER": {
+    "SLOGAN": "Siga a nossa jornada.",
+    "SLOGAN_SUBTITLE": "Mantenha-se em contacto com a LYSIA Labs.",
+    "LINKS_LIST1": {
+      "TITLE": "Projetos Relacionados"
+    },
+    "LINKS_LIST2": {
+      "TITLE": "Ligações Úteis"
     }
   }
 }

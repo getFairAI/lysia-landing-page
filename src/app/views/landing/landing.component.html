@@ -1,7 +1,3 @@
-<div class="animate-slide-down wait600ms">
-  <app-auth-navbar></app-auth-navbar>
-</div>
-
 <div class="background-wrapper fixed top-0 left-0 w-full h-full animate-fade-in wait200ms" style="z-index: -100">
   <div class="bg-center bg-cover w-full h-full"></div>
 </div>
@@ -95,7 +91,7 @@
         <!-- <div class="card-content-right"><img src="./assets/img/landing-page-cards/preview.png" /></div> -->
         <div class="card-content-right">
           <div class="video-wrapper">
-            <youtube-player videoId="jU1CVlUsC-A" width="100%" height="100%"></youtube-player>
+            <youtube-player [videoId]="videoCardsUrls.card1" width="100%" height="100%"></youtube-player>
             <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
           </div>
         </div>
@@ -114,7 +110,64 @@
 
         <div class="card-content-right">
           <div class="video-wrapper">
-            <youtube-player videoId="dVWhK3Kos54" width="100%" height="100%"></youtube-player>
+            <youtube-player [videoId]="videoCardsUrls.card2" width="100%" height="100%"></youtube-player>
+            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content-left">
+          <div class="card-title">{{ 'CARDS.CARD3.TITLE' | translate }}</div>
+          <div class="card-subtitle">{{ 'CARDS.CARD3.SUBTITLE' | translate }}</div>
+          <div class="card-description">
+            <div class="card-pills">
+              <div class="card-pill" *ngFor="let item of 'CARDS.CARD3.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content-right">
+          <div class="video-wrapper">
+            <youtube-player [videoId]="videoCardsUrls.card3" width="100%" height="100%"></youtube-player>
+            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content-left">
+          <div class="card-title">{{ 'CARDS.CARD4.TITLE' | translate }}</div>
+          <div class="card-subtitle">{{ 'CARDS.CARD4.SUBTITLE' | translate }}</div>
+          <div class="card-description">
+            <div class="card-pills">
+              <div class="card-pill" *ngFor="let item of 'CARDS.CARD4.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content-right">
+          <div class="video-wrapper">
+            <youtube-player [videoId]="videoCardsUrls.card4" width="100%" height="100%"></youtube-player>
+            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-content-left">
+          <div class="card-title">{{ 'CARDS.CARD5.TITLE' | translate }}</div>
+          <div class="card-subtitle">{{ 'CARDS.CARD5.SUBTITLE' | translate }}</div>
+          <div class="card-description">
+            <div class="card-pills">
+              <div class="card-pill" *ngFor="let item of 'CARDS.CARD5.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-content-right">
+          <div class="video-wrapper">
+            <youtube-player [videoId]="videoCardsUrls.card5" width="100%" height="100%"></youtube-player>
             <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
           </div>
         </div>
@@ -122,7 +175,7 @@
     </div>
   </section>
 
-  <section class="relative mt-12">
+  <!-- <section class="relative mt-12">
     <div class="w-full flex justify-center px-6">
       <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
         <div class="flex flex-nowrap gap-4 items-center justify-center w-full">
@@ -299,7 +352,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="mt-40 mb-48 technologies-section gradient-white-bg">
     <div class="w-full flex justify-center px-6">
@@ -308,7 +361,7 @@
           <div class="inline-flex items-center justify-center w-14 h-14 shadow-lg rounded-full bg-white mb-2">
             <i class="fas fa-microchip text-2xl text-[#3aaaaa]"></i>
           </div>
-          <h3 class="text-3xl mb-2 font-semibold leading-normal text-slate-700"> Our tech stack </h3>
+          <h3 class="text-3xl mb-2 font-semibold leading-normal text-slate-700"> {{ 'Our tech stack' | translate }} </h3>
         </div>
       </div>
     </div>
@@ -335,11 +388,11 @@
             <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
               <i class="text-xl text-[#3aaaaa] fas fa-users"></i>
             </div>
-            <h2 class="text-3xl font-semibold">Meet the team</h2>
+            <h2 class="text-3xl font-semibold">{{ 'Meet the team' | translate }}</h2>
           </div>
           <p class="text-lg m-4 text-slate-600"
-            >We're a group of AI, design, and technology specialists who love solving big challenges. <br />
-            With worldwide experience in large-scale projects, we build smart and scalable solutions that fit seamlessly into your business.</p
+            >{{ 'TEAM_DESCRIPTION1' | translate }} <br />
+            {{ 'TEAM_DESCRIPTION2' | translate }}</p
           >
         </div>
       </div>
@@ -351,15 +404,21 @@
               <h5 class="text-xl font-bold">Tiago Ferreira</h5>
               <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CEO</p>
               <div class="mt-6">
-                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <button
+                  class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button"
+                  (click)="openLinkNewTab('https://www.linkedin.com/in/carlostiagoferreira/')">
                   <i class="fab fa-linkedin"></i>
                 </button>
-                <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <!-- <button
+                  class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button"
+                  (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
                   <i class="fab fa-twitter"></i>
-                </button>
-                <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                </button> -->
+                <!-- <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
                   <i class="fab fa-discord"></i>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -371,15 +430,15 @@
               <h5 class="text-xl font-bold">Márcio Guia</h5>
               <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> COO </p>
               <div class="mt-6">
-                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/marcio-guia/')">
                   <i class="fab fa-linkedin"></i>
                 </button>
-                <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <!-- <button
+                  class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button"
+                  (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
                   <i class="fab fa-twitter"></i>
-                </button>
-                <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-                  <i class="fab fa-discord"></i>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -391,15 +450,15 @@
               <h5 class="text-xl font-bold">Luís Silvestre</h5>
               <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CTO </p>
               <div class="mt-6">
-                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/l-silvestre/')">
                   <i class="fab fa-linkedin"></i>
                 </button>
-                <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <!-- <button
+                  class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button"
+                  (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
                   <i class="fab fa-x-twitter"></i>
-                </button>
-                <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-                  <i class="fab fa-discord"></i>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -411,15 +470,15 @@
               <h5 class="text-xl font-bold">Eduardo Correia</h5>
               <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CXO </p>
               <div class="mt-6">
-                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <button
+                  class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                  type="button"
+                  (click)="openLinkNewTab('https://www.linkedin.com/in/eduardoxcorreia/')">
                   <i class="fab fa-linkedin"></i>
                 </button>
-                <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                <!-- <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
                   <i class="fab fa-twitter"></i>
-                </button>
-                <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-                  <i class="fab fa-discord"></i>
-                </button>
+                </button> -->
               </div>
             </div>
           </div>
@@ -436,9 +495,9 @@
             <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
               <i class="text-xl text-[#3aaaaa] fas fa-rocket"></i>
             </div>
-            <h2 class="text-3xl font-semibold">AI that seamlessly adapts to you.</h2>
+            <h2 class="text-3xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
           </div>
-          <p class="text-lg leading-relaxed mt-4 px-4">Digitize and automate easily. Keep what works and improve what matters. </p>
+          <p class="text-lg leading-relaxed mt-4 px-4">{{ 'CONTACT_SECTION.SECTION_SUBTITLE' | translate }}</p>
         </div>
       </div>
       <div class="flex flex-wrap mt-20 justify-center">
@@ -446,22 +505,22 @@
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
           </div>
-          <h6 class="text-xl mt-5 font-semibold"> Smart Solutions </h6>
-          <p class="mt-2 mb-4"> We automate repetitive tasks and enhance workflows, allowing you to focus on what truly matters. </p>
+          <h6 class="text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
+          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
         </div>
         <div class="w-full lg:w-3/12 px-4 text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-arrow-trend-up"></i>
           </div>
-          <h5 class="text-xl mt-5 font-semibold"> Easy Growth </h5>
-          <p class="mt-2 mb-4"> Our solutions adapt to your business needs, enabling you to scale without complications. </p>
+          <h5 class="text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
+          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
         </div>
         <div class="w-full lg:w-3/12 px-4 text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
           </div>
-          <h5 class="text-xl mt-5 font-semibold"> Seamless Integration </h5>
-          <p class="mt-2 mb-4"> We integrate AI into your operations effortlessly, ensuring efficiency without interruptions. </p>
+          <h5 class="text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
+          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
         </div>
       </div>
     </div>
@@ -471,8 +530,8 @@
     <div class="w-full px-4 flex justify-center flex-wrap gap-8">
       <div class="w-full max-w-[600px]">
         <div class="shadow-md glasspane-card strong-bg h-[800px] text-slate-600">
-          <h4 class="text-2xl font-semibold">Let's discuss your project.</h4>
-          <p class="leading-relaxed mt-1 mb-4">Choose a time that works for you (scroll down). </p>
+          <h4 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.TITLE' | translate }}</h4>
+          <p class="leading-relaxed mt-1 mb-4">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.SUBTITLE' | translate }} </p>
 
           <div class="w-full h-[650px] rounded-xl overflow-hidden shadow-lg">
             <app-calendly-widget></app-calendly-widget>
@@ -481,43 +540,42 @@
       </div>
 
       <div class="w-full max-w-[600px]">
-        <div class="w-full flex flex-col shadow-md glasspane-card strong-bg h-[580px] text-slate-600">
-          <h4 class="text-2xl font-semibold">Not ready for a call? Send us a message.</h4>
-          <p class="leading-relaxed mt-1 mb-4">We'll respond to you shortly, typically within an hour.</p>
+        <div class="w-full flex flex-col shadow-md glasspane-card strong-bg h-[580px] text-slate-600" [formGroup]="formGroupContactUs">
+          <h4 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.TITLE' | translate }}</h4>
+          <p class="leading-relaxed mt-1 mb-4">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.SUBTITLE' | translate }}</p>
           <div class="relative w-full mb-3 mt-8">
-            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> Full Name </label>
+            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.FULLNAME' | translate }} </label>
             <input
+              formControlName="fullName"
               type="text"
               class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-              placeholder="How should we call you?" />
+              [placeholder]="contactSectionInputsTexts.fullNamePlaceholder" />
           </div>
 
           <div class="relative w-full mb-3">
-            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="email"> Email </label>
+            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="email"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.EMAIL' | translate }} </label>
             <input
+              formControlName="email"
               type="email"
               class="border-0 px-3 py-3 text-slate-600 bg-white placeholder-slate-400 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-              placeholder="Where can we reach you?" />
+              [placeholder]="contactSectionInputsTexts.emailPlaceholder" />
           </div>
 
           <div class="relative w-full mb-3">
-            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="message"> Message </label>
+            <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="message"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.MESSAGE' | translate }} </label>
             <textarea
+              formControlName="message"
               rows="4"
               cols="40"
-              maxlength="2000"
+              maxlength="4000"
               class="border-0 px-3 py-3 placeholder-slate-400 text-slate-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-              placeholder="How can we help? Feel free to share any details."></textarea>
+              [placeholder]="contactSectionInputsTexts.messagePlaceholder"></textarea>
           </div>
           <div class="flex justify-center w-full mt-10">
-            <button type="button" class="button-lysia outlined-secondary-color"> Send Message </button>
+            <button type="button" class="button-lysia primary-color" [disabled]="formGroupContactUs.invalid || formGroupContactUs.pristine"> {{ 'Send Message' | translate }} </button>
           </div>
         </div>
       </div>
     </div>
   </section>
 </main>
-
-<div class="mt-40">
-  <app-footer></app-footer>
-</div>

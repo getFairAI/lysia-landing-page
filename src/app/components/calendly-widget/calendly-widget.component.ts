@@ -16,7 +16,7 @@ export class CalendlyWidgetComponent {
 
   ngOnInit() {
     window.Calendly.initInlineWidget({
-      url: 'https://calendly.com/getfairai/30min',
+      url: 'https://calendly.com/lysialabs/30min',
       parentElement: document.getElementById('calendly-embed'),
       prefill: {},
       utm: {},
