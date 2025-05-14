@@ -1,48 +1,109 @@
 .background-wrapper {
   .bg-cover {
-    background-image: url('/assets/img/backgrounds/blurred_asbtract_bg_purple.jpg');
+    background-image: url('/assets/img/backgrounds/blurred_asbtract_bg.jpg');
+    opacity: 0.4;
   }
 }
 
-.stripe-bg-wrapper {
-  width: 100%;
-  height: 1000px;
-  max-width: 100vw !important;
-  overflow: hidden;
-  position: absolute;
-  padding: 60px 0px;
+.cards-vertical-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   box-sizing: border-box;
-  z-index: -10;
-  top: -80px;
+  padding: 20px;
+  width: 100%;
 
-  .stripe-background {
-    position: absolute;
-    width: 110vw;
-    height: 900px;
-    left: -20px;
-    transform: rotateZ(-1.8deg);
-    // background-color: rgba(5, 49, 49, 0.35);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(5, 55, 55, 0.3) 30%, rgba(5, 55, 55, 0.3) 70%, rgba(255, 255, 255, 0) 100%);
-    backdrop-filter: blur(4px);
+  .card {
+    margin: 25px 0px;
+    width: 100%;
+    max-width: 1600px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
+    border-radius: 30px;
+    padding: 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 
-    &.mirrored {
-      transform: rotateZ(1.8deg);
+    .card-content-left {
+      flex: 1 1 300px;
+      display: flex;
+      flex-direction: column;
+      padding: 15px;
+      box-sizing: border-box;
+
+      .card-title {
+        background-color: rgb(70, 70, 70);
+        border-radius: 40px;
+        padding: 5px 25px;
+        font-weight: 600;
+        font-size: 28px;
+        color: white;
+        width: fit-content;
+      }
+
+      .card-subtitle {
+        margin-top: 20px;
+        padding: 5px 20px;
+        font-weight: 600;
+        font-size: 22px;
+      }
+
+      .card-description {
+        margin-top: 10px;
+        font-weight: 600;
+        font-size: 18px;
+
+        .card-pills {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+
+          .card-pill {
+            padding: 6px 18px;
+            display: flex;
+            gap: 8px;
+
+            mat-icon {
+              flex: 0 0 fit-content;
+              margin-top: 2px;
+            }
+          }
+        }
+      }
     }
 
-    &.no-rotation {
-      transform: rotateZ(0deg) !important;
-    }
+    .card-content-right {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: flex-end;
 
-    &.white-bg {
-      background-color: rgba(250, 250, 250, 0.5);
-    }
+      img {
+        border-radius: 20px;
+        object-fit: cover;
+        border: 6px solid white;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+      }
 
-    &.gradient-white {
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 90%);
-    }
+      .video-wrapper {
+        background-color: white;
+        text-align: center;
+        font-weight: 600;
+        font-size: 90%;
+        width: 100%;
+        max-width: 640px;
+        border-radius: 20px;
+        overflow: hidden;
+        border: 6px solid white;
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
 
-    &.gradient-green {
-      background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(5, 55, 55, 0.3) 30%, rgba(5, 55, 55, 0.3) 70%, rgba(255, 255, 255, 0) 90%);
+        youtube-player {
+          border-radius: 20px;
+          overflow: hidden;
+        }
+      }
     }
   }
 }
@@ -51,16 +112,73 @@
   background-color: rgba(255, 255, 255, 0.8);
 }
 
+@keyframes dashAnimation1 {
+  from {
+    stroke-dashoffset: 1397;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes dashAnimation2 {
+  from {
+    stroke-dashoffset: 387;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 .logo-img-wrapper {
   width: 100%;
   max-width: 600px;
   padding: 30px;
   margin-bottom: 20px;
   box-sizing: border-box;
+  position: relative;
 
-  .logo-img {
+  // .logo-img {
+  //   width: 100%;
+  //   object-fit: contain;
+  // }
+
+  .svg-logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    object-fit: contain;
+    max-width: 500px;
+    z-index: 0;
+    opacity: 0;
+    animation: 1.2s fadeIn 2.5s forwards;
+  }
+
+  .svg-animation {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 1;
+    animation: 1.2s fadeOut 3s forwards;
+
+    .logo-path-1 {
+      // animate logo
+      stroke-dasharray: 1397;
+      stroke-dashoffset: 1397;
+      animation: dashAnimation1 6s linear 0.1s forwards !important;
+    }
+
+    .logo-path-2 {
+      // animate logo
+      stroke-dasharray: 387;
+      stroke-dashoffset: 387;
+      animation: dashAnimation2 6s linear 0.1s forwards !important;
+    }
   }
 }
 
@@ -78,8 +196,12 @@
     padding: 0px 40px;
     margin-top: 80px;
     box-sizing: border-box;
-    opacity: 0;
+    // opacity: 0;
     transition: 0.4s all;
+
+    @media only screen and (max-width: 800px) {
+      padding: 0px 15px !important;
+    }
 
     .arrow-left,
     .arrow-right {
@@ -111,21 +233,37 @@
   }
 }
 
-.technologies-images {
-  width: 100%;
-  height: 100%;
-  max-width: 1400px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 60px;
+.gradient-white-bg {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0.4) 30%, rgba(255, 255, 255, 0.4) 70%, rgba(255, 255, 255, 0) 90%);
+}
 
-  img {
+.technologies-section {
+  padding: 40px 0px 60px 0px;
+
+  .technologies-images {
     width: 100%;
-    height: 200px;
-    max-width: 200px;
-    object-fit: contain;
-    filter: grayscale(1) brightness(0.7); // order is important
+    height: 100%;
+    max-width: 1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+
+    @media only screen and (max-width: 800px) {
+      margin-top: 40px;
+      gap: 40px 25px;
+    }
+
+    img {
+      width: 100%;
+      max-width: 200px;
+      object-fit: contain;
+      filter: grayscale(1) brightness(0.7); // order is important
+
+      @media only screen and (max-width: 800px) {
+        max-width: 100px;
+      }
+    }
   }
 }

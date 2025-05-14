@@ -1,0 +1,17 @@
+{
+  "CARDS": {
+    "CARD1": {
+      "TITLE": "Commercial Intelligence Assistant",
+      "SUBTITLE": "Close More Deals, Faster.",
+      "ITEMS": ["Stay informed and never miss an opportunity.", "Get alerts when it's the right time to reach out to inactive clients.", "And let the assistant find new leads for you — no hassle."]
+    },
+    "CARD2": {
+      "TITLE": "Specialized Knowledge Assistant",
+      "SUBTITLE": "The Right Knowledge, Always at Hand.",
+      "ITEMS": [
+        "Capture and share the expertise of your top team members.",
+        "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.footer-list-items {
+  .list-item {
+    transition: 0.2s all;
+
+    &:hover,
+    &:focus-within {
+      transform: translateX(3px);
+    }
+  }
+}

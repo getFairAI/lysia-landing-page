@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-auth-navbar',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class AuthNavbarComponent implements OnInit {
   navbarOpen = false;
 
-  constructor() {}
+  constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {}
 
@@ -19,5 +20,9 @@ export class AuthNavbarComponent implements OnInit {
   contactUsScrollToDiv() {
     let elementPosition = document.getElementById('contact-us-wrapper');
     elementPosition.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  useLanguage(language: string): void {
+    this.translate.use(language);
   }
 }

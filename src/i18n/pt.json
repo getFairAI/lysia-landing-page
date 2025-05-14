@@ -1,0 +1,28 @@
+{
+  "Contact Us": "Contacte-nos",
+  "Watch the quick video to learn more": "Veja o vídeo rápido para saber mais",
+  "It's time for something better.": "Está na hora de algo melhor.",
+  "Digitalize": "Digitalize",
+  "your business": "o seu negócio",
+  "without changing": "sem alterar",
+  "the way you work.": "a forma como trabalha.",
+  "Learn More": "Saber Mais",
+  "CARDS": {
+    "CARD1": {
+      "TITLE": "Assistente de Inteligência Comercial",
+      "SUBTITLE": "Feche Mais Negócios, Mais Rápido.",
+      "ITEMS": [
+        "Esteja sempre a par e não deixe escapar nenhuma possibilidade.",
+        "Receba avisos quando for o momento certo para falar com clientes inativos e deixe que se encontrem novas oportunidades de negócio por si, sem complicações."
+      ]
+    },
+    "CARD2": {
+      "TITLE": "Assistente de Conhecimento Especializado",
+      "SUBTITLE": "O conhecimento certo, sempre à mão.",
+      "ITEMS": [
+        "Guarde e partilhe experiência com os seus melhores colaboradores.",
+        "Ajude novos funcionários a aprender mais rápido e assegure que o conhecimento permanece acessível e relevante ao longo do tempo, independentemente de quem esteja na empresa."
+      ]
+    }
+  }
+}

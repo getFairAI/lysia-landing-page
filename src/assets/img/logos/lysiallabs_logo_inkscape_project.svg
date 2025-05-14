@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="364.16"
+   height="74.239998"
+   viewBox="0 0 364.16 74.239998"
+   sodipodi:docname="lysiallabs_logo_transp.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
+    <inkscape:page
+       x="0"
+       y="0"
+       width="364.16"
+       height="74.239998"
+       id="page2"
+       margin="0"
+       bleed="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs1" />
+  <g
+     id="g1">
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:96px;font-family:Satoshi;-inkscape-font-specification:'Satoshi Bold';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke-width:3.677;stroke-linejoin:bevel;stroke-miterlimit:20"
+       x="13.91887"
+       y="62.634911"
+       id="text276778"><tspan
+         id="tspan276778"
+         x="13.91887"
+         y="62.634911"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:96px;font-family:Lollipoptron;-inkscape-font-specification:Lollipoptron;fill:#000000;fill-opacity:1">LYSIA</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:Lollipoptron;-inkscape-font-specification:Lollipoptron;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#2a2a2a;fill-opacity:1;stroke-width:3.677;stroke-linejoin:bevel;stroke-miterlimit:20"
+       x="-63.041637"
+       y="344.41965"
+       id="text276779"
+       transform="rotate(-90)"><tspan
+         id="tspan276779"
+         x="-63.041637"
+         y="344.41965"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:40px;font-family:'Darty Zhedant';-inkscape-font-specification:'Darty Zhedant';fill:#3aaaaa;fill-opacity:1">labs</tspan></text>
+  </g>
+</svg>

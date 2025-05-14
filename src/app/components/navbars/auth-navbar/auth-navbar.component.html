@@ -1,59 +1,58 @@
-<nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
-  <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-    <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
-      <!-- <a [routerLink]="['/']" class="text-2xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"> LYSIA Labs </a> -->
-      <div class="logo-img-wrapper">
-        <img src="./assets/img/logos/lysiallabs_logo_transp.png" alt="LYSIA Labs Logo" class="logo-img" [routerLink]="['/']" />
+<div class="fixed top-0 z-50 w-full">
+  <nav class="w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
+    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
+      <div class="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
+        <!-- <a [routerLink]="['/']" class="text-2xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"> LYSIA Labs </a> -->
+        <div class="logo-img-wrapper">
+          <img src="./assets/img/logos/lysiallabs_logo_transp_greyed.svg" alt="LYSIA Labs Logo" class="logo-img" [routerLink]="['/']" />
+        </div>
+        <button
+          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+          type="button"
+          (click)="setNavbarOpen()">
+          <i class="text-black fas fa-bars"></i>
+        </button>
       </div>
-      <button
-        class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
-        type="button"
-        (click)="setNavbarOpen()">
-        <i class="text-white fas fa-bars"></i>
-      </button>
+      <div class="md:flex flex-grow items-center bg-white md:bg-opacity-0 md:shadow-none" [ngClass]="{ hidden: !navbarOpen, 'block rounded shadow-lg': navbarOpen }" id="example-navbar-warning">
+        <ul class="flex flex-col gap-2 md:flex-row list-none md:ml-auto">
+          <li class="flex items-center">
+            <div
+              class="text-slate-600 py-2 px-4 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full cursor-pointer"
+              (click)="contactUsScrollToDiv()"
+              >{{ 'Contact Us' | translate }}</div
+            >
+          </li>
+
+          <li class="flex items-center">
+            <a class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full" href="" target="_blank">
+              <i class="fab fa-x-twitter text-lg leading-lg"></i>
+            </a>
+          </li>
+
+          <li class="flex items-center">
+            <a class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full" href="" target="_blank">
+              <i class="fab fa-github text-lg leading-lg"></i>
+            </a>
+          </li>
+
+          <li class="flex items-center">
+            <div
+              class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full cursor-pointer"
+              (click)="useLanguage('en')"
+              matTooltip="Access the english version LYSIA Labs"
+              >EN</div
+            >
+          </li>
+          <li class="flex items-center">
+            <div
+              class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full cursor-pointer"
+              (click)="useLanguage('pt')"
+              matTooltip="Consultar a versão portuguesa do LYSIA Labs"
+              >PT</div
+            >
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="lg:flex flex-grow items-center bg-white lg:bg-opacity-0 lg:shadow-none" [ngClass]="{ hidden: !navbarOpen, 'block rounded shadow-lg': navbarOpen }" id="example-navbar-warning">
-      <!-- <ul class="flex flex-col lg:flex-row list-none mr-auto">
-        <li class="flex items-center">
-          <a
-            class="lg:text-white lg:hover:text-blueGray-200 text-blueGray-700 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-            href="https://www.creative-tim.com/learning-lab/tailwind/angular/overview/notus?ref=na-auth-navbar">
-            <i class="lg:text-blueGray-200 text-blueGray-400 far fa-file-alt text-lg leading-lg mr-2"></i>
-            Docs
-          </a>
-        </li>
-      </ul> -->
-      <ul class="flex flex-col gap-2 lg:flex-row list-none lg:ml-auto">
-        <li class="flex items-center">
-          <div
-            class="text-slate-600 py-2 px-4 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full cursor-pointer"
-            (click)="contactUsScrollToDiv()"
-            >Contact Us</div
-          >
-        </li>
-
-        <li class="flex items-center">
-          <a class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full" href="" target="_blank">
-            <i class="fab fa-x-twitter text-lg leading-lg"></i>
-            <span class="lg:hidden inline-block ml-2">Tweet</span>
-          </a>
-        </li>
-
-        <li class="flex items-center">
-          <a class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full" href="" target="_blank">
-            <i class="fab fa-github text-lg leading-lg"></i>
-            <span class="lg:hidden inline-block ml-2">Star</span>
-          </a>
-        </li>
-
-        <!-- <li class="flex items-center">
-          <button
-            class="bg-white text-blueGray-700 active:bg-blueGray-50 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
-            type="button">
-            <i class="fas fa-arrow-alt-circle-down"></i> Download
-          </button>
-        </li> -->
-      </ul>
-    </div>
-  </div>
-</nav>
+  </nav>
+</div>

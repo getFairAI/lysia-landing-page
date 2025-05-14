@@ -49,7 +49,16 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UserDropdownComponent } from './components/dropdowns/user-dropdown/user-dropdown.component';
 import { CalendlyWidgetComponent } from './components/calendly-widget/calendly-widget.component';
 
-import { CdkDrag } from '@angular/cdk/drag-drop';
+import { DragScrollComponent, DragScrollItemDirective } from 'ngx-drag-scroll';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MaterialModule } from './shared/material.module';
+import { SafeHtmlPipe } from 'src/pipes/safeHtml.pipe';
+import { YouTubePlayer } from '@angular/youtube-player';
+
+// import ngx-translate and the http loader
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -88,9 +97,30 @@ import { CdkDrag } from '@angular/cdk/drag-drop';
     LandingComponent,
     ProfileComponent,
     CalendlyWidgetComponent,
+    SafeHtmlPipe,
   ],
-  imports: [BrowserModule, AppRoutingModule, CdkDrag],
-  providers: [],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    DragScrollComponent,
+    DragScrollItemDirective,
+    MaterialModule,
+    YouTubePlayer,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ],
+  providers: [provideAnimationsAsync(), provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
+
+// required for AOT compilation
+export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(http, './i18n/', '.json');
+}
