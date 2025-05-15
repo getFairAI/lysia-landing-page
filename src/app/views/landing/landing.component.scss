@@ -152,7 +152,7 @@
     max-width: 500px;
     z-index: 0;
     opacity: 0;
-    animation: 1.2s fadeIn 2.5s forwards;
+    animation: 1s fadeIn 2s forwards;
   }
 
   .svg-animation {
@@ -164,20 +164,20 @@
     transform: translateX(-50%);
     z-index: 1;
     opacity: 1;
-    animation: 1.2s fadeOut 3s forwards;
+    animation: 1s fadeOut 3s forwards;
 
     .logo-path-1 {
       // animate logo
       stroke-dasharray: 1397;
       stroke-dashoffset: 1397;
-      animation: dashAnimation1 6s linear 0.1s forwards !important;
+      animation: dashAnimation1 4s linear 0.1s forwards !important;
     }
 
     .logo-path-2 {
       // animate logo
       stroke-dasharray: 387;
       stroke-dashoffset: 387;
-      animation: dashAnimation2 6s linear 0.1s forwards !important;
+      animation: dashAnimation2 5s linear 1s forwards !important;
     }
   }
 }
