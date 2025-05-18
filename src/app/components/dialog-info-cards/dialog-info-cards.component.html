@@ -1,0 +1,30 @@
+<!-- <h2 mat-dialog-title>Title</h2>
+<mat-dialog-content class="mat-typography"> sdfasdf </mat-dialog-content>
+<mat-dialog-actions>
+  <button cdkFocusInitial class="button-lysia primary-color" (click)="onNoClick()">Close</button>
+</mat-dialog-actions> -->
+
+<div class="dialog-card-content">
+  <div class="card-content-left">
+    <div class="card-title">{{ 'CARDS.CARD1.TITLE' | translate }}</div>
+    <div class="card-subtitle">{{ 'CARDS.CARD1.SUBTITLE' | translate }}</div>
+    <div class="card-subtitle"></div>
+    <div class="card-description">
+      <div class="card-pills">
+        <div class="card-pill" *ngFor="let item of 'CARDS.CARD1.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="card-content-right"><img src="./assets/img/landing-page-cards/preview.png" /></div> -->
+  <div class="card-content-right">
+    <div class="video-wrapper">
+      <youtube-player [videoId]="videoCardsUrls.card1" width="100%" height="100%"></youtube-player>
+      <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
+    </div>
+  </div>
+
+  <div class="end-buttons">
+    <button cdkFocusInitial class="button-lysia outlined-secondary-color" (click)="onNoClick()">Close</button>
+  </div>
+</div>

@@ -15,6 +15,7 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LandingComponent } from './views/landing/landing.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { DialogInfoCardsComponent } from './components/dialog-info-cards/dialog-info-cards.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
     AuthNavbarComponent,
     FooterComponent,
     LandingComponent,
+    DialogInfoCardsComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,

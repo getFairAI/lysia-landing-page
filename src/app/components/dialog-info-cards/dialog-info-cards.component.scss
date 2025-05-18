@@ -1,0 +1,95 @@
+.dialog-card-content {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  gap: 20px;
+
+  .card-content-left {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
+
+    .card-title {
+      background-color: rgb(70, 70, 70);
+      border-radius: 40px;
+      padding: 5px 25px;
+      font-weight: 600;
+      font-size: 24px;
+      color: white;
+      width: fit-content;
+    }
+
+    .card-subtitle {
+      margin-top: 20px;
+      padding: 5px 20px;
+      font-weight: 600;
+      font-size: 22px;
+    }
+
+    .card-description {
+      margin-top: 10px;
+      font-weight: 600;
+      font-size: 18px;
+
+      .card-pills {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .card-pill {
+          padding: 6px 18px;
+          display: flex;
+          gap: 8px;
+
+          mat-icon {
+            flex: 0 0 fit-content;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+  }
+
+  .card-content-right {
+    flex: 1 1 300px;
+    display: flex;
+    justify-content: flex-end;
+
+    img {
+      border-radius: 20px;
+      object-fit: cover;
+      border: 6px solid white;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .video-wrapper {
+      background-color: white;
+      text-align: center;
+      font-weight: 600;
+      font-size: 90%;
+      width: 100%;
+      max-width: 640px;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 6px solid white;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+
+      youtube-player {
+        border-radius: 20px;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .end-buttons {
+    flex: 1 1 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}

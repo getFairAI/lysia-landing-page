@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
+import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
 
 @Component({
   selector: 'app-landing',
@@ -28,7 +30,7 @@ export class LandingComponent implements OnInit {
     message: new FormControl('', [Validators.required, Validators.maxLength(4000)]),
   });
 
-  constructor(private translateService: TranslateService) {}
+  constructor(private translateService: TranslateService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
     // this event fires at the first page open so it will bring the default language files on page open
@@ -63,11 +65,11 @@ export class LandingComponent implements OnInit {
   }
 
   scrollDownLearnMore() {
-    let cardsSection = document.getElementById('cards-section');
+    let cardsSection = document.getElementById('top-info-cards-section');
     cardsSection.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
-      inline: 'center',
+      inline: 'start',
     });
   }
 
@@ -78,5 +80,13 @@ export class LandingComponent implements OnInit {
   submitContactForm() {
     if (this.formGroupContactUs.valid) {
     }
+  }
+
+  clickInfoCardOpenDialog(infoCardId: string) {
+    this.dialog.open(DialogInfoCardsComponent, {
+      data: {
+        infoCardId: infoCardId,
+      },
+    });
   }
 }

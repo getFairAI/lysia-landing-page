@@ -40,6 +40,17 @@ body {
   }
 }
 
+@keyframes fadeInSlideUpZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
 @keyframes fadeInSlideRight {
   0% {
     opacity: 0;
@@ -227,6 +238,7 @@ body {
 .button-lysia {
   padding: 6px 15px;
   border-radius: 25px;
+  font-size: 16px;
   font-weight: 600;
   display: flex;
   justify-content: center;
@@ -283,4 +295,16 @@ body {
 
 .primary-text-color {
   color: #3aaaaa !important;
+}
+
+.cdk-overlay-backdrop.cdk-overlay-backdrop-showing {
+  backdrop-filter: blur(10px);
+}
+
+.mat-mdc-dialog-panel {
+  border-radius: 20px;
+  overflow: hidden;
+  animation: 0.4s fadeInSlideUpZoomIn ease forwards !important;
+  width: 100vw;
+  max-width: 1400px;
 }

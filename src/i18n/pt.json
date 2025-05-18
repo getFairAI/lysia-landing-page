@@ -31,12 +31,12 @@
     },
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
-        "TITLE": "Vamos debater ideias.",
+        "TITLE": "Vamos debater ideias?",
         "SUBTITLE": "Escolha um horário conveniente para si (scroll para baixo)"
       },
       "CARD2": {
-        "TITLE": "Ainda não preparado? Envie-nos uma mensagem.",
-        "SUBTITLE": "Iremos responder rapidamente, dentro de umas horas."
+        "TITLE": "Se preferir, envie-nos uma mensagem.",
+        "SUBTITLE": "Normalmente, respondemos dentro de algumas horas."
       },
       "CONTACT_FORM_INPUTS": {
         "FULLNAME": "NOME COMPLETO",

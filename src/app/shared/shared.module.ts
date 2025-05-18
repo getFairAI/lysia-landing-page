@@ -8,11 +8,16 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { DragScrollComponent, DragScrollItemDirective } from 'ngx-drag-scroll';
+import { MatDialog } from '@angular/material/dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 @NgModule({
   declarations: [CalendlyWidgetComponent, SafeHtmlPipe],
-  imports: [MaterialModule, YouTubePlayer, DragScrollComponent, DragScrollItemDirective],
-  providers: [provideAnimationsAsync()],
-  exports: [MaterialModule, YouTubePlayer, CalendlyWidgetComponent, SafeHtmlPipe, DragScrollComponent, DragScrollItemDirective],
+  imports: [MaterialModule, YouTubePlayer, DragScrollComponent, DragScrollItemDirective, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
+  providers: [provideAnimationsAsync(), MatDialog],
+  exports: [MaterialModule, YouTubePlayer, CalendlyWidgetComponent, SafeHtmlPipe, DragScrollComponent, DragScrollItemDirective, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule],
 })
 export class SharedModule {}
