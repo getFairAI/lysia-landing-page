@@ -306,5 +306,7 @@ body {
   overflow: hidden;
   animation: 0.4s fadeInSlideUpZoomIn ease forwards !important;
   width: 100vw;
-  max-width: 1400px;
+  max-height: 90vh !important;
+  overflow-y: auto !important;
+  max-width: 1400px !important;
 }

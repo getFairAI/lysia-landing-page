@@ -5,26 +5,62 @@
 </mat-dialog-actions> -->
 
 <div class="dialog-card-content">
-  <div class="card-content-left">
-    <div class="card-title">{{ 'CARDS.CARD1.TITLE' | translate }}</div>
-    <div class="card-subtitle">{{ 'CARDS.CARD1.SUBTITLE' | translate }}</div>
-    <div class="card-subtitle"></div>
-    <div class="card-description">
-      <div class="card-pills">
-        <div class="card-pill" *ngFor="let item of 'CARDS.CARD1.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
-      </div>
-    </div>
-  </div>
+  <div class="card-section" *ngFor="let card of currentCardDataFromTranslate; index as iCard">
+    <!-- if card index is even (mod% by 2 equals zero) then have the order be the other way around -->
 
-  <!-- <div class="card-content-right"><img src="./assets/img/landing-page-cards/preview.png" /></div> -->
-  <div class="card-content-right">
-    <div class="video-wrapper">
-      <youtube-player [videoId]="videoCardsUrls.card1" width="100%" height="100%"></youtube-player>
-      <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
-    </div>
+    <!-- is even -->
+    <ng-container *ngIf="iCard % 2 !== 0">
+      <div class="card-content-right inverted" [ngClass]="{ 'image-card': card?.CARD_IMAGE_LOCAL_PATH }">
+        <img [src]="card.CARD_IMAGE_LOCAL_PATH" *ngIf="card?.CARD_IMAGE_LOCAL_PATH" />
+        <div class="video-wrapper" *ngIf="card?.VIDEO_URL">
+          <youtube-player [videoId]="card.VIDEO_URL" width="100%" [height]="310"></youtube-player>
+          <p class="py-1">{{ 'Watch the quick video to learn more' }}</p>
+        </div>
+      </div>
+
+      <div class="card-content-left">
+        <div class="card-title">{{ card.TITLE }}</div>
+        <div class="card-subtitle">{{ card.SUBTITLE }}</div>
+        <div class="card-description">
+          <div class="description-text" *ngIf="card?.DESCRIPTION_TEXT">{{ card.DESCRIPTION_TEXT }}</div>
+
+          <div class="card-pills" *ngIf="card?.ITEMS_PILLS?.length > 0">
+            <div class="card-pill" *ngFor="let item of card.ITEMS_PILLS"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card-content-right"><img src="./assets/img/landing-page-cards/preview.png" /></div> -->
+    </ng-container>
+
+    <!-- is odd -->
+    <ng-container *ngIf="iCard % 2 === 0">
+      <div class="card-content-left">
+        <div class="card-title">{{ card.TITLE }}</div>
+        <div class="card-subtitle">{{ card.SUBTITLE }}</div>
+        <div class="card-description">
+          <div class="description-text" *ngIf="card?.DESCRIPTION_TEXT">{{ card.DESCRIPTION_TEXT }}</div>
+
+          <div class="card-pills" *ngIf="card?.ITEMS_PILLS?.length > 0">
+            <div class="card-pill" *ngFor="let item of card.ITEMS_PILLS"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="card-content-right"><img src="./assets/img/landing-page-cards/preview.png" /></div> -->
+
+      <div class="card-content-right" [ngClass]="{ 'image-card': card?.CARD_IMAGE_LOCAL_PATH }">
+        <img [src]="card.CARD_IMAGE_LOCAL_PATH" *ngIf="card?.CARD_IMAGE_LOCAL_PATH" />
+        <div class="video-wrapper" *ngIf="card?.VIDEO_URL">
+          <youtube-player [videoId]="card.VIDEO_URL" width="100%" [height]="310"></youtube-player>
+          <p class="py-1">{{ 'Watch the quick video to learn more' }}</p>
+        </div>
+      </div>
+    </ng-container>
   </div>
 
   <div class="end-buttons">
-    <button cdkFocusInitial class="button-lysia outlined-secondary-color" (click)="onNoClick()">Close</button>
+    <!-- cdkFocusInitial -->
+    <button class="button-lysia primary-color" (click)="onNoClick()"><mat-icon>close</mat-icon></button>
   </div>
 </div>

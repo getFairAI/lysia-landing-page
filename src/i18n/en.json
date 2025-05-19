@@ -1,6 +1,24 @@
 {
   "TEAM_DESCRIPTION1": "We're a group of AI, design, and technology specialists who love solving big challenges.",
   "TEAM_DESCRIPTION2": "With worldwide experience in large-scale projects, we build smart and scalable solutions that fit seamlessly into your business.",
+  "KNOWMORE_CARDS": {
+    "CARD1": {
+      "TITLE": "Act before the opportunity slips away.",
+      "DESCRIPTION": "Stop wasting time on manual sales reports."
+    },
+    "CARD2": {
+      "TITLE": "Shared knowledge.\nSmarter decisions.",
+      "DESCRIPTION": "All your company's knowledge, right when you need it."
+    },
+    "CARD3": {
+      "TITLE": "Professional proposals.",
+      "DESCRIPTION": "Faster quotes using the data you already have."
+    },
+    "CARD4": {
+      "TITLE": "Fast diagnostics.\nEven remotely.",
+      "DESCRIPTION": "Take the guesswork out of maintenance."
+    }
+  },
   "CONTACT_SECTION": {
     "SECTION_TITLE": "AI that seamlessly adapts to you.",
     "SECTION_SUBTITLE": "Digitize and automate easily. Keep what works and improve what matters.",
@@ -39,18 +57,42 @@
   },
   "CARDS": {
     "CARD1": {
-      "TITLE": "Commercial Intelligence Assistant",
-      "SUBTITLE": "Close More Deals, Faster.",
-      "VIDEO_URL": "5yfsQKWMG_8",
-      "ITEMS": ["Stay informed and never miss an opportunity.", "Get alerts when it's the right time to reach out to inactive clients.", "And let the assistant find new leads for you — no hassle."]
+      "INNER_CARDS": [
+        {
+          "TITLE": "Knowledge is just one question away.",
+          "SUBTITLE": "No more relying on who remembers what.",
+          "DESCRIPTION_TEXT": "Too much time is lost searching for documents or waiting for the right person to explain what was done before.\n\nThis solution changes that.\n\nAsk a question and instantly access relevant information from past reports, records, or experiences. Valuable know-how stays available to everyone, exactly when it's needed.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
+        },
+        {
+          "TITLE": "Commercial Intelligence Assistant",
+          "SUBTITLE": "Close More Deals, Faster.",
+          "VIDEO_URL": "5yfsQKWMG_8",
+          "ITEMS_PILLS": [
+            "Stay informed and never miss an opportunity.",
+            "Get alerts when it's the right time to reach out to inactive clients.",
+            "And let the assistant find new leads for you — no hassle."
+          ]
+        },
+        {
+          "TITLE": "All your company's knowledge.",
+          "SUBTITLE": "The answer might already exist inside your organization.",
+          "DESCRIPTION_TEXT": "Your team's knowledge should not disappear when someone leaves. Give everyone fast access to your organization’s experience to make better decisions, solve problems, and learn from what worked before.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card2.jpeg"
+        }
+      ]
     },
     "CARD2": {
-      "TITLE": "Specialized Knowledge Assistant",
-      "SUBTITLE": "The Right Knowledge, Always at Hand.",
-      "VIDEO_URL": "fiX02g0uoAg",
-      "ITEMS": [
-        "Capture and share the expertise of your top team members.",
-        "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
+      "INNER_CARDS": [
+        {
+          "TITLE": "Specialized Knowledge Assistant",
+          "SUBTITLE": "The Right Knowledge, Always at Hand.",
+          "VIDEO_URL": "fiX02g0uoAg",
+          "ITEMS_PILLS": [
+            "Capture and share the expertise of your top team members.",
+            "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
+          ]
+        }
       ]
     },
     "CARD3": {
