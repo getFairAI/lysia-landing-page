@@ -305,8 +305,8 @@ body {
   border-radius: 20px;
   overflow: hidden;
   animation: 0.4s fadeInSlideUpZoomIn ease forwards !important;
-  width: 100vw;
-  max-height: 90vh !important;
   overflow-y: auto !important;
+  width: 90vw !important;
   max-width: 1400px !important;
+  max-height: 95vh !important;
 }
