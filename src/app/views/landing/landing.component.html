@@ -68,6 +68,12 @@
         </div>
       </div>
 
+      <div class="sponsors-wrapper">
+        <div class="sponsors-div">
+          <img src="" alt="" />
+        </div>
+      </div>
+
       <div class="mt-20 flex justify-center p-6 animate-slide-down wait600ms">
         <button type="button" class="w-fit button-lysia primary-color bigger-button" (click)="scrollDownLearnMore()"> {{ 'Learn More' | translate }} <mat-icon>keyboard_arrow_down</mat-icon></button>
       </div>
@@ -77,13 +83,10 @@
   <section id="top-info-cards-section" class="top-info-cards-wrapper">
     <div class="w-full flex justify-center px-6">
       <div class="flex flex-col items-center justify-center w-full max-w-[800px]">
-        <div class="flex flex-nowrap gap-4 items-center justify-center w-full">
-          <div class="inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white mb-2">
-            <i class="fas fa-list-check text-2xl text-[#3aaaaa]"></i>
-          </div>
-          <h3 class="text-2xl mb-2 font-semibold leading-normal"> What We Do </h3>
+        <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
+          <h3 class="text-2xl font-semibold">What We Do</h3>
         </div>
-        <div class="font-medium text-lg text-center mt-4"
+        <div class="font-medium text-lg text-center mt-6"
           >We deliver tailored AI solutions that fit your business. <br />
           Our team analyzes your workflow and context to design personalized tools, enhancing operations without disruption.
           <br />
@@ -167,183 +170,14 @@
     </div>
   </section>
 
-  <!-- <section id="cards-section" class="mt-40">
-    <div class="cards-vertical-wrapper">
-      <div class="card">
-        <div class="card-content-left">
-          <div class="card-title">{{ 'CARDS.CARD1.TITLE' | translate }}</div>
-          <div class="card-subtitle">{{ 'CARDS.CARD1.SUBTITLE' | translate }}</div>
-          <div class="card-subtitle"></div>
-          <div class="card-description">
-            <div class="card-pills">
-              <div class="card-pill" *ngFor="let item of 'CARDS.CARD1.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-content-right">
-          <div class="video-wrapper">
-            <youtube-player [videoId]="videoCardsUrls.card1" width="100%" height="100%"></youtube-player>
-            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content-left">
-          <div class="card-title">{{ 'CARDS.CARD2.TITLE' | translate }}</div>
-          <div class="card-subtitle">{{ 'CARDS.CARD2.SUBTITLE' | translate }}</div>
-          <div class="card-description">
-            <div class="card-pills">
-              <div class="card-pill" *ngFor="let item of 'CARDS.CARD2.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-content-right">
-          <div class="video-wrapper">
-            <youtube-player [videoId]="videoCardsUrls.card2" width="100%" height="100%"></youtube-player>
-            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content-left">
-          <div class="card-title">{{ 'CARDS.CARD3.TITLE' | translate }}</div>
-          <div class="card-subtitle">{{ 'CARDS.CARD3.SUBTITLE' | translate }}</div>
-          <div class="card-description">
-            <div class="card-pills">
-              <div class="card-pill" *ngFor="let item of 'CARDS.CARD3.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-content-right">
-          <div class="video-wrapper">
-            <youtube-player [videoId]="videoCardsUrls.card3" width="100%" height="100%"></youtube-player>
-            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content-left">
-          <div class="card-title">{{ 'CARDS.CARD4.TITLE' | translate }}</div>
-          <div class="card-subtitle">{{ 'CARDS.CARD4.SUBTITLE' | translate }}</div>
-          <div class="card-description">
-            <div class="card-pills">
-              <div class="card-pill" *ngFor="let item of 'CARDS.CARD4.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-content-right">
-          <div class="video-wrapper">
-            <youtube-player [videoId]="videoCardsUrls.card4" width="100%" height="100%"></youtube-player>
-            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-content-left">
-          <div class="card-title">{{ 'CARDS.CARD5.TITLE' | translate }}</div>
-          <div class="card-subtitle">{{ 'CARDS.CARD5.SUBTITLE' | translate }}</div>
-          <div class="card-description">
-            <div class="card-pills">
-              <div class="card-pill" *ngFor="let item of 'CARDS.CARD5.ITEMS' | translate"><mat-icon class="primary-text-color">check_circle</mat-icon> {{ item }}</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-content-right">
-          <div class="video-wrapper">
-            <youtube-player [videoId]="videoCardsUrls.card5" width="100%" height="100%"></youtube-player>
-            <p class="py-1">{{ 'Watch the quick video to learn more' | translate }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <!-- <section class="relative mt-12">
-    <div class="w-[100vw] mt-20 container-scroll-arrows">
-      <div class="scroll-arrows">
-        <div class="arrow-left" (click)="scrollLeft()">
-          <i class="fas fa-arrow-left"></i>
-        </div>
-        <div class="arrow-right" (click)="scrollRight()">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-      </div>
-
-      <div class="flex flex-nowrap pl-[10%] pr-[5%] xl:pl-[30%] xl:pr-[30%] py-5 gap-8 overflow-y-auto relative scroll-smooth" id="scrollable-div">
-        <div class="glasspane-card strong-bg items-center flex flex-wrap md:flex-nowrap w-[95%] md:w-[900px] flex-shrink-0 flex-grow-0 gap-4" id="card-scroll-reference">
-          <div class="w-full flex justify-center">
-            <img
-              alt="..."
-              class="w-full max-w-full md:max-w-[300px] max-h-[400px] md:max-h-full object-cover rounded-lg shadow-lg"
-              src="https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80" />
-          </div>
-          <div class="w-full pl-4 h-full pt-6">
-            <div class="flex flex-col gap-1">
-              <div class="w-full flex flex-nowrap items-center gap-4">
-                <div class="inline-flex items-center justify-center w-12 h-12 flex-shrink-0 shadow-lg rounded-full bg-white">
-                  <i class="fas fa-book text-xl text-[#3aaaaa]"></i>
-                </div>
-                <h3 class="text-lg md:text-2xl font-semibold">Intelligent Document Management</h3>
-              </div>
-
-              <p class="mt-6 px-2 md:text-lg leading-relaxed text-slate-600">
-                Eliminate manual document handling with AI-driven automation. Extract insights, organize data, and connect with your existing tools effortlessly.
-              </p>
-
-              <div class="flex flex-col mt-6 gap-3">
-                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
-                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
-                    <i class="fas fa-check text-white"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-slate-600"> AI-powered document processing and organization.</h4>
-                  </div>
-                </div>
-                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
-                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
-                    <i class="fas fa-check text-white"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-slate-600">Seamless integration with your current workflows.</h4>
-                  </div>
-                </div>
-                <div class="flex items-center rounded-xl px-3 py-2 white-pills-bg">
-                  <div class="inline-flex items-center justify-center w-8 h-8 flex-shrink-0 shadow-lg rounded-full bg-slate-600 mr-3">
-                    <i class="fas fa-check text-white"></i>
-                  </div>
-                  <div>
-                    <h4 class="text-slate-600">Faster access to critical business information.</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-  </section> -->
-
   <section class="mt-40 pt-14 pb-28 gradient-white-bg">
     <div class="container mx-auto px-4 text-slate-700">
       <div class="flex flex-wrap justify-center text-center mb-24">
         <div class="w-full max-w-[800px] flex flex-col items-center px-4">
-          <div class="flex items-center gap-4">
-            <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-12 h-12">
-              <i class="text-xl text-[#3aaaaa] fas fa-users"></i>
-            </div>
+          <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
             <h2 class="text-2xl font-semibold">{{ 'Meet the team' | translate }}</h2>
           </div>
-          <p class="text-lg m-4 text-slate-600"
+          <p class="text-lg mt-5 font-medium"
             >{{ 'TEAM_DESCRIPTION1' | translate }} <br />
             {{ 'TEAM_DESCRIPTION2' | translate }}</p
           >
@@ -440,17 +274,14 @@
     </div>
   </section>
 
-  <section class="mt-40">
+  <section class="mt-10">
     <div class="container mx-auto px-4 lg:pt-24" id="contact-us-wrapper">
-      <div class="flex flex-wrap text-center justify-center -mt-40">
-        <div class="w-full">
-          <div class="flex gap-4 items-center justify-center text-slate-700">
-            <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
-              <i class="text-xl text-[#3aaaaa] fas fa-rocket"></i>
-            </div>
-            <h2 class="text-3xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
+      <div class="flex flex-wrap text-center justify-center">
+        <div class="w-full flex flex-col justify-center items-center">
+          <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
+            <h2 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
           </div>
-          <p class="text-lg leading-relaxed mt-4 px-4">{{ 'CONTACT_SECTION.SECTION_SUBTITLE' | translate }}</p>
+          <p class="text-lg leading-relaxed mt-4 px-4 font-medium">{{ 'CONTACT_SECTION.SECTION_SUBTITLE' | translate }}</p>
         </div>
       </div>
       <div class="flex flex-wrap mt-20 justify-center">
@@ -484,7 +315,7 @@
       <div class="w-full max-w-[600px]">
         <div class="shadow-md glasspane-card strong-bg h-[800px] text-slate-600">
           <h4 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.TITLE' | translate }}</h4>
-          <p class="leading-relaxed mt-1 mb-4">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.SUBTITLE' | translate }} </p>
+          <p class="leading-relaxed mt-1 mb-6">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.SUBTITLE' | translate }} </p>
 
           <div class="w-full h-[650px] rounded-xl overflow-hidden shadow-lg">
             <app-calendly-widget></app-calendly-widget>
@@ -495,8 +326,8 @@
       <div class="w-full max-w-[600px]">
         <div class="w-full flex flex-col shadow-md glasspane-card strong-bg h-[580px] text-slate-600" [formGroup]="formGroupContactUs">
           <h4 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.TITLE' | translate }}</h4>
-          <p class="leading-relaxed mt-1 mb-4">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.SUBTITLE' | translate }}</p>
-          <div class="relative w-full mb-3 mt-8">
+          <p class="leading-relaxed mt-1">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.SUBTITLE' | translate }}</p>
+          <div class="relative w-full mb-3 mt-4">
             <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.FULLNAME' | translate }} </label>
             <input
               formControlName="fullName"
@@ -535,12 +366,10 @@
   <section class="mt-40 mb-48 technologies-section gradient-white-bg">
     <div class="w-full flex justify-center px-6">
       <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
-        <div class="flex flex-nowrap gap-4 items-center justify-center w-full">
-          <div class="inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-white mb-2">
-            <i class="fas fa-microchip text-2xl text-[#3aaaaa]"></i>
-          </div>
-          <h3 class="text-2xl mb-2 font-semibold leading-normal text-slate-700"> {{ 'Our tech stack' | translate }} </h3>
+        <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
+          <h3 class="text-2xl font-semibold"> {{ 'TECH_STACK.TITLE' | translate }} </h3>
         </div>
+        <p class="text-lg leading-relaxed mt-4 px-4 font-medium">{{ 'TECH_STACK.DESCRIPTION' | translate }}</p>
       </div>
     </div>
     <div class="flex justify-center px-8 items-center gap-0 lg:gap-4 flex-wrap">

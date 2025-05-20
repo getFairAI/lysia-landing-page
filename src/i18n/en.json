@@ -189,6 +189,10 @@
       ]
     }
   },
+  "TECH_STACK": {
+    "TITLE": "Our Tech Stack",
+    "DESCRIPTION": "Some of our most used technologies and frameworks."
+  },
   "FOOTER": {
     "SLOGAN": "Follow our journey.",
     "SLOGAN_SUBTITLE": "Stay in touch with LYSIA Labs.",

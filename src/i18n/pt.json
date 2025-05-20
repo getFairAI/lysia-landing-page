@@ -1,12 +1,12 @@
 {
   "Contact Us": "Contacte-nos",
   "Watch the quick video to learn more": "Veja o vídeo rápido para saber mais",
-  "It's time for something better.": "Está na hora de algo melhor.",
+  "It's time for something better.": "Revolucione a sua empresa.",
   "Digitalize": "Digitalize",
   "your business": "o seu negócio",
   "without changing": "sem alterar",
-  "Send Message": "Enviar Mensagem",
   "the way you work.": "a forma como trabalha.",
+  "Send Message": "Enviar Mensagem",
   "Learn More": "Saber Mais",
   "Our tech stack": "As nossas tecnologias",
   "Meet the team": "A nossa equipa",
@@ -92,6 +92,10 @@
         "Tudo em segundos, sem depender de relatórios demorados ou análises técnicas."
       ]
     }
+  },
+  "TECH_STACK": {
+    "TITLE": "As Nossas Tecnologias",
+    "DESCRIPTION": "Algumas das nossas mais usadas e amadas technologias e frameworks."
   },
   "FOOTER": {
     "SLOGAN": "Siga a nossa jornada.",
