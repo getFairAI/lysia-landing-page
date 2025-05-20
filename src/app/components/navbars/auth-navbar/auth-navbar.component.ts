@@ -7,14 +7,16 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './auth-navbar.component.html',
 })
 export class AuthNavbarComponent implements OnInit {
-  navbarOpen = false;
+  menuOpen = false;
+
+  menuClosingAnimation = false; // setting to true will trigger the close animation - set it to false after that.
 
   constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {}
 
-  setNavbarOpen() {
-    this.navbarOpen = !this.navbarOpen;
+  openMenu() {
+    this.menuOpen = true;
   }
 
   contactUsScrollToDiv() {
@@ -24,5 +26,23 @@ export class AuthNavbarComponent implements OnInit {
 
   useLanguage(language: string): void {
     this.translate.use(language);
+  }
+
+  closeMenu(openLinkUrl?: string, scrollToContactDiv?: boolean) {
+    // set openLinkUrl to open a link in a new tab after the menu closes
+
+    this.menuClosingAnimation = true; // wait for animation to finish then close it
+    setTimeout(() => {
+      this.menuOpen = false;
+      this.menuClosingAnimation = false;
+
+      if (openLinkUrl) {
+        window.open(openLinkUrl, '_blank');
+      }
+
+      if (scrollToContactDiv) {
+        this.contactUsScrollToDiv();
+      }
+    }, 400);
   }
 }

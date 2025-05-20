@@ -1,4 +1,4 @@
-<div class="fixed top-0 z-50 w-full">
+<div class="w-full">
   <nav class="w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
       <div class="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
@@ -9,12 +9,12 @@
         <button
           class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
           type="button"
-          (click)="setNavbarOpen()">
+          (click)="openMenu()">
           <i class="text-black fas fa-bars"></i>
         </button>
       </div>
-      <div class="md:flex flex-grow items-center bg-white md:bg-opacity-0 md:shadow-none" [ngClass]="{ hidden: !navbarOpen, 'block rounded shadow-lg': navbarOpen }" id="example-navbar-warning">
-        <ul class="flex flex-col gap-2 md:flex-row list-none md:ml-auto">
+      <div class="flex flex-grow items-center bg-transparent">
+        <ul class="hidden md:flex gap-2 flex-row list-none ml-auto">
           <li class="flex items-center">
             <div
               class="text-slate-600 py-2 px-4 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full cursor-pointer"
@@ -32,9 +32,9 @@
           <li class="flex items-center">
             <a
               class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full"
-              href="https://github.com/getFairAI/"
+              href="https://www.linkedin.com/company/getfairai"
               target="_blank">
-              <i class="fab fa-github text-lg leading-lg"></i>
+              <i class="fab fa-linkedin text-lg leading-lg"></i>
             </a>
           </li>
 
@@ -58,4 +58,22 @@
       </div>
     </div>
   </nav>
+</div>
+
+<div class="navbar-menu-popup" *ngIf="menuOpen" [ngClass]="{ 'menu-close-animation': menuClosingAnimation }">
+  <div class="menu-container" [ngClass]="{ 'menu-close-animation': menuClosingAnimation }">
+    <div class="menu-button">
+      <button cdkFocusInitial class="text-xl p-0 m-0" type="button" (click)="closeMenu()">
+        <i class="text-white fas fa-close"></i>
+      </button>
+    </div>
+
+    <div class="menu-logo">
+      <img src="./assets/img/logos/lysiallabs_logo_transp_greyed.svg" alt="LYSIA Logo" />
+    </div>
+
+    <a class="menu-item" (click)="closeMenu(undefined, true)"><i class="fas fa-comment text-xl"></i> {{ 'Contact Us' | translate }}</a>
+    <a class="menu-item" href="https://www.linkedin.com/company/getfairai" target="_blank"><i class="fab fa-x-twitter text-xl"></i> X / Twitter</a>
+    <a class="menu-item" href="https://www.linkedin.com/company/getfairai" target="_blank"><i class="fab fa-linkedin text-xl"></i> LinkedIn</a>
+  </div>
 </div>

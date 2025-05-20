@@ -1,7 +1,7 @@
 @import './assets/styles/import-tailwind.css';
 @import './assets/font-awesome/fontawesome.min.css';
-@import './assets/font-awesome/solid.min.css';
-@import './assets/font-awesome/brands.min.css';
+@import './assets/font-awesome/solid.min.css'; // call it with fas class
+@import './assets/font-awesome/brands.min.css'; // call it with fab class
 
 html,
 body {
@@ -40,14 +40,47 @@ body {
   }
 }
 
-@keyframes fadeInSlideUpZoomIn {
+@keyframes fadeInZoomIn {
   0% {
     opacity: 0;
-    transform: translateY(30px) scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInSlideDownZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.9);
   }
   100% {
     opacity: 1;
     transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fadeInSlideUpZoomIn {
+  0% {
+    opacity: 0;
+    transform: translateY(80px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+}
+
+@keyframes fadeOutSlideUpZoomOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) scale(0.9);
   }
 }
 
