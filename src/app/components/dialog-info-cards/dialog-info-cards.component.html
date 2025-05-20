@@ -5,11 +5,11 @@
 </mat-dialog-actions> -->
 
 <div class="dialog-card-content" id="card-content-div">
-  <div class="card-section" *ngFor="let card of currentCardDataFromTranslate; index as iCard">
+  <div class="card-section" *ngFor="let card of currentCardDataFromTranslate; index as iCard" [ngClass]="{ 'flex-wrap-reverse': (iCard + 1) % 2 === 0 }">
     <!-- if card index is even (mod% by 2 equals zero) then have the order be the other way around -->
 
     <!-- is even -->
-    <ng-container *ngIf="iCard % 2 !== 0">
+    <ng-container *ngIf="(iCard + 1) % 2 === 0">
       <div class="card-content-right inverted" [ngClass]="{ 'image-card': card?.CARD_IMAGE_LOCAL_PATH }">
         <img [src]="card.CARD_IMAGE_LOCAL_PATH" *ngIf="card?.CARD_IMAGE_LOCAL_PATH" />
         <div class="video-wrapper" *ngIf="card?.VIDEO_URL">
@@ -34,7 +34,7 @@
     </ng-container>
 
     <!-- is odd -->
-    <ng-container *ngIf="iCard % 2 === 0">
+    <ng-container *ngIf="(iCard + 1) % 2 !== 0">
       <div class="card-content-left">
         <div class="card-title">{{ card.TITLE }}</div>
         <div class="card-subtitle">{{ card.SUBTITLE }}</div>
