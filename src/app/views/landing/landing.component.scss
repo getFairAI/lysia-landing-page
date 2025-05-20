@@ -180,6 +180,19 @@
 .container-scroll-arrows {
   position: relative;
   width: 100%;
+  max-width: 1600px;
+
+  .scrollable-div {
+    scrollbar-width: none; // Firefox
+    // Hide scrollbar for chromium-based and safari
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    --mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
 
   .scroll-arrows {
     .arrow-left {
