@@ -64,19 +64,44 @@
     "CARD1": {
       "INNER_CARDS": [
         {
-          "TITLE": "Knowledge is just one question away.",
-          "SUBTITLE": "No more relying on who remembers what.",
-          "DESCRIPTION_TEXT": "Too much time is lost searching for documents or waiting for the right person to explain what was done before.\n\nThis solution changes that.\n\nAsk a question and instantly access relevant information from past reports, records, or experiences. Valuable know-how stays available to everyone, exactly when it's needed.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
-        },
-        {
-          "TITLE": "All your company's knowledge.",
+          "TITLE": "All your company's knowledge",
           "SUBTITLE": "The answer might already exist inside your organization.",
           "DESCRIPTION_TEXT": "Your team's knowledge should not disappear when someone leaves.\nGive everyone fast access to your organization's experience to make better decisions, solve problems, and learn from what worked before.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card2.jpeg"
         },
         {
-          "TITLE": "Commercial Intelligence Assistant",
+          "TITLE": "Knowledge is just one question away",
+          "SUBTITLE": "No more relying on who remembers what.",
+          "DESCRIPTION_TEXT": "Too much time is lost searching for documents or waiting for the right person to explain what was done before.\n\nThis solution changes that.\n\nAsk a question and instantly access relevant information from past reports, records, or experiences. Valuable know-how stays available to everyone, exactly when it's needed.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
+        },
+        {
+          "TITLE": "AI Assistant for Expert Knowledge",
+          "SUBTITLE": "The Right Knowledge, Always at Hand.",
+          "VIDEO_URL": "fiX02g0uoAg",
+          "ITEMS_PILLS": [
+            "Capture and share the expertise of your top team members.",
+            "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
+          ]
+        }
+      ]
+    },
+    "CARD2": {
+      "INNER_CARDS": [
+        {
+          "TITLE": "Act before the opportunity slips away",
+          "SUBTITLE": "Spot inactivity before it becomes a lost opportunity.",
+          "DESCRIPTION_TEXT": "Don't let sales opportunities go unnoticed.\n\nIdentify inactive customers, analyze buying patterns and take action based on your own data.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
+        },
+        {
+          "TITLE": "Your pipeline, now crystal clear",
+          "SUBTITLE": "Stop wasting time on manual sales reports.",
+          "DESCRIPTION_TEXT": "Responding to requests quickly and accurately means having the right context.\n\nThis solution lets you review previous quotes, compare pricing by client or market and generate tailored proposals in seconds using your existing templates.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card2.jpeg"
+        },
+        {
+          "TITLE": "AI Assistant for Sales Optimization",
           "SUBTITLE": "Close More Deals, Faster.",
           "VIDEO_URL": "5yfsQKWMG_8",
           "ITEMS_PILLS": [
@@ -87,47 +112,22 @@
         }
       ]
     },
-    "CARD2": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Act before the opportunity slips away.",
-          "SUBTITLE": "Spot inactivity before it becomes a lost opportunity.",
-          "DESCRIPTION_TEXT": "Don't let sales opportunities go unnoticed.\n\nIdentify inactive customers, analyze buying patterns and take action based on your own data.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
-        },
-        {
-          "TITLE": "Your pipeline, now crystal clear.",
-          "SUBTITLE": "Stop wasting time on manual sales reports.",
-          "DESCRIPTION_TEXT": "Responding to requests quickly and accurately means having the right context.\n\nThis solution lets you review previous quotes, compare pricing by client or market and generate tailored proposals in seconds using your existing templates.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card2.jpeg"
-        },
-        {
-          "TITLE": "Specialized Knowledge Assistant",
-          "SUBTITLE": "The Right Knowledge, Always at Hand.",
-          "VIDEO_URL": "fiX02g0uoAg",
-          "ITEMS_PILLS": [
-            "Capture and share the expertise of your top team members.",
-            "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
-          ]
-        }
-      ]
-    },
     "CARD3": {
       "INNER_CARDS": [
         {
-          "TITLE": "Professional proposals. No stress.",
+          "TITLE": "Professional proposals. No stress",
           "SUBTITLE": "Build competitive proposals with confidence.",
           "DESCRIPTION_TEXT": "Quoting doesn't need to be slow or uncertain.\n\nCheck past proposals, compare prices and create consistent quotes based on real data.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
         },
         {
-          "TITLE": "Adjust pricing based on real-world data.",
+          "TITLE": "Adjust pricing based on real-world data",
           "SUBTITLE": "Faster quotes using the data you already have.",
           "DESCRIPTION_TEXT": "Responding to requests quickly and accurately means having the right context.\n\nThis solution lets you review previous quotes, compare pricing by client or market and generate tailored proposals in seconds using your existing templates.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card2.jpeg"
         },
         {
-          "TITLE": "Budget Planning Assistant",
+          "TITLE": "AI Assistant for Budget Planning",
           "SUBTITLE": "Decide Faster, Plan Better, Deliver with Confidence.",
           "VIDEO_URL": "m-bHcaCOoJU",
           "ITEMS_PILLS": [
@@ -140,19 +140,19 @@
     "CARD4": {
       "INNER_CARDS": [
         {
-          "TITLE": "Fast diagnostics. Even remotely.",
+          "TITLE": "Fast diagnostics. Even remotely",
           "SUBTITLE": "Less downtime. More confidence.",
           "DESCRIPTION_TEXT": "When something fails, every second counts.\n\nDiagnose faster using past cases and get automatic recommendations to guide the next steps.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
         },
         {
-          "TITLE": "Take the guesswork out of maintenance.",
+          "TITLE": "Take the guesswork out of maintenance",
           "SUBTITLE": "Has it happened before? Find out in seconds.",
           "DESCRIPTION_TEXT": "Technical issues often cause delays because knowledge is scattered or unavailable.\n\nThis solution helps you identify similar past incidents, access test results and act quickly with data-based suggestions. It reduces downtime and supports smarter maintenance.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card2.jpeg"
         },
         {
-          "TITLE": "Smart Maintenance Assistant",
+          "TITLE": "AI Assistant for More Efficient Maintenance",
           "SUBTITLE": "Less Downtime. More Control.",
           "VIDEO_URL": "EUVHxbCVzy8",
           "ITEMS_PILLS": [
@@ -165,19 +165,19 @@
     "CARD5": {
       "INNER_CARDS": [
         {
-          "TITLE": "Operational data. Instantly readable.",
+          "TITLE": "Operational data. Instantly readable",
           "SUBTITLE": "See what's really happening. In real time.",
           "DESCRIPTION_TEXT": "Turn complex data into clear visual insights.\n\nAsk a question and get answers in seconds, without relying on reports or specialists.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card3.avif"
         },
         {
-          "TITLE": "Create powerful visuals in seconds.",
+          "TITLE": "Create powerful visuals in seconds",
           "SUBTITLE": "Answer questions with charts, not reports.",
-          "DESCRIPTION_TEXT": "Understanding what’s really happening across operations should not require technical help.\n\nThis solution makes it easy to ask questions in natural language and receive visual answers from your data, making it easier to act, improve and decide.",
+          "DESCRIPTION_TEXT": "Understanding what's really happening across operations should not require technical help.\n\nThis solution makes it easy to ask questions in natural language and receive visual answers from your data, making it easier to act, improve and decide.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/card2.jpeg"
         },
         {
-          "TITLE": "Intelligent Analysis Assistant",
+          "TITLE": "AI Assistant for Insights with Dynamic Charts",
           "SUBTITLE": "Understand what's happening, without wasting time.",
           "VIDEO_URL": "CBzl82FzhEQ",
           "ITEMS_PILLS": [

@@ -50,7 +50,7 @@
   },
   "CARDS": {
     "CARD1": {
-      "TITLE": "Assistente de Soluções Inteligentes",
+      "TITLE": "Assistente de IA para Otimização de Vendas",
       "SUBTITLE": "Feche Mais Negócios, Mais Rápido.",
       "VIDEO_URL": "SxteyMHuY1c",
       "ITEMS": [
@@ -59,7 +59,7 @@
       ]
     },
     "CARD2": {
-      "TITLE": "Assistente de Conhecimento Especializado",
+      "TITLE": "Assistente de IA para Conhecimento Especializado",
       "SUBTITLE": "O conhecimento certo, sempre à mão.",
       "VIDEO_URL": "jU1CVlUsC-A",
       "ITEMS": [
@@ -68,7 +68,7 @@
       ]
     },
     "CARD3": {
-      "TITLE": "Assistente de Planeamento Orçamental",
+      "TITLE": "Assistente IA para Planeamento de Orçamentos",
       "SUBTITLE": "Decida mais rápido, planeie melhor e garanta as entregas.",
       "VIDEO_URL": "dVWhK3Kos54",
       "ITEMS": [
@@ -77,13 +77,13 @@
       ]
     },
     "CARD4": {
-      "TITLE": "Assistente de Manutenção Inteligente",
+      "TITLE": "Assistente de IA para Manutenção Mais Eficiente",
       "SUBTITLE": "Menos paragens. Mais controlo.",
       "VIDEO_URL": "5vtU03nUvGU",
       "ITEMS": ["Perceba facilmente quando há risco de avarias e como foram resolvidos problemas no passado.", "Ajude a equipa a prevenir falhas e reduzir custos com uma manutenção mais eficiente."]
     },
     "CARD5": {
-      "TITLE": "Assistente de Análise Inteligente",
+      "TITLE": "Assistente de IA para Insights com Gráficos Dinâmicos",
       "SUBTITLE": "Entenda o que se passa, sem perder tempo.",
       "VIDEO_URL": "MTjN3Rnu71s",
       "ITEMS": [
