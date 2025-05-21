@@ -13,8 +13,6 @@
   "TEAM_DESCRIPTION1": "Somos uma equipa especializada em IA, e especialistas em tecnologias que resolvem grandes problemas de forma eficaz e eficiente.",
   "TEAM_DESCRIPTION2": "Com experiência mundial em projetos de larga escala, construímos soluções inteligentes e expansíveis que se integram perfeitamente nos seus projetos.",
   "CONTACT_SECTION": {
-    "SECTION_TITLE": "IA que se adapta a si.",
-    "SECTION_SUBTITLE": "Digitalize e automatize com facilidade. Melhore o que interessa, sem alterar o seu trabalho.",
     "SECTION_CARDS": {
       "CARD1": {
         "TITLE": "Soluções Inteligentes",
@@ -94,8 +92,7 @@
     }
   },
   "TECH_STACK": {
-    "TITLE": "As Nossas Tecnologias",
-    "DESCRIPTION": "Algumas das nossas mais usadas e amadas technologias e frameworks."
+    "TITLE": "As Nossas Tecnologias"
   },
   "FOOTER": {
     "SLOGAN": "Siga a nossa jornada.",

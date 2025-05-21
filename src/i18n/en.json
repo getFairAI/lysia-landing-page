@@ -3,8 +3,6 @@
   "TEAM_DESCRIPTION2": "With worldwide experience in large-scale projects, we build smart and scalable solutions that fit seamlessly into your business.",
 
   "CONTACT_SECTION": {
-    "SECTION_TITLE": "AI that seamlessly adapts to you.",
-    "SECTION_SUBTITLE": "Digitize and automate easily. Keep what works and improve what matters.",
     "SECTION_CARDS": {
       "CARD1": {
         "TITLE": "Smart Solutions",
@@ -190,8 +188,7 @@
     }
   },
   "TECH_STACK": {
-    "TITLE": "Our Tech Stack",
-    "DESCRIPTION": "Some of our most used technologies and frameworks."
+    "TITLE": "Our Tech Stack"
   },
   "FOOTER": {
     "SLOGAN": "Follow our journey.",
