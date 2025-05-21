@@ -47,14 +47,56 @@
       }
     }
   },
+  "WHAT_WE_DO_SECTION": {
+    "TITLE": "Aquilo em que nos focamos",
+    "DESCRIPTION": "Construímos soluções perfeitamente ajustadas ao seu negócio.\nA nossa equipa analisa o workflow e o contexto dos seus projetos para criar ferramentas IA personalizadas, impulsionando produtividade sem disrupções.\n\nEis apenas alguns exemplos do que somos capazes:"
+  },
+  "KNOWMORE_CARDS": {
+    "CARD1": {
+      "TITLE": "Conhecimento partilhado.\nDecisões mais rápidas.",
+      "DESCRIPTION": "Não dependas da memória de alguém."
+    },
+    "CARD2": {
+      "TITLE": "Age antes que a oportunidade desapareça.",
+      "DESCRIPTION": "Não percas mais tempo com análises manuais."
+    },
+    "CARD3": {
+      "TITLE": "Menos suposições.\nDecisões fundamentadas.",
+      "DESCRIPTION": "Faz propostas competitivas com confiança."
+    },
+    "CARD4": {
+      "TITLE": "Diagnóstico rápido.\nMesmo à distância.",
+      "DESCRIPTION": "Deixa a incerteza fora da manutenção."
+    },
+    "CARD5": {
+      "TITLE": "Os teus dados.\nFinalmente úteis.",
+      "DESCRIPTION": "Vê o que está a acontecer, em tempo real."
+    }
+  },
   "CARDS": {
     "CARD1": {
-      "TITLE": "Assistente de IA para Otimização de Vendas",
-      "SUBTITLE": "Feche Mais Negócios, Mais Rápido.",
-      "VIDEO_URL": "SxteyMHuY1c",
-      "ITEMS": [
-        "Esteja sempre a par e não deixe escapar nenhuma possibilidade.",
-        "Receba avisos quando for o momento certo para falar com clientes inativos e deixe que se encontrem novas oportunidades de negócio por si, sem complicações."
+      "INNER_CARDS": [
+        {
+          "TITLE": "Nunca mais dependas da memória de alguém",
+          "SUBTITLE": "A resposta que procuras pode já estar dentro de casa.",
+          "DESCRIPTION_TEXT": "O conhecimento da tua organização não devia desaparecer quando alguém sai.\n\nGarante acesso rápido à experiência da equipa para tomar melhores decisões, resolver problemas e aprender com o passado.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/smart.jpg"
+        },
+        {
+          "TITLE": "Conhecimento partilhado, decisões mais rápidas",
+          "SUBTITLE": "Toda a experiência da organização, onde e quando precisares.",
+          "DESCRIPTION_TEXT": "Sempre que alguém precisa de perceber como algo foi feito ou resolver uma situação, perde-se tempo à procura de documentos ou à espera de quem tem a resposta.\n\nCom esta solução, basta uma pergunta simples para aceder a informação útil guardada em relatórios, registos ou experiências anteriores. O conhecimento fica disponível para todos, em qualquer momento.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/lamp.jpg"
+        },
+        {
+          "TITLE": "Assistente IA para Conhecimento Especializado",
+          "SUBTITLE": "O que a tua equipa já sabe, agora acessível a todos.",
+          "VIDEO_URL": "piJPcQ0PR94",
+          "ITEMS_PILLS": [
+            "Capture and share the expertise of your top team members.",
+            "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
+          ]
+        }
       ]
     },
     "CARD2": {
@@ -93,7 +135,7 @@
     }
   },
   "TECH_STACK": {
-    "TITLE": "As Nossas Tecnologias"
+    "TITLE": "As nossas tecnologias"
   },
   "FOOTER": {
     "SLOGAN": "Siga a nossa jornada.",

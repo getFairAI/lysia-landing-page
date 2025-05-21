@@ -36,6 +36,10 @@
       }
     }
   },
+  "WHAT_WE_DO_SECTION": {
+    "TITLE": "What we stand for",
+    "DESCRIPTION": "We deliver tailored AI solutions that fit your business.\nOur team analyzes your workflow and context to design personalized tools, enhancing operations without disruption.\n\nHere are some examples of what we can achieve:"
+  },
   "KNOWMORE_CARDS": {
     "CARD1": {
       "TITLE": "Shared knowledge.\nSmarter decisions.",
@@ -76,7 +80,7 @@
         {
           "TITLE": "AI Assistant for Expert Knowledge",
           "SUBTITLE": "The Right Knowledge, Always at Hand.",
-          "VIDEO_URL": "fiX02g0uoAg",
+          "VIDEO_URL": "G_adYUG7iw8",
           "ITEMS_PILLS": [
             "Capture and share the expertise of your top team members.",
             "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
@@ -101,7 +105,7 @@
         {
           "TITLE": "AI Assistant for Sales Optimization",
           "SUBTITLE": "Close More Deals, Faster.",
-          "VIDEO_URL": "5yfsQKWMG_8",
+          "VIDEO_URL": "eWv6Y11pP9o",
           "ITEMS_PILLS": [
             "Stay informed and never miss an opportunity.",
             "Get alerts when it's the right time to reach out to inactive clients.",
@@ -127,7 +131,7 @@
         {
           "TITLE": "AI Assistant for Budget Planning",
           "SUBTITLE": "Decide Faster, Plan Better, Deliver with Confidence.",
-          "VIDEO_URL": "m-bHcaCOoJU",
+          "VIDEO_URL": "whp5twgS3z8",
           "ITEMS_PILLS": [
             "Helps you create clearer budgets and plan more effectively.",
             "Simulate scenarios, view real-time data, manage stock levels, and make sure nothing goes wrong with deliveries - all in minutes, not days."
@@ -152,7 +156,7 @@
         {
           "TITLE": "AI Assistant for More Efficient Maintenance",
           "SUBTITLE": "Less Downtime. More Control.",
-          "VIDEO_URL": "EUVHxbCVzy8",
+          "VIDEO_URL": "vjWFvFeiVXA",
           "ITEMS_PILLS": [
             "Get alerts about potential failures and see how similar issues were resolved in the past.",
             "Support your team in preventing breakdowns and reducing costs with more efficient maintenance."
@@ -177,7 +181,7 @@
         {
           "TITLE": "AI Assistant for Insights with Dynamic Charts",
           "SUBTITLE": "Understand what's happening, without wasting time.",
-          "VIDEO_URL": "CBzl82FzhEQ",
+          "VIDEO_URL": "t6ngDz10OKs",
           "ITEMS_PILLS": [
             "Turn simple questions into clear, visual answers, even when the data is complex or extensive.",
             "Whether in production, quality, maintenance, or executive management, quickly analyze large volumes of information, identify patterns, and make informed decisions.",
@@ -188,7 +192,7 @@
     }
   },
   "TECH_STACK": {
-    "TITLE": "Our Tech Stack"
+    "TITLE": "Our tech stack"
   },
   "FOOTER": {
     "SLOGAN": "Follow our journey.",

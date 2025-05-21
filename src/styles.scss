@@ -369,3 +369,8 @@ body {
   max-width: 1400px !important;
   max-height: 95vh !important;
 }
+
+.youtube-player-placeholder {
+  // try to fix the youtube embed library not being responsive
+  width: 100% !important;
+}

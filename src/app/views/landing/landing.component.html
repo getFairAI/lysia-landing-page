@@ -87,14 +87,10 @@
     <div class="w-full flex justify-center px-6">
       <div class="flex flex-col items-center justify-center w-full max-w-[800px]">
         <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
-          <h3 class="text-2xl font-semibold">Here Is What We Do</h3>
+          <h3 class="text-2xl font-semibold">{{ 'WHAT_WE_DO_SECTION.TITLE' | translate }}</h3>
         </div>
-        <div class="font-medium text-lg text-center mt-6"
-          >We deliver tailored AI solutions that fit your business. <br />
-          Our team analyzes your workflow and context to design personalized tools, enhancing operations without disruption.
-          <br />
-          <br />
-          Here are some examples of what we can achieve:
+        <div class="font-medium text-lg text-center mt-6 whitespace-pre-wrap">
+          {{ 'WHAT_WE_DO_SECTION.DESCRIPTION' | translate }}
         </div>
       </div>
     </div>
@@ -191,7 +187,7 @@
           <img alt="..." src="assets/img/team/Tiago_Ferreira.png" class="shadow-lg rounded-full mx-auto w-[120px]" />
           <div class="pt-6 text-center">
             <h5 class="text-xl font-bold">Tiago Ferreira</h5>
-            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CEO</p>
+            <p class="mt-1 text-sm text-slate-400 font-semibold"> CEO | AI Expert</p>
             <div class="mt-6">
               <button
                 class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -215,7 +211,7 @@
           <img alt="..." src="assets/img/team/marcio.jpg" class="shadow-lg rounded-full mx-auto w-[120px]" />
           <div class="pt-6 text-center">
             <h5 class="text-xl font-bold">Márcio Guia</h5>
-            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> COO </p>
+            <p class="mt-1 text-sm text-slate-400 font-semibold"> COO | AI Expert</p>
             <div class="mt-6">
               <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/marcio-guia/')">
                 <i class="fab fa-linkedin"></i>
@@ -233,7 +229,7 @@
           <img alt="..." src="assets/img/team/luis.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
           <div class="pt-6 text-center">
             <h5 class="text-xl font-bold">Luís Silvestre</h5>
-            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CTO </p>
+            <p class="mt-1 text-sm text-slate-400 font-semibold"> CTO | AI Expert </p>
             <div class="mt-6">
               <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/l-silvestre/')">
                 <i class="fab fa-linkedin"></i>
@@ -251,7 +247,7 @@
           <img alt="..." src="assets/img/team/eduardo_correia.png" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
           <div class="pt-6 text-center">
             <h5 class="text-xl font-bold">Eduardo Correia</h5>
-            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CXO </p>
+            <p class="mt-1 text-sm text-slate-400 font-semibold"> CXO | UX Expert </p>
             <div class="mt-6">
               <button
                 class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -269,7 +265,7 @@
           <img alt="..." src="assets/img/team/jose.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
           <div class="pt-6 text-center">
             <h5 class="text-xl font-bold">José Carreira</h5>
-            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CXO </p>
+            <p class="mt-1 text-sm text-slate-400 font-semibold"> UX Expert </p>
             <div class="mt-6">
               <button
                 class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
@@ -337,13 +333,13 @@
       </div>
 
       <div class="w-full max-w-[600px]">
-        <div class="w-full flex flex-col shadow-md glasspane-card strong-bg h-[580px] text-slate-600" [formGroup]="formGroupContactUs">
+        <form class="w-full flex flex-col shadow-md glasspane-card strong-bg h-[580px] text-slate-600" [formGroup]="formGroupContactUs" id="form-contact-us">
           <h4 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.TITLE' | translate }}</h4>
           <p class="leading-relaxed mt-1">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.SUBTITLE' | translate }}</p>
-          <div class="relative w-full mb-3 mt-4">
+          <div class="relative w-full mb-3 mt-7">
             <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.FULLNAME' | translate }} </label>
             <input
-              formControlName="fullName"
+              formControlName="userFullname"
               type="text"
               class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               [placeholder]="contactSectionInputsTexts.fullNamePlaceholder" />
@@ -352,7 +348,7 @@
           <div class="relative w-full mb-3">
             <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="email"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.EMAIL' | translate }} </label>
             <input
-              formControlName="email"
+              formControlName="userEmail"
               type="email"
               class="border-0 px-3 py-3 text-slate-600 bg-white placeholder-slate-400 rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
               [placeholder]="contactSectionInputsTexts.emailPlaceholder" />
@@ -361,7 +357,7 @@
           <div class="relative w-full mb-3">
             <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="message"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.MESSAGE' | translate }} </label>
             <textarea
-              formControlName="message"
+              formControlName="userMessage"
               rows="4"
               cols="40"
               maxlength="4000"
@@ -369,9 +365,18 @@
               [placeholder]="contactSectionInputsTexts.messagePlaceholder"></textarea>
           </div>
           <div class="flex justify-center w-full mt-10">
-            <button type="button" class="button-lysia primary-color" [disabled]="formGroupContactUs.invalid || formGroupContactUs.pristine"> {{ 'Send Message' | translate }} </button>
+            <button
+              type="button"
+              (click)="submitContactForm()"
+              class="button-lysia primary-color flex gap-2 flex-nowrap"
+              [disabled]="formGroupContactUs.invalid || formGroupContactUs.pristine || submittingForm">
+              <mat-spinner diameter="20" mode="indeterminate" *ngIf="submittingForm"></mat-spinner>
+              {{ 'Send Message' | translate }}
+            </button>
           </div>
-        </div>
+
+          <div class="flex justify-center mt-10 text-center"> </div>
+        </form>
       </div>
     </div>
   </section>

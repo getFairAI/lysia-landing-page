@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
 import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 
 @Component({
   selector: 'app-landing',
@@ -25,10 +26,15 @@ export class LandingComponent implements OnInit {
   };
 
   formGroupContactUs = new FormGroup({
-    fullName: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
-    message: new FormControl('', [Validators.required, Validators.maxLength(4000)]),
+    // field names must be equal to those configured in emailjs service
+    userFullname: new FormControl('', Validators.required),
+    userEmail: new FormControl('', [Validators.required, Validators.email]),
+    userMessage: new FormControl('', [Validators.required, Validators.maxLength(4000)]),
   });
+
+  submittingForm = false; // triggers submitting animation
+  showMessageSentSuccess = false;
+  showMessageSentError = false;
 
   constructor(private translateService: TranslateService, private dialog: MatDialog) {}
 
@@ -79,6 +85,30 @@ export class LandingComponent implements OnInit {
 
   submitContactForm() {
     if (this.formGroupContactUs.valid) {
+      this.formGroupContactUs.disable();
+      this.submittingForm = true;
+      emailjs.send('service_5s8jchq', 'template_231dukm', this.formGroupContactUs.getRawValue(), { publicKey: '4HHqO-lLCP9kvCE2z' }).then(
+        (result: EmailJSResponseStatus) => {
+          this.submittingForm = false;
+          this.formGroupContactUs.reset();
+          this.formGroupContactUs.enable();
+
+          this.showMessageSentSuccess = true;
+          setTimeout(() => {
+            this.showMessageSentSuccess = false;
+          }, 4000);
+        },
+        error => {
+          console.log('EMAILJS CONTACT FORM ERROR:', error);
+          this.submittingForm = false;
+          this.formGroupContactUs.enable();
+
+          this.showMessageSentError = true;
+          setTimeout(() => {
+            this.showMessageSentError = false;
+          }, 4000);
+        }
+      );
     }
   }
 
