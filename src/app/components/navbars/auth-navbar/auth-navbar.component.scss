@@ -122,3 +122,53 @@
     }
   }
 }
+
+.language-selectors-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  width: fit-content;
+  gap: 5px;
+  position: relative;
+
+  .selector-indicator {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    background-color: rgb(196, 202, 210);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    transition: 0.2s all;
+
+    &.en-position {
+      left: 0;
+    }
+
+    &.pt-position {
+      left: 35px; // width of indicator + flex gap of language-selectors-wrapper
+    }
+  }
+
+  .lang-selector {
+    flex: none;
+    color: rgb(71 85 105);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s all;
+
+    &:hover,
+    &:focus-within {
+      background-color: rgb(71 85 105);
+      color: white;
+    }
+  }
+}

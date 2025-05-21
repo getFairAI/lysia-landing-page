@@ -8,12 +8,17 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AuthNavbarComponent implements OnInit {
   menuOpen = false;
-
+  currentLanguage = 'en';
   menuClosingAnimation = false; // setting to true will trigger the close animation - set it to false after that.
 
   constructor(private translate: TranslateService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.translate.onLangChange.subscribe(newTranslationData => {
+      // this observable fires immediately when first run
+      this.currentLanguage = newTranslationData?.lang ?? 'en';
+    });
+  }
 
   openMenu() {
     this.menuOpen = true;

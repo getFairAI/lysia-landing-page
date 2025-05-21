@@ -6,12 +6,20 @@
         <div class="logo-img-wrapper">
           <img src="./assets/img/logos/lysiallabs_logo_transp_greyed.svg" alt="LYSIA Labs Logo" class="logo-img" [routerLink]="['/']" />
         </div>
-        <button
-          class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
-          type="button"
-          (click)="openMenu()">
-          <i class="text-black fas fa-bars"></i>
-        </button>
+
+        <div class="flex md:hidden justify-end flex-nowrap items-center gap-3">
+          <div class="language-selectors-wrapper">
+            <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of LYSIA Labs">EN</div>
+            <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa do LYSIA Labs">PT</div>
+            <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
+          </div>
+          <button
+            class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block md:hidden outline-none focus:outline-none"
+            type="button"
+            (click)="openMenu()">
+            <i class="text-black fas fa-bars"></i>
+          </button>
+        </div>
       </div>
       <div class="flex flex-grow items-center bg-transparent">
         <ul class="hidden md:flex gap-2 flex-row list-none ml-auto">
@@ -38,21 +46,12 @@
             </a>
           </li>
 
-          <li class="flex items-center">
-            <div
-              class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full cursor-pointer"
-              (click)="useLanguage('en')"
-              matTooltip="Access the english version of LYSIA Labs"
-              >EN</div
-            >
-          </li>
-          <li class="flex items-center">
-            <div
-              class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-slate-600 hover:text-white transition-all rounded-full cursor-pointer"
-              (click)="useLanguage('pt')"
-              matTooltip="Consultar a versão portuguesa do LYSIA Labs"
-              >PT</div
-            >
+          <li class="ml-2 flex items-center">
+            <div class="language-selectors-wrapper">
+              <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of LYSIA Labs">EN</div>
+              <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa do LYSIA Labs">PT</div>
+              <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
+            </div>
           </li>
         </ul>
       </div>
@@ -75,5 +74,11 @@
     <a class="menu-item" (click)="closeMenu(undefined, true)"><i class="fas fa-comment text-xl"></i> {{ 'Contact Us' | translate }}</a>
     <a class="menu-item" href="https://www.linkedin.com/company/getfairai" target="_blank"><i class="fab fa-x-twitter text-xl"></i> X / Twitter</a>
     <a class="menu-item" href="https://www.linkedin.com/company/getfairai" target="_blank"><i class="fab fa-linkedin text-xl"></i> LinkedIn</a>
+
+    <div class="language-selectors-wrapper mt-10">
+      <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of LYSIA Labs">EN</div>
+      <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa do LYSIA Labs">PT</div>
+      <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
+    </div>
   </div>
 </div>
