@@ -3,7 +3,7 @@
 </div>
 
 <main>
-  <div class="w-full flex content-center items-center justify-center min-h-screen">
+  <div class="w-full flex content-center items-center justify-center min-h-screen relative">
     <div class="flex flex-col justify-between w-full">
       <div class="items-center flex flex-wrap">
         <div class="w-full flex flex-col items-center px-4 text-center">
@@ -68,14 +68,17 @@
         </div>
       </div>
 
-      <div class="sponsors-wrapper">
-        <div class="sponsors-div">
-          <img src="" alt="" />
-        </div>
-      </div>
-
       <div class="mt-20 flex justify-center p-6 animate-slide-down wait600ms">
         <button type="button" class="w-fit button-lysia primary-color bigger-button" (click)="scrollDownLearnMore()"> {{ 'Learn More' | translate }} <mat-icon>keyboard_arrow_down</mat-icon></button>
+      </div>
+    </div>
+
+    <div class="w-full flex justify-center px-4 absolute bottom-[80px] animate-slide-up-zoom wait600ms">
+      <div class="w-full max-w-[1600px] flex justify-center">
+        <div class="flex flex-col gap-1">
+          <span class="text-xs font-medium">Powered by</span>
+          <a href="https://getfair.ai" target="_blank" matTooltip="Check out FairAI"><img src="./assets/img/logos/logo_non_capitalized_black_transp.svg" class="w-full max-w-[140px]" /></a>
+        </div>
       </div>
     </div>
   </div>
@@ -84,7 +87,7 @@
     <div class="w-full flex justify-center px-6">
       <div class="flex flex-col items-center justify-center w-full max-w-[800px]">
         <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
-          <h3 class="text-2xl font-semibold">What We Do</h3>
+          <h3 class="text-2xl font-semibold">AI that seamlessly adapts to you</h3>
         </div>
         <div class="font-medium text-lg text-center mt-6"
           >We deliver tailored AI solutions that fit your business. <br />
@@ -106,7 +109,7 @@
         </div>
       </div>
 
-      <div class="flex flex-nowrap pl-[10%] pr-[10%] xl:pl-[40%] xl:pr-[40%] py-5 gap-8 overflow-y-auto relative scroll-smooth scrollable-div" id="scrollable-div">
+      <div class="flex flex-nowrap pl-[10%] pr-[10%] xl:pl-[20%] xl:pr-[20%] py-5 gap-8 overflow-y-auto relative scroll-smooth scrollable-div" id="scrollable-div">
         <div class="info-card" (click)="clickInfoCardOpenDialog('CARD1')" id="card-scroll-reference">
           <div class="card-img-bg">
             <img src="./assets/img/landing-page-cards/smart.jpg" />
@@ -170,8 +173,8 @@
     </div>
   </section>
 
-  <section class="mt-40 pt-14 pb-28 gradient-white-bg">
-    <div class="container mx-auto px-4 text-slate-700">
+  <section class="mt-40 pt-14 pb-28 gradient-white-bg w-full flex justify-center">
+    <div class="w-full flex flex-col items-center justify-center max-w-[1600px] px-4 text-slate-700">
       <div class="flex flex-wrap justify-center text-center mb-24">
         <div class="w-full max-w-[800px] flex flex-col items-center px-4">
           <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
@@ -183,90 +186,100 @@
           >
         </div>
       </div>
-      <div class="flex flex-wrap">
-        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-          <div class="px-6">
-            <img alt="..." src="assets/img/team/Tiago_Ferreira.png" class="shadow-lg rounded-full mx-auto w-[120px]" />
-            <div class="pt-6 text-center">
-              <h5 class="text-xl font-bold">Tiago Ferreira</h5>
-              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CEO</p>
-              <div class="mt-6">
-                <button
-                  class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                  (click)="openLinkNewTab('https://www.linkedin.com/in/carlostiagoferreira/')">
-                  <i class="fab fa-linkedin"></i>
-                </button>
-                <!-- <button
+      <div class="flex flex-wrap w-full items-center justify-center gap-6">
+        <div class="w-full max-w-[200px] py-4">
+          <img alt="..." src="assets/img/team/Tiago_Ferreira.png" class="shadow-lg rounded-full mx-auto w-[120px]" />
+          <div class="pt-6 text-center">
+            <h5 class="text-xl font-bold">Tiago Ferreira</h5>
+            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CEO</p>
+            <div class="mt-6">
+              <button
+                class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                type="button"
+                (click)="openLinkNewTab('https://www.linkedin.com/in/carlostiagoferreira/')">
+                <i class="fab fa-linkedin"></i>
+              </button>
+              <!-- <button
                   class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                   type="button"
                   (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
                   <i class="fab fa-twitter"></i>
                 </button> -->
-                <!-- <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+              <!-- <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
                   <i class="fab fa-discord"></i>
                 </button> -->
-              </div>
             </div>
           </div>
         </div>
-        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-          <div class="px-6">
-            <img alt="..." src="assets/img/team/marcio.jpg" class="shadow-lg rounded-full mx-auto w-[120px]" />
-            <div class="pt-6 text-center">
-              <h5 class="text-xl font-bold">Márcio Guia</h5>
-              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> COO </p>
-              <div class="mt-6">
-                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/marcio-guia/')">
-                  <i class="fab fa-linkedin"></i>
-                </button>
-                <!-- <button
+        <div class="w-full max-w-[200px] py-4">
+          <img alt="..." src="assets/img/team/marcio.jpg" class="shadow-lg rounded-full mx-auto w-[120px]" />
+          <div class="pt-6 text-center">
+            <h5 class="text-xl font-bold">Márcio Guia</h5>
+            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> COO </p>
+            <div class="mt-6">
+              <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/marcio-guia/')">
+                <i class="fab fa-linkedin"></i>
+              </button>
+              <!-- <button
                   class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                   type="button"
                   (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
                   <i class="fab fa-twitter"></i>
                 </button> -->
-              </div>
             </div>
           </div>
         </div>
-        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-          <div class="px-6">
-            <img alt="..." src="assets/img/team/luis.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
-            <div class="pt-6 text-center">
-              <h5 class="text-xl font-bold">Luís Silvestre</h5>
-              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CTO </p>
-              <div class="mt-6">
-                <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/l-silvestre/')">
-                  <i class="fab fa-linkedin"></i>
-                </button>
-                <!-- <button
+        <div class="w-full max-w-[200px] py-4">
+          <img alt="..." src="assets/img/team/luis.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
+          <div class="pt-6 text-center">
+            <h5 class="text-xl font-bold">Luís Silvestre</h5>
+            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CTO </p>
+            <div class="mt-6">
+              <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/l-silvestre/')">
+                <i class="fab fa-linkedin"></i>
+              </button>
+              <!-- <button
                   class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                   type="button"
                   (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
                   <i class="fab fa-x-twitter"></i>
                 </button> -->
-              </div>
             </div>
           </div>
         </div>
-        <div class="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
-          <div class="px-6">
-            <img alt="..." src="assets/img/team/eduardo_correia.png" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
-            <div class="pt-6 text-center">
-              <h5 class="text-xl font-bold">Eduardo Correia</h5>
-              <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CXO </p>
-              <div class="mt-6">
-                <button
-                  class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                  (click)="openLinkNewTab('https://www.linkedin.com/in/eduardoxcorreia/')">
-                  <i class="fab fa-linkedin"></i>
-                </button>
-                <!-- <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+        <div class="w-full max-w-[200px] py-4">
+          <img alt="..." src="assets/img/team/eduardo_correia.png" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
+          <div class="pt-6 text-center">
+            <h5 class="text-xl font-bold">Eduardo Correia</h5>
+            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CXO </p>
+            <div class="mt-6">
+              <button
+                class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                type="button"
+                (click)="openLinkNewTab('https://www.linkedin.com/in/eduardoxcorreia/')">
+                <i class="fab fa-linkedin"></i>
+              </button>
+              <!-- <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
                   <i class="fab fa-twitter"></i>
                 </button> -->
-              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-w-[200px] py-4">
+          <img alt="..." src="assets/img/team/jose.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
+          <div class="pt-6 text-center">
+            <h5 class="text-xl font-bold">José Carreira</h5>
+            <p class="mt-1 text-sm text-slate-400 uppercase font-semibold"> CXO </p>
+            <div class="mt-6">
+              <button
+                class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                type="button"
+                (click)="openLinkNewTab('https://www.linkedin.com/in/josé-carreira-z/')">
+                <i class="fab fa-linkedin"></i>
+              </button>
+              <!-- <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
+                  <i class="fab fa-twitter"></i>
+                </button> -->
             </div>
           </div>
         </div>

@@ -235,6 +235,11 @@ body {
   animation: 0.4s fadeInSlideLeft forwards;
 }
 
+.animate-slide-up-zoom {
+  opacity: 0;
+  animation: 0.4s fadeInSlideUpZoomIn forwards;
+}
+
 .wait100ms {
   animation-delay: 0.1s;
 }
