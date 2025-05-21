@@ -71,7 +71,7 @@
           "TITLE": "Knowledge is just one question away",
           "SUBTITLE": "No more relying on who remembers what.",
           "DESCRIPTION_TEXT": "Too much time is lost searching for documents or waiting for the right person to explain what was done before.\n\nThis solution changes that.\n\nAsk a question and instantly access relevant information from past reports, records, or experiences. Valuable know-how stays available to everyone, exactly when it's needed.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs_coffee.jpg"
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/lamp.jpg"
         },
         {
           "TITLE": "AI Assistant for Expert Knowledge",
@@ -122,7 +122,7 @@
           "TITLE": "Adjust pricing based on real-world data",
           "SUBTITLE": "Faster quotes using the data you already have.",
           "DESCRIPTION_TEXT": "Responding to requests quickly and accurately means having the right context.\n\nThis solution lets you review previous quotes, compare pricing by client or market and generate tailored proposals in seconds using your existing templates.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs_coffee.jpg"
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/tablet_calculator.jpg"
         },
         {
           "TITLE": "AI Assistant for Budget Planning",
@@ -141,7 +141,7 @@
           "TITLE": "Fast diagnostics. Even remotely",
           "SUBTITLE": "Less downtime. More confidence.",
           "DESCRIPTION_TEXT": "When something fails, every second counts.\n\nDiagnose faster using past cases and get automatic recommendations to guide the next steps.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/diagnostics.jpg"
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/machine2.jpg"
         },
         {
           "TITLE": "Take the guesswork out of maintenance",
