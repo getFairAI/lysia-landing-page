@@ -3,8 +3,8 @@
 </div>
 
 <main>
-  <div class="w-full flex content-center items-center justify-center min-h-screen relative">
-    <div class="flex flex-col justify-between w-full">
+  <div class="w-full flex flex-col items-center justify-center min-h-screen">
+    <div class="flex flex-col justify-center items-center w-full min-h-[70vh] pt-24">
       <div class="items-center flex flex-wrap">
         <div class="w-full flex flex-col items-center px-4 text-center">
           <div class="logo-img-wrapper">
@@ -53,7 +53,7 @@
           </div>
 
           <div class="flex flex-col items-center mt-12 animate-slide-right wait200ms">
-            <h1 class="text-2xl text-with-dark-bg-jambo"> {{ 'AI that seamlessly adapts to you' | translate }}</h1>
+            <h1 class="text-lg md:text-2xl text-with-dark-bg-jambo"> {{ 'AI that seamlessly adapts to you' | translate }}</h1>
             <div class="mt-10 font-medium text-lg md:text-2xl flex flex-col gap-2">
               <div>
                 <span class="font-medium underlined-text-animation delay500ms">{{ 'Digitalize and automate' | translate }}</span>
@@ -66,32 +66,38 @@
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="mt-20 flex justify-center p-6 animate-slide-down wait600ms">
-        <button type="button" class="w-fit button-lysia primary-color bigger-button" (click)="scrollDownLearnMore()"> {{ 'Learn More' | translate }} <mat-icon>keyboard_arrow_down</mat-icon></button>
+        <div class="mt-5 lg:mt-20 w-full flex flex-col justify-center items-center py-6 animate-slide-down wait600ms">
+          <div class="hidden sm:block">
+            <button type="button" class="w-fit button-lysia primary-color bigger-button" (click)="scrollDownLearnMore()">
+              {{ 'Learn More' | translate }}<mat-icon>keyboard_arrow_down</mat-icon>
+            </button>
+          </div>
+
+          <div class="flex sm:hidden items-center justify-center w-full font-bold"><mat-icon>keyboard_arrow_down</mat-icon></div>
+        </div>
       </div>
     </div>
 
-    <div class="w-full flex justify-center px-4 absolute bottom-3 md:bottom-[100px] animate-slide-up-zoom wait600ms">
-      <div class="w-full max-w-[1400px] flex justify-between items-center">
-        <div class="flex flex-col gap-1">
-          <span class="text-xs font-medium"><i class="fas fa-bolt mr-1 opacity-75"></i>Empowered by</span>
-          <div class="flex flex-wrap gap-8 items-center flex-col md:flex-row">
+    <div class="w-full flex justify-center px-4 mt-20 animate-slide-up-zoom wait600ms">
+      <div class="w-full max-w-[1400px] flex justify-between items-center gap-8">
+        <div class="flex flex-col">
+          <span class="text-xs font-medium mb-2"><i class="fas fa-bolt mr-1 opacity-75"></i>Empowered by</span>
+          <div class="flex flex-wrap gap-4 md:gap-8 items-center">
             <a href="https://getfair.ai" target="_blank" matTooltip="Check out FairAI"
-              ><img src="./assets/img/logos/logo_non_capitalized_black_transp.svg" class="w-full max-w-[100px] md:max-w-[140px]"
+              ><img src="./assets/img/logos/logo_non_capitalized_black_transp.svg" class="w-full max-w-[120px] md:max-w-[140px]"
             /></a>
-            <a href="https://arweave.org/" target="_blank"><img src="./assets/img/logos/arweave-logo.png" class="w-full max-w-[100px] md:max-w-[140px]" /></a>
-            <a href="https://arbitrum.io/" target="_blank"><img src="./assets/img/logos/arbitrum-logo.png" class="w-full max-w-[100px] md:max-w-[140px]" /></a>
+            <a href="https://arweave.org/" target="_blank"><img src="./assets/img/logos/arweave-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
+            <a href="https://arbitrum.io/" target="_blank"><img src="./assets/img/logos/arbitrum-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
           </div>
         </div>
 
-        <div class="flex items-end lg:items-start flex-col gap-1">
+        <div class="flex items-end lg:items-start flex-col">
           <span class="text-xs font-medium"><i class="fas fa-heart mr-1 opacity-75"></i>Backed by</span>
-          <div class="flex flex-wrap gap-8 justify-end items-center flex-col md:flex-row">
-            <a href="https://www.rndao.io/" target="_blank"><img src="./assets/img/logos/rndao.png" class="w-full max-w-[40px] md:max-w-[80px]" /></a>
-            <a href="https://forward.arweave.dev/" target="_blank"><img src="./assets/img/logos/forward-research-logo.png" class="w-full max-w-[80px] md:max-w-[120px]" /></a>
-            <a href="https://www.techstars.com/" target="_blank"><img src="./assets/img/logos/techstars-logo.png" class="w-full max-w-[100px] md:max-w-[140px]" /></a>
+          <div class="flex flex-wrap gap-4 md:gap-8 justify-end items-center">
+            <a href="https://www.rndao.io/" target="_blank"><img src="./assets/img/logos/rndao.png" class="w-full max-w-[60px] md:max-w-[80px]" /></a>
+            <a href="https://forward.arweave.dev/" target="_blank"><img src="./assets/img/logos/forward-research-logo.png" class="w-full max-w-[100px] md:max-w-[120px]" /></a>
+            <a href="https://www.techstars.com/" target="_blank"><img src="./assets/img/logos/techstars-logo.png" class="w-full max-w-[120px] md:max-w-[140px] relative translate-x-2" /></a>
           </div>
         </div>
       </div>
@@ -99,12 +105,12 @@
   </div>
 
   <section id="top-info-cards-section" class="top-info-cards-wrapper">
-    <div class="w-full flex justify-center px-6">
+    <div class="w-full flex justify-center px-8">
       <div class="flex flex-col items-center justify-center w-full max-w-[800px]">
         <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
-          <h3 class="text-2xl font-semibold">{{ 'WHAT_WE_DO_SECTION.TITLE' | translate }}</h3>
+          <h2 class="text-xl md:text-2xl font-semibold">{{ 'WHAT_WE_DO_SECTION.TITLE' | translate }}</h2>
         </div>
-        <div class="font-medium text-lg text-center mt-6 whitespace-pre-wrap">
+        <div class="font-medium md:text-lg text-center mt-6 whitespace-pre-wrap">
           {{ 'WHAT_WE_DO_SECTION.DESCRIPTION' | translate }}
         </div>
       </div>
@@ -189,15 +195,15 @@
       <div class="flex flex-wrap justify-center text-center mb-24">
         <div class="w-full max-w-[800px] flex flex-col items-center px-4">
           <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
-            <h2 class="text-2xl font-semibold">{{ 'About us' | translate }}</h2>
+            <h2 class="text-xl md:text-2xl font-semibold">{{ 'About us' | translate }}</h2>
           </div>
-          <p class="text-lg mt-8 font-medium whitespace-pre-wrap">{{ 'TEAM_DESCRIPTION' | translate }}</p>
+          <p class="md:text-lg mt-8 font-medium whitespace-pre-wrap">{{ 'TEAM_DESCRIPTION' | translate }}</p>
         </div>
       </div>
-      <div class="flex flex-wrap w-full items-center justify-center gap-6">
-        <div class="w-full max-w-[200px] py-4">
-          <img alt="..." src="assets/img/team/Tiago_Ferreira.png" class="shadow-lg rounded-full mx-auto w-[120px]" />
-          <div class="pt-6 text-center">
+      <div class="team-photos-wrapper">
+        <div class="team-person-container">
+          <img alt="..." src="assets/img/team/Tiago_Ferreira.png" />
+          <div class="person-info">
             <h5 class="text-xl font-bold">Tiago Ferreira</h5>
             <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Executive Officer"> CEO | AI Expert</p>
             <div class="mt-6">
@@ -219,45 +225,33 @@
             </div>
           </div>
         </div>
-        <div class="w-full max-w-[200px] py-4">
-          <img alt="..." src="assets/img/team/marcio.jpg" class="shadow-lg rounded-full mx-auto w-[120px]" />
-          <div class="pt-6 text-center">
+        <div class="team-person-container">
+          <img alt="..." src="assets/img/team/marcio.jpg" />
+          <div class="person-info">
             <h5 class="text-xl font-bold">Márcio Guia</h5>
             <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Operating Officer"> COO | AI Expert</p>
             <div class="mt-6">
               <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/marcio-guia/')">
                 <i class="fab fa-linkedin"></i>
               </button>
-              <!-- <button
-                  class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                  (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
-                  <i class="fab fa-twitter"></i>
-                </button> -->
             </div>
           </div>
         </div>
-        <div class="w-full max-w-[200px] py-4">
-          <img alt="..." src="assets/img/team/luis.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
-          <div class="pt-6 text-center">
+        <div class="team-person-container">
+          <img alt="..." src="assets/img/team/luis.jpg" />
+          <div class="person-info">
             <h5 class="text-xl font-bold">Luís Silvestre</h5>
             <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Technology Officer"> CTO | AI Expert </p>
             <div class="mt-6">
               <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/l-silvestre/')">
                 <i class="fab fa-linkedin"></i>
               </button>
-              <!-- <button
-                  class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                  (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
-                  <i class="fab fa-x-twitter"></i>
-                </button> -->
             </div>
           </div>
         </div>
-        <div class="w-full max-w-[200px] py-4">
-          <img alt="..." src="assets/img/team/eduardo_correia.png" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
-          <div class="pt-6 text-center">
+        <div class="team-person-container">
+          <img alt="..." src="assets/img/team/eduardo_correia.png" />
+          <div class="person-info">
             <h5 class="text-xl font-bold">Eduardo Correia</h5>
             <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Experience Officer"> CXO | UI/UX Expert </p>
             <div class="mt-6">
@@ -267,15 +261,12 @@
                 (click)="openLinkNewTab('https://www.linkedin.com/in/eduardoxcorreia/')">
                 <i class="fab fa-linkedin"></i>
               </button>
-              <!-- <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-                  <i class="fab fa-twitter"></i>
-                </button> -->
             </div>
           </div>
         </div>
-        <div class="w-full max-w-[200px] py-4">
-          <img alt="..." src="assets/img/team/jose.jpg" class="shadow-lg rounded-full mx-auto w-[120px] h-[120px] object-cover" />
-          <div class="pt-6 text-center">
+        <div class="team-person-container">
+          <img alt="..." src="assets/img/team/jose.jpg" />
+          <div class="person-info">
             <h5 class="text-xl font-bold">José Carreira</h5>
             <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Knowledge Officer">CKO | UX Expert </p>
             <div class="mt-6">
@@ -285,9 +276,6 @@
                 (click)="openLinkNewTab('https://www.linkedin.com/in/josé-carreira-z/')">
                 <i class="fab fa-linkedin"></i>
               </button>
-              <!-- <button class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
-                  <i class="fab fa-twitter"></i>
-                </button> -->
             </div>
           </div>
         </div>
@@ -295,8 +283,19 @@
     </div>
   </section>
 
-  <section class="mt-5">
-    <div class="container mx-auto px-4 lg:pt-24" id="contact-us-wrapper">
+  <section class="w-full flex items-center justify-center px-8 mt-20">
+    <div class="w-full max-w-[700px] flex justify-center items-center flex-col">
+      <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
+        <h2 class="text-xl md:text-2xl font-semibold">{{ 'Contact us' | translate }}</h2>
+      </div>
+      <p class="md:text-lg font-medium whitespace-pre-wrap text-center text-slate-700 mt-5"
+        >We’re not building AI for the sake of it. We’re building AI that respects how people already get things done and helps them do it even better.</p
+      >
+    </div>
+  </section>
+
+  <section>
+    <div class="container mx-auto px-4 mt-14" id="contact-us-wrapper">
       <!-- <div class="flex flex-wrap text-center justify-center">
         <div class="w-full flex flex-col justify-center items-center">
           <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
@@ -305,37 +304,37 @@
           <p class="text-lg leading-relaxed mt-4 px-4 font-medium">{{ 'CONTACT_SECTION.SECTION_SUBTITLE' | translate }}</p>
         </div>
       </div> -->
-      <div class="flex flex-wrap justify-center">
-        <div class="w-full lg:w-3/12 px-4 text-center">
+      <div class="flex flex-wrap justify-evenly gap-8">
+        <div class="w-full max-w-[300px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
           </div>
-          <h6 class="text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
+          <h6 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
           <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
         </div>
-        <div class="w-full lg:w-3/12 px-4 text-center">
+        <div class="w-full max-w-[300px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-arrow-trend-up"></i>
           </div>
-          <h5 class="text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
+          <h5 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
           <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
         </div>
-        <div class="w-full lg:w-3/12 px-4 text-center">
+        <div class="w-full max-w-[300px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
           </div>
-          <h5 class="text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
+          <h5 class="md:text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
           <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="mt-28">
+  <section class="mt-14">
     <div class="w-full px-4 flex justify-center flex-wrap gap-8">
       <div class="w-full max-w-[600px]">
-        <div class="shadow-md glasspane-card strong-bg h-[800px] text-slate-600">
-          <h4 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.TITLE' | translate }}</h4>
+        <div class="shadow-md glasspane-card strong-bg text-slate-600">
+          <h4 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.TITLE' | translate }}</h4>
           <p class="leading-relaxed mt-1 mb-6">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.SUBTITLE' | translate }} </p>
 
           <div class="w-full h-[650px] rounded-xl overflow-hidden shadow-lg">
@@ -345,8 +344,8 @@
       </div>
 
       <div class="w-full max-w-[600px]">
-        <form class="w-full flex flex-col shadow-md glasspane-card strong-bg h-[580px] text-slate-600" [formGroup]="formGroupContactUs" id="form-contact-us">
-          <h4 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.TITLE' | translate }}</h4>
+        <form class="w-full flex flex-col shadow-md glasspane-card strong-bg text-slate-600" [formGroup]="formGroupContactUs" id="form-contact-us">
+          <h4 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.TITLE' | translate }}</h4>
           <p class="leading-relaxed mt-1">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.SUBTITLE' | translate }}</p>
           <div class="relative w-full mb-3 mt-7">
             <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.FULLNAME' | translate }} </label>
@@ -393,11 +392,11 @@
     </div>
   </section>
 
-  <section class="mt-40 mb-48 technologies-section gradient-white-bg">
+  <section class="mt-40 technologies-section gradient-white-bg">
     <div class="w-full flex justify-center px-6">
       <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
         <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
-          <h3 class="text-2xl font-semibold"> {{ 'TECH_STACK.TITLE' | translate }} </h3>
+          <h3 class="text-xl md:text-2xl font-semibold"> {{ 'TECH_STACK.TITLE' | translate }} </h3>
         </div>
       </div>
     </div>

@@ -90,15 +90,15 @@
     "CARD2": {
       "INNER_CARDS": [
         {
-          "TITLE": "Act before the opportunity slips away",
-          "SUBTITLE": "Spot inactivity before it becomes a lost opportunity.",
-          "DESCRIPTION_TEXT": "Don't let sales opportunities go unnoticed.\n\nIdentify inactive customers, analyze buying patterns and take action based on your own data.",
+          "TITLE": "Manual work is still the standard in sales",
+          "SUBTITLE": "Sales teams lose time every week gathering data instead of acting on it.",
+          "DESCRIPTION_TEXT": "Finding new clients and recognizing product trends still depend on spreadsheets, manual research, and disconnected workflows.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/knowledge.jpg"
         },
         {
-          "TITLE": "Your pipeline, now crystal clear",
-          "SUBTITLE": "Stop wasting time on manual sales reports.",
-          "DESCRIPTION_TEXT": "Responding to requests quickly and accurately means having the right context.\n\nThis solution lets you review previous quotes, compare pricing by client or market and generate tailored proposals in seconds using your existing templates.",
+          "TITLE": "You can't act on what you can't see",
+          "SUBTITLE": "Sales teams miss opportunities because they lack real visibility.",
+          "DESCRIPTION_TEXT": "Key signals such as declining orders, inactive clients, or shifting demand are often hidden in disconnected tools or neglected in outdated reports.\n\nWithout a clear view, it's easy to miss the right moment to act.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/coffee_paper.jpg"
         },
         {
@@ -108,7 +108,7 @@
           "ITEMS_PILLS": [
             "Stay informed and never miss an opportunity.",
             "Get alerts when it's the right time to reach out to inactive clients.",
-            "And let the assistant find new leads for you — no hassle."
+            "And let the assistant find new leads for you, so you focus on closing, not chasing."
           ]
         }
       ]
