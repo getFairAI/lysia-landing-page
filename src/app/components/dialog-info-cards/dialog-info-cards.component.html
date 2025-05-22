@@ -5,8 +5,13 @@
 </mat-dialog-actions> -->
 
 <div class="dialog-card-content" id="card-content-div">
-  <div class="card-section" *ngFor="let card of currentCardDataFromTranslate; index as iCard" [ngClass]="{ 'flex-wrap-reverse': (iCard + 1) % 2 === 0 }">
+  <div class="card-section" *ngFor="let card of currentCardDataFromTranslate; index as iCard" [ngClass]="{ 'flex-wrap-reverse': (iCard + 1) % 2 === 0, 'extra-padding-top': card.VIDEO_URL }">
     <!-- if card index is even (mod% by 2 equals zero) then have the order be the other way around -->
+
+    <div *ngIf="card.VIDEO_URL" class="card-seeit-action-label animate-slide-right wait600ms">
+      <i class="fas fa-star primary-text-color"></i>
+      <span>See It In Action</span>
+    </div>
 
     <!-- is even -->
     <ng-container *ngIf="(iCard + 1) % 2 === 0">
@@ -14,7 +19,6 @@
         <img [src]="card.CARD_IMAGE_LOCAL_PATH" *ngIf="card?.CARD_IMAGE_LOCAL_PATH" />
         <div class="video-wrapper" *ngIf="card?.VIDEO_URL">
           <youtube-player [autofocus]="false" [videoId]="card.VIDEO_URL" [width]="videoWidth" [height]="310"></youtube-player>
-          <p class="py-1">{{ 'See it in action with this quick video' }}</p>
         </div>
       </div>
 
@@ -51,7 +55,6 @@
         <img [src]="card.CARD_IMAGE_LOCAL_PATH" *ngIf="card?.CARD_IMAGE_LOCAL_PATH" />
         <div class="video-wrapper" *ngIf="card?.VIDEO_URL" #youTubePlayer>
           <youtube-player [autofocus]="false" [videoId]="card.VIDEO_URL" [width]="videoWidth" [height]="310"></youtube-player>
-          <p class="py-1">{{ 'See it in action with this quick video' }}</p>
         </div>
       </div>
     </ng-container>
