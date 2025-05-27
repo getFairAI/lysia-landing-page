@@ -61,13 +61,13 @@ export class LandingComponent implements OnInit {
   scrollRight() {
     let element = document.getElementById('scrollable-div');
     let cardReference = document.getElementById('card-scroll-reference');
-    element.scrollLeft += cardReference.clientWidth + 30;
+    element.scrollLeft += cardReference.clientWidth + 35; // add a few units to include paddings and margins
   }
 
   scrollLeft() {
     let element = document.getElementById('scrollable-div');
     let cardReference = document.getElementById('card-scroll-reference');
-    element.scrollLeft -= cardReference.clientWidth + 30;
+    element.scrollLeft -= cardReference.clientWidth + 35;
   }
 
   scrollDownLearnMore() {

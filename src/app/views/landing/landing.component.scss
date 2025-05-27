@@ -209,7 +209,7 @@
 
     .arrow-left,
     .arrow-right {
-      margin: 0px 40px;
+      margin: 0px 20px;
       position: absolute;
       z-index: 100;
       width: 45px;
@@ -218,10 +218,11 @@
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      background-color: rgb(122, 122, 122);
-      color: white;
+      background-color: rgb(255, 255, 255);
+      color: rgb(70, 70, 70);
       font-size: 20px;
-      opacity: 0.7;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+      opacity: 0.8;
       cursor: pointer;
       transition: 0.6s all;
 
@@ -238,12 +239,11 @@
       &:hover,
       &:focus-within {
         opacity: 1;
-        background-color: rgb(190, 190, 190);
+        color: #3aaaaa;
         transition: 0.1s all;
       }
 
       &:active {
-        color: #3aaaaa;
         transition: 0.1s all;
 
         .fas {

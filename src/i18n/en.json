@@ -65,15 +65,15 @@
     "CARD1": {
       "INNER_CARDS": [
         {
-          "TITLE": "All your company's knowledge",
+          "TITLE": "Stop solving what's already been solved",
           "SUBTITLE": "The answer might already exist inside your organization.",
-          "DESCRIPTION_TEXT": "Your team's knowledge should not disappear when someone leaves.\nGive everyone fast access to your organization's experience to make better decisions, solve problems, and learn from what worked before.",
+          "DESCRIPTION_TEXT": "Important know-how often disappears with staff changes or shift rotations.\n\nWithout access to past fixes or test results, mistakes get repeated, and time and materials are wasted solving problems that already had a solution.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/smart.jpg"
         },
         {
-          "TITLE": "Knowledge is just one question away",
-          "SUBTITLE": "No more relying on who remembers what.",
-          "DESCRIPTION_TEXT": "Too much time is lost searching for documents or waiting for the right person to explain what was done before.\n\nThis solution changes that.\n\nAsk a question and instantly access relevant information from past reports, records, or experiences. Valuable know-how stays available to everyone, exactly when it's needed.",
+          "TITLE": "Still asking around for answers?",
+          "SUBTITLE": "Critical knowledge shouldn't depend on who's around.",
+          "DESCRIPTION_TEXT": "Crucial answers are hidden in files, emails, or someone's memory. \n\nAs teams search or wait for context, progress slows when they could be tackling what’s next.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/lamp.jpg"
         },
         {
@@ -90,9 +90,9 @@
     "CARD2": {
       "INNER_CARDS": [
         {
-          "TITLE": "Manual work is still the standard in sales",
+          "TITLE": "Your sales team can only go so far",
           "SUBTITLE": "Sales teams lose time every week gathering data instead of acting on it.",
-          "DESCRIPTION_TEXT": "Finding new clients and recognizing product trends still depend on spreadsheets, manual research, and disconnected workflows.",
+          "DESCRIPTION_TEXT": "Finding new clients and recognizing product trends still rely on manual, time-consuming processes.\n\nWith limited tools and small teams, the pace is slow, the reach is limited, and valuable opportunities are left behind.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/knowledge.jpg"
         },
         {
@@ -116,15 +116,15 @@
     "CARD3": {
       "INNER_CARDS": [
         {
-          "TITLE": "Professional proposals. No stress",
-          "SUBTITLE": "Build competitive proposals with confidence.",
-          "DESCRIPTION_TEXT": "Quoting doesn't need to be slow or uncertain.\n\nCheck past proposals, compare prices and create consistent quotes based on real data.",
+          "TITLE": "Quoting shouldn't take this long",
+          "SUBTITLE": "Elaborating a proposal shouldn't feel like starting from scratch every time.",
+          "DESCRIPTION_TEXT": "Searching for past quotes, comparing prices across markets, and checking technical variations, it's all done manually. \n\nTeams waste hours compiling information that should be instantaneous, preventing them from responding quickly and winning business.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/notes.jpg"
         },
         {
-          "TITLE": "Adjust pricing based on real-world data",
-          "SUBTITLE": "Faster quotes using the data you already have.",
-          "DESCRIPTION_TEXT": "Responding to requests quickly and accurately means having the right context.\n\nThis solution lets you review previous quotes, compare pricing by client or market and generate tailored proposals in seconds using your existing templates.",
+          "TITLE": "Quoting without knowing what you can deliver?",
+          "SUBTITLE": "Without visibility, you risk delays and losing credibility.",
+          "DESCRIPTION_TEXT": "Many proposals are made without knowing if there's enough stock or time to deliver.\n\nWithout visibility, it's harder to give accurate deadlines or spot which orders could wait so you can prioritize urgent ones.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/tablet_calculator.jpg"
         },
         {
@@ -141,15 +141,15 @@
     "CARD4": {
       "INNER_CARDS": [
         {
-          "TITLE": "Fast diagnostics. Even remotely",
-          "SUBTITLE": "Less downtime. More confidence.",
-          "DESCRIPTION_TEXT": "When something fails, every second counts.\n\nDiagnose faster using past cases and get automatic recommendations to guide the next steps.",
+          "TITLE": "It's not just the failure, it's how fast you respond",
+          "SUBTITLE": "Has it happened before? Find out in seconds.",
+          "DESCRIPTION_TEXT": "When a machine fails, acting quickly is key.\n\nHowever, without access to similar past cases, it takes longer to understand the issue, especially if the expert is unavailable or the client is located far away.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/machine2.jpg"
         },
         {
-          "TITLE": "Take the guesswork out of maintenance",
-          "SUBTITLE": "Has it happened before? Find out in seconds.",
-          "DESCRIPTION_TEXT": "Technical issues often cause delays because knowledge is scattered or unavailable.\n\nThis solution helps you identify similar past incidents, access test results and act quickly with data-based suggestions. It reduces downtime and supports smarter maintenance.",
+          "TITLE": "Fix it before it breaks",
+          "SUBTITLE": "Stop guessing, start preventing.",
+          "DESCRIPTION_TEXT": "Identify issues long before they become failures.\n\nGet smart alerts, spot patterns, and plan maintenance when it's most convenient, not when it's too late.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/photo_machine.jpg"
         },
         {
@@ -166,15 +166,15 @@
     "CARD5": {
       "INNER_CARDS": [
         {
-          "TITLE": "Operational data. Instantly readable",
-          "SUBTITLE": "See what's really happening. In real time.",
-          "DESCRIPTION_TEXT": "Turn complex data into clear visual insights.\n\nAsk a question and get answers in seconds, without relying on reports or specialists.",
+          "TITLE": "Drowning in data, starving for insights",
+          "SUBTITLE": "Too much info, not enough clarity.",
+          "DESCRIPTION_TEXT": "You've got dashboards, reports, and spreadsheets.\nBut when you need quick answers, you're stuck digging.\n\nComplex questions take too long to solve, or worse, go unanswered.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs.jpg"
         },
         {
-          "TITLE": "Create powerful visuals in seconds",
-          "SUBTITLE": "Answer questions with charts, not reports.",
-          "DESCRIPTION_TEXT": "Understanding what's really happening across operations should not require technical help.\n\nThis solution makes it easy to ask questions in natural language and receive visual answers from your data, making it easier to act, improve and decide.",
+          "TITLE": "Decisions delayed, momentum lost",
+          "SUBTITLE": "No time to wait for another report.",
+          "DESCRIPTION_TEXT": "You have a hunch, but not the data to back it up.\nWaiting on analysts slows everything down.\n\nBy the time you get the report, the moment's already passed.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs_table_coffee.jpg"
         },
         {

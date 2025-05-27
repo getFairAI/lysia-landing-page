@@ -76,60 +76,129 @@
     "CARD1": {
       "INNER_CARDS": [
         {
-          "TITLE": "Nunca mais dependas da memória de alguém",
-          "SUBTITLE": "A resposta que procuras pode já estar dentro de casa.",
-          "DESCRIPTION_TEXT": "O conhecimento da tua organização não devia desaparecer quando alguém sai.\n\nGarante acesso rápido à experiência da equipa para tomar melhores decisões, resolver problemas e aprender com o passado.",
+          "TITLE": "Pare de resolver o que já foi resolvido",
+          "SUBTITLE": "A resposta pode já existir dentro da sua organização.",
+          "DESCRIPTION_TEXT": "Conhecimento importante desaparece frequentemente com mudanças de pessoal ou turnos.\n\nSem acesso a soluções anteriores ou resultados de testes, os erros repetem-se, e tempo e materiais são desperdiçados a resolver problemas que já tinham uma solução.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/smart.jpg"
         },
         {
-          "TITLE": "Conhecimento partilhado, decisões mais rápidas",
-          "SUBTITLE": "Toda a experiência da organização, onde e quando precisares.",
-          "DESCRIPTION_TEXT": "Sempre que alguém precisa de perceber como algo foi feito ou resolver uma situação, perde-se tempo à procura de documentos ou à espera de quem tem a resposta.\n\nCom esta solução, basta uma pergunta simples para aceder a informação útil guardada em relatórios, registos ou experiências anteriores. O conhecimento fica disponível para todos, em qualquer momento.",
+          "TITLE": "Ainda continua a perguntar por respostas?",
+          "SUBTITLE": "O conhecimento crítico não deve depender de quem está presente.",
+          "DESCRIPTION_TEXT": "Respostas cruciais encontram-se escondidas em ficheiros, e-mails ou na memória de alguém.\n\nEnquanto as equipas procuram ou aguardam por contexto, o progresso abranda — quando podiam estar a avançar para o próximo desafio.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/lamp.jpg"
         },
         {
           "TITLE": "Assistente IA para Conhecimento Especializado",
-          "SUBTITLE": "O que a tua equipa já sabe, agora acessível a todos.",
+          "SUBTITLE": "O conhecimento certo, sempre à mão.",
           "VIDEO_URL": "piJPcQ0PR94",
           "ITEMS_PILLS": [
-            "Capture and share the expertise of your top team members.",
-            "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
+            "Capte e partilhe o conhecimento dos membros mais experientes da sua equipa.",
+            "Ajude novos colaboradores a aprender mais rapidamente e assegure que o conhecimento essencial se mantém acessível e relevante ao longo do tempo, independentemente de quem integra a equipa."
           ]
         }
       ]
     },
     "CARD2": {
-      "TITLE": "Assistente de IA para Conhecimento Especializado",
-      "SUBTITLE": "O conhecimento certo, sempre à mão.",
-      "VIDEO_URL": "jU1CVlUsC-A",
-      "ITEMS": [
-        "Guarde e partilhe experiência com os seus melhores colaboradores.",
-        "Ajude novos funcionários a aprender mais rápido e assegure que o conhecimento permanece acessível e relevante ao longo do tempo, independentemente de quem esteja na empresa."
+      "INNER_CARDS": [
+        {
+          "TITLE": "A sua equipa de vendas só consegue ir até certo ponto",
+          "SUBTITLE": "As equipas comerciais perdem tempo, todas as semanas, a reunir dados em vez de os utilizarem para tomar decisões estratégicas.",
+          "DESCRIPTION_TEXT": "A identificação de novos clientes e o reconhecimento de tendências de produto continuam a depender de processos manuais e demorados.\n\nCom ferramentas limitadas e equipas reduzidas, o ritmo é lento, o alcance é limitado e muitas oportunidades valiosas ficam por aproveitar.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/knowledge.jpg"
+        },
+        {
+          "TITLE": "Não se pode agir sobre aquilo que não se vê",
+          "SUBTITLE": "As equipas de vendas perdem oportunidades por falta de visibilidade real.",
+          "DESCRIPTION_TEXT": "Sinais importantes como a redução de encomendas, clientes inativos ou alterações na procura estão muitas vezes ocultos em ferramentas desconectadas ou esquecidos em relatórios desatualizados.\n\nSem uma visão clara, é fácil perder o momento certo para agir.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/coffee_paper.jpg"
+        },
+        {
+          "TITLE": "Assistente IA para Otimização de Vendas",
+          "SUBTITLE": "Feche mais negócios, mais rapidamente",
+          "VIDEO_URL": "Y8vt96xhBNU",
+          "ITEMS_PILLS": [
+            "Mantenha-se informado e não perca nenhuma oportunidade.",
+            "Receba alertas quando for o momento certo para entrar em contacto com clientes inativos.",
+            "Deixe que o assistente encontre novos leads por si, para que se possa focar em fechar negócios em vez de os andar a perseguir."
+          ]
+        }
       ]
     },
     "CARD3": {
-      "TITLE": "Assistente IA para Planeamento de Orçamentos",
-      "SUBTITLE": "Decida mais rápido, planeie melhor e garanta as entregas.",
-      "VIDEO_URL": "dVWhK3Kos54",
-      "ITEMS": [
-        "Ajude a fazer orçamentos mais claros e a planear melhor.",
-        "Simule cenários, veja os dados em tempo real, controle os stocks e assegure que nada falha nas entregas. Tudo em minutos, não em dias."
+      "INNER_CARDS": [
+        {
+          "TITLE": "Criar orçamentos não devia demorar tanto",
+          "SUBTITLE": "Elaborar uma proposta não deveria parecer que está sempre a começar do zero.",
+          "DESCRIPTION_TEXT": "A procura por orçamentos anteriores, a comparação de preços entre mercados e a verificação de variações técnicas são processos realizados manualmente.\n\nAs equipas perdem horas a compilar informação que deveria estar imediatamente acessível, impedindo uma resposta rápida e a conquista de novos negócios.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/notes.jpg"
+        },
+        {
+          "TITLE": "A elaborar propostas sem confiança?",
+          "SUBTITLE": "Sem visibilidade, corre o risco de atrasos e de perda de credibilidade.",
+          "DESCRIPTION_TEXT": "Muitas propostas são feitas sem saber se existe stock suficiente ou tempo para entregar.\n\nSem visibilidade, é mais difícil indicar prazos com precisão ou identificar quais encomendas podem esperar, para que possa dar prioridade às mais urgentes.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/tablet_calculator.jpg"
+        },
+        {
+          "TITLE": "Assistente IA para Planeamento de Orçamentos",
+          "SUBTITLE": "Decida mais rápido, planeie melhor, entregue com confiança.",
+          "VIDEO_URL": "bsBxSShHQ",
+          "ITEMS_PILLS": [
+            "Ajude a criar orçamentos mais claros e a planear de forma mais eficaz.",
+            "Simule cenários, visualize dados em tempo real, controle os níveis de stock e assegure-se de que nada falha nas entregas.",
+            "Faça tudo em minutos, não em dias."
+          ]
+        }
       ]
     },
     "CARD4": {
-      "TITLE": "Assistente de IA para Manutenção Mais Eficiente",
-      "SUBTITLE": "Menos paragens. Mais controlo.",
-      "VIDEO_URL": "5vtU03nUvGU",
-      "ITEMS": ["Perceba facilmente quando há risco de avarias e como foram resolvidos problemas no passado.", "Ajude a equipa a prevenir falhas e reduzir custos com uma manutenção mais eficiente."]
+      "INNER_CARDS": [
+        {
+          "TITLE": "Não é apenas a falha, é a rapidez com que responde",
+          "SUBTITLE": "Já aconteceu antes? Descubra em segundos.",
+          "DESCRIPTION_TEXT": "Quando uma máquina falha, agir rapidamente é fundamental.\n\nContudo, sem acesso a casos semelhantes anteriores, demora-se mais a compreender o problema, especialmente se o especialista não estiver disponível ou se o cliente estiver geograficamente distante.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/machine2.jpg"
+        },
+        {
+          "TITLE": "Resolva antes que avarie",
+          "SUBTITLE": "Deixe de adivinhar. Comece a prevenir.",
+          "DESCRIPTION_TEXT": "Identifique problemas muito antes de se tornarem falhas.\n\nReceba alertas inteligentes, detete padrões e planeie a manutenção no momento mais conveniente, e não quando já é demasiado tarde.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/photo_machine.jpg"
+        },
+        {
+          "TITLE": "Assistente IA para Manutenção Mais Eficiente",
+          "SUBTITLE": "Menos tempo de paragem. Mais controlo.",
+          "VIDEO_URL": "wA-4gz78_0k",
+          "ITEMS_PILLS": [
+            "Receba alertas sobre potenciais falhas e veja como foram resolvidos problemas semelhantes no passado.",
+            "Apoie a sua equipa na prevenção de avarias e na redução de custos, através de uma manutenção mais eficiente."
+          ]
+        }
+      ]
     },
     "CARD5": {
-      "TITLE": "Assistente de IA para Insights com Gráficos Dinâmicos",
-      "SUBTITLE": "Entenda o que se passa, sem perder tempo.",
-      "VIDEO_URL": "MTjN3Rnu71s",
-      "ITEMS": [
-        "Transforme perguntas simples em respostas claras e visuais, mesmo quando os dados são complexos ou extensos.",
-        "Seja na produção, qualidade, manutenção ou gestão de topo, analise rapidamente grandes volumes de informação, identifique padrões e tome decisões informadas.",
-        "Tudo em segundos, sem depender de relatórios demorados ou análises técnicas."
+      "INNER_CARDS": [
+        {
+          "TITLE": "Dados, dados e mais dados",
+          "SUBTITLE": "Muita informação, mas e a clareza?",
+          "DESCRIPTION_TEXT": "Tem acesso a dashboards, relatórios e folhas de cálculo, mas quando precisa de respostas rápidas, perde-se na análise.\n\nQuestões complexas demoram demasiado tempo a ser resolvidas, ou simplesmente ficam por responder.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs.jpg"
+        },
+        {
+          "TITLE": "Decisões comprometidas, ritmo em risco",
+          "SUBTITLE": "Não há tempo a perder com mais um relatório.",
+          "DESCRIPTION_TEXT": "Tem uma intuição, mas não os dados que a sustentem.\n\nDepender de analistas atrasa todo o processo.\n\nQuando finalmente recebe o relatório, a oportunidade já passou.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs_table_coffee.jpg"
+        },
+        {
+          "TITLE": "Assistente IA para Insights com Gráficos Dinâmicos",
+          "SUBTITLE": "Veja tudo o que se está a passar, sem perder tempo.",
+          "VIDEO_URL": "a4oWKK3bMhs",
+          "ITEMS_PILLS": [
+            "Transforme perguntas simples em respostas visuais e claras, mesmo quando os dados são complexos ou extensos.",
+            "Seja nas áreas de produção, qualidade, manutenção ou gestão executiva, analise rapidamente grandes volumes de informação, identifique padrões e tome decisões informadas.",
+            "Tudo em segundos, sem depender de relatórios extensos ou análises técnicas."
+          ]
+        }
       ]
     }
   },

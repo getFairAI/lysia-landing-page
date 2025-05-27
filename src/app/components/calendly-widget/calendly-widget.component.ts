@@ -16,7 +16,6 @@ export class CalendlyWidgetComponent implements OnInit {
 
   ngOnInit() {
     const script = document.getElementById('calendly-script');
-    console.log(window.Calendly);
     if (script && !!window.Calendly) {
       // script already loaded
       window.Calendly.initInlineWidget({
