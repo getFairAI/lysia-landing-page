@@ -69,7 +69,7 @@
 
         <div class="mt-5 lg:mt-20 w-full flex flex-col justify-center items-center py-6 animate-slide-down wait600ms">
           <div class="hidden sm:block">
-            <button type="button" class="w-fit button-lysia primary-color bigger-button" (click)="scrollDownLearnMore()">
+            <button type="button" class="w-fit button-lysia primary-color bigger-button plausible-event-name=Learn+More+Click" (click)="scrollDownLearnMore()">
               {{ 'Learn More' | translate }}<mat-icon>keyboard_arrow_down</mat-icon>
             </button>
           </div>
@@ -127,7 +127,7 @@
       </div>
 
       <div class="flex flex-nowrap pl-[10%] pr-[10%] xl:pl-[15%] xl:pr-[15%] py-5 gap-8 overflow-y-auto relative scroll-smooth scrollable-div" id="scrollable-div">
-        <div class="info-card" (click)="clickInfoCardOpenDialog('CARD1')" id="card-scroll-reference">
+        <div class="info-card plausible-event-name=Card+Click plausible-event-card=card1" (click)="clickInfoCardOpenDialog('CARD1')" id="card-scroll-reference">
           <div class="card-img-bg">
             <img src="./assets/img/landing-page-cards/smart.jpg" />
           </div>
@@ -139,7 +139,7 @@
           <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
         </div>
 
-        <div class="info-card" (click)="clickInfoCardOpenDialog('CARD2')">
+        <div class="info-card plausible-event-name=Card+Click plausible-event-card=card2" (click)="clickInfoCardOpenDialog('CARD2')">
           <div class="card-img-bg">
             <img src="./assets/img/landing-page-cards/knowledge.jpg" />
           </div>
@@ -151,7 +151,7 @@
           <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
         </div>
 
-        <div class="info-card" (click)="clickInfoCardOpenDialog('CARD3')">
+        <div class="info-card plausible-event-name=Card+Click plausible-event-card=card3" (click)="clickInfoCardOpenDialog('CARD3')">
           <div class="card-img-bg">
             <img src="./assets/img/landing-page-cards/notes.jpg" />
           </div>
@@ -163,7 +163,7 @@
           <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
         </div>
 
-        <div class="info-card" (click)="clickInfoCardOpenDialog('CARD4')">
+        <div class="info-card plausible-event-name=Card+Click plausible-event-card=card4" (click)="clickInfoCardOpenDialog('CARD4')">
           <div class="card-img-bg">
             <img src="./assets/img/landing-page-cards/machine2.jpg" />
           </div>
@@ -175,7 +175,7 @@
           <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
         </div>
 
-        <div class="info-card" (click)="clickInfoCardOpenDialog('CARD5')">
+        <div class="info-card plausible-event-name=Card+Click plausible-event-card=card5" (click)="clickInfoCardOpenDialog('CARD5')">
           <div class="card-img-bg">
             <img src="./assets/img/landing-page-cards/graphs.jpg" />
           </div>
@@ -337,7 +337,7 @@
           <h4 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.TITLE' | translate }}</h4>
           <p class="leading-relaxed mt-1 mb-6">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.SUBTITLE' | translate }} </p>
 
-          <div class="w-full h-[650px] rounded-xl overflow-hidden shadow-lg">
+          <div class="w-full min-h-[650px] h-[901px] rounded-xl overflow-hidden shadow-lg">
             <app-calendly-widget></app-calendly-widget>
           </div>
         </div>

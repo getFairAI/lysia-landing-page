@@ -18,7 +18,7 @@
       <div class="card-content-right inverted" [ngClass]="{ 'image-card': card?.CARD_IMAGE_LOCAL_PATH }">
         <img [src]="card.CARD_IMAGE_LOCAL_PATH" *ngIf="card?.CARD_IMAGE_LOCAL_PATH" />
         <div class="video-wrapper" *ngIf="card?.VIDEO_URL">
-          <youtube-player [autofocus]="false" [videoId]="card.VIDEO_URL" [width]="videoWidth" [height]="310"></youtube-player>
+          <youtube-player [autofocus]="false" [videoId]="card.VIDEO_URL" [width]="videoWidth" [height]="310" (stateChange)="videoStateChange($event)"></youtube-player>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
       <div class="card-content-right" [ngClass]="{ 'image-card': card?.CARD_IMAGE_LOCAL_PATH }">
         <img [src]="card.CARD_IMAGE_LOCAL_PATH" *ngIf="card?.CARD_IMAGE_LOCAL_PATH" />
         <div class="video-wrapper" *ngIf="card?.VIDEO_URL" #youTubePlayer>
-          <youtube-player [autofocus]="false" [videoId]="card.VIDEO_URL" [width]="videoWidth" [height]="310"></youtube-player>
+          <youtube-player [autofocus]="false" [videoId]="card.VIDEO_URL" [width]="videoWidth" [height]="310" (stateChange)="videoStateChange($event)"></youtube-player>
         </div>
       </div>
     </ng-container>

@@ -1,13 +1,15 @@
 import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
-import { MAT_DIALOG_DATA, MatDialogRef, MatDialogTitle, MatDialogContent, MatDialogActions } from '@angular/material/dialog';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { TranslateService } from '@ngx-translate/core';
 
 export interface DialogData {
   infoCardId: string;
+}
+
+declare global {
+  interface Window {
+    plausible: (eventName: string, { callback, props, revenue }: { callback?: () => void, props?: any, revenue?: any}) => void;
+  }
 }
 
 @Component({
@@ -62,5 +64,37 @@ export class DialogInfoCardsComponent implements OnInit, AfterViewInit {
 
   onNoClick(): void {
     this.dialogRef.close();
+  }
+
+  handleEvent(): void {}
+
+  videoStateChange(event: YT.OnStateChangeEvent): void {
+    // make sure plausible is available
+    if (window.plausible) {
+      const video = event.target.getVideoUrl();
+      const time = event.target.getCurrentTime();
+      switch (event.data) {
+        case YT.PlayerState.PLAYING:
+          // emit play event
+          if (time < 1) {
+            window.plausible('Video Start', { callback: this.handleEvent, props: { video, } })
+          } else {
+            window.plausible('Video Resumed or Skipped', { callback: this.handleEvent, props: { video, time } })
+          }
+
+          break;
+        case YT.PlayerState.PAUSED:
+          // emit paused event
+          // emit when stopped
+          window.plausible('Video Paused', { callback: this.handleEvent, props: { video, time } })
+          break;
+        case YT.PlayerState.ENDED:
+          // emit finished video event
+          window.plausible('Video Finished', { callback: this.handleEvent, props: { video } })
+          break;
+        default:
+          return;
+      }
+    }
   }
 }
