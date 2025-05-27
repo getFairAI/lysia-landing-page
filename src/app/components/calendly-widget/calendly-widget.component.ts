@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
 declare global {
   interface Window {
@@ -11,15 +11,29 @@ declare global {
   templateUrl: './calendly-widget.component.html',
   styleUrl: './calendly-widget.component.scss',
 })
-export class CalendlyWidgetComponent {
+export class CalendlyWidgetComponent implements OnInit {
   @ViewChild('container') container: ElementRef;
 
   ngOnInit() {
-    window.Calendly.initInlineWidget({
-      url: 'https://calendly.com/lysialabs/30min',
-      parentElement: document.getElementById('calendly-embed'),
-      prefill: {},
-      utm: {},
-    });
+    const script = document.getElementById('calendly-script');
+    console.log(window.Calendly);
+    if (script && !!window.Calendly) {
+      // script already loaded
+      window.Calendly.initInlineWidget({
+        url: 'https://calendly.com/lysialabs/30min',
+        parentElement: document.getElementById('calendly-embed'),
+        prefill: {},
+        utm: {},
+      });
+    } else if (script) {
+      script.onload = () => {
+        window.Calendly.initInlineWidget({
+          url: 'https://calendly.com/lysialabs/30min',
+          parentElement: document.getElementById('calendly-embed'),
+          prefill: {},
+          utm: {},
+        });
+      };
+    }
   }
 }
