@@ -56,12 +56,12 @@
             <h1 class="text-lg md:text-2xl text-with-dark-bg-jambo"> {{ 'AI that seamlessly adapts to you' | translate }}</h1>
             <div class="mt-10 font-medium text-lg md:text-2xl flex flex-col gap-2">
               <div>
-                <span class="font-medium underlined-text-animation delay500ms">{{ 'Digitalize and automate' | translate }}</span>
+                <span class="font-medium underlined-text-animation delay500ms pb-1">{{ 'Digitalize and automate' | translate }}</span>
                 <span> {{ 'without losing control' | translate }} </span>
               </div>
               <div class="flex flex-wrap gap-2 justify-center">
                 <span> {{ 'of' | translate }} </span>
-                <span class="font-medium underlined-text-animation delay800ms">{{ 'what makes you great.' | translate }}</span>
+                <span class="font-medium underlined-text-animation delay800ms md:pb-1">{{ 'what makes you great.' | translate }}</span>
               </div>
             </div>
           </div>
@@ -80,10 +80,10 @@
     </div>
 
     <div class="w-full flex justify-center px-4 mt-20 animate-slide-up-zoom wait600ms">
-      <div class="w-full max-w-[1400px] flex justify-between items-center gap-8">
-        <div class="flex flex-col">
-          <span class="text-xs font-medium mb-2"><i class="fas fa-bolt mr-1 opacity-75"></i>Empowered by</span>
-          <div class="flex flex-wrap gap-4 md:gap-8 items-center">
+      <div class="w-full max-w-[1400px] flex justify-between items-center gap-10">
+        <div class="flex flex-col items-center lg:items-start">
+          <span class="text-xs font-medium mb-3"><i class="fas fa-bolt mr-1 opacity-75"></i>Empowered by</span>
+          <div class="flex flex-wrap gap-4 md:gap-8 items-center justify-center">
             <a href="https://getfair.ai" target="_blank" matTooltip="Check out FairAI"
               ><img src="./assets/img/logos/logo_non_capitalized_black_transp.svg" class="w-full max-w-[120px] md:max-w-[140px]"
             /></a>
@@ -92,9 +92,9 @@
           </div>
         </div>
 
-        <div class="flex items-end lg:items-start flex-col">
-          <span class="text-xs font-medium"><i class="fas fa-heart mr-1 opacity-75"></i>Backed by</span>
-          <div class="flex flex-wrap gap-4 md:gap-8 justify-end items-center">
+        <div class="flex items-center lg:items-start flex-col">
+          <span class="text-xs font-medium mb-3 md:mb-0"><i class="fas fa-heart mr-1 opacity-75"></i>Backed by</span>
+          <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center">
             <a href="https://www.rndao.io/" target="_blank"><img src="./assets/img/logos/rndao.png" class="w-full max-w-[60px] md:max-w-[80px]" /></a>
             <a href="https://forward.arweave.dev/" target="_blank"><img src="./assets/img/logos/forward-research-logo.png" class="w-full max-w-[100px] md:max-w-[120px]" /></a>
             <a href="https://www.techstars.com/" target="_blank"><img src="./assets/img/logos/techstars-logo.png" class="w-full max-w-[120px] md:max-w-[140px] relative translate-x-2" /></a>
@@ -110,7 +110,7 @@
         <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
           <h2 class="text-xl md:text-2xl font-semibold">{{ 'WHAT_WE_DO_SECTION.TITLE' | translate }}</h2>
         </div>
-        <div class="font-medium md:text-lg text-center mt-6 whitespace-pre-wrap">
+        <div class="font-medium text-center mt-6 whitespace-pre-wrap">
           {{ 'WHAT_WE_DO_SECTION.DESCRIPTION' | translate }}
         </div>
       </div>
@@ -195,9 +195,12 @@
       <div class="flex flex-wrap justify-center text-center mb-24">
         <div class="w-full max-w-[800px] flex flex-col items-center px-4">
           <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
-            <h2 class="text-xl md:text-2xl font-semibold">{{ 'About us' | translate }}</h2>
+            <h2 class="text-xl md:text-2xl font-semibold">{{ 'ABOUT_US_TITLE' | translate }}</h2>
           </div>
-          <p class="md:text-lg mt-8 font-medium whitespace-pre-wrap">{{ 'TEAM_DESCRIPTION' | translate }}</p>
+          <p class="mt-8 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION1' | translate }}</p>
+          <p class="mt-5 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION2' | translate }}</p>
+          <p class="mt-5 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION3' | translate }}</p>
+          <p class="mt-5 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION4' | translate }}</p>
         </div>
       </div>
       <div class="team-photos-wrapper">
@@ -286,24 +289,14 @@
   <section class="w-full flex items-center justify-center px-8 mt-20">
     <div class="w-full max-w-[700px] flex justify-center items-center flex-col">
       <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
-        <h2 class="text-xl md:text-2xl font-semibold">{{ 'Contact us' | translate }}</h2>
+        <h2 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
       </div>
-      <p class="md:text-lg font-medium whitespace-pre-wrap text-center text-slate-700 mt-5"
-        >We’re not building AI for the sake of it. We’re building AI that respects how people already get things done and helps them do it even better.</p
-      >
+      <p class="font-medium whitespace-pre-wrap text-center text-slate-700 mt-5">{{ 'CONTACT_SECTION.SECTION_DESCRIPTION' | translate }}</p>
     </div>
   </section>
 
   <section>
     <div class="container mx-auto px-4 mt-14" id="contact-us-wrapper">
-      <!-- <div class="flex flex-wrap text-center justify-center">
-        <div class="w-full flex flex-col justify-center items-center">
-          <div class="w-fit px-5 py-1 bg-white text-[#3aaaaa] rounded-3xl shadow-md">
-            <h2 class="text-2xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
-          </div>
-          <p class="text-lg leading-relaxed mt-4 px-4 font-medium">{{ 'CONTACT_SECTION.SECTION_SUBTITLE' | translate }}</p>
-        </div>
-      </div> -->
       <div class="flex flex-wrap justify-evenly gap-8">
         <div class="w-full max-w-[300px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">

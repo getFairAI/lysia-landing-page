@@ -1,7 +1,12 @@
 {
-  "TEAM_DESCRIPTION": "We are a strong technical team passionate about AI since 2016, with experience in multinational companies and public sector projects, across banking, education, large-scale logistics, and telecommunications.\n\nWe started this project in 2022, and since then, we've secured support from multiple investors and joined Techstars, one of the world’s leading startup accelerators.\n\nWe've delivered AI projects in a range of sectors, including a leading blockchain infrastructure provider and a prominent UK-based startup.\n\nMore recently, we've focused on the industrial sector, helping manufacturers improve operations through intelligent automation and data-driven decision-making.",
-
+  "ABOUT_US_TITLE": "About us",
+  "ABOUT_US_DESCRIPTION1": "We are a strong technical team passionate about AI since 2016, with experience in multinational companies and public sector projects, across banking, education, large-scale logistics, and telecommunications.",
+  "ABOUT_US_DESCRIPTION2": "We started this project in 2022, and since then, we've secured support from multiple investors and joined Techstars, one of the world's leading startup accelerators.",
+  "ABOUT_US_DESCRIPTION3": "We've delivered AI projects in a range of sectors, including a leading blockchain infrastructure provider and a prominent UK-based startup.",
+  "ABOUT_US_DESCRIPTION4": "More recently, we've focused on the industrial sector, helping manufacturers improve operations through intelligent automation and data-driven decision-making.",
   "CONTACT_SECTION": {
+    "SECTION_TITLE": "Contact us",
+    "SECTION_DESCRIPTION": "We're not building AI for the sake of it. We're building AI that respects how people already get things done and helps them do it even better.",
     "SECTION_CARDS": {
       "CARD1": {
         "TITLE": "Smart Solutions",

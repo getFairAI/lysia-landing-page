@@ -1,5 +1,4 @@
 {
-  "Contact Us": "Contacte-nos",
   "Watch the quick video to learn more": "Veja o vídeo rápido para saber mais",
   "AI that seamlessly adapts to you": "IA que se adapta a si",
   "Digitalize and automate": "Digitalize e automatize",
@@ -9,10 +8,15 @@
   "Send Message": "Enviar Mensagem",
   "Learn More": "Saber Mais",
   "Our tech stack": "As nossas tecnologias",
-  "About us": "Sobre nós",
-  "TEAM_DESCRIPTION": "We are a strong technical team passionate about AI since 2016, with experience in multinational companies and public sector projects, across banking, education, large-scale logistics, and telecommunications.\n\nWe started this project in 2022, and since then, we've secured support from multiple investors and joined Techstars, one of the world’s leading startup accelerators.\n\nWe've delivered AI projects in a range of sectors, including a leading blockchain infrastructure provider and a prominent UK-based startup.\n\nMore recently, we've focused on the industrial sector, helping manufacturers improve operations through intelligent automation and data-driven decision-making.",
+  "ABOUT_US_TITLE": "Sobre nós",
+  "ABOUT_US_DESCRIPTION1": "Somos uma equipa técnica forte e apaixonada por IA desde 2016, com experiência em empresas multinacionais e projetos no setor público, nos setores bancário, educacional, de logística em larga escala e telecomunicações.",
+  "ABOUT_US_DESCRIPTION2": "Iniciámos este projeto em 2022 e, desde então, conquistámos o apoio de diversos investidores e ingressamos na Techstars, uma das principais aceleradoras de startups do mundo.",
+  "ABOUT_US_DESCRIPTION3": "Entregámos projetos de IA em diversos setores, incluindo um dos principais provedores de infraestrutura blockchain e uma startup proeminente com sede no Reino Unido.",
+  "ABOUT_US_DESCRIPTION4": "Mais recentemente, temo-nos focado no setor industrial, ajudando fabricantes a melhorar suas operações por meio de automação inteligente e tomada de decisões orientada por dados.",
   "See it in action": "Ver exemplos",
   "CONTACT_SECTION": {
+    "SECTION_TITLE": "Contacte-nos",
+    "SECTION_DESCRIPTION": "Não estamos a construir ferramentas IA só porque sim.\nEstamos a construir IA que respeita a forma como as pessoas já trabalham, que as ajuda a atingir objetivos e a superar dificuldades.",
     "SECTION_CARDS": {
       "CARD1": {
         "TITLE": "Soluções Inteligentes",
@@ -20,7 +24,7 @@
       },
       "CARD2": {
         "TITLE": "Adaptável e Expansível",
-        "DESCRIPTION": "As nossas soluções adaptam-se à necessidades da sua empresa, permitindo que crescam juntos sem complicações."
+        "DESCRIPTION": "As nossas soluções adaptam-se às necessidades da sua empresa, permitindo que crescam juntos sem complicações."
       },
       "CARD3": {
         "TITLE": "Integração Completa",
@@ -141,7 +145,7 @@
         {
           "TITLE": "Assistente IA para Planeamento de Orçamentos",
           "SUBTITLE": "Decida mais rápido, planeie melhor, entregue com confiança.",
-          "VIDEO_URL": "bsBxSShHQ",
+          "VIDEO_URL": "b__sBxSShHQ",
           "ITEMS_PILLS": [
             "Ajude a criar orçamentos mais claros e a planear de forma mais eficaz.",
             "Simule cenários, visualize dados em tempo real, controle os níveis de stock e assegure-se de que nada falha nas entregas.",

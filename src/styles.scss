@@ -178,8 +178,7 @@ body {
     animation: 1s underlineSlideRight 0.8s forwards;
 
     @media only screen and (max-width: 600px) {
-      height: 4px;
-      left: -4px;
+      height: 2px;
     }
   }
 
@@ -387,6 +386,11 @@ body {
   width: 90vw !important;
   max-width: 1400px !important;
   max-height: 95vh !important;
+
+  @media only screen and (max-width: 700px) {
+    width: 95vw !important;
+    max-height: 97vh !important;
+  }
 }
 
 .youtube-player-placeholder {
