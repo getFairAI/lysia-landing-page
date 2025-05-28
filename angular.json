@@ -24,7 +24,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": ["src/favicon.ico", "src/apple-icon.png", "src/assets", "src/i18n"],
+            "assets": ["src/favicon.ico", "src/favicon.png", "src/apple-icon.png", "src/assets", "src/i18n"],
             "styles": ["@angular/material/prebuilt-themes/indigo-pink.css", "src/styles.scss"],
             "scripts": [],
             "vendorChunk": true,
