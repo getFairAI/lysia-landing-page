@@ -8,7 +8,6 @@
       <div class="items-center flex flex-wrap">
         <div class="w-full flex flex-col items-center px-4 text-center">
           <div class="logo-img-wrapper">
-            <!-- <div [innerHTML]="lysiaLogoSVGInnerHTML | safeHtml" class="logo-img"></div> -->
             <svg version="1.1" id="svg-logo" class="svg-logo" viewBox="0 0 364.16 74.239998" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
               <defs id="defs1" />
               <g id="g1">
@@ -82,7 +81,7 @@
     <div class="w-full flex justify-center px-4 mt-20 animate-slide-up-zoom wait600ms">
       <div class="w-full max-w-[1400px] flex justify-between items-center gap-10">
         <div class="flex flex-col items-center lg:items-start">
-          <span class="text-xs font-medium mb-3"><i class="fas fa-bolt mr-1 opacity-75"></i>Empowered by</span>
+          <span class="text-xs font-medium mb-3"><i class="fas fa-bolt mr-1 opacity-75"></i>{{ 'Empowered by' | translate }}</span>
           <div class="flex flex-wrap gap-4 md:gap-8 items-center justify-center">
             <a href="https://getfair.ai" target="_blank" matTooltip="Check out FairAI"
               ><img src="./assets/img/logos/logo_non_capitalized_black_transp.svg" class="w-full max-w-[120px] md:max-w-[140px]"
@@ -93,7 +92,7 @@
         </div>
 
         <div class="flex items-center lg:items-start flex-col">
-          <span class="text-xs font-medium mb-3 md:mb-0"><i class="fas fa-heart mr-1 opacity-75"></i>Backed by</span>
+          <span class="text-xs font-medium mb-3 md:mb-0"><i class="fas fa-heart mr-1 opacity-75"></i>{{ 'Backed by' | translate }}</span>
           <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center">
             <a href="https://www.rndao.io/" target="_blank"><img src="./assets/img/logos/rndao.png" class="w-full max-w-[60px] md:max-w-[80px]" /></a>
             <a href="https://forward.arweave.dev/" target="_blank"><img src="./assets/img/logos/forward-research-logo.png" class="w-full max-w-[100px] md:max-w-[120px]" /></a>
@@ -110,7 +109,7 @@
         <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
           <h2 class="text-xl md:text-2xl font-semibold">{{ 'WHAT_WE_DO_SECTION.TITLE' | translate }}</h2>
         </div>
-        <div class="font-medium text-center mt-6 whitespace-pre-wrap">
+        <div class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">
           {{ 'WHAT_WE_DO_SECTION.DESCRIPTION' | translate }}
         </div>
       </div>
@@ -197,10 +196,12 @@
           <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
             <h2 class="text-xl md:text-2xl font-semibold">{{ 'ABOUT_US_TITLE' | translate }}</h2>
           </div>
-          <p class="mt-8 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION1' | translate }}</p>
-          <p class="mt-5 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION2' | translate }}</p>
-          <p class="mt-5 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION3' | translate }}</p>
-          <p class="mt-5 font-medium whitespace-pre-wrap">{{ 'ABOUT_US_DESCRIPTION4' | translate }}</p>
+          <div class="font-medium whitespace-pre-wrap text-slate-800">
+            <p class="mt-8">{{ 'ABOUT_US_DESCRIPTION1' | translate }}</p>
+            <p class="mt-5">{{ 'ABOUT_US_DESCRIPTION2' | translate }}</p>
+            <p class="mt-5">{{ 'ABOUT_US_DESCRIPTION3' | translate }}</p>
+            <p class="mt-5">{{ 'ABOUT_US_DESCRIPTION4' | translate }}</p>
+          </div>
         </div>
       </div>
       <div class="team-photos-wrapper">
@@ -287,11 +288,11 @@
   </section>
 
   <section class="w-full flex items-center justify-center px-8 mt-20">
-    <div class="w-full max-w-[700px] flex justify-center items-center flex-col">
+    <div class="w-full max-w-[600px] flex justify-center items-center flex-col">
       <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
         <h2 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
       </div>
-      <p class="font-medium whitespace-pre-wrap text-center text-slate-700 mt-5">{{ 'CONTACT_SECTION.SECTION_DESCRIPTION' | translate }}</p>
+      <p class="font-medium whitespace-pre-wrap text-center text-slate-800 mt-5">{{ 'CONTACT_SECTION.SECTION_DESCRIPTION' | translate }}</p>
     </div>
   </section>
 
