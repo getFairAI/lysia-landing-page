@@ -45,9 +45,9 @@
       },
       "CONTACT_FORM_INPUTS": {
         "FULLNAME": "NOME COMPLETO",
-        "FULLNAMEPLACEHOLDER": "Como lhe devemos chamar?",
+        "FULLNAMEPLACEHOLDER": "Como o(a) devemos chamar?",
         "EMAIL": "EMAIL",
-        "EMAILPLACEHOLDER": "Para onde poderemos comunicar?",
+        "EMAILPLACEHOLDER": "Para onde o(a) devemos contactar?",
         "MESSAGE": "MENSAGEM",
         "MESSAGEPLACEHOLDER": "Como podemos ajudar? Esteja à vontade para partilhar quaisquer detalhes."
       }
