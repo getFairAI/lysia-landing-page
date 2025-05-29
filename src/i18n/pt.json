@@ -17,6 +17,7 @@
   "ABOUT_US_DESCRIPTION3": "Já entregámos soluções de IA em vários setores, incluindo para uma empresa líder em infraestrutura blockchain e uma proeminente startup sediada no Reino Unido.",
   "ABOUT_US_DESCRIPTION4": "Mais recentemente, temos vindo a focar-nos no setor industrial, ajudando empresas da área da manufatura a melhorar operações com automação inteligente e decisões baseadas em dados.",
   "See it in action": "Veja em ação",
+  "See It In Action": "Veja em ação",
   "CONTACT_SECTION": {
     "SECTION_TITLE": "Contacte-nos",
     "SECTION_DESCRIPTION": "Não estamos a criar IA só porque sim.\nEstamos a criar IA que respeita a forma como as pessoas já trabalham e que as ajuda a fazer ainda melhor.",
@@ -59,15 +60,15 @@
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Conhecimento partilhado.\nDecisões mais inteligentes.",
-      "DESCRIPTION": "Todos com acesso à mesma informação."
+      "TITLE": "Conhecimento partilhado.\nDecisões inteligentes.",
+      "DESCRIPTION": "Todos com acesso a toda a informação."
     },
     "CARD2": {
-      "TITLE": "Atue antes que a oportunidade se perca.",
-      "DESCRIPTION": "Simplifique os seus processos de vendas e ganhe tempo para vender."
+      "TITLE": "Atue antes que perca a oportunidade.",
+      "DESCRIPTION": "Simplifique os processos de vendas e ganhe tempo para vender."
     },
     "CARD3": {
-      "TITLE": "Orçamentos mais inteligentes.\nSem stress.",
+      "TITLE": "Orçamentos mais inteligentes.\nZero stress.",
       "DESCRIPTION": "Prepare orçamentos com total confiança e rapidez."
     },
     "CARD4": {

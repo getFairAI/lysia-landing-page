@@ -130,6 +130,20 @@
   }
 }
 
+.sponsors-images-div a {
+  transition: 0.6s all;
+
+  &:hover,
+  &:focus-within {
+    transition: 0.2s all;
+    transform: scale(1.08);
+  }
+
+  img {
+    pointer-events: none; // avoids imagus extension from interacting with it
+  }
+}
+
 .logo-img-wrapper {
   width: 100%;
   max-width: 600px;
