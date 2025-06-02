@@ -3,8 +3,8 @@
 </div>
 
 <main>
-  <div class="w-full flex flex-col items-center justify-center min-h-screen">
-    <div class="flex flex-col justify-center items-center w-full min-h-[70vh] pt-24">
+  <div class="w-full flex flex-col first-screen-wrapper">
+    <div class="flex flex-col justify-center items-center w-full h-full pt-24">
       <div class="items-center flex flex-wrap">
         <div class="w-full flex flex-col items-center px-4 text-center">
           <div class="logo-img-wrapper">
@@ -75,7 +75,7 @@
           </div>
 
           <div
-            class="flex sm:hidden items-center justify-center learnmore-button-animate bg-white text-[#3aaaaa] shadow-md font-medium w-fit rounded-full p-2 plausible-event-name=Learn+More+Click"
+            class="flex sm:hidden items-center justify-center learnmore-button-animate bg-white text-[#3aaaaa] shadow-md font-medium w-fit rounded-full p-2 cursor-pointer plausible-event-name=Learn+More+Click"
             (click)="scrollDownLearnMore()"
             ><mat-icon>keyboard_arrow_down</mat-icon></div
           >
@@ -83,25 +83,27 @@
       </div>
     </div>
 
-    <div class="w-full flex justify-center px-4 mt-20 animate-slide-up-zoom wait600ms">
-      <div class="w-full max-w-[1400px] flex justify-between items-center gap-10">
-        <div class="flex flex-col items-center lg:items-start">
-          <span class="text-xs font-medium mb-3"><i class="fas fa-bolt mr-1 opacity-75"></i>{{ 'Empowered by' | translate }}</span>
-          <div class="flex flex-wrap gap-4 md:gap-8 items-center justify-center sponsors-images-div">
-            <a href="https://getfair.ai" target="_blank" matTooltip="Check out FairAI"
-              ><img src="./assets/img/logos/logo_non_capitalized_black_transp.svg" class="w-full max-w-[120px] md:max-w-[140px]"
-            /></a>
-            <a href="https://arweave.org/" target="_blank"><img src="./assets/img/logos/arweave-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
-            <a href="https://arbitrum.io/" target="_blank"><img src="./assets/img/logos/arbitrum-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
+    <div class="w-full static md:absolute bottom-8 left-0 dynamic-height-sponsors-div">
+      <div class="w-full flex justify-center px-4 mt-12 md:mt-40 animate-slide-up-zoom wait600ms">
+        <div class="w-full max-w-[1400px] flex justify-between items-center gap-10">
+          <div class="flex flex-col items-center lg:items-start">
+            <span class="text-xs font-medium mb-3"><i class="fas fa-bolt mr-1 opacity-75"></i>{{ 'Empowered by' | translate }}</span>
+            <div class="flex flex-wrap gap-4 md:gap-8 items-center justify-center sponsors-images-div">
+              <a href="https://getfair.ai" target="_blank" matTooltip="Check out FairAI"
+                ><img src="./assets/img/logos/logo_non_capitalized_black_transp.svg" class="w-full max-w-[120px] md:max-w-[140px]"
+              /></a>
+              <a href="https://arweave.org/" target="_blank"><img src="./assets/img/logos/arweave-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
+              <a href="https://arbitrum.io/" target="_blank"><img src="./assets/img/logos/arbitrum-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
+            </div>
           </div>
-        </div>
 
-        <div class="flex items-center lg:items-start flex-col">
-          <span class="text-xs font-medium mb-3 md:mb-0"><i class="fas fa-heart mr-1 opacity-75"></i>{{ 'Backed by' | translate }}</span>
-          <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center sponsors-images-div">
-            <a href="https://www.rndao.io/" target="_blank"><img src="./assets/img/logos/rndao.png" class="w-full max-w-[60px] md:max-w-[80px]" /></a>
-            <a href="https://forward.arweave.dev/" target="_blank"><img src="./assets/img/logos/forward-research-logo.png" class="w-full max-w-[100px] md:max-w-[120px]" /></a>
-            <a href="https://www.techstars.com/" target="_blank"><img src="./assets/img/logos/techstars-logo.png" class="w-full max-w-[120px] md:max-w-[140px] relative translate-x-2" /></a>
+          <div class="flex items-center lg:items-start flex-col">
+            <span class="text-xs font-medium mb-3 md:mb-0"><i class="fas fa-heart mr-1 opacity-75"></i>{{ 'Backed by' | translate }}</span>
+            <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center sponsors-images-div">
+              <a href="https://www.rndao.io/" target="_blank"><img src="./assets/img/logos/rndao.png" class="w-full max-w-[60px] md:max-w-[80px]" /></a>
+              <a href="https://forward.arweave.dev/" target="_blank"><img src="./assets/img/logos/forward-research-logo.png" class="w-full max-w-[100px] md:max-w-[120px]" /></a>
+              <a href="https://www.techstars.com/" target="_blank"><img src="./assets/img/logos/techstars-logo.png" class="w-full max-w-[120px] md:max-w-[140px] relative translate-x-2" /></a>
+            </div>
           </div>
         </div>
       </div>
@@ -197,26 +199,26 @@
   <section>
     <div class="container mx-auto px-4 mt-20">
       <div class="flex flex-wrap justify-evenly gap-8">
-        <div class="w-full max-w-[300px] text-center">
+        <div class="flex-1 max-w-[300px] min-w-[150px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
           </div>
           <h6 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
-          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
+          <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
         </div>
-        <div class="w-full max-w-[300px] text-center">
+        <div class="flex-1 max-w-[300px] min-w-[150px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-arrow-trend-up"></i>
           </div>
           <h5 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
-          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
+          <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
         </div>
-        <div class="w-full max-w-[300px] text-center">
+        <div class="flex-1 max-w-[300px] min-w-[150px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
           </div>
           <h5 class="md:text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
-          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
+          <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
         </div>
       </div>
     </div>
