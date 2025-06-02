@@ -74,7 +74,11 @@
             </button>
           </div>
 
-          <div class="flex sm:hidden items-center justify-center w-full font-bold"><mat-icon>keyboard_arrow_down</mat-icon></div>
+          <div
+            class="flex sm:hidden items-center justify-center learnmore-button-animate bg-white text-[#3aaaaa] shadow-md font-medium w-fit rounded-full p-2 plausible-event-name=Learn+More+Click"
+            (click)="scrollDownLearnMore()"
+            ><mat-icon>keyboard_arrow_down</mat-icon></div
+          >
         </div>
       </div>
     </div>
@@ -190,7 +194,35 @@
     </div>
   </section>
 
-  <section class="mt-40 pt-14 pb-28 gradient-white-bg w-full flex justify-center">
+  <section>
+    <div class="container mx-auto px-4 mt-20">
+      <div class="flex flex-wrap justify-evenly gap-8">
+        <div class="w-full max-w-[300px] text-center">
+          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+            <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
+          </div>
+          <h6 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
+          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
+        </div>
+        <div class="w-full max-w-[300px] text-center">
+          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+            <i class="text-xl text-[#3aaaaa] fas fa-arrow-trend-up"></i>
+          </div>
+          <h5 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
+          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
+        </div>
+        <div class="w-full max-w-[300px] text-center">
+          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
+            <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
+          </div>
+          <h5 class="md:text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
+          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-20 pt-14 pb-28 gradient-white-bg w-full flex justify-center">
     <div class="w-full flex flex-col items-center justify-center max-w-[1600px] px-4 text-slate-700">
       <div class="flex flex-wrap justify-center text-center mb-24">
         <div class="w-full max-w-[800px] flex flex-col items-center px-4">
@@ -288,6 +320,9 @@
     </div>
   </section>
 
+  <!-- contact button scrolls down here -->
+  <div id="contact-us-wrapper"></div>
+
   <section class="w-full flex items-center justify-center px-8 mt-20">
     <div class="w-full max-w-[600px] flex justify-center items-center flex-col">
       <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
@@ -297,38 +332,10 @@
     </div>
   </section>
 
-  <section>
-    <div class="container mx-auto px-4 mt-14" id="contact-us-wrapper">
-      <div class="flex flex-wrap justify-evenly gap-8">
-        <div class="w-full max-w-[300px] text-center">
-          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
-            <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
-          </div>
-          <h6 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
-          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
-        </div>
-        <div class="w-full max-w-[300px] text-center">
-          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
-            <i class="text-xl text-[#3aaaaa] fas fa-arrow-trend-up"></i>
-          </div>
-          <h5 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
-          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
-        </div>
-        <div class="w-full max-w-[300px] text-center">
-          <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
-            <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
-          </div>
-          <h5 class="md:text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
-          <p class="mt-2 mb-4"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="mt-14">
     <div class="w-full px-4 flex justify-center flex-wrap gap-8">
       <div class="w-full max-w-[600px]">
-        <div class="shadow-md glasspane-card strong-bg text-slate-600">
+        <div class="shadow-md glasspane-card strong-bg text-slate-700">
           <h4 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.TITLE' | translate }}</h4>
           <p class="leading-relaxed mt-1 mb-6">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD1.SUBTITLE' | translate }} </p>
 
@@ -339,7 +346,7 @@
       </div>
 
       <div class="w-full max-w-[600px]">
-        <form class="w-full flex flex-col shadow-md glasspane-card strong-bg text-slate-600" [formGroup]="formGroupContactUs" id="form-contact-us">
+        <form class="w-full flex flex-col shadow-md glasspane-card strong-bg text-slate-700" [formGroup]="formGroupContactUs" id="form-contact-us">
           <h4 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.TITLE' | translate }}</h4>
           <p class="leading-relaxed mt-1">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.SUBTITLE' | translate }}</p>
           <div class="relative w-full mb-3 mt-7">
