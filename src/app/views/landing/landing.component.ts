@@ -4,6 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
 import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-landing',
@@ -25,6 +26,11 @@ export class LandingComponent implements OnInit {
     messagePlaceholder: '',
   };
 
+  notifSnackbarMessage: {
+    success: 'Message sent succesfully. We will be in touch very soon!';
+    error: 'An error occurred. Please, try again.';
+  }; // message to show after form submit
+
   formGroupContactUs = new FormGroup({
     // field names must be equal to those configured in emailjs service
     userFullname: new FormControl('', Validators.required),
@@ -33,10 +39,8 @@ export class LandingComponent implements OnInit {
   });
 
   submittingForm = false; // triggers submitting animation
-  showMessageSentSuccess = false;
-  showMessageSentError = false;
 
-  constructor(private translateService: TranslateService, private dialog: MatDialog) {}
+  constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     // this event fires at the first page open so it will bring the default language files on page open
@@ -51,6 +55,11 @@ export class LandingComponent implements OnInit {
         this.contactSectionInputsTexts.fullNamePlaceholder = newLangData.translations?.CONTACT_SECTION?.CONTACT_FORMS_CARDS?.CONTACT_FORM_INPUTS?.FULLNAMEPLACEHOLDER ?? '';
         this.contactSectionInputsTexts.emailPlaceholder = newLangData.translations?.CONTACT_SECTION?.CONTACT_FORMS_CARDS?.CONTACT_FORM_INPUTS?.EMAILPLACEHOLDER ?? '';
         this.contactSectionInputsTexts.messagePlaceholder = newLangData.translations?.CONTACT_SECTION?.CONTACT_FORMS_CARDS?.CONTACT_FORM_INPUTS?.MESSAGEPLACEHOLDER ?? '';
+
+        this.notifSnackbarMessage = {
+          success: newLangData.translations?.SNACKBAR?.MESSAGE_SUBMIT_SUCCESS ?? 'Message sent succesfully. We will be in touch very soon!',
+          error: newLangData.translations?.SNACKBAR?.MESSAGE_SUBMIT_ERROR ?? 'An error occurred. Please, try again.',
+        };
       },
       error: error => {
         console.log(error);
@@ -93,20 +102,22 @@ export class LandingComponent implements OnInit {
           this.formGroupContactUs.reset();
           this.formGroupContactUs.enable();
 
-          this.showMessageSentSuccess = true;
-          setTimeout(() => {
-            this.showMessageSentSuccess = false;
-          }, 4000);
+          this._snackBar.open(this.notifSnackbarMessage.success, 'OK', {
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+            panelClass: ['snackbar-custom-css', 'success'],
+          });
         },
         error => {
           console.log('EMAILJS CONTACT FORM ERROR:', error);
           this.submittingForm = false;
           this.formGroupContactUs.enable();
 
-          this.showMessageSentError = true;
-          setTimeout(() => {
-            this.showMessageSentError = false;
-          }, 4000);
+          this._snackBar.open(this.notifSnackbarMessage.error, 'OK', {
+            horizontalPosition: 'center',
+            verticalPosition: 'top',
+            panelClass: ['snackbar-custom-css', 'error'],
+          });
         }
       );
     }

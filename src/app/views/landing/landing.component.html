@@ -67,8 +67,9 @@
         </div>
 
         <div class="mt-5 lg:mt-20 w-full flex flex-col justify-center items-center py-6 animate-slide-down wait600ms">
-          <div class="hidden sm:block">
-            <button type="button" class="w-fit button-lysia primary-color bigger-button plausible-event-name=Learn+More+Click" (click)="scrollDownLearnMore()">
+          <div class="hidden sm:flex justify-center flex-col items-center">
+            <p class="mb-2 w-fit font-semibold text-slate-700">{{ 'Scroll down to' | translate }}</p>
+            <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=Learn+More+Click" (click)="scrollDownLearnMore()">
               {{ 'Learn More' | translate }}<mat-icon>keyboard_arrow_down</mat-icon>
             </button>
           </div>
@@ -379,8 +380,6 @@
               {{ 'Send Message' | translate }}
             </button>
           </div>
-
-          <div class="flex justify-center mt-10 text-center"> </div>
         </form>
       </div>
     </div>

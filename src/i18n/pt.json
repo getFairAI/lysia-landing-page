@@ -1,9 +1,12 @@
 {
+  "SNACKBAR": {
+    "MESSAGE_SUBMIT_SUCCESS": "Mensagem enviada. Iremos entrar em contacto o mais brevemente possível!",
+    "MESSAGE_SUBMIT_ERROR": "Ocorreu um erro. Por favor, tente novamente."
+  },
   "Empowered by": "Potenciado por",
   "Backed by": "Apoiado por",
-  "Contact Us": "Contacte-nos",
   "Watch the quick video to learn more": "Veja o vídeo rápido para saber mais",
-  "AI that seamlessly adapts to you": "IA que se adapta a si",
+  "AI that seamlessly adapts to you": "IA que se adapta ao seu negócio",
   "Digitalize and automate": "Digitalize e automatize",
   "without losing control": "sem perder o controlo",
   "of": "sobre",
@@ -11,6 +14,8 @@
   "Send Message": "Enviar Mensagem",
   "Learn More": "Saber Mais",
   "Our tech stack": "As nossas tecnologias",
+  "Contact Us": "Contacte-nos",
+  "Scroll down to": "Deslize para",
   "ABOUT_US_TITLE": "Sobre nós",
   "ABOUT_US_DESCRIPTION1": "Somos uma equipa altamente capacitada tecnicamente e apaixonada por IA desde 2016, com experiência em empresas multinacionais e projetos do setor público, nas áreas da banca, educação, logística de grande escala e telecomunicações.",
   "ABOUT_US_DESCRIPTION2": "Iniciámos este projeto em 2022 e, desde então, conseguimos o apoio de vários investidores e participámos na Techstars, uma das principais aceleradoras de startups a nível mundial.",
@@ -19,8 +24,8 @@
   "See it in action": "Veja em ação",
   "See It In Action": "Veja em ação",
   "CONTACT_SECTION": {
-    "SECTION_TITLE": "Contacte-nos",
-    "SECTION_DESCRIPTION": "Não estamos a criar IA só porque sim.\nEstamos a criar IA que respeita a forma como as pessoas já trabalham e que as ajuda a fazer ainda melhor.",
+    "SECTION_TITLE": "Vamos conversar",
+    "SECTION_DESCRIPTION": "Não estamos a construir ferramentas IA só porque sim.\nEstamos a construir IA que respeita a forma como as pessoas já trabalham, que as ajuda a atingir objetivos e a superar dificuldades.",
     "SECTION_CARDS": {
       "CARD1": {
         "TITLE": "Soluções Inteligentes",

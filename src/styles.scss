@@ -323,6 +323,11 @@ body {
     color: white;
   }
 
+  &.outlined-primary-color {
+    border: 2px solid #3aaaaa;
+    color: #3aaaaa;
+  }
+
   &.outlined-secondary-color {
     border: 2px solid rgb(70, 70, 70);
     color: rgb(70, 70, 70);
@@ -334,9 +339,14 @@ body {
     padding: 10px 20px;
     font-size: 18px;
 
+    &.outlined-primary-color {
+      padding: 8px 18px;
+      border: 4px solid #3aaaaa;
+    }
+
     &.outlined-secondary-color {
+      padding: 8px 18px;
       border: 4px solid rgb(70, 70, 70);
-      font-weight: 700;
     }
 
     @media only screen and (max-width: 600px) {
@@ -355,6 +365,11 @@ body {
 
     &.primary-color {
       background-color: #53cbcb;
+      color: white;
+    }
+
+    &.outlined-primary-color {
+      background-color: #3aaaaa;
       color: white;
     }
 
@@ -396,4 +411,41 @@ body {
 .youtube-player-placeholder {
   // try to fix the youtube embed library not being responsive
   width: 100% !important;
+}
+
+// custom css class for snackbar material (need to add this class when calling the snackbar)
+.snackbar-custom-css {
+  .mdc-snackbar__surface {
+    background-color: white !important;
+    border-radius: 40px !important;
+
+    .mat-mdc-snack-bar-label {
+      color: rgb(70, 70, 70) !important;
+      font-weight: 700 !important;
+      white-space: pre-wrap;
+    }
+
+    .mat-mdc-snack-bar-action {
+      background-color: white !important;
+      border-radius: 20px !important;
+      color: rgb(70, 70, 70) !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  &.success .mdc-snackbar__surface {
+    background-color: rgb(101, 206, 85) !important;
+
+    .mat-mdc-snack-bar-label {
+      color: white !important;
+    }
+  }
+
+  &.error .mdc-snackbar__surface {
+    background-color: rgb(208, 86, 86) !important;
+
+    .mat-mdc-snack-bar-label {
+      color: white !important;
+    }
+  }
 }
