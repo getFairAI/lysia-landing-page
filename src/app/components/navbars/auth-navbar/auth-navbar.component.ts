@@ -24,6 +24,11 @@ export class AuthNavbarComponent implements OnInit {
     this.menuOpen = true;
   }
 
+  aboutUsScrollToDiv() {
+    let elementPosition = document.getElementById('about-us-wrapper');
+    elementPosition.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
   contactUsScrollToDiv() {
     let elementPosition = document.getElementById('contact-us-wrapper');
     elementPosition.scrollIntoView({ behavior: 'smooth', block: 'start' });
