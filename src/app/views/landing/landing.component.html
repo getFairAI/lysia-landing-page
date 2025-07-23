@@ -113,7 +113,7 @@
   <section id="top-info-cards-section" class="top-info-cards-wrapper">
     <div class="w-full flex justify-center px-8">
       <div class="flex flex-col items-center justify-center w-full max-w-[800px]">
-        <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
+        <div class="w-fit px-5 py-1 bg-neutral-700 text-white rounded-3xl shadow-lg">
           <h2 class="text-xl md:text-2xl font-semibold">{{ 'WHAT_WE_DO_SECTION.TITLE' | translate }}</h2>
         </div>
         <div class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">
@@ -135,41 +135,41 @@
       <div class="flex flex-nowrap pl-[10%] pr-[10%] xl:pl-[15%] xl:pr-[15%] py-5 gap-8 overflow-y-auto relative scroll-smooth scrollable-div" id="scrollable-div">
         <div class="info-card plausible-event-name=Card+Click plausible-event-card=card1" (click)="clickInfoCardOpenDialog('CARD1')" id="card-scroll-reference">
           <div class="card-img-bg">
-            <img src="./assets/img/landing-page-cards/smart.jpg" />
+            <img src="./assets/img/landing-page-cards/girl-writing.jpg" />
           </div>
           <div class="card-title-div">
             <h6 class="text-xl font-semibold text-white">{{ 'KNOWMORE_CARDS.CARD1.TITLE' | translate }}</h6>
             <p class="mt-2 text-white">{{ 'KNOWMORE_CARDS.CARD1.DESCRIPTION' | translate }} </p>
           </div>
           <div class="open-icon"><mat-icon>call_made</mat-icon></div>
-          <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
+          <div class="open-icon-text">{{ 'Learn More' | translate }}</div>
         </div>
 
         <div class="info-card plausible-event-name=Card+Click plausible-event-card=card2" (click)="clickInfoCardOpenDialog('CARD2')">
           <div class="card-img-bg">
-            <img src="./assets/img/landing-page-cards/knowledge.jpg" />
+            <img src="./assets/img/landing-page-cards/research-papers.jpg" />
           </div>
           <div class="card-title-div">
             <h6 class="text-xl font-semibold text-white">{{ 'KNOWMORE_CARDS.CARD2.TITLE' | translate }}</h6>
             <p class="mt-2 text-white">{{ 'KNOWMORE_CARDS.CARD2.DESCRIPTION' | translate }}</p>
           </div>
           <div class="open-icon"><mat-icon>call_made</mat-icon></div>
-          <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
+          <div class="open-icon-text">{{ 'Learn More' | translate }}</div>
         </div>
 
         <div class="info-card plausible-event-name=Card+Click plausible-event-card=card3" (click)="clickInfoCardOpenDialog('CARD3')">
           <div class="card-img-bg">
-            <img src="./assets/img/landing-page-cards/notes.jpg" />
+            <img src="./assets/img/landing-page-cards/papers-table.jpg" />
           </div>
           <div class="card-title-div">
-            <h6 class="text-xl font-semibold">{{ 'KNOWMORE_CARDS.CARD3.TITLE' | translate }}</h6>
-            <p class="mt-2">{{ 'KNOWMORE_CARDS.CARD3.DESCRIPTION' | translate }}</p>
+            <h6 class="text-xl font-semibold text-white">{{ 'KNOWMORE_CARDS.CARD3.TITLE' | translate }}</h6>
+            <p class="mt-2 text-white">{{ 'KNOWMORE_CARDS.CARD3.DESCRIPTION' | translate }}</p>
           </div>
           <div class="open-icon"><mat-icon>call_made</mat-icon></div>
-          <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
+          <div class="open-icon-text">{{ 'Learn More' | translate }}</div>
         </div>
 
-        <div class="info-card plausible-event-name=Card+Click plausible-event-card=card4" (click)="clickInfoCardOpenDialog('CARD4')">
+        <!-- <div class="info-card plausible-event-name=Card+Click plausible-event-card=card4" (click)="clickInfoCardOpenDialog('CARD4')">
           <div class="card-img-bg">
             <img src="./assets/img/landing-page-cards/machine2.jpg" />
           </div>
@@ -191,7 +191,7 @@
           </div>
           <div class="open-icon"><mat-icon>call_made</mat-icon></div>
           <div class="open-icon-text">{{ 'See it in action' | translate }}</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -199,23 +199,23 @@
   <section>
     <div class="container mx-auto px-4 mt-20">
       <div class="flex flex-wrap justify-evenly gap-8">
-        <div class="flex-1 max-w-[300px] min-w-[150px] text-center">
+        <div class="flex-1 w-full max-w-[400px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
             <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
           </div>
           <h6 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
           <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
         </div>
-        <div class="flex-1 max-w-[300px] min-w-[150px] text-center">
+        <div class="flex-1 w-full max-w-[400px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
-            <i class="text-xl text-[#3aaaaa] fas fa-arrow-trend-up"></i>
+            <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
           </div>
           <h5 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
           <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
         </div>
-        <div class="flex-1 max-w-[300px] min-w-[150px] text-center">
+        <div class="flex-1 w-full max-w-[400px] text-center">
           <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
-            <i class="text-xl text-[#3aaaaa] fas fa-arrows-rotate"></i>
+            <i class="text-xl text-[#3aaaaa] fas fa-lock"></i>
           </div>
           <h5 class="md:text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
           <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
@@ -224,18 +224,26 @@
     </div>
   </section>
 
-  <section class="mt-20 pt-14 pb-28 gradient-white-bg w-full flex justify-center">
-    <div class="w-full flex flex-col items-center justify-center max-w-[1600px] px-4 text-slate-700">
-      <div class="flex flex-wrap justify-center text-center mb-24">
-        <div class="w-full max-w-[800px] flex flex-col items-center px-4">
-          <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
+  <section class="mt-40 pt-14 pb-14 gradient-white-bg w-full flex justify-center">
+    <div class="w-full flex flex-wrap items-center justify-center max-w-[1600px] px-4 text-slate-700 gap-10">
+      <div class="flex flex-wrap justify-center">
+        <div class="flex-1 max-w-[600px] flex flex-col px-4">
+          <div class="w-fit px-5 py-1 bg-neutral-700 text-white rounded-3xl shadow-lg">
             <h2 class="text-xl md:text-2xl font-semibold">{{ 'ABOUT_US_TITLE' | translate }}</h2>
           </div>
-          <div class="font-medium whitespace-pre-wrap text-slate-800">
-            <p class="mt-8">{{ 'ABOUT_US_DESCRIPTION1' | translate }}</p>
-            <p class="mt-5">{{ 'ABOUT_US_DESCRIPTION2' | translate }}</p>
-            <p class="mt-5">{{ 'ABOUT_US_DESCRIPTION3' | translate }}</p>
-            <p class="mt-5">{{ 'ABOUT_US_DESCRIPTION4' | translate }}</p>
+          <div class="font-medium whitespace-pre-wrap text-slate-800 text-sm md:text-base flex flex-col gap-3">
+            <div class="flex pt-5 gap-2">
+              <i class="fas fa-circle mt-[5px] text-xs primary-text-color"></i>
+              <p>{{ 'ABOUT_US_DESCRIPTION1' | translate }}</p>
+            </div>
+            <div class="flex gap-2">
+              <i class="fas fa-circle mt-[5px] text-xs primary-text-color"></i>
+              <p>{{ 'ABOUT_US_DESCRIPTION2' | translate }}</p>
+            </div>
+            <div class="flex gap-2">
+              <i class="fas fa-circle mt-[5px] text-xs primary-text-color"></i>
+              <p>{{ 'ABOUT_US_DESCRIPTION3' | translate }}</p>
+            </div>
           </div>
         </div>
       </div>
@@ -243,21 +251,18 @@
         <div class="team-person-container">
           <img alt="..." src="assets/img/team/Tiago_Ferreira.png" />
           <div class="person-info">
-            <h5 class="text-xl font-bold">Tiago Ferreira</h5>
-            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Executive Officer"> CEO | AI Expert</p>
-            <div class="mt-6">
+            <h5 class="text-lg font-bold">Tiago Ferreira</h5>
+            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Executive Officer"> CEO | AI Dev</p>
+            <div class="mt-3">
               <button
                 class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                 type="button"
                 (click)="openLinkNewTab('https://www.linkedin.com/in/carlostiagoferreira/')">
                 <i class="fab fa-linkedin"></i>
               </button>
-              <!-- <button
-                  class="bg-sky-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                  type="button"
-                  (click)="openLinkNewTab('https://www.linkedin.com/in/jos%C3%A9-carreira-z/')">
-                  <i class="fab fa-twitter"></i>
-                </button> -->
+              <button class="bg-neutral-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://x.com/FairTferreira')">
+                <i class="fab fa-x-twitter"></i>
+              </button>
               <!-- <button class="bg-indigo-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button">
                   <i class="fab fa-discord"></i>
                 </button> -->
@@ -267,11 +272,14 @@
         <div class="team-person-container">
           <img alt="..." src="assets/img/team/marcio.jpg" />
           <div class="person-info">
-            <h5 class="text-xl font-bold">Márcio Guia</h5>
-            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Operating Officer"> COO | AI Expert</p>
-            <div class="mt-6">
+            <h5 class="text-lg font-bold">Márcio Guia</h5>
+            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Operating Officer"> COO | AI Dev</p>
+            <div class="mt-3">
               <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/marcio-guia/')">
                 <i class="fab fa-linkedin"></i>
+              </button>
+              <button class="bg-neutral-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://x.com/Marcio__Guia')">
+                <i class="fab fa-x-twitter"></i>
               </button>
             </div>
           </div>
@@ -279,11 +287,14 @@
         <div class="team-person-container">
           <img alt="..." src="assets/img/team/luis.jpg" />
           <div class="person-info">
-            <h5 class="text-xl font-bold">Luís Silvestre</h5>
-            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Technology Officer"> CTO | AI Expert </p>
-            <div class="mt-6">
+            <h5 class="text-lg font-bold">Luís Silvestre</h5>
+            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Technology Officer"> CTO | AI Dev </p>
+            <div class="mt-3">
               <button class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://www.linkedin.com/in/l-silvestre/')">
                 <i class="fab fa-linkedin"></i>
+              </button>
+              <button class="bg-neutral-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1" type="button" (click)="openLinkNewTab('https://x.com/lsilvestre_fair')">
+                <i class="fab fa-x-twitter"></i>
               </button>
             </div>
           </div>
@@ -291,9 +302,9 @@
         <div class="team-person-container">
           <img alt="..." src="assets/img/team/eduardo_correia.png" />
           <div class="person-info">
-            <h5 class="text-xl font-bold">Eduardo Correia</h5>
-            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Experience Officer"> CXO | UI/UX Expert </p>
-            <div class="mt-6">
+            <h5 class="text-lg font-bold">Eduardo Correia</h5>
+            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Experience Officer"> CXO | UI/UX </p>
+            <div class="mt-3">
               <button
                 class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                 type="button"
@@ -306,9 +317,9 @@
         <div class="team-person-container">
           <img alt="..." src="assets/img/team/jose.jpg" />
           <div class="person-info">
-            <h5 class="text-xl font-bold">José Carreira</h5>
-            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Knowledge Officer">CKO | UX Expert </p>
-            <div class="mt-6">
+            <h5 class="text-lg font-bold">José Carreira</h5>
+            <p class="mt-1 text-sm text-slate-400 font-semibold" matTooltip="Chief Knowledge Officer">CKO</p>
+            <div class="mt-3">
               <button
                 class="bg-sky-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
                 type="button"
@@ -322,12 +333,12 @@
     </div>
   </section>
 
-  <!-- contact button scrolls down here -->
+  <!-- contact button scrolls down here, empty div on purpose -->
   <div id="contact-us-wrapper"></div>
 
-  <section class="w-full flex items-center justify-center px-8 mt-20">
+  <section class="w-full flex items-center justify-center px-8 mt-40">
     <div class="w-full max-w-[600px] flex justify-center items-center flex-col">
-      <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
+      <div class="w-fit px-5 py-1 bg-neutral-700 text-white rounded-3xl shadow-lg">
         <h2 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
       </div>
       <p class="font-medium whitespace-pre-wrap text-center text-slate-800 mt-5">{{ 'CONTACT_SECTION.SECTION_DESCRIPTION' | translate }}</p>
@@ -397,7 +408,7 @@
   <section class="mt-40 technologies-section gradient-white-bg">
     <div class="w-full flex justify-center px-6">
       <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
-        <div class="w-fit px-5 py-1 bg-neutral-600 text-white rounded-3xl shadow-lg">
+        <div class="w-fit px-5 py-1 bg-neutral-700 text-white rounded-3xl shadow-lg">
           <h3 class="text-xl md:text-2xl font-semibold"> {{ 'TECH_STACK.TITLE' | translate }} </h3>
         </div>
       </div>

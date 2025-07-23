@@ -14,7 +14,7 @@
 
   .card-section {
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.04);
+    // background-color: rgba(0, 0, 0, 0.04);
     border-radius: 30px;
     padding: 40px;
     box-sizing: border-box;
@@ -85,7 +85,7 @@
 
       .card-subtitle {
         padding: 0px 10px;
-        margin: 20px 0px;
+        margin: 30px 0px 20px 0px;
         font-weight: 600;
         font-size: 20px;
         white-space: pre-wrap;
@@ -107,7 +107,7 @@
         }
 
         .description-text {
-          margin-left: 10px;
+          margin: 0px 10px;
           white-space: pre-wrap;
         }
 
@@ -137,7 +137,7 @@
       &.image-card {
         overflow: hidden;
         border: 6px solid white;
-        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
         height: fit-content;
         max-height: 500px;
         border-radius: 20px;

@@ -4,25 +4,24 @@
     "MESSAGE_SUBMIT_ERROR": "An error occurred. Please, try again."
   },
   "ABOUT_US_TITLE": "About us",
-  "ABOUT_US_DESCRIPTION1": "We are a strong technical team passionate about AI since 2016, with experience in multinational companies and public sector projects, across banking, education, large-scale logistics, and telecommunications.",
-  "ABOUT_US_DESCRIPTION2": "We started this project in 2022, and since then, we've secured support from multiple investors and joined Techstars, one of the world's leading startup accelerators.",
-  "ABOUT_US_DESCRIPTION3": "We've delivered AI projects in a range of sectors, including a leading blockchain infrastructure provider and a prominent UK-based startup.",
-  "ABOUT_US_DESCRIPTION4": "More recently, we've focused on the industrial sector, helping manufacturers improve operations through intelligent automation and data-driven decision-making.",
+  "ABOUT_US_DESCRIPTION1": "We're a technically driven team passionate about AI since 2016, with experience across banking, education, logistics, and telecom.",
+  "ABOUT_US_DESCRIPTION2": "Since launching this project in 2022, we've gained investor backing, joined Techstars, and delivered AI solutions for sectors including blockchain and UK startups.",
+  "ABOUT_US_DESCRIPTION3": "Today, we focus on helping manufacturers unlock value through intelligent automation and data-driven decision-making.",
   "CONTACT_SECTION": {
     "SECTION_TITLE": "Let's talk",
     "SECTION_DESCRIPTION": "We're not building AI for the sake of it. We're building AI that respects how people already get things done and helps them do it even better.",
     "SECTION_CARDS": {
       "CARD1": {
-        "TITLE": "Smart Solutions",
-        "DESCRIPTION": "We automate repetitive tasks and enhance workflows, allowing you to focus on what truly matters."
+        "TITLE": "AI that Follows Your Best Engineer",
+        "DESCRIPTION": "Our solution uses AI to capture and organize all of your team's best insights so they can speed through future endeavors."
       },
       "CARD2": {
-        "TITLE": "Easy Growth",
-        "DESCRIPTION": "Our solutions adapt to your business needs, enabling you to scale without complications."
+        "TITLE": "AI-Powered Summarization",
+        "DESCRIPTION": "Save time by replacing manual reports of experiments with automated summaries."
       },
       "CARD3": {
-        "TITLE": "Seamless Integration",
-        "DESCRIPTION": "We integrate AI into your operations effortlessly, ensuring efficiency without interruptions."
+        "TITLE": "Secure, Self-Owned Database",
+        "DESCRIPTION": "All your critical knowledge gathered in one place, private and accessible to you, owned by you."
       }
     },
     "CONTACT_FORMS_CARDS": {
@@ -45,80 +44,41 @@
     }
   },
   "WHAT_WE_DO_SECTION": {
-    "TITLE": "What we stand for",
-    "DESCRIPTION": "We deliver tailored AI solutions that fit your business.\nOur team analyzes your workflow and context to design personalized tools, enhancing operations without disruption.\n\nHere are some examples of what we can achieve:"
+    "TITLE": "Maximize Your Manufacturing Potential",
+    "DESCRIPTION": "Lysia Labs enables you to accelerate sales and R&D by accessing your hard-earned insights from previous factory floor experiments with AI."
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Shared knowledge.\nSmarter decisions.",
-      "DESCRIPTION": "No more relying on who remembers what."
+      "TITLE": "Preserve Knowledge When Teams Change",
+      "DESCRIPTION": "Capture engineering wisdom so that when someone goes away, their insights stay within the company."
     },
     "CARD2": {
-      "TITLE": "Act before the opportunity slips away.",
-      "DESCRIPTION": "Stop wasting time on manual sales reports."
+      "TITLE": "Accelerate The Research Of Your Company",
+      "DESCRIPTION": "Recycle valuable knowledge from all your past research and don't waste your time on things you already did."
     },
     "CARD3": {
-      "TITLE": "Professional proposals.\nNo stress.",
-      "DESCRIPTION": "Build competitive proposals with confidence."
-    },
-    "CARD4": {
-      "TITLE": "Fast diagnostics.\nEven remotely.",
-      "DESCRIPTION": "Take the guesswork out of maintenance."
-    },
-    "CARD5": {
-      "TITLE": "Operational data.\nInstantly readable.",
-      "DESCRIPTION": "See what's really happening. In real time."
+      "TITLE": "Reduce Time Spent On Documentation",
+      "DESCRIPTION": "Our AI structures, creates, and organizes your data, so your team can focus on what really matters."
     }
   },
   "CARDS": {
     "CARD1": {
       "INNER_CARDS": [
         {
-          "TITLE": "Stop solving what's already been solved",
-          "SUBTITLE": "The answer might already exist inside your organization.",
-          "DESCRIPTION_TEXT": "Important know-how often disappears with staff changes or shift rotations.\n\nWithout access to past fixes or test results, mistakes get repeated, and time and materials are wasted solving problems that already had a solution.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/smart.jpg"
-        },
-        {
-          "TITLE": "Still asking around for answers?",
-          "SUBTITLE": "Critical knowledge shouldn't depend on who's around.",
-          "DESCRIPTION_TEXT": "Crucial answers are hidden in files, emails, or someone's memory. \n\nAs teams search or wait for context, progress slows when they could be tackling what’s next.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/lamp.jpg"
-        },
-        {
-          "TITLE": "AI Assistant for Expert Knowledge",
-          "SUBTITLE": "The Right Knowledge, Always at Hand.",
-          "VIDEO_URL": "G_adYUG7iw8",
-          "ITEMS_PILLS": [
-            "Capture and share the expertise of your top team members.",
-            "Help new employees learn faster and ensure that essential knowledge remains accessible and relevant over time, regardless of who is on the team."
-          ]
+          "TITLE": "Never Lose Critical Know-How Again",
+          "SUBTITLE": "Capture insights from every factory floor experiment, successful or not, and boost your sales.",
+          "DESCRIPTION_TEXT": "Turn everyday experiences, even those that didn't go well, into accessible learning.\n\nEasily document what works (and what doesn't) and continuously improve your processes and outcomes.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/guy-monitor.jpg"
         }
       ]
     },
     "CARD2": {
       "INNER_CARDS": [
         {
-          "TITLE": "Your sales team can only go so far",
+          "TITLE": "Don't waste time on reports",
           "SUBTITLE": "Sales teams lose time every week gathering data instead of acting on it.",
-          "DESCRIPTION_TEXT": "Finding new clients and recognizing product trends still rely on manual, time-consuming processes.\n\nWith limited tools and small teams, the pace is slow, the reach is limited, and valuable opportunities are left behind.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/knowledge.jpg"
-        },
-        {
-          "TITLE": "You can't act on what you can't see",
-          "SUBTITLE": "Sales teams miss opportunities because they lack real visibility.",
-          "DESCRIPTION_TEXT": "Key signals such as declining orders, inactive clients, or shifting demand are often hidden in disconnected tools or neglected in outdated reports.\n\nWithout a clear view, it's easy to miss the right moment to act.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/coffee_paper.jpg"
-        },
-        {
-          "TITLE": "AI Assistant for Sales Optimization",
-          "SUBTITLE": "Close More Deals, Faster.",
-          "VIDEO_URL": "eWv6Y11pP9o",
-          "ITEMS_PILLS": [
-            "Stay informed and never miss an opportunity.",
-            "Get alerts when it's the right time to reach out to inactive clients.",
-            "And let the assistant find new leads for you, so you focus on closing, not chasing."
-          ]
+          "DESCRIPTION_TEXT": "Your data is automatically structured, analyzed, and clearly presented.\n\nLess time on repetitive tasks, more focus on strategic decisions.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/research.jpg"
         }
       ]
     },
@@ -127,74 +87,8 @@
         {
           "TITLE": "Quoting shouldn't take this long",
           "SUBTITLE": "Elaborating a proposal shouldn't feel like starting from scratch every time.",
-          "DESCRIPTION_TEXT": "Searching for past quotes, comparing prices across markets, and checking technical variations, it's all done manually. \n\nTeams waste hours compiling information that should be instantaneous, preventing them from responding quickly and winning business.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/notes.jpg"
-        },
-        {
-          "TITLE": "Quoting without knowing what you can deliver?",
-          "SUBTITLE": "Without visibility, you risk delays and losing credibility.",
-          "DESCRIPTION_TEXT": "Many proposals are made without knowing if there's enough stock or time to deliver.\n\nWithout visibility, it's harder to give accurate deadlines or spot which orders could wait so you can prioritize urgent ones.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/tablet_calculator.jpg"
-        },
-        {
-          "TITLE": "AI Assistant for Budget Planning",
-          "SUBTITLE": "Decide Faster, Plan Better, Deliver with Confidence.",
-          "VIDEO_URL": "whp5twgS3z8",
-          "ITEMS_PILLS": [
-            "Helps you create clearer budgets and plan more effectively.",
-            "Simulate scenarios, view real-time data, manage stock levels, and make sure nothing goes wrong with deliveries - all in minutes, not days."
-          ]
-        }
-      ]
-    },
-    "CARD4": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "It's not just the failure, it's how fast you respond",
-          "SUBTITLE": "Has it happened before? Find out in seconds.",
-          "DESCRIPTION_TEXT": "When a machine fails, acting quickly is key.\n\nHowever, without access to similar past cases, it takes longer to understand the issue, especially if the expert is unavailable or the client is located far away.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/machine2.jpg"
-        },
-        {
-          "TITLE": "Fix it before it breaks",
-          "SUBTITLE": "Stop guessing, start preventing.",
-          "DESCRIPTION_TEXT": "Identify issues long before they become failures.\n\nGet smart alerts, spot patterns, and plan maintenance when it's most convenient, not when it's too late.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/photo_machine.jpg"
-        },
-        {
-          "TITLE": "AI Assistant for More Efficient Maintenance",
-          "SUBTITLE": "Less Downtime. More Control.",
-          "VIDEO_URL": "vjWFvFeiVXA",
-          "ITEMS_PILLS": [
-            "Get alerts about potential failures and see how similar issues were resolved in the past.",
-            "Support your team in preventing breakdowns and reducing costs with more efficient maintenance."
-          ]
-        }
-      ]
-    },
-    "CARD5": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Drowning in data, starving for insights",
-          "SUBTITLE": "Too much info, not enough clarity.",
-          "DESCRIPTION_TEXT": "You've got dashboards, reports, and spreadsheets.\nBut when you need quick answers, you're stuck digging.\n\nComplex questions take too long to solve, or worse, go unanswered.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs.jpg"
-        },
-        {
-          "TITLE": "Decisions delayed, momentum lost",
-          "SUBTITLE": "No time to wait for another report.",
-          "DESCRIPTION_TEXT": "You have a hunch, but not the data to back it up.\nWaiting on analysts slows everything down.\n\nBy the time you get the report, the moment's already passed.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/graphs_table_coffee.jpg"
-        },
-        {
-          "TITLE": "AI Assistant for Insights with Dynamic Charts",
-          "SUBTITLE": "Understand what's happening, without wasting time.",
-          "VIDEO_URL": "t6ngDz10OKs",
-          "ITEMS_PILLS": [
-            "Turn simple questions into clear, visual answers, even when the data is complex or extensive.",
-            "Whether in production, quality, maintenance, or executive management, quickly analyze large volumes of information, identify patterns, and make informed decisions.",
-            "All in seconds, without relying on lengthy reports or technical analysis."
-          ]
+          "DESCRIPTION_TEXT": "Avoid the chaos of disorganized folders and scattered notes.\n\nOur technology automatically indexes your team's content, making everything easy to find, share, and reuse without manual effort.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/product-brief.jpg"
         }
       ]
     }

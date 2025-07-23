@@ -5,109 +5,6 @@
   }
 }
 
-// .cards-vertical-wrapper {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   box-sizing: border-box;
-//   padding: 20px;
-//   width: 100%;
-
-//   .card {
-//     margin: 25px 0px;
-//     width: 100%;
-//     max-width: 1600px;
-//     background-color: rgba(255, 255, 255, 0.6);
-//     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.03);
-//     border-radius: 30px;
-//     padding: 25px;
-//     box-sizing: border-box;
-//     display: flex;
-//     flex-wrap: wrap;
-//     gap: 20px;
-
-//     .card-content-left {
-//       flex: 1 1 300px;
-//       display: flex;
-//       flex-direction: column;
-//       padding: 15px;
-//       box-sizing: border-box;
-
-//       .card-title {
-//         background-color: rgb(70, 70, 70);
-//         border-radius: 40px;
-//         padding: 5px 25px;
-//         font-weight: 600;
-//         font-size: 28px;
-//         color: white;
-//         width: fit-content;
-//       }
-
-//       .card-subtitle {
-//         margin-top: 20px;
-//         padding: 5px 20px;
-//         font-weight: 600;
-//         font-size: 22px;
-//       }
-
-//       .card-description {
-//         margin-top: 10px;
-//         font-weight: 600;
-//         font-size: 18px;
-
-//         .card-pills {
-//           display: flex;
-//           flex-direction: column;
-//           gap: 8px;
-
-//           .card-pill {
-//             padding: 6px 18px;
-//             display: flex;
-//             gap: 8px;
-
-//             mat-icon {
-//               flex: 0 0 fit-content;
-//               margin-top: 2px;
-//             }
-//           }
-//         }
-//       }
-//     }
-
-//     .card-content-right {
-//       flex: 1 1 300px;
-//       display: flex;
-//       justify-content: flex-end;
-
-//       img {
-//         border-radius: 20px;
-//         object-fit: cover;
-//         border: 6px solid white;
-//         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
-//       }
-
-//       .video-wrapper {
-//         background-color: white;
-//         text-align: center;
-//         font-weight: 600;
-//         font-size: 90%;
-//         width: 100%;
-//         max-width: 640px;
-//         border-radius: 20px;
-//         overflow: hidden;
-//         border: 6px solid white;
-//         box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.08);
-
-//         youtube-player {
-//           border-radius: 20px;
-//           overflow: hidden;
-//         }
-//       }
-//     }
-//   }
-// }
-
 .white-pills-bg {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -243,6 +140,11 @@
   }
 
   .scroll-arrows {
+    // disable scroll arrows if width is big
+    @media only screen and (min-width: 1400px) {
+      display: none !important;
+    }
+
     .arrow-left {
       left: 0;
       top: 50%;
@@ -360,7 +262,7 @@
 
     .info-card {
       // its inside a flex container
-      flex: 0 0 320px;
+      flex: 0 0 350px;
       position: relative;
       height: 500px;
       box-sizing: border-box;
@@ -390,6 +292,7 @@
       }
 
       .card-title-div {
+        background-color: rgba(50, 50, 50, 0.25);
         backdrop-filter: blur(6px);
         padding: 20px 25px;
         box-sizing: border-box;
@@ -439,7 +342,7 @@
 
       &:hover,
       &:focus-within {
-        transform: scale(1.03) translateY(-10px);
+        transform: scale(1.01) translateY(-5px);
         transition: 0.2s all;
 
         .open-icon {
@@ -451,13 +354,13 @@
 
         .open-icon-text {
           opacity: 1;
-          width: 140px;
+          width: 120px;
           transition: 0.2s all;
         }
       }
 
       &:active {
-        transform: scale(1.02) translateY(-8px);
+        transform: translateY(-2px);
         outline: 3px solid #3aaaaa;
       }
     }
@@ -465,35 +368,36 @@
 }
 
 .team-photos-wrapper {
-  width: 100%;
-  padding: 0px 16px;
+  flex: 1 1 600px;
+  padding: 0px 10px;
+  max-width: fit-content;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
-  gap: 32px;
+  gap: 40px;
 
   .team-person-container {
-    flex: 0 0 180px;
+    flex: 0 0 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
 
     @media only screen and (max-width: 600px) {
-      flex: 0 0 120px;
+      flex: 0 0 100px;
     }
 
     img {
       box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-      border-radius: 50%;
-      width: 120px;
-      height: 120px;
+      border-radius: 20px;
+      width: 100px;
+      height: 100px;
       object-fit: cover;
 
       @media only screen and (max-width: 800px) {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
       }
     }
 
