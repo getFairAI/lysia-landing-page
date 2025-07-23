@@ -65,7 +65,7 @@
   "KNOWMORE_CARDS": {
     "CARD1": {
       "TITLE": "Preserve conhecimento quando as equipas mudam",
-      "DESCRIPTION": "Capte a sabedoria para que quando alguém sai, esta permaneça dentro da sua empresa."
+      "DESCRIPTION": "Capte a sabedoria para que quando alguém se ausenta, esta permaneça dentro da sua empresa."
     },
     "CARD2": {
       "TITLE": "Acelere a investigação dentro da sua empresa",
@@ -81,9 +81,9 @@
       "INNER_CARDS": [
         {
           "TITLE": "Nunca mais perca conhecimento crítico",
-          "SUBTITLE": "Capte a informação de todas as experiências no chão de fábrica, com ou sem sucesso, e impulsione as suas vendas.",
-          "DESCRIPTION_TEXT": "Transforme experiências diárias, mesmo as que não correram bem, em aprendizagem acessível.\n\nDocumente facilmente o que funciona (e o que não funciona) e melhore continuamente os seus processos e resultados.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/guy-monitor.jpg"
+          "SUBTITLE": "Conserve o que é importante, mesmo quando alguém está ausente.",
+          "DESCRIPTION_TEXT": "Mantenha o registo das principais decisões e das razões pelas quais as coisas foram construídas da forma que foram.\n\nEvite a perda de contexto e erros repetidos, disponibilizando o conhecimento para além das pessoas que o detinham originalmente.",
+          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/people-table.jpg"
         }
       ]
     },

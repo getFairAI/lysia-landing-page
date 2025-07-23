@@ -50,7 +50,7 @@
   "KNOWMORE_CARDS": {
     "CARD1": {
       "TITLE": "Preserve Knowledge When Teams Change",
-      "DESCRIPTION": "Capture engineering wisdom so that when someone goes away, their insights stay within the company."
+      "DESCRIPTION": "Capture engineering wisdom so that when someone is absent, their insights stay within the company."
     },
     "CARD2": {
       "TITLE": "Accelerate The Research Of Your Company",
@@ -66,8 +66,8 @@
       "INNER_CARDS": [
         {
           "TITLE": "Never Lose Critical Know-How Again",
-          "SUBTITLE": "Capture insights from every factory floor experiment, successful or not, and boost your sales.",
-          "DESCRIPTION_TEXT": "Turn everyday experiences, even those that didn't go well, into accessible learning.\n\nEasily document what works (and what doesn't) and continuously improve your processes and outcomes.",
+          "SUBTITLE": "Retain what matters, even when people are absent.",
+          "DESCRIPTION_TEXT": "Keep track of key decisions and why things were built the way they were.\n\nAvoid lost context and repeated mistakes by making knowledge available beyond the people who originally held it.",
           "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/guy-monitor.jpg"
         }
       ]
