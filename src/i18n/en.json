@@ -4,12 +4,13 @@
     "MESSAGE_SUBMIT_ERROR": "An error occurred. Please, try again."
   },
   "ABOUT_US_TITLE": "About us",
-  "ABOUT_US_DESCRIPTION1": "We're a technically driven team passionate about AI since 2016, with experience across banking, education, logistics, and telecom.",
-  "ABOUT_US_DESCRIPTION2": "Since launching this project in 2022, we've gained investor backing, joined Techstars, and delivered AI solutions for sectors including blockchain and UK startups.",
-  "ABOUT_US_DESCRIPTION3": "Today, we focus on helping manufacturers unlock value through intelligent automation and data-driven decision-making.",
+  "ABOUT_US_DESCRIPTION1": "Lysia Labs was founded by three software engineers who have been passionate about AI since they began their degrees in 2016.",
+  "ABOUT_US_DESCRIPTION2": "While working in banking, logistics, and telecom, they noticed that the way knowledge was captured, stored, and shared was highly inefficient, even within some of the world's leading organizations.",
+  "ABOUT_US_DESCRIPTION3": "This problem became even more apparent in the manufacturing industry, where operational know-how is often undocumented and siloed.",
+  "ABOUT_US_DESCRIPTION4": "With that mission, they started Lysia Labs in 2023. Backed by Techstars and international investors, and having published research papers on the topic, they now help manufacturing teams improve operational efficiency by up to 10x by making expert know-how accessible across the organization.",
   "CONTACT_SECTION": {
-    "SECTION_TITLE": "Let's talk",
-    "SECTION_DESCRIPTION": "We're not building AI for the sake of it. We're building AI that respects how people already get things done and helps them do it even better.",
+    "SECTION_TITLE": "Let's talk !",
+    "SECTION_DESCRIPTION": "Together we can research ways and ideas that can massively improve the overall operating efficiency of your company.",
     "SECTION_CARDS": {
       "CARD1": {
         "TITLE": "AI that Follows Your Best Engineer",
@@ -26,7 +27,7 @@
     },
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
-        "TITLE": "Let's book a call.",
+        "TITLE": "Let's do a quick meeting?",
         "SUBTITLE": "Choose a time that works for you."
       },
       "CARD2": {

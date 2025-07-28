@@ -17,15 +17,16 @@
   "About Us": "Quem Somos",
   "Contact Us": "Contacte-nos",
   "Scroll down to": "Deslize para",
-  "ABOUT_US_TITLE": "Sobre Nós",
-  "ABOUT_US_DESCRIPTION1": "Somos uma equipa tecnicamente motivada e apaixonada por IA desde 2016, com experiência em bancos, educação, logística e telecomunicações.",
-  "ABOUT_US_DESCRIPTION2": "Desde o lançamento deste projeto em 2022, obtivemos o apoio de investidores, juntámo-nos à Techstars e fornecemos soluções de IA para sectores que incluem blockchain e startups do Reino Unido.",
-  "ABOUT_US_DESCRIPTION3": "Hoje, concentramo-nos em ajudar os fabricantes a desbloquear valor por meio da automação inteligente e da tomada de decisões baseada em dados.",
+  "ABOUT_US_TITLE": "Sobre nós",
+  "ABOUT_US_DESCRIPTION1": "A Lysia Labs foi fundada por três engenheiros de software apaixonados por Inteligência Artificial desde o início dos seus estudos, em 2016.",
+  "ABOUT_US_DESCRIPTION2": "Ao longo das suas carreiras nos setores da banca, logística e telecomunicações, perceberam que a forma como o conhecimento era recolhido, armazenado e partilhado era altamente ineficiente, mesmo dentro de algumas das maiores organizações do mundo.",
+  "ABOUT_US_DESCRIPTION3": "Esse problema revelou-se ainda mais crítico na indústria da manufatura, onde o conhecimento operacional raramente é documentado e permanece isolado.",
+  "ABOUT_US_DESCRIPTION4": "Com essa missão, fundaram a Lysia Labs em 2023. Com o apoio da Techstars, de investidores internacionais e com alguns artigos científicos publicada na área, a empresa ajuda hoje empresas da indústria a aumentar a sua eficiência operacional até 10 vezes, tornando o conhecimento especializado acessível em toda a organização.",
   "See it in action": "Veja em ação",
   "See It In Action": "Veja em ação",
   "CONTACT_SECTION": {
-    "SECTION_TITLE": "Vamos conversar",
-    "SECTION_DESCRIPTION": "Não estamos a construir ferramentas IA só porque sim.\nEstamos a construir IA que respeita a forma como as pessoas já trabalham, que as ajuda a atingir objetivos e a superar dificuldades.",
+    "SECTION_TITLE": "Vamos conversar ?",
+    "SECTION_DESCRIPTION": "Juntos poderemos discutir ideias e oportunidades de crescimento para que a sua empresa aumente exponencialmente a sua eficiência operacional.",
     "SECTION_CARDS": {
       "CARD1": {
         "TITLE": "IA que segue o seu melhor engenheiro",
@@ -42,7 +43,7 @@
     },
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
-        "TITLE": "Pronto para avançar? Nós também!",
+        "TITLE": "Que tal uma reunião rápida?",
         "SUBTITLE": "Escolha um horário conveniente para si."
       },
       "CARD2": {
