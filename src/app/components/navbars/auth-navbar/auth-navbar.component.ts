@@ -38,7 +38,7 @@ export class AuthNavbarComponent implements OnInit {
     this.translate.use(language);
   }
 
-  closeMenu(openLinkUrl?: string, scrollToContactDiv?: boolean) {
+  closeMenu(openLinkUrl?: string, scrollToDiv?: string) {
     // set openLinkUrl to open a link in a new tab after the menu closes
 
     this.menuClosingAnimation = true; // wait for animation to finish then close it
@@ -50,8 +50,10 @@ export class AuthNavbarComponent implements OnInit {
         window.open(openLinkUrl, '_blank');
       }
 
-      if (scrollToContactDiv) {
+      if (scrollToDiv === 'contact-us') {
         this.contactUsScrollToDiv();
+      } else if (scrollToDiv === 'about-us') {
+        this.aboutUsScrollToDiv();
       }
     }, 400);
   }
