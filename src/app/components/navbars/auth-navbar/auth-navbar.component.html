@@ -2,15 +2,15 @@
   <nav class="w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg">
     <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
       <div class="w-full relative flex justify-between md:w-auto md:static md:block md:justify-start">
-        <!-- <a [routerLink]="['/']" class="text-2xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"> LYSIA Labs </a> -->
+        <!-- <a [routerLink]="['/']" class="text-2xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap"> FairAI Labs </a> -->
         <div class="logo-img-wrapper">
-          <img src="./assets/img/logos/lysiallabs_logo_transp_greyed.svg" alt="LYSIA Labs Logo" class="logo-img" [routerLink]="['/']" />
+          <img src="./assets/img/logos/fairai-v3-logo-color-black.svg" alt="FairAI Logo" class="logo-img" [routerLink]="['/']" />
         </div>
 
         <div class="flex md:hidden justify-end flex-nowrap items-center gap-3">
           <div class="language-selectors-wrapper">
-            <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of LYSIA Labs">EN</div>
-            <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa de LYSIA Labs">PT</div>
+            <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of FairAI Labs">EN</div>
+            <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa de FairAI Labs">PT</div>
             <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
           </div>
           <button
@@ -56,8 +56,8 @@
 
           <li class="ml-2 flex items-center">
             <div class="language-selectors-wrapper">
-              <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of LYSIA Labs">EN</div>
-              <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa do LYSIA Labs">PT</div>
+              <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of FairAI Labs">EN</div>
+              <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa do FairAI Labs">PT</div>
               <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
             </div>
           </li>
@@ -76,7 +76,7 @@
     </div>
 
     <div class="menu-logo">
-      <img src="./assets/img/logos/lysiallabs_logo_transp_greyed.svg" alt="LYSIA Logo" />
+      <img src="./assets/img/logos/fairai-v3-logo-color-black.svg" alt="FairAI Logo" />
     </div>
 
     <a class="menu-item" (click)="closeMenu(undefined, 'about-us')"><i class="fas fa-circle-info text-xl"></i> {{ 'About Us' | translate }}</a>
@@ -85,8 +85,8 @@
     <a class="menu-item" href="https://www.linkedin.com/company/getfairai" target="_blank"><i class="fab fa-linkedin text-xl"></i> LinkedIn</a>
 
     <div class="language-selectors-wrapper mt-10">
-      <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of LYSIA Labs">EN</div>
-      <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa do LYSIA Labs">PT</div>
+      <div class="lang-selector" (click)="useLanguage('en')" matTooltip="Access the english version of FairAI Labs">EN</div>
+      <div class="lang-selector" (click)="useLanguage('pt')" matTooltip="Consultar a versão portuguesa do FairAI Labs">PT</div>
       <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
     </div>
   </div>

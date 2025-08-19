@@ -11,16 +11,7 @@
 
 @keyframes dashAnimation1 {
   from {
-    stroke-dashoffset: 1397;
-  }
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-
-@keyframes dashAnimation2 {
-  from {
-    stroke-dashoffset: 387;
+    stroke-dashoffset: 500;
   }
   to {
     stroke-dashoffset: 0;
@@ -77,8 +68,9 @@
 
 .logo-img-wrapper {
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   padding: 30px;
+  height: 100px; // fix the logo container height (wont affect SVG)
   margin-bottom: 20px;
   box-sizing: border-box;
   position: relative;
@@ -86,38 +78,32 @@
   .svg-logo {
     position: absolute;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 500px;
     z-index: 0;
     opacity: 0;
-    animation: 1s fadeIn 2s forwards;
+    animation: 1s fadeIn 2.6s forwards;
   }
 
   .svg-animation {
     position: absolute;
-    width: 100%;
-    max-width: 500px;
     top: 0;
-    left: 50%;
-    transform: translateX(-50%);
     z-index: 1;
     opacity: 1;
     animation: 1s fadeOut 3s forwards;
 
     .logo-path-1 {
-      // animate logo
-      stroke-dasharray: 1397;
-      stroke-dashoffset: 1397;
-      animation: dashAnimation1 4s linear 0.1s forwards !important;
+      // animate logo first part
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      stroke-width: 0.5px;
+      animation: dashAnimation1 10s linear 0.3s forwards !important;
     }
 
     .logo-path-2 {
-      // animate logo
-      stroke-dasharray: 387;
-      stroke-dashoffset: 387;
-      animation: dashAnimation2 5s linear 1s forwards !important;
+      // animate logo second part
+      stroke-dasharray: 500;
+      stroke-dashoffset: 500;
+      stroke-width: 0.5px;
+      animation: dashAnimation1 10s linear 1.2s forwards !important;
     }
   }
 }

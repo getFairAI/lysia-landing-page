@@ -4,10 +4,10 @@
     "MESSAGE_SUBMIT_ERROR": "An error occurred. Please, try again."
   },
   "ABOUT_US_TITLE": "About us",
-  "ABOUT_US_DESCRIPTION1": "Lysia Labs was founded by three software engineers who have been passionate about AI since they began their degrees in 2016.",
+  "ABOUT_US_DESCRIPTION1": "FairAI was founded by three software engineers who have been passionate about AI since they began their degrees in 2016.",
   "ABOUT_US_DESCRIPTION2": "While working in banking, logistics, and telecom, they noticed that the way knowledge was captured, stored, and shared was highly inefficient, even within some of the world's leading organizations.",
   "ABOUT_US_DESCRIPTION3": "This problem became even more apparent in the manufacturing industry, where operational know-how is often undocumented and siloed.",
-  "ABOUT_US_DESCRIPTION4": "With that mission, they started Lysia Labs in 2023. Backed by Techstars and international investors, and having published research papers on the topic, they now help manufacturing teams improve operational efficiency by up to 10x by making expert know-how accessible across the organization.",
+  "ABOUT_US_DESCRIPTION4": "With that mission, they started FairAI in 2023. Backed by Techstars and international investors, and having published research papers on the topic, they now help manufacturing teams improve operational efficiency by up to 10x by making expert know-how accessible across the organization.",
   "CONTACT_SECTION": {
     "SECTION_TITLE": "Let's talk !",
     "SECTION_DESCRIPTION": "Together we can research ways and ideas that can massively improve the overall operating efficiency of your company.",
@@ -46,7 +46,7 @@
   },
   "WHAT_WE_DO_SECTION": {
     "TITLE": "Maximize Your Manufacturing Potential",
-    "DESCRIPTION": "Lysia Labs enables you to accelerate sales and R&D by accessing your hard-earned insights from previous factory floor experiments with AI."
+    "DESCRIPTION": "FairAI enables you to accelerate sales and R&D by accessing your hard-earned insights from previous factory floor experiments with AI."
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
@@ -99,7 +99,7 @@
   },
   "FOOTER": {
     "SLOGAN": "Follow our journey.",
-    "SLOGAN_SUBTITLE": "Stay in touch with LYSIA Labs.",
+    "SLOGAN_SUBTITLE": "Stay in touch with FairAI.",
     "LINKS_LIST1": {
       "TITLE": "Related Projects"
     },
