@@ -19,7 +19,7 @@ export class CalendlyWidgetComponent implements OnInit {
     if (script && !!window.Calendly) {
       // script already loaded
       window.Calendly.initInlineWidget({
-        url: 'https://calendly.com/lysialabs/30min',
+        url: 'https://calendly.com/getfairai/30min',
         parentElement: document.getElementById('calendly-embed'),
         prefill: {},
         utm: {},
@@ -27,7 +27,7 @@ export class CalendlyWidgetComponent implements OnInit {
     } else if (script) {
       script.onload = () => {
         window.Calendly.initInlineWidget({
-          url: 'https://calendly.com/lysialabs/30min',
+          url: 'https://calendly.com/getfairai/30min',
           parentElement: document.getElementById('calendly-embed'),
           prefill: {},
           utm: {},

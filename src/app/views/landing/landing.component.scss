@@ -225,7 +225,7 @@
       width: 100%;
       max-width: 100px;
       object-fit: contain;
-      filter: grayscale(1) brightness(0.7); // order is important
+      // filter: grayscale(1) brightness(0.7); // order is important
 
       @media only screen and (max-width: 800px) {
         max-width: 100px;
