@@ -1,6 +1,7 @@
 # Lysia Labs (by FairAI)
 
 This repo has all the source code of [lysialabs.com](https://lysialabs.com) website / landing page.
+
 At FairAI, we love open-source. That is why most of what we do, including this website, is always and fully open-source.
 
 Lysia Labs is the B2B-focused branch of FairAI. We create and integrate custom open-source AI solutions to many businesses around the world, so that they can have their own AI tools, inside their companies, while fully owning their own AI databases without compromising any security or privacy.
