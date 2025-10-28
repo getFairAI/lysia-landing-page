@@ -7,9 +7,30 @@ import { BigDescriptionCardsComponent } from './big-description-cards/big-descri
 import { OurServicesCardsComponent } from './our-services-cards/our-services-cards.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { LandingRoutingModule } from './landing-routing.module';
+import { WowDemoComponent } from './wow-demo/wow-demo.component';
+import { LandingComponent } from './landing.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpLoaderFactory } from 'src/app/app.module';
+import { HttpClient } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from 'src/app/components/footers/footer/footer.component';
 
 @NgModule({
-  declarations: [TeamComponent, OurTechStackComponent, ContactUsCardsComponent, BigDescriptionCardsComponent, OurServicesCardsComponent],
-  imports: [CommonModule, SharedModule, LandingRoutingModule],
+  declarations: [LandingComponent, TeamComponent, OurTechStackComponent, ContactUsCardsComponent, BigDescriptionCardsComponent, OurServicesCardsComponent, WowDemoComponent, FooterComponent],
+  imports: [
+    CommonModule,
+    SharedModule,
+    LandingRoutingModule,
+    ReactiveFormsModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'en',
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
+  ],
+  exports: [LandingComponent, WowDemoComponent],
 })
 export class LandingPageModule {}

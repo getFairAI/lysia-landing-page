@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
 import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import gsap from 'gsap';
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 @Component({
   selector: 'app-landing',
   styleUrl: './landing.component.scss',
   templateUrl: './landing.component.html',
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, AfterViewInit {
   videoCardsUrls = {
     card1: '',
     card2: '',
@@ -43,6 +46,7 @@ export class LandingComponent implements OnInit {
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    console.log('here');
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({
       next: (newLangData: TranslationChangeEvent) => {
@@ -65,6 +69,22 @@ export class LandingComponent implements OnInit {
         console.log(error);
       },
     });
+    console.log('here2');
+
+  }
+
+  ngAfterViewInit(): void {
+    console.log('here after view');
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    console.log('here3');
+    const result = ScrollSmoother.create({
+      wrapper: "#smooth-wrapper",
+      content: "#smooth-content",
+      smooth: 1,
+      effects: true,
+    });
+
+    console.log(result);
   }
 
   scrollRight() {
