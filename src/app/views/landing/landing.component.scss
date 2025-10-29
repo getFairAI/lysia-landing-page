@@ -49,6 +49,10 @@
   animation-iteration-count: 5; // set this for performance reasons
 }
 
+.dynamic-height-sponsors-div {
+  scroll-padding-top: 6rem;
+}
+
 .first-screen-wrapper {
   // height: 100dvh;
   justify-content: center;

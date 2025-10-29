@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
@@ -8,13 +8,14 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import gsap from 'gsap';
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 @Component({
   selector: 'app-landing',
   styleUrl: './landing.component.scss',
   templateUrl: './landing.component.html',
 })
-export class LandingComponent implements OnInit, AfterViewInit {
+export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
   videoCardsUrls = {
     card1: '',
     card2: '',
@@ -43,10 +44,14 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   submittingForm = false; // triggers submitting animation
 
+  scrollObserver: Observer;
+  smoother: ScrollSmoother;
+  fakeScrolling = false;
+  savedScroll = 0;
+
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
-    console.log('here');
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({
       next: (newLangData: TranslationChangeEvent) => {
@@ -69,22 +74,109 @@ export class LandingComponent implements OnInit, AfterViewInit {
         console.log(error);
       },
     });
-    console.log('here2');
-
   }
 
   ngAfterViewInit(): void {
-    console.log('here after view');
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-    console.log('here3');
-    const result = ScrollSmoother.create({
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+    this.smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
       smooth: 1,
       effects: true,
     });
 
-    console.log(result);
+    const coverPage = document.querySelector('#cover-page');
+    const sibling = coverPage.nextElementSibling;
+
+    // helper to arm the lock
+    const armCover = () => {
+      console.log('arm cover');
+      if (this.fakeScrolling) return;
+      this.fakeScrolling = true;
+      this.savedScroll = this.smoother.scrollTop();   // exact position while pinned
+      this.smoother.paused(true);                // freeze smoothing momentum
+      ScrollTrigger.normalizeScroll(true);  // kill browser/touch inertia
+      this.scrollObserver.enable();
+    };
+
+    // helper to disarm the lock cleanly
+    const disarmCover = () => {
+      console.log('disarm cover');
+      this.scrollObserver.disable();
+      // turn things back on *after* we’re exactly where we want
+      gsap.delayedCall(0, () => {
+        ScrollTrigger.normalizeScroll(false);
+        this.smoother.paused(false);
+        this.fakeScrolling = false;
+      });
+    };
+
+    const scrollToTarget = (target: number | Element) => {
+      // clamp any incoming deltas and do a controlled snap
+      console.log('scrolling to sibling', target);
+      gsap.to(window, {
+        duration: 0.5,
+        scrollTo: { y: target, autoKill: false }, // don’t let new wheel cancel
+        overwrite: 'auto',
+        onComplete: disarmCover,
+      });
+    };
+    this.scrollObserver = ScrollTrigger.observe({
+      type: "wheel,touch",
+      preventDefault: true, // ensure passive: false handlers
+      lockAxis: true,
+      wheelSpeed: -1,       // keep your mobile-like inversion
+      tolerance: 8,
+      onDown: (self) => {
+        // user tried to scroll UP while on cover -> snap to top of cover
+        self.event?.preventDefault();
+        scrollToTarget(0);
+      },
+      onUp: (self) => {
+        // user tried to scroll DOWN while on cover -> snap to next section
+        self.event?.preventDefault();
+        if (sibling) scrollToTarget(sibling);
+      },
+      // absolutely clamp any stray movement while armed
+      onChangeY: (self) => {
+        if (!this.fakeScrolling) return;
+        self.event?.preventDefault();
+        // Put the scroll back exactly where it was during the lock
+        this.smoother.scrollTop(this.savedScroll);
+      },
+      onStop: () => {
+        // if something stopped without a snap, make sure we stay clamped
+        if (this.fakeScrolling) this.smoother.scrollTop(this.savedScroll);
+      },
+      onEnable: () => {
+        // snapshot the exact scroll so we can clamp to it
+        this.savedScroll = this.smoother.scrollTop();
+      },
+    });
+    this.scrollObserver.disable();
+
+
+    ScrollTrigger.create({
+      trigger: coverPage,
+      pin: true,
+      anticipatePin: 1,
+      start: "top top",
+      // end: "top top", // end pin when bottom of cover hits top of viewport
+      scrub: 1,
+      /* onEnter: () => armCover(),
+      onEnterBack: () => armCover(),
+      onLeave: () => disarmCover(),
+      onLeaveBack: () => disarmCover(), */
+      snap: {
+        snapTo: 'labels',
+
+      }
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.scrollObserver.kill();
+    this.smoother.kill();
   }
 
   scrollRight() {

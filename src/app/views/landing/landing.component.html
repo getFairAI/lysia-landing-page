@@ -4,7 +4,7 @@
 
 <main id="smooth-wrapper">
   <div id="smooth-content">
-    <div class="w-full flex flex-col first-screen-wrapper" data-speed="2">
+    <div id="cover-page" class="w-full flex flex-col first-screen-wrapper">
       <div class="flex flex-col justify-center items-center w-full h-[100vh] pt-24">
         <div class="items-center flex flex-wrap">
           <div class="w-full flex flex-col items-center px-4 text-center">
@@ -120,9 +120,9 @@
       </div>
     </div>
 
-    <app-wow-demo></app-wow-demo>
+    <!-- <app-wow-demo></app-wow-demo> -->
 
-    <div class="w-full dynamic-height-sponsors-div">
+    <div class="w-full dynamic-height-sponsors-div" id="afterDemo">
       <div class="w-full flex justify-center px-4 mt-12 md:mt-40 animate-slide-up-zoom wait600ms">
         <div class="w-full max-w-[1400px] flex justify-between items-center gap-10">
           <div class="flex flex-col items-center lg:items-start">
@@ -231,7 +231,7 @@
       </div>
     </section>
 
-    <section data-lag="0.5">
+    <section>
       <div class="container mx-auto px-4 mt-20">
         <div class="flex flex-wrap justify-evenly gap-8">
           <div class="flex-1 w-full max-w-[400px] text-center">
@@ -260,9 +260,9 @@
     </section>
 
     <!-- empty div on purpose -->
-    <div id="about-us-wrapper" data-speed="2"></div>
+    <div id="about-us-wrapper"></div>
 
-    <section class="mt-40 pt-14 pb-14 gradient-white-bg w-full flex justify-center" data-lag="0.5">
+    <section class="mt-40 pt-14 pb-14 gradient-white-bg w-full flex justify-center">
       <div class="w-full flex flex-wrap items-center justify-center max-w-[1600px] px-4 text-slate-700 gap-10">
         <div class="flex flex-wrap justify-center">
           <div class="flex-1 max-w-[600px] flex flex-col px-4">
@@ -378,7 +378,7 @@
     <!-- contact button scrolls down here, empty div on purpose -->
     <div id="contact-us-wrapper"></div>
 
-    <section class="w-full flex items-center justify-center px-8 mt-40" data-lag="0.5">
+    <section class="w-full flex items-center justify-center px-8 mt-40">
       <div class="w-full max-w-[600px] flex justify-center items-center flex-col">
         <div class="w-fit px-5 py-1 bg-neutral-700 text-white rounded-3xl shadow-lg">
           <h2 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
@@ -387,7 +387,7 @@
       </div>
     </section>
 
-    <section class="mt-14" data-lag="0.5">
+    <section class="mt-14">
       <div class="w-full px-4 flex justify-center flex-wrap gap-8">
         <div class="w-full max-w-[600px]">
           <div class="shadow-md glasspane-card strong-bg text-slate-700">
@@ -447,7 +447,7 @@
       </div>
     </section>
 
-    <section class="mt-40 technologies-section gradient-white-bg" data-lag="0.5">
+    <section class="mt-40 technologies-section">
       <div class="w-full flex justify-center px-6">
         <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
           <div class="w-fit px-5 py-1 bg-neutral-700 text-white rounded-3xl shadow-lg">
@@ -472,7 +472,7 @@
       </div>
     </section>
 
-    <div class="mt-40 w-full" data-lag="1">
+    <div class="mt-40 w-full">
       <app-footer></app-footer>
     </div>
   </div>
