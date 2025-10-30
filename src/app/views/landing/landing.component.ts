@@ -9,6 +9,8 @@ import gsap from 'gsap';
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
+import { Observer } from 'gsap/Observer';
+import { WowDemoComponent } from './wow-demo/wow-demo.component';
 
 @Component({
   selector: 'app-landing',
@@ -16,6 +18,8 @@ import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
   templateUrl: './landing.component.html',
 })
 export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
+  @ViewChild('wowDemo') wowDemoComponent!: WowDemoComponent;
+
   videoCardsUrls = {
     card1: '',
     card2: '',
@@ -46,8 +50,17 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
 
   scrollObserver: Observer;
   smoother: ScrollSmoother;
-  fakeScrolling = false;
+  scrollTrigger: ScrollTrigger;
+
   savedScroll = 0;
+  currentIndex = -1;
+  // wrap = gsap.utils.wrap(0, sections.length),
+  animating;
+  sections: NodeListOf<HTMLElement>;
+  images: NodeListOf<HTMLElement>;
+  innerWrappers: unknown[];
+  outerWrappers: unknown[];
+
 
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
@@ -77,106 +90,13 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
-    this.smoother = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1,
-      effects: true,
-    });
-
-    const coverPage = document.querySelector('#cover-page');
-    const sibling = coverPage.nextElementSibling;
-
-    // helper to arm the lock
-    const armCover = () => {
-      console.log('arm cover');
-      if (this.fakeScrolling) return;
-      this.fakeScrolling = true;
-      this.savedScroll = this.smoother.scrollTop();   // exact position while pinned
-      this.smoother.paused(true);                // freeze smoothing momentum
-      ScrollTrigger.normalizeScroll(true);  // kill browser/touch inertia
-      this.scrollObserver.enable();
-    };
-
-    // helper to disarm the lock cleanly
-    const disarmCover = () => {
-      console.log('disarm cover');
-      this.scrollObserver.disable();
-      // turn things back on *after* we’re exactly where we want
-      gsap.delayedCall(0, () => {
-        ScrollTrigger.normalizeScroll(false);
-        this.smoother.paused(false);
-        this.fakeScrolling = false;
-      });
-    };
-
-    const scrollToTarget = (target: number | Element) => {
-      // clamp any incoming deltas and do a controlled snap
-      console.log('scrolling to sibling', target);
-      gsap.to(window, {
-        duration: 0.5,
-        scrollTo: { y: target, autoKill: false }, // don’t let new wheel cancel
-        overwrite: 'auto',
-        onComplete: disarmCover,
-      });
-    };
-    this.scrollObserver = ScrollTrigger.observe({
-      type: "wheel,touch",
-      preventDefault: true, // ensure passive: false handlers
-      lockAxis: true,
-      wheelSpeed: -1,       // keep your mobile-like inversion
-      tolerance: 8,
-      onDown: (self) => {
-        // user tried to scroll UP while on cover -> snap to top of cover
-        self.event?.preventDefault();
-        scrollToTarget(0);
-      },
-      onUp: (self) => {
-        // user tried to scroll DOWN while on cover -> snap to next section
-        self.event?.preventDefault();
-        if (sibling) scrollToTarget(sibling);
-      },
-      // absolutely clamp any stray movement while armed
-      onChangeY: (self) => {
-        if (!this.fakeScrolling) return;
-        self.event?.preventDefault();
-        // Put the scroll back exactly where it was during the lock
-        this.smoother.scrollTop(this.savedScroll);
-      },
-      onStop: () => {
-        // if something stopped without a snap, make sure we stay clamped
-        if (this.fakeScrolling) this.smoother.scrollTop(this.savedScroll);
-      },
-      onEnable: () => {
-        // snapshot the exact scroll so we can clamp to it
-        this.savedScroll = this.smoother.scrollTop();
-      },
-    });
-    this.scrollObserver.disable();
-
-
-    ScrollTrigger.create({
-      trigger: coverPage,
-      pin: true,
-      anticipatePin: 1,
-      start: "top top",
-      // end: "top top", // end pin when bottom of cover hits top of viewport
-      scrub: 1,
-      /* onEnter: () => armCover(),
-      onEnterBack: () => armCover(),
-      onLeave: () => disarmCover(),
-      onLeaveBack: () => disarmCover(), */
-      snap: {
-        snapTo: 'labels',
-
-      }
-    });
+    this.handleAnimations();
   }
 
   ngOnDestroy(): void {
     this.scrollObserver.kill();
     this.smoother.kill();
+    this.scrollTrigger.kill();
   }
 
   scrollRight() {
@@ -242,4 +162,95 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
       },
     });
   }
+
+  handleAnimations() {
+    gsap.registerPlugin(Observer, ScrollTrigger, ScrollSmoother);
+    this.smoother = ScrollSmoother.create({
+      wrapper: "#main-page",
+      content: "#main-content",
+      smooth: 1,
+      effects: true,
+    });
+
+    this.sections = document.querySelectorAll(".section-fake-scroll");
+    this.images = document.querySelectorAll(".bg");
+    this.outerWrappers = gsap.utils.toArray(".outer");
+    this.innerWrappers = gsap.utils.toArray(".inner");
+
+    gsap.set(this.outerWrappers, { yPercent: 100 });
+    gsap.set(this.innerWrappers, { yPercent: -100 });
+
+    this.scrollObserver = Observer.create({
+      type: "wheel,touch,pointer",
+      wheelSpeed: -1,
+      onDown: () =>{ !this.animating && this.gotoSection(this.currentIndex - 1, -1)},
+      onUp: () => !this.animating && this.gotoSection(this.currentIndex + 1, 1),
+      tolerance: 10,
+      preventDefault: true,
+      onStop: () => {
+        if (this.currentIndex === 1) {
+          // second section /main content
+
+          this.scrollObserver.disable();
+          this.wowDemoComponent.activateSideScroll();
+        } else if (this.currentIndex === 2) {
+          this.scrollObserver.disable();
+          this.scrollTrigger.scroll(2); // make it to two, so it can scroll back up a bit
+        }
+      }
+    });
+
+    this.gotoSection(0, 1);
+
+    this.scrollTrigger = ScrollTrigger.create({
+      trigger: '#main-page',
+      pin: false,
+      // anticipatePin: 1,
+      start: "top center",
+      scrub: 1,
+      onUpdate: (event) => {
+        if (event.scroll() < 1 && event.direction === -1) {
+          console.log('in top, scroll observer')
+          /* // enable observer again
+          this.scrollObserver.scrollY(0);
+          this.scrollObserver.enable(); */
+
+          // enable wow-demo
+          this.scrollObserver.enable();
+          this.scrollObserver.scrollY(0);
+          // this.wowDemoComponent.activateSideScroll();
+        }
+      },
+    });
+  }
+
+  gotoSection(index, direction) {
+      console.log('scrolled')
+      console.log(this.sections.length);
+      if (index > this.sections.length - 1|| index < 0) {
+        return;
+      }
+      this.animating = true;
+      let fromTop = direction === -1,
+          dFactor = fromTop ? -1 : 1,
+          tl = gsap.timeline({
+            defaults: { duration: 1.25, ease: "power4.inOut" },
+            onComplete: () => this.animating = false
+          });
+      if (this.currentIndex >= 0) {
+        // The first time this function runs, current is -1
+        gsap.set(this.sections[this.currentIndex], { zIndex: 0 });
+        tl.to(this.images[this.currentIndex], { yPercent: -100 * dFactor })
+          .set(this.sections[this.currentIndex], { autoAlpha: 0 });
+      }
+      gsap.set(this.sections[index], { autoAlpha: 1, zIndex: 1 });
+      tl.fromTo([this.outerWrappers[index], this.innerWrappers[index]], {
+          yPercent: i => i ? -100 * dFactor : 100 * dFactor
+        }, {
+          yPercent: 0
+        }, 0)
+        .fromTo(this.images[index], { yPercent: 100 * dFactor }, { yPercent: 0 }, 0);
+
+      this.currentIndex = index;
+    }
 }

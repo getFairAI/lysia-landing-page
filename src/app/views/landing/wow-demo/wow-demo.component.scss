@@ -32,3 +32,42 @@
   transform: translateZ(-40px) rotateX(90deg);
   opacity: 0.5;
 } */
+
+.progress {
+  width: 100%;
+  top: 6rem;
+  position: fixed;
+}
+
+.demo {
+  height: 100%;
+  width: 100%;
+  top: 7.625rem;
+  position: fixed;
+  visibility: hidden;
+
+  .outer,
+  .inner,
+  .demo-outer,
+  .demo-inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+  }
+
+  .clip-text {
+    overflow: hidden;
+  }
+}
+
+h2 * {
+  will-change: transform;
+}
+
+h2 {
+  font-size: clamp(1rem, 6vw, 4rem);
+  font-weight: 600;
+  text-align: center;
+  margin-right: -0.5em;
+  text-transform: none;
+}

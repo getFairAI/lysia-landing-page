@@ -49,10 +49,6 @@
   animation-iteration-count: 5; // set this for performance reasons
 }
 
-.dynamic-height-sponsors-div {
-  scroll-padding-top: 6rem;
-}
-
 .first-screen-wrapper {
   // height: 100dvh;
   justify-content: center;
@@ -399,5 +395,26 @@
       gap: 10px;
       text-align: center;
     }
+  }
+}
+
+$bg-gradient: linear-gradient(
+  180deg,
+  rgba(0, 0, 0, 0.6) 0%,
+  rgba(0, 0, 0, 0.1) 100%
+);
+
+.first, .second, .third {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  position: fixed;
+  visibility: hidden;
+
+  .outer,
+  .inner {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
   }
 }
