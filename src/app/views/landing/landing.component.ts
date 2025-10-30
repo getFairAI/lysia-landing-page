@@ -8,7 +8,6 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import gsap from 'gsap';
 import { ScrollSmoother } from "gsap/ScrollSmoother";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 import { Observer } from 'gsap/Observer';
 import { WowDemoComponent } from './wow-demo/wow-demo.component';
 
@@ -182,20 +181,24 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.scrollObserver = Observer.create({
       type: "wheel,touch,pointer",
-      wheelSpeed: -1,
-      onDown: () =>{ !this.animating && this.gotoSection(this.currentIndex - 1, -1)},
-      onUp: () => !this.animating && this.gotoSection(this.currentIndex + 1, 1),
+      wheelSpeed: -0.1,
+      onDown: (self) => !this.animating && this.gotoSection(this.currentIndex - 1, -1),
+      onUp: () => !this.animating &&  this.gotoSection(this.currentIndex + 1, 1),
       tolerance: 10,
       preventDefault: true,
-      onStop: () => {
+      onStop: (self) => {
+
         if (this.currentIndex === 1) {
           // second section /main content
+          this.scrollObserver.disable();
+          this.wowDemoComponent.activateSideScroll(self.deltaY < 0);
+        }
 
+        if (this.currentIndex === 2) {
+          this.scrollTrigger.enable();
           this.scrollObserver.disable();
-          this.wowDemoComponent.activateSideScroll();
-        } else if (this.currentIndex === 2) {
-          this.scrollObserver.disable();
-          this.scrollTrigger.scroll(2); // make it to two, so it can scroll back up a bit
+        } else {
+          this.scrollTrigger.disable();
         }
       }
     });
@@ -209,25 +212,19 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
       start: "top center",
       scrub: 1,
       onUpdate: (event) => {
-        if (event.scroll() < 1 && event.direction === -1) {
-          console.log('in top, scroll observer')
-          /* // enable observer again
-          this.scrollObserver.scrollY(0);
-          this.scrollObserver.enable(); */
-
-          // enable wow-demo
-          this.scrollObserver.enable();
-          this.scrollObserver.scrollY(0);
-          // this.wowDemoComponent.activateSideScroll();
+        if (this.currentIndex === 2 && event.direction === -1 && event.scroll() < 1) {
+          this.gotoSection(1, -1);
+          this.wowDemoComponent.activateSideScroll(false);
         }
       },
     });
+
+    this.scrollTrigger.disable();
   }
 
   gotoSection(index, direction) {
-      console.log('scrolled')
-      console.log(this.sections.length);
       if (index > this.sections.length - 1|| index < 0) {
+        console.log('ignored');
         return;
       }
       this.animating = true;
@@ -252,5 +249,6 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
         .fromTo(this.images[index], { yPercent: 100 * dFactor }, { yPercent: 0 }, 0);
 
       this.currentIndex = index;
+
     }
 }

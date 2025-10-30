@@ -50,6 +50,7 @@ export class WowDemoComponent implements OnDestroy, AfterViewInit {
     });
 
    /*  this.gotoSection(0, 1); */
+    this.scrollObserver.disable();
   }
 
   ngOnDestroy(): void {
@@ -57,7 +58,7 @@ export class WowDemoComponent implements OnDestroy, AfterViewInit {
   }
 
   gotoSection(index, direction) {
-    console.log('scrolled')
+    console.log('scrolled wow')
 
     if (index > this.sections.length - 1 || index < 0) {
       const lastScrollUp = index < 0 && direction === -1;
@@ -110,19 +111,24 @@ export class WowDemoComponent implements OnDestroy, AfterViewInit {
       }, {
         autoAlpha: 1,
         xPercent: 0,
-        duration: 0.5,
+        duration: 1,
         ease: "power1.inOut",
         stagger: {
-          each: 0.025,
-          from: "end"
+          each: 0.005,
+          from: "random"
         }
       }, 0.2);
 
     this.currentIndex = index;
   }
 
-  activateSideScroll() {
+  activateSideScroll(goingDown: boolean) {
     this.scrollObserver.enable();
+    if (goingDown) {
+      this.gotoSection(0, 1);
+    } else {
+      this.gotoSection(this.sections.length - 1, -1);
+    }
     /* this.scrollObserver.scrollX(0);
     this.scrollObserver.scrollY(0); */
   }
