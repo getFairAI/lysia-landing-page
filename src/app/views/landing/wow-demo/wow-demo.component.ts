@@ -23,6 +23,7 @@ export class WowDemoComponent implements OnDestroy, AfterViewInit {
   innerWrappers: unknown[];
   outerWrappers: unknown[];
   splitHeadings;
+  savedScrollDelta: number;
 
 
   ngAfterViewInit(): void {
@@ -59,7 +60,9 @@ export class WowDemoComponent implements OnDestroy, AfterViewInit {
 
   gotoSection(index, direction) {
     console.log('scrolled wow')
-
+    console.log(index);
+    console.log(direction);
+    console.log(this.currentIndex);
     if (index > this.sections.length - 1 || index < 0) {
       const lastScrollUp = index < 0 && direction === -1;
       const lastScrollDown = index > this.sections.length - 1 && direction === 1;
@@ -75,36 +78,75 @@ export class WowDemoComponent implements OnDestroy, AfterViewInit {
         // if we are at the limit, enable parent scroll so it can go to previous or next section
         this.scrollObserver.disable();
         this.parentObserver.enable();
-        this.parentObserver.scrollY(this.parentObserver.scrollY() + 1);
       }
 
+      this.currentIndex = index;
       return;
     }
     this.animating = true;
     let fromTop = direction === -1,
         dFactor = fromTop ? -1 : 1,
         tl = gsap.timeline({
-          defaults: { duration: 1.25, ease: "power4.inOut" },
+          defaults: { duration: 1, ease: "power4.inOut" },
           onComplete: () => this.animating = false
         });
 
     const step = 100 / this.sections.length;
 
 
-    gsap.to("#scroll-progress", { drawSVG: !fromTop ? `0% ${step + step * index}%` : `0% ${step + step * index}%`, duration: 1, ease:'power1.inOut' });
+
     if (this.currentIndex >= 0) {
       // The first time this function runs, current is -1
       gsap.set(this.sections[this.currentIndex], { zIndex: 0 });
-      tl.to(this.images[this.currentIndex], { xPercent: -100 * dFactor })
+      tl
+
+        .to(this.images[this.currentIndex], { xPercent: -100 * dFactor })
+        // .to("#scroll-progress", { drawSVG: !fromTop ? `0% ${step + step * index}%` : `0% ${step + step * index}%`, duration: 1, ease:'power1.inOut' })
         .set(this.sections[this.currentIndex], { autoAlpha: 0 });
     }
-    gsap.set(this.sections[index], { autoAlpha: 1, zIndex: 1 });
-    tl.fromTo([this.outerWrappers[index], this.innerWrappers[index]], {
+
+    gsap.to("#scroll-progress", { drawSVG: !fromTop ? `0% ${step + step * index}%` : `0% ${step + step * index}%`, duration: 1, ease:'power1.inOut' })
+
+    gsap.set(this.sections[index], { autoAlpha: 1, zIndex: 1});
+    tl
+      .fromTo([this.outerWrappers[index], this.innerWrappers[index]], {
+        xPercent: i => i ? -100 * dFactor : 100 * dFactor
+      }, {
+        xPercent: 0
+      }, 0)
+
+      .fromTo(this.images[index], { xPercent: 100 * dFactor }, { xPercent: 0 }, 0)
+
+      .fromTo(this.splitHeadings[index].chars, {
+        autoAlpha: 0,
+        xPercent: 150 * dFactor
+      }, {
+        autoAlpha: 1,
+        xPercent: 0,
+        duration: 1,
+        ease: "power1.inOut",
+        stagger: {
+          each: 0.005,
+          from: "random"
+        }
+      }, 0.2);
+    this.currentIndex = index;
+  }
+
+  getFirstPageTimeline(fromTop: boolean) {
+    const index = 0;
+    const dFactor = fromTop ? -1 : 1;
+    const step = 100 / this.sections.length;
+
+    const tl = gsap.timeline();
+    tl.set(this.sections[index], { autoAlpha: 1, zIndex: 1})
+      .fromTo([this.outerWrappers[index], this.innerWrappers[index]], {
         xPercent: i => i ? -100 * dFactor : 100 * dFactor
       }, {
         xPercent: 0
       }, 0)
       .fromTo(this.images[index], { xPercent: 100 * dFactor }, { xPercent: 0 }, 0)
+      .to("#scroll-progress", { drawSVG: !fromTop ? `0% ${step + step * index}%` : `0% ${step + step * index}%`, duration: 1, ease:'power1.inOut' })
       .fromTo(this.splitHeadings[index].chars, {
         autoAlpha: 0,
         xPercent: 150 * dFactor
@@ -119,7 +161,7 @@ export class WowDemoComponent implements OnDestroy, AfterViewInit {
         }
       }, 0.2);
 
-    this.currentIndex = index;
+    return tl;
   }
 
   activateSideScroll(goingDown: boolean) {

@@ -231,17 +231,20 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
       let fromTop = direction === -1,
           dFactor = fromTop ? -1 : 1,
           tl = gsap.timeline({
-            defaults: { duration: 1.25, ease: "power4.inOut" },
+            defaults: { duration: 0.5, ease: "power4.inOut" },
             onComplete: () => this.animating = false
           });
       if (this.currentIndex >= 0) {
         // The first time this function runs, current is -1
         gsap.set(this.sections[this.currentIndex], { zIndex: 0 });
         tl.to(this.images[this.currentIndex], { yPercent: -100 * dFactor })
-          .set(this.sections[this.currentIndex], { autoAlpha: 0 });
+          // .set(this.sections[this.currentIndex], { autoAlpha: 0 });
+          .to(this.sections[this.currentIndex], { autoAlpha: 0 });
       }
-      gsap.set(this.sections[index], { autoAlpha: 1, zIndex: 1 });
-      tl.fromTo([this.outerWrappers[index], this.innerWrappers[index]], {
+      // gsap.set(this.sections[index], { autoAlpha: 1, zIndex: 1 });
+      tl
+        .to(this.sections[index], { autoAlpha: 1, zIndex: 1 })
+        .fromTo([this.outerWrappers[index], this.innerWrappers[index]], {
           yPercent: i => i ? -100 * dFactor : 100 * dFactor
         }, {
           yPercent: 0
@@ -249,6 +252,5 @@ export class LandingComponent implements OnInit, AfterViewInit, OnDestroy {
         .fromTo(this.images[index], { yPercent: 100 * dFactor }, { yPercent: 0 }, 0);
 
       this.currentIndex = index;
-
     }
 }
