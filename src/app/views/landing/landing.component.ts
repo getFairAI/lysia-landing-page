@@ -46,6 +46,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({
       next: (newLangData: TranslationChangeEvent) => {
@@ -71,21 +72,12 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
     ScrollSmoother.create({
       smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
       effects: true, // looks for data-speed and data-lag attributes on elements
       smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
     });
-
-   /*  ScrollTrigger.create({
-      trigger: '#benefits-section',
-      pin: true,
-      anticipatePin: 1,
-      scrub: 1,
-    })
- */
 
     gsap.set('#first-benefit-card', { zIndex: 10 });
     gsap.set('#second-benefit-card', { zIndex: 11 });
@@ -94,51 +86,33 @@ export class LandingComponent implements OnInit, AfterViewInit {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.top-info-cards',
-        start: "top top",
-        end: "bottom bottom",
+        start: 'top top',
+        end: 'bottom bottom',
         scrub: true,
         markers: true,
         pin: true,
-      }
+        pinSpacing: false,
+        // pinnedContainer: '.top-info-cards'
+      },
     });
 
-    tl.to('#first-benefit-card', {
-      duration: 2,
-      scale: 0.7,
-    });
 
-    tl.to('#second-benefit-card', {
-      duration: 2,
-      /* yPercent: -100, */
-      yPercent: -120,
-    }, "-=2");
+    tl.to(['#second-benefit-card', '#third-benefit-card', '#first-benefit-card'], {
+     /*  duration: 1, */
+      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
+      yPercent: (i) => i < 2 ? -130 : 0,
+      scale: (i) => i === 2 ? 0.85 : 1,
+      opacity: (i) => i === 2 ? 0 : 1,
+    }); // start 1s earlier
 
-    tl.to('#first-benefit-card', {
-      duration: 1,
-      opacity: 0,
-    }, "-=1");
+    tl.to(['#second-benefit-card', '#third-benefit-card'], {
+      /* duration: 1, */
+      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
+      yPercent: (i) => i < 1 ? -130 : -240,
+      scale: (i) => i === 0 ? 0.85 : 1,
+      opacity: (i) => i === 0 ? 0 : 1,
+    }); // start 1s earlier
 
-    // bring third closer
-    tl.to('#third-benefit-card', {
-      duration: 0,
-      yPercent: -100,
-    }, "-=1");
-
-
-    tl.to('#second-benefit-card', {
-      duration: 2,
-      scale: 0.7,
-    }, "+=2");
-
-    tl.to('#third-benefit-card', {
-      duration: 2,
-      yPercent: -220,
-    }, "-=2");
-
-    tl.to('#second-benefit-card', {
-      duration: 1,
-      opacity: 0
-    }, "-=1");
   }
 
   scrollDownLearnMore() {
