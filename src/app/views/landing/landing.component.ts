@@ -73,11 +73,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-    /* ScrollSmoother.create({
+    ScrollSmoother.create({
       smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
       effects: true, // looks for data-speed and data-lag attributes on elements
       smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-    }); */
+    });
 
    /*  ScrollTrigger.create({
       trigger: '#benefits-section',
@@ -139,16 +139,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
       duration: 1,
       opacity: 0
     }, "-=1");
-
-    /* gsap.to('#card1', {
-      scrollTrigger: {
-        trigger: '#card1',
-        scrub: true,
-      }
-      ,
-      yPercent: -50,
-    }); */
-
   }
 
   scrollDownLearnMore() {
