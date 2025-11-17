@@ -34,6 +34,7 @@
     "@tailwindcss/postcss": "^4.0.3",
     "chart.js": "2.9.4",
     "draggy": "^2.0.5",
+    "gsap": "^3.13.0",
     "motion": "^12.4.2",
     "ngx-drag-scroll": "^17.0.1",
     "rxjs": "6.6.6",

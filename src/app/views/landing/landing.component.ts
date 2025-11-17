@@ -1,17 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
 import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollSmoother from 'gsap/ScrollSmoother';
 
 @Component({
   selector: 'app-landing',
   styleUrl: './landing.component.scss',
   templateUrl: './landing.component.html',
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, AfterViewInit {
   videoCardsUrls = {
     card1: '',
     card2: '',
@@ -67,16 +70,85 @@ export class LandingComponent implements OnInit {
     });
   }
 
-  scrollRight() {
-    let element = document.getElementById('scrollable-div');
-    let cardReference = document.getElementById('card-scroll-reference');
-    element.scrollLeft += cardReference.clientWidth + 35; // add a few units to include paddings and margins
-  }
+  ngAfterViewInit() {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-  scrollLeft() {
-    let element = document.getElementById('scrollable-div');
-    let cardReference = document.getElementById('card-scroll-reference');
-    element.scrollLeft -= cardReference.clientWidth + 35;
+    /* ScrollSmoother.create({
+      smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+      effects: true, // looks for data-speed and data-lag attributes on elements
+      smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+    }); */
+
+   /*  ScrollTrigger.create({
+      trigger: '#benefits-section',
+      pin: true,
+      anticipatePin: 1,
+      scrub: 1,
+    })
+ */
+
+    gsap.set('#first-benefit-card', { zIndex: 10 });
+    gsap.set('#second-benefit-card', { zIndex: 11 });
+    gsap.set('#third-benefit-card', { zIndex: 12 });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.top-info-cards',
+        start: "top top",
+        end: "bottom bottom",
+        scrub: true,
+        markers: true,
+        pin: true,
+      }
+    });
+
+    tl.to('#first-benefit-card', {
+      duration: 2,
+      scale: 0.7,
+    });
+
+    tl.to('#second-benefit-card', {
+      duration: 2,
+      /* yPercent: -100, */
+      yPercent: -120,
+    }, "-=2");
+
+    tl.to('#first-benefit-card', {
+      duration: 1,
+      opacity: 0,
+    }, "-=1");
+
+    // bring third closer
+    tl.to('#third-benefit-card', {
+      duration: 0,
+      yPercent: -100,
+    }, "-=1");
+
+
+    tl.to('#second-benefit-card', {
+      duration: 2,
+      scale: 0.7,
+    }, "+=2");
+
+    tl.to('#third-benefit-card', {
+      duration: 2,
+      yPercent: -220,
+    }, "-=2");
+
+    tl.to('#second-benefit-card', {
+      duration: 1,
+      opacity: 0
+    }, "-=1");
+
+    /* gsap.to('#card1', {
+      scrollTrigger: {
+        trigger: '#card1',
+        scrub: true,
+      }
+      ,
+      yPercent: -50,
+    }); */
+
   }
 
   scrollDownLearnMore() {
