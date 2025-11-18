@@ -90,7 +90,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
         start: 'top top',
         end: 'bottom bottom',
         scrub: true,
-        markers: true,
         pin: true,
         pinSpacing: false,
         // pinnedContainer: '.top-info-cards'
@@ -104,7 +103,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
       yPercent: (i) => i < 2 ? -130 : 0,
       scale: (i) => i === 2 ? 0.85 : 1,
       opacity: (i) => i === 2 ? 0 : 1,
-    }); // start 1s earlier
+    }, "+=2"); // start 1s earlier
 
     tl.to(['#second-benefit-card', '#third-benefit-card'], {
       /* duration: 1, */
@@ -112,7 +111,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
       yPercent: (i) => i < 1 ? -130 : -240,
       scale: (i) => i === 0 ? 0.85 : 1,
       opacity: (i) => i === 0 ? 0 : 1,
-    }); // start 1s earlier
+    }, "+=2"); // start 1s earlier
 
     tl.to('#benefits-extra', { opacity: 1 });
   }
