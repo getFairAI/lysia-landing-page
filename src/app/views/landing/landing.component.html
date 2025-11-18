@@ -168,10 +168,10 @@
 
         <div class="flex flex-col pl-[10%] pr-[10%] xl:pl-[15%] xl:pr-[15%] pt-5 gap-48 overflow-y-auto relative scroll-smooth">
           <div class="info-card plausible-event-name=Card+Click plausible-event-card=card1" id="first-benefit-card">
-            <div class="card-img-bg">
-              <img src="./assets/img/landing-page-cards/teamwork.jpg" />
+            <div class="absolute -z-1 bottom-0 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
+              <img src="./assets/img/landing-page-cards/teamwork.jpg" class="w-full h-full object-cover object-top"/>
             </div>
-            <div class="card-title-div gradient-white-bg">
+            <div class="flex flex-col w-full items-center justify-start h-full gradient-white-bg px-4 py-8 sm:justify-center sm:w-1/2">
               <h6 class="text-4xl font-semibold">{{ 'KNOWMORE_CARDS.CARD1.TITLE' | translate }}</h6>
               <p class="mt-6">{{ 'KNOWMORE_CARDS.CARD1.DESCRIPTION' | translate }} </p>
               <!-- <p class="mt-2 text-white">{{ 'KNOWMORE_CARDS.CARD1.DESCRIPTION_LONG' | translate }}</p> -->
@@ -181,20 +181,20 @@
           </div>
 
           <div class="info-card plausible-event-name=Card+Click plausible-event-card=card2" id="second-benefit-card">
-            <div class="card-img-bg">
-              <img src="./assets/img/landing-page-cards/research-papers.jpg" />
+            <div class="absolute -z-1 bottom-0 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
+              <img src="./assets/img/landing-page-cards/research-papers.jpg" class="w-full h-full object-cover object-top"/>
             </div>
-            <div class="card-title-div gradient-white-bg">
+            <div class="flex flex-col w-full items-center justify-start h-full gradient-white-bg px-4 py-8 sm:justify-center sm:w-1/2">
               <h6 class="text-4xl font-semibold">{{ 'KNOWMORE_CARDS.CARD2.TITLE' | translate }}</h6>
               <p class="mt-6">{{ 'KNOWMORE_CARDS.CARD2.DESCRIPTION' | translate }}</p>
             </div>
           </div>
 
           <div class="info-card plausible-event-name=Card+Click plausible-event-card=card3" id="third-benefit-card">
-            <div class="card-img-bg">
-              <img src="./assets/img/landing-page-cards/books_horizontal.jpg" />
+            <div class="absolute -z-1 bottom-0 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
+              <img src="./assets/img/landing-page-cards/books_horizontal.jpg" class="w-full h-full object-cover object-top"/>
             </div>
-            <div class="card-title-div gradient-white-bg">
+            <div class="flex flex-col w-full items-center justify-start h-full gradient-white-bg px-4 py-8 sm:justify-center sm:w-1/2">
               <h6 class="text-4xl font-semibold">{{ 'KNOWMORE_CARDS.CARD3.TITLE' | translate }}</h6>
               <p class="mt-6">{{ 'KNOWMORE_CARDS.CARD3.DESCRIPTION' | translate }}</p>
             </div>
@@ -228,8 +228,8 @@
     </section>
 
     <section>
-      <div class="container mx-auto px-4 mt-20">
-        <div class="flex flex-wrap justify-evenly gap-8">
+      <div class="container mx-auto px-4 sm:mt-20 mt-48">
+        <div class="flex sm:flex-row sm:flex-wrap justify-evenly gap-8 flex-col">
           <div class="flex-1 w-full max-w-[400px] text-center" id="card1">
             <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
               <i class="text-xl text-[#3aaaaa] fas fa-medal"></i>
