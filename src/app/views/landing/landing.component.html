@@ -206,26 +206,21 @@
               <i class="text-xl text-[#3aaaaa] fas fa-sack-dollar"></i>
             </div>
             <h6 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.TITLE' | translate }} </h6>
-            <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }} </p>
-            <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION2' | translate }} </p>
-            <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION3' | translate }} </p>
+            <p class="mt-4 mb-4 text-sm md:text-base/8 whitespace-pre-line text-center"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION' | translate }}{{'\n'}}{{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION2' | translate }}{{'\n'}}{{ 'CONTACT_SECTION.SECTION_CARDS.CARD1.DESCRIPTION3' | translate }}</p>
           </div>
           <div class="flex-1 w-full max-w-[400px] text-center" id="card2">
             <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
               <i class="text-xl text-[#3aaaaa] fas fa-shield"></i>
             </div>
-            <h5 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h5>
-            <p class="mt-2 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }} </p>
-            <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION2' | translate }} </p>
-            <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION3' | translate }} </p>
+            <h6 class="md:text-xl mt-5 font-semibold"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.TITLE' | translate }} </h6>
+            <p class="mt-4 mb-4 text-sm md:text-base/8 whitespace-pre-line text-center"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION' | translate }}{{'\n'}}{{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION2' | translate }}{{'\n'}}{{ 'CONTACT_SECTION.SECTION_CARDS.CARD2.DESCRIPTION3' | translate }}</p>
           </div>
           <div class="flex-1 w-full max-w-[400px] text-center" id="card3">
             <div class="inline-flex items-center justify-center bg-white rounded-full shadow-lg w-14 h-14">
               <i class="text-xl text-[#3aaaaa] fas fa-seedling"></i>
             </div>
-            <h5 class="md:text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h5>
-            <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }} </p>
-            <p class="mt-2 mb-4 text-sm md:text-base"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION2' | translate }} </p>
+            <h6 class="md:text-xl mt-5 font-semibold">{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.TITLE' | translate }} </h6>
+            <p class="mt-4 mb-4 text-sm md:text-base/8 whitespace-pre-line text-center"> {{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION' | translate }}{{'\n'}}{{ 'CONTACT_SECTION.SECTION_CARDS.CARD3.DESCRIPTION2' | translate }}</p>
           </div>
         </div>
       </div>
@@ -298,7 +293,7 @@
       </div>
     </section>
 
-    <section class="mt-40 technologies-section">
+    <section class="mt-40 technologies-section" data-lag="0.7">
       <div class="w-full flex justify-center px-6">
         <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
           <h3 class="text-xl md:text-4xl font-semibold"> {{ 'TECH_STACK.TITLE' | translate }} </h3>
@@ -320,7 +315,14 @@
         </div>
       </div>
     </section>
-    <div class="mt-40 w-full" data-lag="0.8">
+    <section data-lag="0.5">
+      <div class="hidden sm:flex justify-center flex-col items-center mt-20">
+        <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=Learn+More+Bottom+Click" (click)="scrollDownLearnMore()">
+          {{ 'HERO_CTA_BOTTOM' | translate }}<mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
+    </section>
+    <div class="mt-20 w-full" data-lag="0.8">
       <app-footer></app-footer>
     </div>
   </div>
