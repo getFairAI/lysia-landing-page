@@ -165,9 +165,14 @@
     cursor: pointer;
     transition: 0.2s all;
 
+    &.selected {
+      color: white;
+    }
+
     &:hover,
     &:focus-within {
-      background-color: rgb(71 85 105);
+      background-color: #3aaaaa;
+      opacity: 0.5;
       color: white;
     }
   }
