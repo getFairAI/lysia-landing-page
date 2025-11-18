@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 @Component({
   selector: 'app-landing',
@@ -46,7 +47,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({
       next: (newLangData: TranslationChangeEvent) => {
@@ -113,14 +114,19 @@ export class LandingComponent implements OnInit, AfterViewInit {
       opacity: (i) => i === 0 ? 0 : 1,
     }); // start 1s earlier
 
+    tl.to('#benefits-extra', { opacity: 1 });
   }
 
   scrollDownLearnMore() {
-    let cardsSection = document.getElementById('top-info-cards-section');
-    cardsSection.scrollIntoView({
+    let contactSection = document.getElementById('contact-us-wrapper');
+    /* contactSection.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
       inline: 'start',
+    }); */
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: contactSection, autoKill: true },
     });
   }
 
