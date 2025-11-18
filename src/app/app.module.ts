@@ -16,11 +16,13 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LandingComponent } from './views/landing/landing.component';
 import { FormControl, ReactiveFormsModule } from '@angular/forms';
 import { DialogInfoCardsComponent } from './components/dialog-info-cards/dialog-info-cards.component';
+import { TrustedByComponent } from './components/trusted-by/trusted-by.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AuthNavbarComponent,
+    TrustedByComponent,
     FooterComponent,
     LandingComponent,
     DialogInfoCardsComponent,

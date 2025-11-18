@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import gsap from 'gsap';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
+
 
 @Component({
   selector: 'app-auth-navbar',
@@ -14,6 +17,8 @@ export class AuthNavbarComponent implements OnInit {
   constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
+
+     gsap.registerPlugin(ScrollToPlugin);
     this.translate.onLangChange.subscribe(newTranslationData => {
       // this observable fires immediately when first run
       this.currentLanguage = newTranslationData?.lang ?? 'en';
@@ -26,12 +31,18 @@ export class AuthNavbarComponent implements OnInit {
 
   aboutUsScrollToDiv() {
     let elementPosition = document.getElementById('about-us-wrapper');
-    elementPosition.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: elementPosition, autoKill: true },
+    });
   }
 
   contactUsScrollToDiv() {
     let elementPosition = document.getElementById('contact-us-wrapper');
-    elementPosition.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: elementPosition, autoKill: true },
+    });
   }
 
   useLanguage(language: string): void {

@@ -113,18 +113,6 @@
   width: 100%;
   max-width: 1600px;
 
-  .scrollable-div {
-    scrollbar-width: none; // Firefox
-    // Hide scrollbar for chromium-based and safari
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    --mask: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask: var(--mask);
-    mask: var(--mask);
-  }
-
   .scroll-arrows {
     // disable scroll arrows if width is big
     @media only screen and (min-width: 1400px) {
@@ -250,11 +238,10 @@
       // its inside a flex container
       flex: 0 0 350px;
       position: relative;
-      height: 500px;
+      min-height: 550px;
       box-sizing: border-box;
       border-radius: 20px;
       overflow: hidden;
-      cursor: pointer;
       outline: 3px solid white;
       white-space: pre-wrap;
       transition: 0.6s all;
@@ -264,8 +251,8 @@
         position: absolute;
         z-index: -1;
         top: 0;
-        left: 0;
-        width: 100%;
+        right: 0;
+        width: 50%;
         height: 100%;
 
         img {
@@ -278,10 +265,16 @@
       }
 
       .card-title-div {
-        background-color: rgba(80, 80, 80, 0.5);
-        backdrop-filter: blur(3px);
+       /*  background-color: rgba(80, 80, 80, 0.5);
+        backdrop-filter: blur(3px); */
         padding: 20px 25px;
-        box-sizing: border-box;
+        /* box-sizing: border-box; */
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
       }
 
       .open-icon {

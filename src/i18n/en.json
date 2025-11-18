@@ -13,16 +13,21 @@
     "SECTION_DESCRIPTION": "Together we can research ways and ideas that can massively improve the overall operating efficiency of your company.",
     "SECTION_CARDS": {
       "CARD1": {
-        "TITLE": "AI that Follows Your Best Engineer",
-        "DESCRIPTION": "Our solution uses AI to capture and organize all of your team's best insights so they can speed through future endeavors."
+        "TITLE": "Sell smarter, not harder.",
+        "DESCRIPTION": "Find new leads automatically while you focus on what you do best.",
+        "DESCRIPTION2": "Stay ahead of competitors with real-time market insight.",
+        "DESCRIPTION3": "Save time with personalised, automated emails."
       },
       "CARD2": {
-        "TITLE": "AI-Powered Summarization",
-        "DESCRIPTION": "Save time by replacing manual reports of experiments with automated summaries."
+        "TITLE": "Bring all your knowledge into one place.",
+        "DESCRIPTION": "Gather your files in a single trusted space so nothing gets lost.",
+        "DESCRIPTION2": "Find what you need quickly and keep your work moving.",
+        "DESCRIPTION3": "Collaborate with your team without wasting time searching."
       },
       "CARD3": {
-        "TITLE": "Secure, Self-Owned Database",
-        "DESCRIPTION": "All your critical knowledge gathered in one place, private and accessible to you, owned by you."
+        "TITLE": "Technology that grows with you.",
+        "DESCRIPTION": "It adapts to your workflows and improves insights with every use.",
+        "DESCRIPTION2": "Your system becomes smarter over time."
       }
     },
     "CONTACT_FORMS_CARDS": {
@@ -50,16 +55,21 @@
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Preserve Knowledge When Teams Change",
-      "DESCRIPTION": "Capture engineering wisdom so that when someone is absent, their insights stay within the company."
+      "TITLE": "Turn raw numbers into a clear direction",
+      "DESCRIPTION": "Turn your data into clear, actionable insight.",
+      "DESCRIPTION2": "Spot opportunities early instead of chasing them late.",
+      "DESCRIPTION3": "Make confident decisions without digging through spreadsheets or documents."
     },
     "CARD2": {
-      "TITLE": "Accelerate The Research Of Your Company",
-      "DESCRIPTION": "Recycle valuable knowledge from all your past research and don't waste your time on things you already did."
+      "TITLE": "Collect information effortlessly",
+      "DESCRIPTION": "Voice-driven AI instantly turns conversations into structured data.",
+      "DESCRIPTION2": "No more wasted time on manual entry or scattered notes.",
+      "DESCRIPTION3": "Teams get the operational clarity they need in seconds, not hours."
     },
     "CARD3": {
-      "TITLE": "Reduce Time Spent On Documentation",
-      "DESCRIPTION": "Our AI structures, creates, and organizes your data, so your team can focus on what really matters."
+      "TITLE": "AI you own, not rent",
+      "DESCRIPTION": "The AI runs on your infrastructure. Your data remains in your hands, and nothing is processed elsewhere.",
+      "DESCRIPTION2": "There are no subscriptions or recurring fees. You get a solution you can rely on without being locked into someone else's platform."
     }
   },
   "CARDS": {
@@ -106,5 +116,14 @@
     "LINKS_LIST2": {
       "TITLE": "Useful Links"
     }
-  }
+  },
+  "HERO_HEADLINE": "Set the pace of your industry",
+  "HERO_SUBTITLE": {
+    "SECTION1": "Harness AI to outpace your competition and",
+    "SECTION2": "achieve more",
+    "SECTION3": "with the resources",
+    "SECTION4": "you already have."
+  },
+  "HERO_CTA": "Talk to us",
+  "HERO_CTA_BOTTOM": "Get in touch"
 }

@@ -1,0 +1,31 @@
+<!-- logo-carousel.component.html -->
+<div class="w-full static md:relative bottom-8 dynamic-height-sponsors-div">
+  <div class="w-full flex justify-center px-4 animate-slide-up-zoom wait600ms">
+    <div class="w-full max-w-[1400px] flex justify-between items-center gap-10 overflow-hidden">
+      <div class="flex items-start flex-col">
+        <span class="text-xs font-medium mb-3 md:mb-0"><i class="fas fa-heart mr-1 opacity-75"></i>{{ 'Trusted by' | translate }}</span>
+        <div class="flex flex-wrap gap-4 md:gap-10 justify-center items-center sponsors-images-div">
+          <div class="logo-carousel gap-24 lg:gap-0">
+            <div class="logo-track min-w-fit" #trackA>
+              <div class="logo-item" *ngFor="let logo of logos">
+                <img [src]="logo.src" [alt]="logo.alt" />
+              </div>
+            </div>
+
+            <div class="logo-track min-w-fit" #trackB>
+              <div class="logo-item" *ngFor="let logo of logos">
+                <img [src]="logo.src" [alt]="logo.alt" />
+              </div>
+            </div>
+
+            <div class="logo-track min-w-fit" #trackC>
+              <div class="logo-item" *ngFor="let logo of logos">
+                <img [src]="logo.src" [alt]="logo.alt" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

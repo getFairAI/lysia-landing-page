@@ -1,17 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
 import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import ScrollSmoother from 'gsap/ScrollSmoother';
+import ScrollToPlugin from 'gsap/ScrollToPlugin';
 
 @Component({
   selector: 'app-landing',
   styleUrl: './landing.component.scss',
   templateUrl: './landing.component.html',
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements OnInit, AfterViewInit {
   videoCardsUrls = {
     card1: '',
     card2: '',
@@ -43,6 +47,7 @@ export class LandingComponent implements OnInit {
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({
       next: (newLangData: TranslationChangeEvent) => {
@@ -67,24 +72,60 @@ export class LandingComponent implements OnInit {
     });
   }
 
-  scrollRight() {
-    let element = document.getElementById('scrollable-div');
-    let cardReference = document.getElementById('card-scroll-reference');
-    element.scrollLeft += cardReference.clientWidth + 35; // add a few units to include paddings and margins
-  }
+  ngAfterViewInit() {
 
-  scrollLeft() {
-    let element = document.getElementById('scrollable-div');
-    let cardReference = document.getElementById('card-scroll-reference');
-    element.scrollLeft -= cardReference.clientWidth + 35;
+    ScrollSmoother.create({
+      smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
+      effects: true, // looks for data-speed and data-lag attributes on elements
+      smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+    });
+
+    gsap.set('#first-benefit-card', { zIndex: 10 });
+    gsap.set('#second-benefit-card', { zIndex: 11 });
+    gsap.set('#third-benefit-card', { zIndex: 12 });
+
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '.top-info-cards',
+        start: 'top top',
+        end: 'bottom bottom',
+        scrub: true,
+        pin: true,
+        pinSpacing: false,
+        // pinnedContainer: '.top-info-cards'
+      },
+    });
+
+
+    tl.to(['#second-benefit-card', '#third-benefit-card', '#first-benefit-card'], {
+     /*  duration: 1, */
+      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
+      yPercent: (i) => i < 2 ? -130 : 0,
+      scale: (i) => i === 2 ? 0.85 : 1,
+      opacity: (i) => i === 2 ? 0 : 1,
+    }, "+=2"); // start 1s earlier
+
+    tl.to(['#second-benefit-card', '#third-benefit-card'], {
+      /* duration: 1, */
+      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
+      yPercent: (i) => i < 1 ? -130 : -240,
+      scale: (i) => i === 0 ? 0.85 : 1,
+      opacity: (i) => i === 0 ? 0 : 1,
+    }, "+=2"); // start 1s earlier
+
+    tl.to('#benefits-extra', { opacity: 1 });
   }
 
   scrollDownLearnMore() {
-    let cardsSection = document.getElementById('top-info-cards-section');
-    cardsSection.scrollIntoView({
+    let contactSection = document.getElementById('contact-us-wrapper');
+    /* contactSection.scrollIntoView({
       behavior: 'smooth',
       block: 'start',
       inline: 'start',
+    }); */
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: { y: contactSection, autoKill: true },
     });
   }
 
