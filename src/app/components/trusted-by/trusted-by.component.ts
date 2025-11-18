@@ -48,7 +48,7 @@ export class TrustedByComponent implements AfterViewInit {
 
     gsap.to(tracks, {
       xPercent: -100,
-      duration: 10,
+      duration: 20,
       ease: 'none',
       repeat: -1,
       modifiers: {
