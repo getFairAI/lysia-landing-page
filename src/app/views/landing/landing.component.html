@@ -106,8 +106,10 @@
 
           <div class="mt-5 lg:mt-20 w-full flex flex-col justify-center items-center py-6 animate-slide-down wait600ms">
             <div class="hidden sm:flex justify-center flex-col items-center">
-              <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=CTA+Hero+Click" (click)="scrollDownLearnMore()">
-                {{ 'HERO_CTA' | translate }}<mat-icon>keyboard_arrow_right</mat-icon>
+              <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate" [ngClass]="{ 'plausible-event-name=CTA+Hero+Click': abVersion === 'A', 'plausible-event-name=CTA_ALTERNATIVE+Hero+Click': abVersion === 'B'}" (click)="scrollDownLearnMore()">
+                <ng-template *ngIf="abVersion === 'A'; else ctaBBottom">{{'HERO_CTA' | translate }}</ng-template>
+                <ng-template #ctaBBottom>{{'HERO_CTA_ALTERNATIVE' | translate }}</ng-template>
+                <mat-icon>keyboard_arrow_right</mat-icon>
               </button>
             </div>
 
@@ -317,8 +319,10 @@
     </section>
     <section data-lag="0.5">
       <div class="flex justify-center flex-col items-center mt-20">
-        <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=CTA+Bottom+Click" (click)="scrollDownLearnMore()">
-          {{ 'HERO_CTA_BOTTOM' | translate }}<mat-icon>keyboard_arrow_right</mat-icon>
+        <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate" [ngClass]="{ 'plausible-event-name=CTA+Bottom+Click': abVersion === 'A', 'plausible-event-name=CTA_ALTERNATIVE+Bottom+Click': abVersion === 'B'}" (click)="scrollDownLearnMore()">
+          <ng-template *ngIf="abVersion === 'A'; else ctaBBottom">{{'HERO_CTA' | translate }}</ng-template>
+          <ng-template #ctaBBottom>{{'HERO_CTA_ALTERNATIVE' | translate }}</ng-template>
+          <mat-icon>keyboard_arrow_right</mat-icon>
         </button>
       </div>
     </section>
