@@ -25,9 +25,9 @@
         "DESCRIPTION3": "Collaborate with your team without wasting time searching."
       },
       "CARD3": {
-        "TITLE": "Technology that grows with you.",
-        "DESCRIPTION": "It adapts to your workflows and improves insights with every use.",
-        "DESCRIPTION2": "Your system becomes smarter over time."
+        "TITLE": "Technology that grows with your business.",
+        "DESCRIPTION": "Your system becomes smarter over time.",
+        "DESCRIPTION2": "It adapts to your workflows and improves insights with every use."
       }
     },
     "CONTACT_FORMS_CARDS": {
@@ -114,7 +114,7 @@
       "TITLE": "Related Projects"
     },
     "LINKS_LIST2": {
-      "TITLE": "Useful Links"
+      "TITLE": "Company"
     }
   },
   "HERO_HEADLINE": "Set the pace of your industry",
@@ -125,5 +125,6 @@
     "SECTION4": "you already have."
   },
   "HERO_CTA": "Talk to us",
-  "HERO_CTA_BOTTOM": "Get in touch"
+  "HERO_CTA_ALTERNATIVE": "Get in touch",
+  "BACK": "Back"
 }

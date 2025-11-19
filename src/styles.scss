@@ -449,3 +449,10 @@ body {
     }
   }
 }
+
+.background-wrapper {
+  .bg-cover {
+    background-image: url('/assets/img/backgrounds/blurred_asbtract_bg.jpg');
+    opacity: 0.4;
+  }
+}

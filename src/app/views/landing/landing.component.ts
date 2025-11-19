@@ -16,6 +16,7 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
   templateUrl: './landing.component.html',
 })
 export class LandingComponent implements OnInit, AfterViewInit {
+  abVersion: string;
   videoCardsUrls = {
     card1: '',
     card2: '',
@@ -47,6 +48,13 @@ export class LandingComponent implements OnInit, AfterViewInit {
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    const abTestVersion = localStorage.getItem('ab-version');
+    if (abTestVersion) {
+      this.abVersion = abTestVersion;
+    } else {
+      this.abVersion = gsap.utils.random(0, 1) ? 'B' : 'A'; // random 1 -> version B; random 2 -> version A
+      localStorage.setItem('ab-version', this.abVersion); // save to local storage so user doesn't see. different versions on same device
+    }
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({

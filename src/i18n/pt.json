@@ -17,11 +17,6 @@
   "About Us": "Quem Somos",
   "Contact Us": "Contacte-nos",
   "Scroll down to": "Deslize para",
-  "ABOUT_US_TITLE": "Sobre nós",
-  "ABOUT_US_DESCRIPTION1": "O FairAI foi fundado por três engenheiros de software apaixonados por Inteligência Artificial desde o início dos seus estudos, em 2016.",
-  "ABOUT_US_DESCRIPTION2": "Ao longo das suas carreiras nos setores da banca, logística e telecomunicações, perceberam que a forma como o conhecimento era recolhido, armazenado e partilhado era altamente ineficiente, mesmo dentro de algumas das maiores organizações do mundo.",
-  "ABOUT_US_DESCRIPTION3": "Esse problema revelou-se ainda mais crítico na indústria da manufatura, onde o conhecimento operacional raramente é documentado e permanece isolado.",
-  "ABOUT_US_DESCRIPTION4": "Com essa missão, fundaram o FairAI em 2023. Com o apoio da Techstars, de investidores internacionais e com alguns artigos científicos publicada na área, a empresa ajuda hoje empresas da indústria a aumentar a sua eficiência operacional até 10 vezes, tornando o conhecimento especializado acessível em toda a organização.",
   "See it in action": "Veja em ação",
   "See It In Action": "Veja em ação",
   "CONTACT_SECTION": {
@@ -29,16 +24,21 @@
     "SECTION_DESCRIPTION": "Juntos poderemos discutir ideias e oportunidades de crescimento para que a sua empresa aumente exponencialmente a sua eficiência operacional.",
     "SECTION_CARDS": {
       "CARD1": {
-        "TITLE": "IA que segue o seu melhor engenheiro",
-        "DESCRIPTION": "A nossa solução utiliza IA para captar e organizar os melhores descobrimentos da sua equipa, permitindo acelerar os projetos futuros."
+        "TITLE": "Venda mais e melhor.",
+        "DESCRIPTION": "Encontre novos potenciais clientes automaticamente enquanto se concentra no que faz de melhor.",
+        "DESCRIPTION2": "Fique à frente dos concorrentes com informações de mercado em tempo real.",
+        "DESCRIPTION3": "Poupe tempo com e-mails personalizados e automatizados."
       },
       "CARD2": {
-        "TITLE": "Sumarização com tecnologia de IA",
-        "DESCRIPTION": "Poupe tempo ao substituir relatórios manuais de experiências por resumos completamente automatizados."
+        "TITLE": "Reúna todo o seu conhecimento num único local.",
+        "DESCRIPTION": "Reúna os seus ficheiros num único espaço confiável para que nada se perca.",
+        "DESCRIPTION2": "Encontre rapidamente o que precisa e mantenha o seu trabalho em andamento.",
+        "DESCRIPTION3": "Colabore com a sua equipa sem perder tempo a pesquisar."
       },
       "CARD3": {
-        "TITLE": "Base de conhecimento segura e privada",
-        "DESCRIPTION": "Todo o conhecimento crítico da sua empresa reunido num único local, privado e controlado por si."
+        "TITLE": "Tecnologia que cresce com o seu negócio.",
+        "DESCRIPTION": "O seu sistema torna-se mais inteligente com o tempo.",
+        "DESCRIPTION2": "Ele adapta-se aos seus fluxos de trabalho e melhora as informações a cada utilização."
       }
     },
     "CONTACT_FORMS_CARDS": {
@@ -66,16 +66,21 @@
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Preserve conhecimento quando as equipas mudam",
-      "DESCRIPTION": "Capte a sabedoria para que quando alguém se ausenta, esta permaneça dentro da sua empresa."
+      "TITLE": "Transforme números brutos numa direção clara",
+      "DESCRIPTION": "Transforme os seus dados em conhecimento útil para a tomada de decisões.",
+      "DESCRIPTION2": "Identifique oportunidades antecipadamente, em vez de correr atrás delas.",
+      "DESCRIPTION3": "Tome decisões confiantes sem precisar de vasculhar documentação."
     },
     "CARD2": {
-      "TITLE": "Acelere a investigação dentro da sua empresa",
-      "DESCRIPTION": "Reaproveite conhecimento de toda a sua investigação passada e evite perder tempo a repetir o que já foi feito."
+      "TITLE": "Recolha informações sem esforço",
+      "DESCRIPTION": "A IA acionada por voz transforma instantaneamente conversas em dados estruturados.",
+      "DESCRIPTION2": "Chega de perder tempo com entradas manuais ou notas espalhadas.",
+      "DESCRIPTION3": "As equipas obtêm a clareza operacional de que precisam em segundos, não em horas."
     },
     "CARD3": {
-      "TITLE": "Reduza o tempo gasto em documentação",
-      "DESCRIPTION": "Tudo é facilmente acessível, pesquisável e organizado automaticamente."
+      "TITLE": "Utilize os seus dados sem custos recorrentes.",
+      "DESCRIPTION": "Não há assinaturas ou taxas recorrentes. Obtenha uma solução na qual pode confiar, sem ficar preso à plataforma de outra pessoa.",
+      "DESCRIPTION2": "A IA funciona na sua infraestrutura. Os dados permanecem nas suas mãos e nada é processado em outro local."
     }
   },
   "CARDS": {
@@ -122,5 +127,15 @@
     "LINKS_LIST2": {
       "TITLE": "Ligações Úteis"
     }
-  }
+  },
+  "HERO_HEADLINE": "Defina o ritmo do seu setor",
+  "HERO_SUBTITLE": {
+    "SECTION1": "Aproveite a IA para superar a concorrência e",
+    "SECTION2": "alcançar mais",
+    "SECTION3": "com os recursos",
+    "SECTION4": "que já possui."
+  },
+  "HERO_CTA": "Fala conosco",
+  "HERO_CTA_ALTERNATIVE": "Saber mais",
+  "BACK": "Voltar"
 }

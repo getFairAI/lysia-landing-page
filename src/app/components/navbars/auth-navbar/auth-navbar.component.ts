@@ -29,14 +29,6 @@ export class AuthNavbarComponent implements OnInit {
     this.menuOpen = true;
   }
 
-  aboutUsScrollToDiv() {
-    let elementPosition = document.getElementById('about-us-wrapper');
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: { y: elementPosition, autoKill: true },
-    });
-  }
-
   contactUsScrollToDiv() {
     let elementPosition = document.getElementById('contact-us-wrapper');
     gsap.to(window, {
@@ -63,8 +55,6 @@ export class AuthNavbarComponent implements OnInit {
 
       if (scrollToDiv === 'contact-us') {
         this.contactUsScrollToDiv();
-      } else if (scrollToDiv === 'about-us') {
-        this.aboutUsScrollToDiv();
       }
     }, 400);
   }

@@ -1,10 +1,3 @@
-.background-wrapper {
-  .bg-cover {
-    background-image: url('/assets/img/backgrounds/blurred_asbtract_bg.jpg');
-    opacity: 0.4;
-  }
-}
-
 .white-pills-bg {
   background-color: rgba(255, 255, 255, 0.8);
 }
@@ -238,7 +231,6 @@
       // its inside a flex container
       flex: 0 0 350px;
       position: relative;
-      min-height: 550px;
       box-sizing: border-box;
       border-radius: 20px;
       overflow: hidden;
