@@ -9,8 +9,8 @@
 
         <div class="flex md:hidden justify-end flex-nowrap items-center gap-3">
           <div class="language-selectors-wrapper">
-            <div class="lang-selector" (click)="useLanguage('en')" [ngClass]="{ 'selected': currentLanguage === 'en' }" matTooltip="Access the english version of FairAI Labs">EN</div>
-            <div class="lang-selector" (click)="useLanguage('pt')" [ngClass]="{ 'selected': currentLanguage === 'pt' }" matTooltip="Consultar a versão portuguesa de FairAI Labs">PT</div>
+            <div class="lang-selector plausible-event-name=Change+Language+EN+Mobile+Click" (click)="useLanguage('en')" [ngClass]="{ 'selected': currentLanguage === 'en' }" matTooltip="Access the english version of FairAI Labs">EN</div>
+            <div class="lang-selector plausible-event-name=Change+Language+PT+Mobile+Click" (click)="useLanguage('pt')" [ngClass]="{ 'selected': currentLanguage === 'pt' }" matTooltip="Consultar a versão portuguesa de FairAI Labs">PT</div>
             <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
           </div>
           <button
@@ -25,7 +25,7 @@
         <ul class="hidden md:flex gap-2 flex-row list-none ml-auto">
           <li class="flex items-center">
             <a
-              class="text-slate-600 py-2 px-4 flex items-center text-xs uppercase font-bold hover:bg-[#3aaaaa] hover:text-white transition-all rounded-full cursor-pointer plausible-event-name=Contact+Us+Navbar+Click"
+              class="text-slate-600 py-2 px-4 flex items-center text-xs uppercase font-bold hover:bg-[#3aaaaa] hover:text-white transition-all rounded-full cursor-pointer plausible-event-name=Blog+Navbar+Click"
               href="https://blog.getfair.ai"
               target="_blank">
               {{ 'Blog' }}</a
@@ -42,7 +42,7 @@
 
           <li class="flex items-center">
             <a
-              class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-[#3aaaaa] hover:text-white transition-all rounded-full"
+              class="text-slate-600 p-2 flex items-center text-xs uppercase font-bold hover:bg-[#3aaaaa] hover:text-white transition-all rounded-full plausible-event-name=LinkedIn+Navbar+Click"
               href="https://www.linkedin.com/company/getfairai"
               target="_blank">
               <i class="fab fa-linkedin text-lg leading-lg"></i>
@@ -51,8 +51,8 @@
 
           <li class="ml-2 flex items-center">
             <div class="language-selectors-wrapper">
-              <div class="lang-selector" (click)="useLanguage('en')" [ngClass]="{ 'selected': currentLanguage === 'en' }" matTooltip="Access the english version of FairAI Labs">EN</div>
-              <div class="lang-selector" (click)="useLanguage('pt')" [ngClass]="{ 'selected': currentLanguage === 'pt' }" matTooltip="Consultar a versão portuguesa do FairAI Labs">PT</div>
+              <div class="lang-selector plausible-event-name=Change+Language+EN+Click" (click)="useLanguage('en')" [ngClass]="{ 'selected': currentLanguage === 'en' }" matTooltip="Access the english version of FairAI Labs">EN</div>
+              <div class="lang-selector plausible-event-name=Change+Language+PT+Click" (click)="useLanguage('pt')" [ngClass]="{ 'selected': currentLanguage === 'pt' }" matTooltip="Consultar a versão portuguesa do FairAI Labs">PT</div>
               <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
             </div>
           </li>
@@ -74,13 +74,13 @@
       <img src="./assets/img/logos/fairai-v3-logo-color-black.svg" alt="FairAI Logo" />
     </div>
 
-    <a class="menu-item" (click)="closeMenu('https://blog.getfair.ai')"><i class="fas fa-circle-info text-xl"></i>Blog</a>
-    <a class="menu-item" (click)="closeMenu(undefined, 'contact-us')"><i class="fas fa-comment text-xl"></i> {{ 'Contact Us' | translate }}</a>
-    <a class="menu-item" href="https://www.linkedin.com/company/getfairai" target="_blank"><i class="fab fa-linkedin text-xl"></i> LinkedIn</a>
+    <a class="menu-item plausible-event-name=Blog+Mobile+Menu+Click" (click)="closeMenu('https://blog.getfair.ai')"><i class="fas fa-circle-info text-xl"></i>Blog</a>
+    <a class="menu-item plausible-event-name=Contact+Us+Mobile+Menu+Click" (click)="closeMenu(undefined, 'contact-us')"><i class="fas fa-comment text-xl"></i> {{ 'Contact Us' | translate }}</a>
+    <a class="menu-item plausible-event-name=LinkedIn+Mobile+Menu+Click" href="https://www.linkedin.com/company/getfairai" target="_blank"><i class="fab fa-linkedin text-xl"></i> LinkedIn</a>
 
     <div class="language-selectors-wrapper mt-10">
-      <div class="lang-selector" (click)="useLanguage('en')" [ngClass]="{ 'selected': currentLanguage === 'en' }" matTooltip="Access the english version of FairAI Labs">EN</div>
-      <div class="lang-selector" (click)="useLanguage('pt')" [ngClass]="{ 'selected': currentLanguage === 'pt' }" matTooltip="Consultar a versão portuguesa do FairAI Labs">PT</div>
+      <div class="lang-selector plausible-event-name=Change+Language+EN+Click" (click)="useLanguage('en')" [ngClass]="{ 'selected': currentLanguage === 'en' }" matTooltip="Access the english version of FairAI Labs">EN</div>
+      <div class="lang-selector plausible-event-name=Change+Language+PT+Click" (click)="useLanguage('pt')" [ngClass]="{ 'selected': currentLanguage === 'pt' }" matTooltip="Consultar a versão portuguesa do FairAI Labs">PT</div>
       <div class="selector-indicator" [ngClass]="{ 'en-position': currentLanguage === 'en', 'pt-position': currentLanguage === 'pt' }"></div>
     </div>
   </div>

@@ -106,13 +106,13 @@
 
           <div class="mt-5 lg:mt-20 w-full flex flex-col justify-center items-center py-6 animate-slide-down wait600ms">
             <div class="hidden sm:flex justify-center flex-col items-center">
-              <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=Learn+More+Click" (click)="scrollDownLearnMore()">
+              <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=CTA+Hero+Click" (click)="scrollDownLearnMore()">
                 {{ 'HERO_CTA' | translate }}<mat-icon>keyboard_arrow_right</mat-icon>
               </button>
             </div>
 
             <div
-              class="flex sm:hidden items-center justify-center learnmore-button-animate bg-white text-[#3aaaaa] shadow-md font-medium w-fit rounded-full p-2 cursor-pointer plausible-event-name=Learn+More+Click"
+              class="flex sm:hidden items-center justify-center learnmore-button-animate bg-white text-[#3aaaaa] shadow-md font-medium w-fit rounded-full p-2 cursor-pointer plausible-event-name=CTA+Hero+Mobile+Click"
               (click)="scrollDownLearnMore()"
               ><mat-icon>keyboard_arrow_down</mat-icon></div
             >
@@ -157,7 +157,7 @@
       </div> -->
 
         <div class="flex flex-col pl-[10%] pr-[10%] xl:pl-[15%] xl:pr-[15%] pt-5 gap-48 overflow-y-auto relative scroll-smooth">
-          <div class="info-card plausible-event-name=Card+Click plausible-event-card=card1 flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="first-benefit-card">
+          <div class="info-card flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="first-benefit-card">
             <div class="sm:absolute -z-1 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
               <img src="./assets/img/landing-page-cards/research-papers.jpg" class="w-full h-full object-cover object-top"/>
             </div>
@@ -172,7 +172,7 @@
           <div class="open-icon-text">{{ 'Learn More' | translate }}</div> -->
           </div>
 
-          <div class="info-card plausible-event-name=Card+Click plausible-event-card=card2 flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="second-benefit-card">
+          <div class="info-card flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="second-benefit-card">
             <div class="sm:absolute -z-1 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
               <img src="./assets/img/landing-page-cards/books_horizontal.jpg" class="w-full h-full object-cover object-top"/>
             </div>
@@ -184,7 +184,7 @@
             </div>
           </div>
 
-          <div class="info-card plausible-event-name=Card+Click plausible-event-card=card3 flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="third-benefit-card">
+          <div class="info-card flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="third-benefit-card">
             <div class="sm:absolute -z-1 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
               <img src="./assets/img/landing-page-cards/local_ai.png" class="w-full h-full object-cover object-top"/>
             </div>
@@ -317,7 +317,7 @@
     </section>
     <section data-lag="0.5">
       <div class="flex justify-center flex-col items-center mt-20">
-        <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=Learn+More+Bottom+Click" (click)="scrollDownLearnMore()">
+        <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate plausible-event-name=CTA+Bottom+Click" (click)="scrollDownLearnMore()">
           {{ 'HERO_CTA_BOTTOM' | translate }}<mat-icon>keyboard_arrow_right</mat-icon>
         </button>
       </div>
