@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, NoPreloading } from '@angular/router';
 import { LandingComponent } from './views/landing/landing.component';
+import { PrivacyComponent } from './views/privacy/privacy.component';
 
 // // layouts
 // import { AdminComponent } from './layouts/admin/admin.component';
@@ -47,6 +48,7 @@ const routes: Routes = [
   // { path: "profile", component: ProfileComponent },
 
   { path: '', component: LandingComponent },
+  { path: 'privacy', component: PrivacyComponent },
   // { path: '', loadChildren: () => import('./views/landing/landing.module').then(m => m.LandingPageModule) },
 
   { path: '**', redirectTo: '', pathMatch: 'full' },

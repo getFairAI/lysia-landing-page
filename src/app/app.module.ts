@@ -4,8 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { DragScrollComponent, DragScrollItemDirective } from 'ngx-drag-scroll';
-
 // import ngx-translate and the http loader
 import { AuthNavbarComponent } from './components/navbars/auth-navbar/auth-navbar.component';
 import { FooterComponent } from './components/footers/footer/footer.component';
@@ -14,9 +12,10 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LandingComponent } from './views/landing/landing.component';
-import { FormControl, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { DialogInfoCardsComponent } from './components/dialog-info-cards/dialog-info-cards.component';
 import { TrustedByComponent } from './components/trusted-by/trusted-by.component';
+import { PrivacyComponent } from './views/privacy/privacy.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +24,7 @@ import { TrustedByComponent } from './components/trusted-by/trusted-by.component
     TrustedByComponent,
     FooterComponent,
     LandingComponent,
+    PrivacyComponent,
     DialogInfoCardsComponent,
     // DashboardComponent,
     // CardBarChartComponent,

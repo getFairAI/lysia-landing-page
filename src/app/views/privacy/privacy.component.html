@@ -1,0 +1,14 @@
+<div class="background-wrapper fixed top-0 left-0 w-full h-full animate-fade-in wait200ms" style="z-index: -100">
+  <div class="bg-center bg-cover w-full h-full"></div>
+</div>
+<div class="sm:flex sm:absolute sm:left-24 sm:top-24 hidden">
+  <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate" routerLink="/">
+    <mat-icon>keyboard_arrow_left</mat-icon>{{ 'Back' | translate }}
+  </button>
+</div>
+<div
+  class="flex absolute top-20 left-6 sm:hidden items-center justify-center learnmore-button-animate bg-white text-[#3aaaaa] shadow-md font-medium w-fit rounded-full p-2 cursor-pointer"
+  routerLink="/"
+  ><mat-icon>keyboard_arrow_left</mat-icon></div
+>
+<iframe src="./assets/PrivacyPolicy.html" class="w-full min-h-screen relative bg-transparent" [ngClass]="{ hidden: !isReady }" (load)="onIframeLoaded()"></iframe>
