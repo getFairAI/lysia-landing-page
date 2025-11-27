@@ -55,20 +55,20 @@
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Turn raw numbers into a clear direction",
-      "DESCRIPTION": "Turn your data into clear, actionable insight.",
+      "TITLE": "Stop Losing Data",
+      "DESCRIPTION": "Automatically capture every detail from projects, meetings, and proposals so historical pricing, win/loss reasons, and customer patterns are never lost again.",
       "DESCRIPTION2": "Spot opportunities early instead of chasing them late.",
       "DESCRIPTION3": "Make confident decisions without digging through spreadsheets or documents."
     },
     "CARD2": {
-      "TITLE": "Collect information effortlessly",
-      "DESCRIPTION": "Voice-driven AI instantly turns conversations into structured data.",
+      "TITLE": "Turn Reports Into Action",
+      "DESCRIPTION": "Centralize and analyze production, quality, and financial reports with AI that extracts insights you can act on. Move from unread documents to real, quantified improvement opportunities.",
       "DESCRIPTION2": "No more wasted time on manual entry or scattered notes.",
       "DESCRIPTION3": "Teams get the operational clarity they need in seconds, not hours."
     },
     "CARD3": {
-      "TITLE": "AI you own, not rent",
-      "DESCRIPTION": "The AI runs on your infrastructure. Your data remains in your hands, and nothing is processed elsewhere.",
+      "TITLE": "Bring Your Knowledge to Life",
+      "DESCRIPTION": "Transform your company’s know-how into evolving, searchable intelligence. Our AI learns and improves with existing knowledge, so your processes get better with every project.",
       "DESCRIPTION2": "There are no subscriptions or recurring fees. You get a solution you can rely on without being locked into someone else's platform."
     }
   },
@@ -117,12 +117,12 @@
       "TITLE": "Company"
     }
   },
-  "HERO_HEADLINE": "Set the pace of your industry",
+  "HERO_HEADLINE": "Make every piece of knowledge work for you",
   "HERO_SUBTITLE": {
-    "SECTION1": "Harness AI to outpace your competition and",
-    "SECTION2": "achieve more",
-    "SECTION3": "with the resources",
-    "SECTION4": "you already have."
+    "SECTION1": "Turn",
+    "SECTION2": "lost data ",
+    "SECTION3": "and undocumented processes into your",
+    "SECTION4": "competitive edge."
   },
   "HERO_CTA": "Talk to us",
   "HERO_CTA_ALTERNATIVE": "Get in touch",

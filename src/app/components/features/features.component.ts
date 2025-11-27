@@ -47,7 +47,7 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
       opacity: 1,
       xPercent: 10,
       zIndex: 10,
-      borderRadius: '1.5rem',
+      // borderRadius: '1.5rem',
     });
   }
 
@@ -57,11 +57,11 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
       xPercent: 0,
       zIndex: 1,
       // borderRadius: 0,
-      ...(idx === 0 && { borderRadius: '1.5rem 0 0 0' }),
+      /* ...(idx === 0 && { borderRadius: '1.5rem 0 0 0' }),
       ...(idx === 1 && { borderRadius: '0 1.5rem 0 0' }),
       ...(idx === 2 && { borderRadius: '0 0 0 1.5rem' }),
       ...(idx === 3 && { borderRadius: 0 }),
-      ...(idx === 4 && { borderRadius: '0 0 1.5rem 0' }),
+      ...(idx === 4 && { borderRadius: '0 0 1.5rem 0' }), */
     });
   }
 }
