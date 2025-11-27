@@ -18,6 +18,12 @@ import { TrustedByComponent } from './components/trusted-by/trusted-by.component
 import { PrivacyComponent } from './views/privacy/privacy.component';
 import { CtaButtonComponent } from './components/cta-button/cta-button.component';
 import { FeaturesComponent } from './components/features/features.component';
+import { DatabasesIconSvgComponent } from './components/databases-icon/databases-icon.component';
+import { HowToComponent } from './components/how-to/how-to.component';
+import { DataImportIconComponent } from './components/data-import-icon/data-import-icon.component';
+import { DataParsingIconComponent } from './components/data-parsing-icon/data-parsing-icon.component';
+import { DashboardsIconComponent } from './components/dashboards-icon/dashboards-icon.component';
+import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learning-icon.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +36,13 @@ import { FeaturesComponent } from './components/features/features.component';
     DialogInfoCardsComponent,
     CtaButtonComponent,
     FeaturesComponent,
+    HowToComponent,
+    // icons
+    AiLearningIconComponent,
+    DatabasesIconSvgComponent,
+    DataImportIconComponent,
+    DataParsingIconComponent,
+    DashboardsIconComponent
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,

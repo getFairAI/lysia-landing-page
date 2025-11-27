@@ -138,5 +138,12 @@
     "FEATURE4DESCRIPTION": "Connect seamlessly with your existing ERP and CRM platforms to unify workflows, reduce duplication, and maintain a single source of truth across the business.",
     "FEATURE5": "Secure multi-location collaboration",
     "FEATURE5DESCRIPTION": "Enable distributed teams to work together in real time with enterprise-grade security, controlled access, and shared workspaces designed for cross-location collaboration."
+  },
+  "HOW_TO": {
+    "STEP1": "1. Connect your existing ERP or CRM and upload historical files",
+    "STEP2": "2. If you don't have any kind of data, we help you obtain what is missing",
+    "STEP3": "3. AI ingests and structures all past and current data",
+    "STEP4": "4. Get dashboards, opportunities, and process insights instantly",
+    "STEP5": "5. Let your AI learn all these insights and train your team so you can expand globally with confidence"
   }
 }
