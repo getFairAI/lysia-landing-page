@@ -17,6 +17,7 @@ import { DialogInfoCardsComponent } from './components/dialog-info-cards/dialog-
 import { TrustedByComponent } from './components/trusted-by/trusted-by.component';
 import { PrivacyComponent } from './views/privacy/privacy.component';
 import { CtaButtonComponent } from './components/cta-button/cta-button.component';
+import { FeaturesComponent } from './components/features/features.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { CtaButtonComponent } from './components/cta-button/cta-button.component
     PrivacyComponent,
     DialogInfoCardsComponent,
     CtaButtonComponent,
+    FeaturesComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,
@@ -64,14 +66,14 @@ import { CtaButtonComponent } from './components/cta-button/cta-button.component
     SharedModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'en',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
+        defaultLanguage: 'en',
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient],
+        },
     }),
-  ],
+],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],
 })
