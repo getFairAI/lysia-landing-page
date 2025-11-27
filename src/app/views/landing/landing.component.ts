@@ -44,10 +44,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
   });
 
   submittingForm = false; // triggers submitting animation
-
   constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+
     const abTestVersion = localStorage.getItem('ab-version');
     if (abTestVersion) {
       this.abVersion = abTestVersion;
@@ -55,7 +56,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
       this.abVersion = gsap.utils.random(0, 1) ? 'B' : 'A'; // random 1 -> version B; random 2 -> version A
       localStorage.setItem('ab-version', this.abVersion); // save to local storage so user doesn't see. different versions on same device
     }
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({
       next: (newLangData: TranslationChangeEvent) => {
@@ -78,10 +78,10 @@ export class LandingComponent implements OnInit, AfterViewInit {
         console.log(error);
       },
     });
+
   }
 
   ngAfterViewInit() {
-
     ScrollSmoother.create({
       smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
       effects: true, // looks for data-speed and data-lag attributes on elements

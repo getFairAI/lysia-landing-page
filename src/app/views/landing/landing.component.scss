@@ -46,17 +46,6 @@
   height: 100dvh;
   justify-content: center;
   align-items: center;
-
-  @media only screen and (max-height: 800px) {
-    height: fit-content !important;
-    justify-content: start !important;
-  }
-
-  .dynamic-height-sponsors-div {
-    @media only screen and (max-height: 800px) {
-      position: static !important;
-    }
-  }
 }
 
 .logo-img-wrapper {

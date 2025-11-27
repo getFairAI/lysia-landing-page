@@ -16,6 +16,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DialogInfoCardsComponent } from './components/dialog-info-cards/dialog-info-cards.component';
 import { TrustedByComponent } from './components/trusted-by/trusted-by.component';
 import { PrivacyComponent } from './views/privacy/privacy.component';
+import { CtaButtonComponent } from './components/cta-button/cta-button.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PrivacyComponent } from './views/privacy/privacy.component';
     LandingComponent,
     PrivacyComponent,
     DialogInfoCardsComponent,
+    CtaButtonComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,

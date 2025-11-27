@@ -6,7 +6,7 @@
   <div>
     <div class="w-full flex flex-col first-screen-wrapper">
       <div class="flex flex-col justify-center items-center w-full h-full pt-24">
-        <div class="items-center flex flex-wrap">
+        <div class="items-center flex flex-wrap gap-24">
           <div class="w-full flex flex-col items-center px-4 text-center">
             <div class="logo-img-wrapper">
               <svg version="1.1" id="svg-logo" class="svg-logo" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
@@ -103,52 +103,15 @@
               </div>
             </div>
           </div>
-
-          <div class="mt-5 lg:mt-20 w-full flex flex-col justify-center items-center py-6 animate-slide-down wait600ms">
-            <div class="hidden sm:flex justify-center flex-col items-center">
-              <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate" [ngClass]="{ 'plausible-event-name=CTA+Hero+Click': abVersion === 'A', 'plausible-event-name=CTA_ALTERNATIVE+Hero+Click': abVersion === 'B'}" (click)="scrollDownLearnMore()">
-                <ng-template *ngIf="abVersion === 'A'; else ctaBBottom">{{'HERO_CTA' | translate }}</ng-template>
-                <ng-template #ctaBBottom>{{'HERO_CTA_ALTERNATIVE' | translate }}</ng-template>
-                <mat-icon>keyboard_arrow_right</mat-icon>
-              </button>
-            </div>
-
-            <div
-              class="flex sm:hidden items-center justify-center learnmore-button-animate bg-white text-[#3aaaaa] shadow-md font-medium w-fit rounded-full p-2 cursor-pointer plausible-event-name=CTA+Hero+Mobile+Click"
-              (click)="scrollDownLearnMore()"
-              ><mat-icon>keyboard_arrow_down</mat-icon></div
-            >
-          </div>
+          <app-cta-button class="w-full" [pagePosition]="'top'"></app-cta-button>
         </div>
       </div>
-
-      <!-- <div class="w-full static md:absolute bottom-8 left-0 dynamic-height-sponsors-div">
-      <div class="w-full flex justify-center px-4 mt-12 md:mt-40 animate-slide-up-zoom wait600ms">
-        <div class="w-full max-w-[1400px] flex justify-between items-center gap-10">
-          <div class="flex flex-col items-center lg:items-start">
-            <span class="text-xs font-medium mb-3"><i class="fas fa-bolt mr-1 opacity-75"></i>{{ 'Empowered by' | translate }}</span>
-            <div class="flex flex-wrap gap-4 md:gap-8 items-center justify-center sponsors-images-div">
-              <a href="https://arweave.org/" target="_blank"><img src="./assets/img/logos/arweave-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
-              <a href="https://arbitrum.io/" target="_blank"><img src="./assets/img/logos/arbitrum-logo.png" class="w-full max-w-[120px] md:max-w-[140px]" /></a>
-            </div>
-          </div>
-
-          <div class="flex items-center lg:items-start flex-col">
-            <span class="text-xs font-medium mb-3 md:mb-0"><i class="fas fa-heart mr-1 opacity-75"></i>{{ 'Backed by' | translate }}</span>
-            <div class="flex flex-wrap gap-4 md:gap-8 justify-center items-center sponsors-images-div">
-              <a href="https://www.rndao.io/" target="_blank"><img src="./assets/img/logos/rndao.png" class="w-full max-w-[60px] md:max-w-[80px]" /></a>
-              <a href="https://forward.arweave.dev/" target="_blank"><img src="./assets/img/logos/forward-research-logo.png" class="w-full max-w-[100px] md:max-w-[120px]" /></a>
-              <a href="https://www.techstars.com/" target="_blank"><img src="./assets/img/logos/techstars-logo.png" class="w-full max-w-[120px] md:max-w-[140px] relative translate-x-2" /></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-      <app-trusted-by></app-trusted-by>
     </div>
 
+    <app-trusted-by></app-trusted-by>
+
     <section id="benefits-section" class="top-info-cards-wrapper">
-      <div class="top-info-cards container-scroll-arrows pt-24">
+      <div class="top-info-cards container-scroll-arrows sm:pt-24">
         <!-- <div class="scroll-arrows">
         <div class="arrow-left" (click)="scrollLeft()">
           <i class="fas left-fas fa-arrow-left"></i>
@@ -318,13 +281,7 @@
       </div>
     </section>
     <section data-lag="0.5">
-      <div class="flex justify-center flex-col items-center mt-20">
-        <button type="button" class="w-fit button-lysia primary-color bigger-button learnmore-button-animate" [ngClass]="{ 'plausible-event-name=CTA+Bottom+Click': abVersion === 'A', 'plausible-event-name=CTA_ALTERNATIVE+Bottom+Click': abVersion === 'B'}" (click)="scrollDownLearnMore()">
-          <ng-template *ngIf="abVersion === 'A'; else ctaBBottom">{{'HERO_CTA' | translate }}</ng-template>
-          <ng-template #ctaBBottom>{{'HERO_CTA_ALTERNATIVE' | translate }}</ng-template>
-          <mat-icon>keyboard_arrow_right</mat-icon>
-        </button>
-      </div>
+      <app-cta-button [pagePosition]="'bottom'"></app-cta-button>
     </section>
     <div class="mt-20 w-full" data-lag="0.8">
       <app-footer></app-footer>

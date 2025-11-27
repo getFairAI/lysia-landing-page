@@ -316,7 +316,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 8px;
-  transition: 0.2s all;
+  // box-shadow: 2px 7px 10px 0px rgba(58,170,170, 0.7);
+  box-shadow: 2px 7px 10px 0px darken(#3aaaaa, 10%);;
 
   &.primary-color {
     background-color: #3aaaaa;
@@ -337,7 +338,7 @@ body {
     font-weight: 700;
     border-radius: 40px;
     padding: 10px 20px;
-    font-size: 18px;
+    font-size: 26px;
 
     &.outlined-primary-color {
       padding: 8px 18px;
@@ -352,30 +353,6 @@ body {
     @media only screen and (max-width: 600px) {
       padding: 8px 15px;
       font-size: 14px;
-    }
-  }
-
-  &:hover,
-  &:focus-within {
-    transform: scale(1.04);
-
-    &.bigger-button {
-      transform: scale(1.02);
-    }
-
-    &.primary-color {
-      background-color: #53cbcb;
-      color: white;
-    }
-
-    &.outlined-primary-color {
-      background-color: #3aaaaa;
-      color: white;
-    }
-
-    &.outlined-secondary-color {
-      background-color: rgb(70, 70, 70);
-      color: white;
     }
   }
 
