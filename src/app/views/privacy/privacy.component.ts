@@ -30,7 +30,6 @@ export class PrivacyComponent {
 
   onIframeLoaded() {
     const iframe = document.querySelector('iframe');
-    console.log(iframe)
     if (iframe) {
       const iframeDoc = iframe.contentDocument;
       if (iframeDoc) {

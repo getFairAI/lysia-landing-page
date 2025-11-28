@@ -82,7 +82,6 @@ export class CtaButtonComponent implements OnInit, AfterViewInit {
 
       },
       onHoverEnd: () => {
-        console.log('hover End')
         gsap.to(currentButton, {
           scale: 1,
           onComplete: () => this.pulsatingAnimation.restart(true), // restart pulsating animation only after hover end finishes

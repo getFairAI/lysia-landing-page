@@ -27,14 +27,13 @@ export class HowToComponent implements OnInit, AfterViewInit, OnDestroy {
 
   ngOnInit() {
     gsap.registerPlugin(Flip);
-
   }
 
   ngAfterViewInit(): void {
     this.animateLabels();
     this.loopTl = gsap.timeline({
-      repeat: -1,         // loop forever
-      repeatDelay: 2.5,   // time between rotations (optional)
+      repeat: -1, // loop forever
+      repeatDelay: 2.5, // time between rotations (optional)
     });
 
     this.loopTl.call(() => this.rotateLoopAnimation());
@@ -50,8 +49,9 @@ export class HowToComponent implements OnInit, AfterViewInit, OnDestroy {
     // 1. capture current positions & sizes
     // 🔹 1. measure starting height
     const container = this.iconsContainer.nativeElement;
+    const label = container.querySelector('[data-flip-id="feature-label"]') as HTMLElement | null;
     const startHeight = container.offsetHeight;
-    const state = Flip.getState(elements);
+    const state = Flip.getState([...elements, label]);
 
     // 2. rotate array: first becomes last
     // iterms are display as: 1/ 2 - 5 / 3 -4
@@ -61,24 +61,42 @@ export class HowToComponent implements OnInit, AfterViewInit, OnDestroy {
 
     this.cdr.detectChanges();
 
+    const newLabel = container.querySelector('[data-flip-id="feature-label"]') as HTMLElement | null;
+
     // keep container from collapsing
     gsap.set(container, { height: startHeight });
+    gsap.set(newLabel, { opacity: 0 });
+
+    // 3) set up timeline
+    const tl = gsap.timeline();
 
     // 4. animate from previous layout to new layout
-    Flip.from(state, {
+    const iconRotation = Flip.from(state, {
+      targets: elements,
       duration: 0.7,
       ease: 'power2.inOut',
       stagger: 0.03,
       absolute: true, // <— important with flex-wrap + row swapping
       nested: true, // helps if you have transforms inside
       scale: true, // optional, but looks nicer if sizes change
+
       onComplete: () => {
         // let height go back to auto after animation
         gsap.set(container, { clearProps: 'height' });
       },
     });
 
-    this.animateLabels();
+    tl.add(iconRotation, 0);
+
+    tl.to(
+      newLabel,
+      {
+        opacity: 1,
+        duration: 0.25,
+        ease: 'power2.out',
+      },
+      0.5 // start time inside the Flip (tweak: closer to 0.7 for later)
+    );
   }
 
   rotate(backwards = false) {
@@ -90,32 +108,41 @@ export class HowToComponent implements OnInit, AfterViewInit, OnDestroy {
     // 1. capture current positions & sizes
     // 🔹 1. measure starting height
     const container = this.iconsContainer.nativeElement;
+    const label = container.querySelector('[data-flip-id="feature-label"]') as HTMLElement | null;
     const startHeight = container.offsetHeight;
-    const state = Flip.getState(elements);
+    const state = Flip.getState([...elements, label]);
 
     // 2. rotate array: first becomes last
     // iterms are display as: 1/ 2 - 5 / 3 -4
     // for first to be the last it needs to go to "third position"
     // need to always change position 0 into 3; and position 2 into 4
     if (backwards) {
-      this.icons = [ this.icons[2], this.icons[0], this.icons[4], this.icons[1], this.icons[3]];
+      this.icons = [this.icons[2], this.icons[0], this.icons[4], this.icons[1], this.icons[3]];
     } else {
       this.icons = [this.icons[1], this.icons[3], this.icons[0], this.icons[4], this.icons[2]];
     }
 
     this.cdr.detectChanges();
 
+    const newLabel = container.querySelector('[data-flip-id="feature-label"]') as HTMLElement | null;
+
     // keep container from collapsing
     gsap.set(container, { height: startHeight });
+    gsap.set(newLabel, { opacity: 0 });
+
+    // 3) set up timeline
+    const tl = gsap.timeline();
 
     // 4. animate from previous layout to new layout
-    Flip.from(state, {
+    const iconRotation = Flip.from(state, {
+      targets: elements,
       duration: 0.7,
       ease: 'power2.inOut',
       stagger: 0.03,
       absolute: true, // <— important with flex-wrap + row swapping
       nested: true, // helps if you have transforms inside
       scale: true, // optional, but looks nicer if sizes change
+
       onComplete: () => {
         // let height go back to auto after animation
         gsap.set(container, { clearProps: 'height' });
@@ -125,19 +152,21 @@ export class HowToComponent implements OnInit, AfterViewInit, OnDestroy {
       },
     });
 
-    this.animateLabels();
+    tl.add(iconRotation, 0);
 
-    /* // 🔹 6. animate the container’s height so content below doesn’t jump
-    gsap.to(container, {
-      height: endHeight,
-      duration: 0.7,
-      ease: 'power2.inOut',
-    }); */
+    tl.to(
+      newLabel,
+      {
+        opacity: 1,
+        duration: 0.25,
+        ease: 'power2.out',
+      },
+      // start time inside the Flip (tweak: closer to 0.7 for later)
+    );
   }
 
   private animateLabels() {
     const labels = this.iconEls.map(el => el.nativeElement.querySelector('.icon-label'));
-    console.log(labels);
     labels.forEach((label, index) => {
       if (!label) return;
 
