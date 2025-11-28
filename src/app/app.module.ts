@@ -79,7 +79,7 @@ import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learni
     SharedModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
-        defaultLanguage: 'en',
+        defaultLanguage: 'pt',
         loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,

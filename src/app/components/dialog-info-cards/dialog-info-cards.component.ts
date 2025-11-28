@@ -41,7 +41,7 @@ export class DialogInfoCardsComponent implements OnInit, AfterViewInit {
       });
     }, 300);
 
-    const currentLang = this.translateService.currentLang ?? 'en';
+    const currentLang = this.translateService.currentLang ?? 'pt';
     const currentLangData = this.translateService.translations[currentLang];
 
     this.currentCardDataFromTranslate = currentLangData?.CARDS[this.data.infoCardId]?.INNER_CARDS ?? [];

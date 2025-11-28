@@ -16,7 +16,7 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.translate.onLangChange.subscribe(newTranslationData => {
       // this observable fires immediately when first run
-      this.currentLanguage = newTranslationData?.lang ?? 'en';
+      this.currentLanguage = newTranslationData?.lang ?? 'pt';
     });
     gsap.registerPlugin(Observer);
   }

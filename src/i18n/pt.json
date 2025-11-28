@@ -3,44 +3,9 @@
     "MESSAGE_SUBMIT_SUCCESS": "Mensagem enviada. Iremos entrar em contacto o mais brevemente possível!",
     "MESSAGE_SUBMIT_ERROR": "Ocorreu um erro. Por favor, tente novamente."
   },
-  "Empowered by": "Potenciado por",
-  "Backed by": "Apoiado por",
-  "Watch the quick video to learn more": "Veja o vídeo rápido para saber mais",
-  "AI that seamlessly adapts to you": "IA que se adapta ao seu negócio",
-  "Digitalize and automate": "Digitalize e automatize",
-  "without losing control": "sem perder o controlo",
-  "of": "sobre",
-  "what makes you great.": "o que o torna único.",
-  "Send Message": "Enviar Mensagem",
-  "Learn More": "Saber Mais",
-  "Our tech stack": "As nossas tecnologias",
-  "About Us": "Quem Somos",
-  "Contact Us": "Contacte-nos",
-  "Scroll down to": "Deslize para",
-  "See it in action": "Veja em ação",
-  "See It In Action": "Veja em ação",
   "CONTACT_SECTION": {
     "SECTION_TITLE": "Vamos conversar ?",
     "SECTION_DESCRIPTION": "Juntos poderemos discutir ideias e oportunidades de crescimento para que a sua empresa aumente exponencialmente a sua eficiência operacional.",
-    "SECTION_CARDS": {
-      "CARD1": {
-        "TITLE": "Venda mais e melhor.",
-        "DESCRIPTION": "Encontre novos potenciais clientes automaticamente enquanto se concentra no que faz de melhor.",
-        "DESCRIPTION2": "Fique à frente dos concorrentes com informações de mercado em tempo real.",
-        "DESCRIPTION3": "Poupe tempo com e-mails personalizados e automatizados."
-      },
-      "CARD2": {
-        "TITLE": "Reúna todo o seu conhecimento num único local.",
-        "DESCRIPTION": "Reúna os seus ficheiros num único espaço confiável para que nada se perca.",
-        "DESCRIPTION2": "Encontre rapidamente o que precisa e mantenha o seu trabalho em andamento.",
-        "DESCRIPTION3": "Colabore com a sua equipa sem perder tempo a pesquisar."
-      },
-      "CARD3": {
-        "TITLE": "Tecnologia que cresce com o seu negócio.",
-        "DESCRIPTION": "O seu sistema torna-se mais inteligente com o tempo.",
-        "DESCRIPTION2": "Ele adapta-se aos seus fluxos de trabalho e melhora as informações a cada utilização."
-      }
-    },
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
         "TITLE": "Que tal uma reunião rápida?",
@@ -60,59 +25,18 @@
       }
     }
   },
-  "WHAT_WE_DO_SECTION": {
-    "TITLE": "Maximize o seu potencial de fabrico",
-    "DESCRIPTION": "A Lysia Labs permite-lhe acelerar as vendas e a Investigação e Desenvolvimento ao aceder aos conhecimentos valiosos adquiridos em experiências anteriores no chão de fábrica com a ajuda da IA."
-  },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Transforme números brutos numa direção clara",
-      "DESCRIPTION": "Transforme os seus dados em conhecimento útil para a tomada de decisões.",
-      "DESCRIPTION2": "Identifique oportunidades antecipadamente, em vez de correr atrás delas.",
-      "DESCRIPTION3": "Tome decisões confiantes sem precisar de vasculhar documentação."
+      "TITLE": "Pare de Perder Dados",
+      "DESCRIPTION": "Capte automaticamente todos os detalhes de projetos, reuniões e propostas para que preços históricos, razões de ganho/perda e padrões de clientes nunca mais se percam."
     },
     "CARD2": {
-      "TITLE": "Recolha informações sem esforço",
-      "DESCRIPTION": "A IA acionada por voz transforma instantaneamente conversas em dados estruturados.",
-      "DESCRIPTION2": "Chega de perder tempo com entradas manuais ou notas espalhadas.",
-      "DESCRIPTION3": "As equipas obtêm a clareza operacional de que precisam em segundos, não em horas."
+      "TITLE": "Transforme Relatórios em Ações",
+      "DESCRIPTION": "Centralize e analise relatórios de produção, qualidade e financeiros com IA que extrai insights acionáveis. Passe de documentos ignorados para oportunidades reais e quantificadas de melhoria."
     },
     "CARD3": {
-      "TITLE": "Utilize os seus dados sem custos recorrentes.",
-      "DESCRIPTION": "Não há assinaturas ou taxas recorrentes. Obtenha uma solução na qual pode confiar, sem ficar preso à plataforma de outra pessoa.",
-      "DESCRIPTION2": "A IA funciona na sua infraestrutura. Os dados permanecem nas suas mãos e nada é processado em outro local."
-    }
-  },
-  "CARDS": {
-    "CARD1": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Nunca mais perca conhecimento crítico",
-          "SUBTITLE": "Conserve o que é importante, mesmo quando alguém está ausente.",
-          "DESCRIPTION_TEXT": "Mantenha o registo das principais decisões e das razões pelas quais as coisas foram construídas da forma que foram.\n\nEvite a perda de contexto e erros repetidos, disponibilizando o conhecimento para além das pessoas que o detinham originalmente.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/people-table.jpg"
-        }
-      ]
-    },
-    "CARD2": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Acelere a investigação na sua empresa",
-          "SUBTITLE": "Capacite todas as equipas a construir com base no trabalho umas das outras.",
-          "DESCRIPTION_TEXT": "Páre de reinventar a roda e aceda a pesquisas anteriores, conhecimento partilhado e documentos-chave exatamente quando e onde a sua equipa mais precisa.\n\nA nossa plataforma liga os pontos entre projetos e pessoas, facilitando o aproveitamento da inteligência coletiva para alcançar em conjunto resultados mais rápidos e inteligentes.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/research.jpg"
-        }
-      ]
-    },
-    "CARD3": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Não perca tempo com relatórios",
-          "SUBTITLE": "A nossa estrutura de IA organiza automaticamente os seus dados, para que a sua equipa se concentre no que realmente importa.",
-          "DESCRIPTION_TEXT": "Evite o caos de pastas desorganizadas e notas espalhadas. A nossa tecnologia indexa automaticamente os conteúdos da sua equipa, tornando tudo fácil de encontrar, partilhar e reutilizar, sem esforço manual.\n\nOs seus dados são automaticamente estruturados e apresentados de forma clara. Menos tempo em tarefas repetitivas, mais foco em decisões estratégicas.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/product-brief.jpg"
-        }
-      ]
+      "TITLE": "Dê Vida ao Seu Conhecimento",
+      "DESCRIPTION": "Transforme o know-how da sua empresa em inteligência pesquisável e em constante evolução. A nossa IA aprende e melhora com o conhecimento existente, tornando os seus processos melhores a cada projeto."
     }
   },
   "TECH_STACK": {
@@ -121,21 +45,40 @@
   "FOOTER": {
     "SLOGAN": "Siga a nossa jornada.",
     "SLOGAN_SUBTITLE": "Mantenha-se em contacto com FairAI.",
-    "LINKS_LIST1": {
-      "TITLE": "Projetos Relacionados"
-    },
-    "LINKS_LIST2": {
+    "LINKS_LIST": {
       "TITLE": "Ligações Úteis"
     }
   },
-  "HERO_HEADLINE": "Defina o ritmo do seu setor",
+  "HERO_HEADLINE": "Faça com que cada peça de conhecimento trabalhe para si",
   "HERO_SUBTITLE": {
-    "SECTION1": "Aproveite a IA para superar a concorrência e",
-    "SECTION2": "alcançar mais",
-    "SECTION3": "com os recursos",
-    "SECTION4": "que já possui."
+    "SECTION1": "Transforme",
+    "SECTION2": "dados perdidos ",
+    "SECTION3": "e processos não documentados na sua",
+    "SECTION4": "vantagem competitiva."
   },
-  "HERO_CTA": "Fala conosco",
-  "HERO_CTA_ALTERNATIVE": "Saber mais",
-  "BACK": "Voltar"
+  "HERO_CTA": "Fale connosco",
+  "HERO_CTA_ALTERNATIVE": "Entre em contacto",
+  "BACK": "Voltar",
+  "FEATURES_SECTION": {
+    "FEATURE1": "Captura automática de dados em projetos, relatórios e documentos",
+    "FEATURE1DESCRIPTION": "Recolha e organize automaticamente dados de todos os projetos, relatórios e documentos — eliminando o trabalho manual e garantindo informação consistente e atualizada em todo o fluxo de trabalho.",
+    "FEATURE2": "Insights e dashboards alimentados por IA",
+    "FEATURE2DESCRIPTION": "Transforme dados complexos em insights claros e acionáveis com dashboards orientados por IA que destacam tendências, identificam riscos e apoiam decisões mais rápidas e inteligentes.",
+    "FEATURE3": "Repositório de conhecimento para processos, preços e histórico operacional",
+    "FEATURE3DESCRIPTION": "Centralize o conhecimento da sua organização num único hub pesquisável — capturando processos, modelos de preços e histórico operacional para que as equipas trabalhem com clareza e confiança.",
+    "FEATURE4": "Integrações com sistemas ERP e CRM",
+    "FEATURE4DESCRIPTION": "Ligue-se facilmente às suas plataformas ERP e CRM existentes para unificar fluxos de trabalho, reduzir duplicações e manter uma única fonte de verdade em toda a empresa.",
+    "FEATURE5": "Colaboração segura entre múltiplas localizações",
+    "FEATURE5DESCRIPTION": "Permita que equipas distribuídas trabalhem em tempo real com segurança empresarial, acessos controlados e espaços de trabalho partilhados pensados para colaboração entre localizações."
+  },
+  "HOW_TO": {
+    "STEP1": "1. Ligue o seu ERP ou CRM existente e carregue ficheiros históricos",
+    "STEP2": "2. Se não tiver qualquer tipo de dados, ajudamo-lo a obter o que falta",
+    "STEP3": "3. A IA processa e estrutura todos os dados passados e atuais",
+    "STEP4": "4. Obtenha dashboards, oportunidades e insights de processos instantaneamente",
+    "STEP5": "5. Deixe a sua IA aprender todos estes insights e formar a sua equipa para que possa expandir globalmente com confiança"
+  },
+  "NAVBAR": {
+    "CONTACT": "Contacte-nos"
+  }
 }

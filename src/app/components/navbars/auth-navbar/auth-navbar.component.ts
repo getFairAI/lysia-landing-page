@@ -21,7 +21,7 @@ export class AuthNavbarComponent implements OnInit {
      gsap.registerPlugin(ScrollToPlugin);
     this.translate.onLangChange.subscribe(newTranslationData => {
       // this observable fires immediately when first run
-      this.currentLanguage = newTranslationData?.lang ?? 'en';
+      this.currentLanguage = newTranslationData?.lang ?? 'pt';
     });
   }
 
