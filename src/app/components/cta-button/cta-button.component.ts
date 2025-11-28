@@ -7,11 +7,11 @@ import SplitText from 'gsap/SplitText';
 
 @Component({
   selector: 'app-cta-button',
-  // styleUrl: './trusted-by.component.scss',
+  // styleUrl: './cta-button.component.scss',
   templateUrl: './cta-button.component.html',
 })
 export class CtaButtonComponent implements OnInit, AfterViewInit {
-  @Input('pagePosition') pagePosition: 'top' | 'bottom' = 'top'; // default to top
+  @Input('pagePosition') pagePosition: 'top' | 'top-center' | 'bottom-center' | 'bottom' = 'top'; // default to top
 
   currentLanguage = 'en';
   abVersion: string;
@@ -37,11 +37,23 @@ export class CtaButtonComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     let currentButton: HTMLButtonElement;
-    if (this.pagePosition === 'top') {
-      currentButton = document.querySelectorAll('.cta-animated-button')[0] as HTMLButtonElement;
-    } else {
-      currentButton = document.querySelectorAll('.cta-animated-button')[1] as HTMLButtonElement;
+    switch (this.pagePosition) {
+      case 'top':
+        currentButton = document.querySelectorAll('.cta-animated-button')[0] as HTMLButtonElement;
+        break;
+      case 'top-center':
+        currentButton = document.querySelectorAll('.cta-animated-button')[1] as HTMLButtonElement;
+        break;
+      case 'bottom-center':
+        currentButton = document.querySelectorAll('.cta-animated-button')[2] as HTMLButtonElement;
+        break;
+      case 'bottom':
+        currentButton = document.querySelectorAll('.cta-animated-button')[3] as HTMLButtonElement;
+        break;
+      default:
+          return;
     }
+
     // animate CTA button
     Observer.create({
       target: currentButton,
@@ -57,29 +69,32 @@ export class CtaButtonComponent implements OnInit, AfterViewInit {
 
         const split = new SplitText(currentText, { type: 'words,chars' });
 
-        split.chars.sort((a, b) => gsap.utils.random(0, 1) > 0 ? 1 : -1);
+        split.chars.sort((a, b) => (gsap.utils.random(0, 1) > 0 ? 1 : -1));
         const fromAbove = split.chars.slice(0, split.chars.length / 2);
         const fromBelow = split.chars.splice(split.chars.length / 2);
 
         const tl = gsap.timeline();
         tl.from(fromAbove, {
-          duration: 0.5,        // animate from 100px below
+          duration: 0.5, // animate from 100px below
           yPercent: -100,
           opacity: 0,
-          rotation: "random(-100, 100)",
-          ease: "back",
-          stagger: 0.05
+          rotation: 'random(-100, 100)',
+          ease: 'back',
+          stagger: 0.05,
         });
 
-        tl.from(fromBelow, {
-          duration: 0.5,        // animate from 100px below
-          yPercent: 100,
-          opacity: 0,
-          rotation: "random(-100, 100)",
-          ease: "back",
-          stagger: 0.05
-        }, '-=0.5'); // start 0.5 before previous aniimation so they are on same time
-
+        tl.from(
+          fromBelow,
+          {
+            duration: 0.5, // animate from 100px below
+            yPercent: 100,
+            opacity: 0,
+            rotation: 'random(-100, 100)',
+            ease: 'back',
+            stagger: 0.05,
+          },
+          '-=0.5'
+        ); // start 0.5 before previous aniimation so they are on same time
       },
       onHoverEnd: () => {
         gsap.to(currentButton, {
@@ -94,13 +109,17 @@ export class CtaButtonComponent implements OnInit, AfterViewInit {
         duration: 1,
         repeat: -1,
         yoyo: true,
+      },
+    });
+    this.pulsatingAnimation.fromTo(
+      currentButton,
+      {
+        scale: 1,
+      },
+      {
+        scale: 1.1,
       }
-    })
-    this.pulsatingAnimation.fromTo(currentButton, {
-      scale: 1
-    }, {
-      scale: 1.1
-    })
+    );
   }
 
   scrollToContact() {

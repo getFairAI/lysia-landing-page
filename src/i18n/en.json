@@ -22,6 +22,9 @@
         "EMAILPLACEHOLDER": "Where can we reach you?",
         "MESSAGE": "MESSAGE",
         "MESSAGEPLACEHOLDER": "How can we help? Fell free to share any details."
+      },
+      "CONTACT_FORM_BUTTONS": {
+        "SEND": "Send Message"
       }
     }
   },
@@ -65,15 +68,15 @@
   "BACK": "Back",
   "FEATURES_SECTION": {
     "FEATURE1": "Automated data capture across projects, reports, and documents",
-    "FEATURE1DESCRIPTION": "Automatically collect and organize data from every project, report, and document—eliminating manual entry and ensuring consistent, up-to-date information across your entire workflow.",
+    "FEATURE1DESCRIPTION": "Automation",
     "FEATURE2": "AI-powered insights and dashboards",
-    "FEATURE2DESCRIPTION": "Turn complex data into clear, actionable insights with AI-driven dashboards that highlight trends, flag risks, and support smarter, faster decision-making.",
+    "FEATURE2DESCRIPTION": "Visualization",
     "FEATURE3": "Knowledge repository for process, pricing, and operational history",
-    "FEATURE3DESCRIPTION": "Centralize your organization's knowledge in one searchable hub—capturing processes, pricing models, and operational history so teams can work with clarity and confidence.",
+    "FEATURE3DESCRIPTION": "Archive",
     "FEATURE4": "Integrations with ERP and CRM systems",
-    "FEATURE4DESCRIPTION": "Connect seamlessly with your existing ERP and CRM platforms to unify workflows, reduce duplication, and maintain a single source of truth across the business.",
+    "FEATURE4DESCRIPTION": "Interoperability",
     "FEATURE5": "Secure multi-location collaboration",
-    "FEATURE5DESCRIPTION": "Enable distributed teams to work together in real time with enterprise-grade security, controlled access, and shared workspaces designed for cross-location collaboration."
+    "FEATURE5DESCRIPTION": "Security"
   },
   "HOW_TO": {
     "STEP1": "1. Connect your existing ERP or CRM and upload historical files",

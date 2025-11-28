@@ -22,6 +22,9 @@
         "EMAILPLACEHOLDER": "Para onde o(a) devemos contactar?",
         "MESSAGE": "MENSAGEM",
         "MESSAGEPLACEHOLDER": "Como podemos ajudar? Esteja à vontade para partilhar quaisquer detalhes."
+      },
+      "CONTACT_FORM_BUTTONS": {
+        "SEND": "Enviar Mensagem"
       }
     }
   },

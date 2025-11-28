@@ -36,7 +36,7 @@ export class BenefitCardsComponent implements AfterViewInit, OnDestroy {
 
     this.loopTl = gsap.timeline({
       repeat: -1, // loop forever
-      repeatDelay: 5.2, // time between rotations (optional)
+      repeatDelay: 4.05, // time between rotations (optional)
     });
 
     this.loopTl.call(() => {
@@ -96,7 +96,7 @@ export class BenefitCardsComponent implements AfterViewInit, OnDestroy {
 
     if (animate) {
       this.fillTween = gsap.to(fill, {
-        duration: 5,
+        duration: 4,
         scaleX: 1,
         ease: 'power2.out',
         onComplete: () => {

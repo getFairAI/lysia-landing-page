@@ -2,12 +2,16 @@
   <div class="flex justify-center flex-col items-center">
     <button
       type="button"
-      class="w-fit button-lysia primary-color bigger-button cta-animated-button"
+      class="w-fit button-lysia primary-color bigger-button cta-animated-button rounded-xl"
       [ngClass]="{
         'plausible-event-name=CTA+Hero+Click': abVersion === 'A' && pagePosition === 'top',
         'plausible-event-name=CTA_ALTERNATIVE+Hero+Click': abVersion === 'B' && pagePosition === 'top',
         'plausible-event-name=CTA+Bottom+Click': abVersion === 'A' && pagePosition === 'bottom',
-        'plausible-event-name=CTA_ALTERNATIVE+Bottom+Click': abVersion === 'B' && pagePosition === 'bottom'
+        'plausible-event-name=CTA_ALTERNATIVE+Bottom+Click': abVersion === 'B' && pagePosition === 'bottom',
+        'plausible-event-name=CTA+Hero+Top+Center+Click': abVersion === 'A' && pagePosition === 'top-center',
+        'plausible-event-name=CTA_ALTERNATIVE+Hero+Top+Center+Click': abVersion === 'B' && pagePosition === 'top-center',
+        'plausible-event-name=CTA+Hero+Bottom+Center+Click': abVersion === 'A' && pagePosition === 'bottom-center',
+        'plausible-event-name=CTA_ALTERNATIVE+Hero+Bottom+Center+Click': abVersion === 'B' && pagePosition === 'bottom-center',
       }"
       (click)="scrollToContact()">
       <ng-template *ngIf="abVersion === 'A'; else bTemplate">

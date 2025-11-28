@@ -84,7 +84,7 @@
             </div>
 
             <div class="flex flex-col items-center mt-4 sm:mt-10 animate-slide-right wait200ms">
-              <h1 class="text-lg md:text-2xl text-with-dark-bg-jambo"> {{ 'HERO_HEADLINE' | translate }}</h1>
+              <h1 class="text-lg md:text-2xl text-with-dark-bg-jambo rounded-xl"> {{ 'HERO_HEADLINE' | translate }}</h1>
               <div class="mt-10 font-medium text-lg md:text-2xl flex flex-col gap-2">
                 <span class="font-medium pb-1 text-wrap max-w-[400px]">{{ '' | translate }}</span>
                 <div>
@@ -110,15 +110,22 @@
         <p class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">{{ 'PROBLEM_SUBTITLE' | translate }}</p>
       </section>
 
-      <div class=" flex flex-col items-center w-full bg-slate-50">
+      <div class="flex flex-col items-center w-full bg-slate-50 carbon-fiber-texture">
         <section class="w-full max-w-[1400px] flex flex-col items-center justify-center px-24 py-24 lg:py-48">
           <h2 class="text-xl md:text-5xl font-bold">{{ 'SOLUTION_HEADLINE' | translate }}</h2>
           <p class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">{{ 'SOLUTION_SUBTITLE' | translate }}</p>
         </section>
       </div>
 
+      <div class="w-full py-24">
+        <app-cta-button [pagePosition]="'top-center'"></app-cta-button>
+      </div>
 
       <app-benefit-cards></app-benefit-cards>
+
+      <div class="w-full py-24">
+        <app-cta-button [pagePosition]="'bottom-center'"></app-cta-button>
+      </div>
       <app-features></app-features>
 
       <!-- <app-how-to></app-how-to> -->
@@ -178,10 +185,10 @@
                 <button
                   type="button"
                   (click)="submitContactForm()"
-                  class="button-lysia primary-color flex gap-2 flex-nowrap"
+                  class="button-lysia primary-color flex gap-2 flex-nowrap rounded-xl"
                   [disabled]="formGroupContactUs.invalid || formGroupContactUs.pristine || submittingForm">
                   <mat-spinner diameter="20" mode="indeterminate" *ngIf="submittingForm"></mat-spinner>
-                  {{ 'Send Message' | translate }}
+                  {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_BUTTONS.SEND' | translate }}
                 </button>
               </div>
             </form>
