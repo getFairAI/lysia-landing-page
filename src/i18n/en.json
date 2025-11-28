@@ -58,6 +58,10 @@
   },
   "HERO_CTA": "Talk to us",
   "HERO_CTA_ALTERNATIVE": "Get in touch",
+  "PROBLEM_HEADLINE": "Is your factory's technical knowledge falling through the cracks?",
+  "PROBLEM_SUBTITLE": "Scattered notes. Silent experts. Constant rework. Your team is stuck chasing missing details instead of fixing problems and improving throughput.",
+  "SOLUTION_HEADLINE": "Automate Knowledge Capture, Save Hours, and Eliminate Expertise Gaps",
+  "SOLUTION_SUBTITLE": "Let your team focus on production and innovation while your AI agents retain, update, and share the technical know-how that keeps your factory moving.",
   "BACK": "Back",
   "FEATURES_SECTION": {
     "FEATURE1": "Automated data capture across projects, reports, and documents",

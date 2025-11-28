@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, HostListener, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -7,6 +7,18 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class AppComponent implements OnInit, AfterViewInit {
   title = 'angular-dashboard-page';
+  isScrolled;
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const number = window.scrollY;
+
+    if (number > 150) {
+      this.isScrolled = true;
+    } else if (this.isScrolled && number < 10) {
+      this.isScrolled = false;
+    }
+  }
 
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['pt', 'en']);
@@ -28,5 +40,8 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.translate.onLangChange.subscribe(newLanguageData => {
       localStorage.setItem('languageSelected', newLanguageData.lang ?? 'pt');
     });
+
+    // set first time isScrolled
+    this.onWindowScroll();
   }
 }

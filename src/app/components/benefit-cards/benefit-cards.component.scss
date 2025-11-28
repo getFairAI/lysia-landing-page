@@ -1,0 +1,36 @@
+.track-button {
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+
+  /* The fill layer */
+  .track-button-fill {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #3aaaaa;
+    opacity: 0.3;
+    transform-origin: left;
+    transform: scaleX(0);
+    // z-index: -1;
+  }
+}
+
+.benefitsWrapper {
+  /* fade 0→60px on left and last 60px on right */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 80px,
+    black calc(100% - 80px),
+    transparent 100%
+  );
+}

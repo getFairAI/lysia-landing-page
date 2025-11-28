@@ -24,6 +24,7 @@ import { DataImportIconComponent } from './components/data-import-icon/data-impo
 import { DataParsingIconComponent } from './components/data-parsing-icon/data-parsing-icon.component';
 import { DashboardsIconComponent } from './components/dashboards-icon/dashboards-icon.component';
 import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learning-icon.component';
+import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learni
     DatabasesIconSvgComponent,
     DataImportIconComponent,
     DataParsingIconComponent,
-    DashboardsIconComponent
+    DashboardsIconComponent,
+    BenefitCardsComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,

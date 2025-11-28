@@ -78,7 +78,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     gsap.set('#second-benefit-card', { zIndex: 11 });
     gsap.set('#third-benefit-card', { zIndex: 12 });
 
-    const tl = gsap.timeline({
+    /* const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.top-info-cards',
         start: 'top top',
@@ -92,22 +92,19 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
 
     tl.to(['#second-benefit-card', '#third-benefit-card', '#first-benefit-card'], {
-     /*  duration: 1, */
-      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
+
       yPercent: (i) => i < 2 ? -130 : 0,
       scale: (i) => i === 2 ? 0.85 : 1,
       opacity: (i) => i === 2 ? 0 : 1,
     }, "+=2"); // start 1s earlier
 
     tl.to(['#second-benefit-card', '#third-benefit-card'], {
-      /* duration: 1, */
-      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
       yPercent: (i) => i < 1 ? -130 : -240,
       scale: (i) => i === 0 ? 0.85 : 1,
       opacity: (i) => i === 0 ? 0 : 1,
     }, "+=2"); // start 1s earlier
 
-    tl.to('#benefits-extra', { opacity: 1 });
+    tl.to('#benefits-extra', { opacity: 1 }); */
   }
 
   scrollDownLearnMore() {

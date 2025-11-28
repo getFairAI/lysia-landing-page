@@ -1,9 +1,13 @@
 <div id="smooth-wrapper"
-  ><div class="animate-slide-down wait600ms w-full fixed top-0 z-50" style="backdrop-filter: blur(8px); background-color: rgba(255, 255, 255, 0.7)">
+  ><div class="animate-slide-down wait600ms w-full fixed top-0 z-50 backdrop-blur-md" [ngClass]="{ 'shadow-xl': isScrolled }">
     <app-auth-navbar></app-auth-navbar>
   </div>
 
   <div class="main-content w-full">
-    <router-outlet></router-outlet>
+    <div class="fixed top-0 left-0 w-full h-full animate-fade-in wait200ms" style="z-index: -100">
+    <div class="bg-center bg-cover w-full h-full bg-[url(/assets/img/backgrounds/blurred_asbtract_bg.jpg)] bg-white/40 bg-blend-lighten">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
   </div>
 </div>

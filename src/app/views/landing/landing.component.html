@@ -1,10 +1,6 @@
-<div class="background-wrapper fixed top-0 left-0 w-full h-full animate-fade-in wait200ms" style="z-index: -100">
-  <div class="bg-center bg-cover w-full h-full"></div>
-</div>
-
-<main id="smooth-content">
-  <div>
-    <div class="w-full flex flex-col first-screen-wrapper">
+<main id="smooth-content" class="bg-transparent">
+  <div class="bg-transparent">
+    <div class="w-full flex flex-col first-screen-wrapper h-screen">
       <div class="flex flex-col justify-center items-center w-full h-full pt-24">
         <div class="items-center flex flex-wrap gap-24">
           <div class="w-full flex flex-col items-center px-4 text-center">
@@ -90,11 +86,10 @@
             <div class="flex flex-col items-center mt-4 sm:mt-10 animate-slide-right wait200ms">
               <h1 class="text-lg md:text-2xl text-with-dark-bg-jambo"> {{ 'HERO_HEADLINE' | translate }}</h1>
               <div class="mt-10 font-medium text-lg md:text-2xl flex flex-col gap-2">
-                <span class="font-medium pb-1 text-wrap max-w-[400px]">{{'' | translate }}</span>
+                <span class="font-medium pb-1 text-wrap max-w-[400px]">{{ '' | translate }}</span>
                 <div>
                   <span> {{ 'HERO_SUBTITLE.SECTION1' | translate }} </span>
                   <span class="font-medium font-semibold underlined-text-animation delay500ms pb-1">{{ 'HERO_SUBTITLE.SECTION2' | translate }}</span>
-
                 </div>
                 <div class="flex flex-wrap gap-2 justify-center">
                   <span> {{ 'HERO_SUBTITLE.SECTION3' | translate }} </span>
@@ -106,156 +101,122 @@
           <app-cta-button class="w-full" [pagePosition]="'top'"></app-cta-button>
         </div>
       </div>
+      <app-trusted-by></app-trusted-by>
     </div>
 
-    <app-trusted-by></app-trusted-by>
+    <div class="bg-slate-100 shadow-[0px_3px_10px_0px_rgba(10,0,0,0.3)] shadow-slate-500 w-full flex flex-col items-center mt-48" data-lag="0.2">
+      <section class="w-full max-w-[1400px] flex flex-col items-center justify-center px-24 py-24 lg:py-48">
+        <h2 class="text-xl md:text-5xl font-bold">{{ 'PROBLEM_HEADLINE' | translate }}</h2>
+        <p class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">{{ 'PROBLEM_SUBTITLE' | translate }}</p>
+      </section>
 
-    <section id="benefits-section" class="top-info-cards-wrapper">
-      <div class="top-info-cards container-scroll-arrows sm:pt-24">
-        <!-- <div class="scroll-arrows">
-        <div class="arrow-left" (click)="scrollLeft()">
-          <i class="fas left-fas fa-arrow-left"></i>
-        </div>
-        <div class="arrow-right" (click)="scrollRight()">
-          <i class="fas right-fas fa-arrow-right"></i>
-        </div>
-      </div> -->
+      <div class=" flex flex-col items-center w-full bg-slate-50">
+        <section class="w-full max-w-[1400px] flex flex-col items-center justify-center px-24 py-24 lg:py-48">
+          <h2 class="text-xl md:text-5xl font-bold">{{ 'SOLUTION_HEADLINE' | translate }}</h2>
+          <p class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">{{ 'SOLUTION_SUBTITLE' | translate }}</p>
+        </section>
+      </div>
 
-        <div class="flex flex-col pl-[10%] pr-[10%] xl:pl-[15%] xl:pr-[15%] pt-5 gap-48 overflow-y-auto relative scroll-smooth">
-          <div class="info-card flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="first-benefit-card">
-            <div class="sm:absolute -z-1 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
-              <img src="./assets/img/landing-page-cards/research-papers.jpg" class="w-full h-full object-cover object-top"/>
+
+      <app-benefit-cards></app-benefit-cards>
+      <app-features></app-features>
+
+      <app-how-to></app-how-to>
+
+      <div id="contact-us-wrapper"></div>
+
+      <section class="w-full flex items-center justify-center px-8 pt-24">
+        <div class="w-full max-w-[600px] flex justify-center items-center flex-col">
+          <h2 class="text-xl md:text-4xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
+          <p class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">{{ 'CONTACT_SECTION.SECTION_DESCRIPTION' | translate }}</p>
+        </div>
+      </section>
+
+      <section class="mt-6">
+        <div class="w-full px-4 flex justify-center flex-wrap gap-8 flex-col">
+          <div class="w-full">
+            <div class="text-slate-700">
+              <div class="w-full min-h-[650px] h-[901px] rounded-xl overflow-hidden">
+                <app-calendly-widget></app-calendly-widget>
+              </div>
             </div>
-            <div class="flex flex-col w-full items-center justify-start h-full gradient-white-bg px-4 py-8 sm:justify-center sm:w-1/2">
-              <h6 class="text-4xl font-semibold w-full">{{ 'KNOWMORE_CARDS.CARD1.TITLE' | translate }}</h6>
-              <p class="mt-6 w-full">{{ 'KNOWMORE_CARDS.CARD1.DESCRIPTION' | translate }} </p>
-              <!-- <p class="mt-2 text-white">{{ 'KNOWMORE_CARDS.CARD1.DESCRIPTION_LONG' | translate }}</p> -->
-            </div>
-            <!-- <div class="open-icon"><mat-icon>call_made</mat-icon></div>
-          <div class="open-icon-text">{{ 'Learn More' | translate }}</div> -->
           </div>
 
-          <div class="info-card flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="second-benefit-card">
-            <div class="sm:absolute -z-1 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
-              <img src="./assets/img/landing-page-cards/books_horizontal.jpg" class="w-full h-full object-cover object-top"/>
-            </div>
-            <div class="flex flex-col w-full items-center justify-start h-full gradient-white-bg px-4 py-8 sm:justify-center sm:w-1/2">
-              <h6 class="text-4xl font-semibold w-full">{{ 'KNOWMORE_CARDS.CARD2.TITLE' | translate }}</h6>
-              <p class="mt-6 w-full">{{ 'KNOWMORE_CARDS.CARD2.DESCRIPTION' | translate }}</p>
-            </div>
+          <div class="w-full flex justify-center">
+            <form class="w-full max-w-[600px] flex flex-col justify-center text-slate-700" [formGroup]="formGroupContactUs" id="form-contact-us">
+              <h4 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.TITLE' | translate }}</h4>
+              <p class="leading-relaxed mt-1">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.SUBTITLE' | translate }}</p>
+              <div class="relative w-full mb-3 mt-7">
+                <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.FULLNAME' | translate }} </label>
+                <input
+                  formControlName="userFullname"
+                  type="text"
+                  class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 shadow rounded text-sm focus:outline-none focus:ring focus:ring-[#3aaaaa] w-full bg-white"
+                  [placeholder]="contactSectionInputsTexts.fullNamePlaceholder" />
+              </div>
+
+              <div class="relative w-full mb-3">
+                <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="email"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.EMAIL' | translate }} </label>
+                <input
+                  formControlName="userEmail"
+                  type="email"
+                  class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 shadow rounded text-sm focus:outline-none focus:ring focus:ring-[#3aaaaa] w-full bg-white"
+                  [placeholder]="contactSectionInputsTexts.emailPlaceholder" />
+              </div>
+
+              <div class="relative w-full mb-3">
+                <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="message"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.MESSAGE' | translate }} </label>
+                <textarea
+                  formControlName="userMessage"
+                  rows="4"
+                  cols="40"
+                  maxlength="4000"
+                  class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 shadow rounded text-sm focus:outline-none focus:ring focus:ring-[#3aaaaa] w-full bg-white"
+                  [placeholder]="contactSectionInputsTexts.messagePlaceholder"></textarea>
+              </div>
+              <div class="flex justify-center w-full mt-10">
+                <button
+                  type="button"
+                  (click)="submitContactForm()"
+                  class="button-lysia primary-color flex gap-2 flex-nowrap"
+                  [disabled]="formGroupContactUs.invalid || formGroupContactUs.pristine || submittingForm">
+                  <mat-spinner diameter="20" mode="indeterminate" *ngIf="submittingForm"></mat-spinner>
+                  {{ 'Send Message' | translate }}
+                </button>
+              </div>
+            </form>
           </div>
+        </div>
+      </section>
 
-          <div class="info-card flex flex-col-reverse h-fit min-h-fit sm:min-h-[550px]" id="third-benefit-card">
-            <div class="sm:absolute -z-1 w-full sm:top-0 sm:right-0 sm:w-1/2 sm:bottom-[unset] sm:h-full">
-              <img src="./assets/img/landing-page-cards/local_ai.png" class="w-full h-full object-cover object-top"/>
-            </div>
-            <div class="flex flex-col w-full items-center justify-start h-full gradient-white-bg px-4 py-8 sm:justify-center sm:w-1/2">
-              <h6 class="text-4xl font-semibold w-full">{{ 'KNOWMORE_CARDS.CARD3.TITLE' | translate }}</h6>
-              <p class="mt-6 w-full">{{ 'KNOWMORE_CARDS.CARD3.DESCRIPTION' | translate }}</p>
-            </div>
+      <section class="mt-24 technologies-section">
+        <div class="w-full flex justify-center px-6">
+          <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
+            <h3 class="text-xl md:text-4xl font-semibold"> {{ 'TECH_STACK.TITLE' | translate }} </h3>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- contact button scrolls down here, empty div on purpose -->
-    <div id="contact-us-wrapper"></div>
-
-    <section class="w-full flex items-center justify-center px-8">
-      <div class="w-full max-w-[600px] flex justify-center items-center flex-col">
-        <h2 class="text-xl md:text-4xl font-semibold">{{ 'CONTACT_SECTION.SECTION_TITLE' | translate }}</h2>
-        <p class="font-medium text-center mt-6 whitespace-pre-wrap text-slate-800">{{ 'CONTACT_SECTION.SECTION_DESCRIPTION' | translate }}</p>
-      </div>
-    </section>
-
-    <section class="mt-6">
-      <div class="w-full px-4 flex justify-center flex-wrap gap-8 flex-col">
-        <div class="w-full">
-          <div class="text-slate-700">
-            <div class="w-full min-h-[650px] h-[901px] rounded-xl overflow-hidden ">
-              <app-calendly-widget></app-calendly-widget>
-            </div>
+        <div class="flex justify-center px-8 items-center gap-2 lg:gap-4 flex-wrap">
+          <div class="technologies-images max-w-[1400px]">
+            <img src="./assets/img/technologies/angular.png" />
+            <img src="./assets/img/technologies/react.png" />
+            <img src="./assets/img/technologies/graphql.png" />
+            <img src="./assets/img/technologies/python-3.png" />
+            <img src="./assets/img/technologies/tensorflow.png" />
+            <img src="./assets/img/technologies/ollama-logo.png" style="max-width: 80px !important" />
+            <img src="./assets/img/technologies/keras.png" />
+            <img src="./assets/img/technologies/node.png" style="max-width: 70px !important" />
+            <img src="./assets/img/technologies/mysql.png" />
+            <img src="./assets/img/technologies/chroma-logo.svg" />
+            <img src="./assets/img/technologies/pytorch.png" />
           </div>
         </div>
-
-        <div class="w-full flex justify-center">
-          <form class="w-full max-w-[600px] flex flex-col justify-center text-slate-700" [formGroup]="formGroupContactUs" id="form-contact-us">
-            <h4 class="text-xl md:text-2xl font-semibold">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.TITLE' | translate }}</h4>
-            <p class="leading-relaxed mt-1">{{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CARD2.SUBTITLE' | translate }}</p>
-            <div class="relative w-full mb-3 mt-7">
-              <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="full-name"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.FULLNAME' | translate }} </label>
-              <input
-                formControlName="userFullname"
-                type="text"
-                class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 shadow rounded text-sm focus:outline-none focus:ring focus:ring-[#3aaaaa] w-full bg-white"
-                [placeholder]="contactSectionInputsTexts.fullNamePlaceholder" />
-            </div>
-
-            <div class="relative w-full mb-3">
-              <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="email"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.EMAIL' | translate }} </label>
-              <input
-                formControlName="userEmail"
-                type="email"
-                class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 shadow rounded text-sm focus:outline-none focus:ring focus:ring-[#3aaaaa] w-full bg-white"
-                [placeholder]="contactSectionInputsTexts.emailPlaceholder" />
-            </div>
-
-            <div class="relative w-full mb-3">
-              <label class="block uppercase text-slate-600 text-xs font-bold mb-2" htmlFor="message"> {{ 'CONTACT_SECTION.CONTACT_FORMS_CARDS.CONTACT_FORM_INPUTS.MESSAGE' | translate }} </label>
-              <textarea
-                formControlName="userMessage"
-                rows="4"
-                cols="40"
-                maxlength="4000"
-                class="border-0 px-3 py-3 text-slate-600 placeholder-slate-400 shadow rounded text-sm focus:outline-none focus:ring focus:ring-[#3aaaaa] w-full bg-white"
-                [placeholder]="contactSectionInputsTexts.messagePlaceholder"></textarea>
-            </div>
-            <div class="flex justify-center w-full mt-10">
-              <button
-                type="button"
-                (click)="submitContactForm()"
-                class="button-lysia primary-color flex gap-2 flex-nowrap"
-                [disabled]="formGroupContactUs.invalid || formGroupContactUs.pristine || submittingForm">
-                <mat-spinner diameter="20" mode="indeterminate" *ngIf="submittingForm"></mat-spinner>
-                {{ 'Send Message' | translate }}
-              </button>
-            </div>
-          </form>
-        </div>
+      </section>
+      <section>
+        <app-cta-button [pagePosition]="'bottom'"></app-cta-button>
+      </section>
+      <div class="mt-20 w-full">
+        <app-footer></app-footer>
       </div>
-    </section>
-
-    <app-features></app-features>
-
-    <app-how-to></app-how-to>
-
-    <section class="mt-24 technologies-section" data-lag="0.7">
-      <div class="w-full flex justify-center px-6">
-        <div class="flex flex-col items-center justify-center w-full max-w-[900px]">
-          <h3 class="text-xl md:text-4xl font-semibold"> {{ 'TECH_STACK.TITLE' | translate }} </h3>
-        </div>
-      </div>
-      <div class="flex justify-center px-8 items-center gap-2 lg:gap-4 flex-wrap">
-        <div class="technologies-images max-w-[1400px]">
-          <img src="./assets/img/technologies/angular.png" />
-          <img src="./assets/img/technologies/react.png" />
-          <img src="./assets/img/technologies/graphql.png" />
-          <img src="./assets/img/technologies/python-3.png" />
-          <img src="./assets/img/technologies/tensorflow.png" />
-          <img src="./assets/img/technologies/ollama-logo.png" style="max-width: 80px !important" />
-          <img src="./assets/img/technologies/keras.png" />
-          <img src="./assets/img/technologies/node.png" style="max-width: 70px !important" />
-          <img src="./assets/img/technologies/mysql.png" />
-          <img src="./assets/img/technologies/chroma-logo.svg" />
-          <img src="./assets/img/technologies/pytorch.png" />
-        </div>
-      </div>
-    </section>
-    <section data-lag="0.5">
-      <app-cta-button [pagePosition]="'bottom'"></app-cta-button>
-    </section>
-    <div class="mt-20 w-full" data-lag="0.8">
-      <app-footer></app-footer>
     </div>
   </div>
 </main>
