@@ -61,18 +61,22 @@
   },
   "HERO_CTA": "Fale connosco",
   "HERO_CTA_ALTERNATIVE": "Entre em contacto",
+  "PROBLEM_HEADLINE": "Is your factory's technical knowledge falling through the cracks?",
+  "PROBLEM_SUBTITLE": "Scattered notes. Silent experts. Constant rework. Your team is stuck chasing missing details instead of fixing problems and improving throughput.",
+  "SOLUTION_HEADLINE": "Automate Knowledge Capture, Save Hours, and Eliminate Expertise Gaps",
+  "SOLUTION_SUBTITLE": "Let your team focus on production and innovation while your AI agents retain, update, and share the technical know-how that keeps your factory moving.",
   "BACK": "Voltar",
   "FEATURES_SECTION": {
     "FEATURE1": "Captura automática de dados em projetos, relatórios e documentos",
-    "FEATURE1DESCRIPTION": "Recolha e organize automaticamente dados de todos os projetos, relatórios e documentos — eliminando o trabalho manual e garantindo informação consistente e atualizada em todo o fluxo de trabalho.",
+    "FEATURE1DESCRIPTION": "Automação",
     "FEATURE2": "Insights e dashboards alimentados por IA",
-    "FEATURE2DESCRIPTION": "Transforme dados complexos em insights claros e acionáveis com dashboards orientados por IA que destacam tendências, identificam riscos e apoiam decisões mais rápidas e inteligentes.",
+    "FEATURE2DESCRIPTION": "Visualização",
     "FEATURE3": "Repositório de conhecimento para processos, preços e histórico operacional",
-    "FEATURE3DESCRIPTION": "Centralize o conhecimento da sua organização num único hub pesquisável — capturando processos, modelos de preços e histórico operacional para que as equipas trabalhem com clareza e confiança.",
+    "FEATURE3DESCRIPTION": "Núcleo",
     "FEATURE4": "Integrações com sistemas ERP e CRM",
-    "FEATURE4DESCRIPTION": "Ligue-se facilmente às suas plataformas ERP e CRM existentes para unificar fluxos de trabalho, reduzir duplicações e manter uma única fonte de verdade em toda a empresa.",
+    "FEATURE4DESCRIPTION": "Interoperabilidade",
     "FEATURE5": "Colaboração segura entre múltiplas localizações",
-    "FEATURE5DESCRIPTION": "Permita que equipas distribuídas trabalhem em tempo real com segurança empresarial, acessos controlados e espaços de trabalho partilhados pensados para colaboração entre localizações."
+    "FEATURE5DESCRIPTION": "Segurança"
   },
   "HOW_TO": {
     "STEP1": "1. Ligue o seu ERP ou CRM existente e carregue ficheiros históricos",

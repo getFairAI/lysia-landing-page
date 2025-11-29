@@ -374,11 +374,29 @@
 
 .carbon-fiber-texture {
   background:
-    radial-gradient(#cbd5e1 15%, transparent 16%) 0 0,
-    radial-gradient(#cbd5e1 15%, transparent 16%) 8px 8px,
-    radial-gradient(#f1f5f9 15%, transparent 20%) 0 1px,
-    radial-gradient(#f1f5f9 15%, transparent 20%) 8px 9px;
-    background-color: #f1f5f9;
-    background-size:16px 16px;
+    radial-gradient(#cbd5e1 15%, transparent 20%) 0 0,
+    radial-gradient(#cbd5e1 15%, transparent 10%) 24px 24px;
+    // radial-gradient(#f1f5f9 15%, transparent 20%) 0 1px;
+    // radial-gradient(#f1f5f9 15%, transparent 20%) 24px 24px;
+    background-color: transparent;
+    background-size: 24px 24px;
+}
+
+.test-x {
+  /* fade 0→60px on left and last 60px on right */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
 }
 
