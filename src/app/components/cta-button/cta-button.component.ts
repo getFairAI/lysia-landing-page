@@ -67,34 +67,16 @@ export class CtaButtonComponent implements OnInit, AfterViewInit {
 
         const currentText = currentButton.querySelector('.cta-animated-text');
 
-        const split = new SplitText(currentText, { type: 'words,chars' });
+        const split = new SplitText(currentText, { type: 'lines' });
 
-        split.chars.sort((a, b) => (gsap.utils.random(0, 1) > 0 ? 1 : -1));
-        const fromAbove = split.chars.slice(0, split.chars.length / 2);
-        const fromBelow = split.chars.splice(split.chars.length / 2);
-
-        const tl = gsap.timeline();
-        tl.from(fromAbove, {
+        gsap.from(split.lines, {
           duration: 0.5, // animate from 100px below
           yPercent: -100,
           opacity: 0,
-          rotation: 'random(-100, 100)',
+          // rotation: 'random(-100, 100)',
           ease: 'back',
           stagger: 0.05,
         });
-
-        tl.from(
-          fromBelow,
-          {
-            duration: 0.5, // animate from 100px below
-            yPercent: 100,
-            opacity: 0,
-            rotation: 'random(-100, 100)',
-            ease: 'back',
-            stagger: 0.05,
-          },
-          '-=0.5'
-        ); // start 0.5 before previous aniimation so they are on same time
       },
       onHoverEnd: () => {
         gsap.to(currentButton, {
