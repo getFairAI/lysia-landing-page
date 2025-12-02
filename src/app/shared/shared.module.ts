@@ -1,3 +1,4 @@
+import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { NgModule } from '@angular/core';
 import { CalendlyWidgetComponent } from '../components/calendly-widget/calendly-widget.component';
@@ -7,8 +8,8 @@ import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [CalendlyWidgetComponent, SafeHtmlPipe],
-  imports: [ FormsModule, MatProgressSpinnerModule],
+  imports: [ FormsModule, MatProgressSpinnerModule, MatIconModule],
   providers: [provideAnimationsAsync()],
-  exports: [CalendlyWidgetComponent, SafeHtmlPipe, FormsModule,MatProgressSpinnerModule],
+  exports: [CalendlyWidgetComponent, SafeHtmlPipe, FormsModule,MatProgressSpinnerModule, MatIconModule],
 })
 export class SharedModule {}

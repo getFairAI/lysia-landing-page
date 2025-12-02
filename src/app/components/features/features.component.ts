@@ -10,15 +10,9 @@ import SplitText from 'gsap/SplitText';
   templateUrl: './features.component.html',
 })
 export class FeaturesComponent implements OnInit, AfterViewInit {
-  currentLanguage = 'en';
-
-  constructor(private translate: TranslateService) {}
+  constructor() {}
 
   ngOnInit(): void {
-    this.translate.onLangChange.subscribe(newTranslationData => {
-      // this observable fires immediately when first run
-      this.currentLanguage = newTranslationData?.lang ?? 'pt';
-    });
     gsap.registerPlugin(Observer, SplitText);
   }
 

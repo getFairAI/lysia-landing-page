@@ -9,6 +9,9 @@ export class AppComponent implements OnInit, AfterViewInit {
   title = 'angular-dashboard-page';
   isScrolled;
 
+  supportedLangs = ['en', 'pt'];
+  defaultLang = 'en';
+
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const number = window.scrollY;
@@ -21,9 +24,18 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   constructor(private translate: TranslateService) {
-    this.translate.addLangs(['pt', 'en']);
-    this.translate.setDefaultLang('en');
-    this.translate.use('en'); // use the default
+    this.translate.addLangs(this.supportedLangs);
+
+    const browserLang = this.detectBrowserLang();
+
+    console.log(browserLang);
+    if (browserLang === 'pt') {
+      this.defaultLang = 'pt';
+    } else {
+      this.defaultLang = 'en';
+    }
+    this.translate.setDefaultLang(this.defaultLang);
+    this.translate.use(this.defaultLang); // use the default
   }
 
   ngOnInit(): void {
@@ -43,5 +55,28 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     // set first time isScrolled
     this.onWindowScroll();
+  }
+
+  private detectBrowserLang(): string {
+    // e.g. ["pt-PT", "en-US", "fr-FR"]
+    const navLanguages: string[] = (navigator.languages as string[]) || (navigator.language ? [navigator.language] : []);
+
+    for (const lang of navLanguages) {
+      const normalized = this.normalizeLang(lang);
+      if (this.supportedLangs.includes(normalized)) {
+        return normalized;
+      }
+    }
+
+    // last fallback: try single navigator.language
+    const single = this.normalizeLang(navigator.language || '');
+
+    return single || this.defaultLang;
+  }
+
+  private normalizeLang(lang: string | undefined | null): string {
+    if (!lang) return '';
+    // "pt-PT" -> "pt", "en-US" -> "en"
+    return lang.split('-')[0].toLowerCase();
   }
 }

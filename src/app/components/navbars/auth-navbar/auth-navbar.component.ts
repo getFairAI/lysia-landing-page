@@ -19,11 +19,11 @@ export class AuthNavbarComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-    gsap.registerPlugin(ScrollToPlugin, Observer, SplitText);
     this.translate.onLangChange.subscribe(newTranslationData => {
       // this observable fires immediately when first run
-      this.currentLanguage = newTranslationData?.lang ?? 'en';
+      this.currentLanguage = newTranslationData?.lang || 'en';
     });
+    gsap.registerPlugin(ScrollToPlugin, Observer, SplitText);
   }
 
   ngAfterViewInit(): void {

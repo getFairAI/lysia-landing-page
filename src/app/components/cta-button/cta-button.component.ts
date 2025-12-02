@@ -13,18 +13,12 @@ import SplitText from 'gsap/SplitText';
 export class CtaButtonComponent implements OnInit, AfterViewInit {
   @Input('pagePosition') pagePosition: 'top' | 'bottom-center' | 'bottom' = 'top'; // default to top
 
-  currentLanguage = 'en';
   abVersion: string;
   pulsatingAnimation: gsap.core.Timeline;
 
   constructor(private translate: TranslateService) {}
 
   ngOnInit(): void {
-    this.translate.onLangChange.subscribe(newTranslationData => {
-      // this observable fires immediately when first run
-      this.currentLanguage = newTranslationData?.lang ?? 'en';
-    });
-
     const abTestVersion = localStorage.getItem('ab-version');
     if (abTestVersion) {
       this.abVersion = abTestVersion;
