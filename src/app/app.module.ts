@@ -79,7 +79,7 @@ import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.
     SharedModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
-        defaultLanguage: 'pt',
+        defaultLanguage: 'en',
         loader: {
             provide: TranslateLoader,
             useFactory: HttpLoaderFactory,

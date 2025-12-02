@@ -22,8 +22,8 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   constructor(private translate: TranslateService) {
     this.translate.addLangs(['pt', 'en']);
-    this.translate.setDefaultLang('pt');
-    this.translate.use('pt'); // use the default
+    this.translate.setDefaultLang('en');
+    this.translate.use('en'); // use the default
   }
 
   ngOnInit(): void {
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     // subscribe to language changes to save them to localStorage
     // this subscribe fires right at the first run
     this.translate.onLangChange.subscribe(newLanguageData => {
-      localStorage.setItem('languageSelected', newLanguageData.lang ?? 'pt');
+      localStorage.setItem('languageSelected', newLanguageData.lang ?? 'en');
     });
 
     // set first time isScrolled

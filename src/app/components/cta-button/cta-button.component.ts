@@ -22,7 +22,7 @@ export class CtaButtonComponent implements OnInit, AfterViewInit {
   ngOnInit(): void {
     this.translate.onLangChange.subscribe(newTranslationData => {
       // this observable fires immediately when first run
-      this.currentLanguage = newTranslationData?.lang ?? 'pt';
+      this.currentLanguage = newTranslationData?.lang ?? 'en';
     });
 
     const abTestVersion = localStorage.getItem('ab-version');
