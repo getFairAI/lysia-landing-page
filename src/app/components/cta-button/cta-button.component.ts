@@ -11,7 +11,7 @@ import SplitText from 'gsap/SplitText';
   templateUrl: './cta-button.component.html',
 })
 export class CtaButtonComponent implements OnInit, AfterViewInit {
-  @Input('pagePosition') pagePosition: 'top' | 'top-center' | 'bottom-center' | 'bottom' = 'top'; // default to top
+  @Input('pagePosition') pagePosition: 'top' | 'bottom-center' | 'bottom' = 'top'; // default to top
 
   currentLanguage = 'en';
   abVersion: string;
@@ -41,14 +41,11 @@ export class CtaButtonComponent implements OnInit, AfterViewInit {
       case 'top':
         currentButton = document.querySelectorAll('.cta-animated-button')[0] as HTMLButtonElement;
         break;
-      case 'top-center':
+      case 'bottom-center':
         currentButton = document.querySelectorAll('.cta-animated-button')[1] as HTMLButtonElement;
         break;
-      case 'bottom-center':
-        currentButton = document.querySelectorAll('.cta-animated-button')[2] as HTMLButtonElement;
-        break;
       case 'bottom':
-        currentButton = document.querySelectorAll('.cta-animated-button')[3] as HTMLButtonElement;
+        currentButton = document.querySelectorAll('.cta-animated-button')[2] as HTMLButtonElement;
         break;
       default:
           return;
