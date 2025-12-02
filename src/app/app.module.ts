@@ -13,7 +13,6 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LandingComponent } from './views/landing/landing.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DialogInfoCardsComponent } from './components/dialog-info-cards/dialog-info-cards.component';
 import { TrustedByComponent } from './components/trusted-by/trusted-by.component';
 import { PrivacyComponent } from './views/privacy/privacy.component';
 import { CtaButtonComponent } from './components/cta-button/cta-button.component';
@@ -34,7 +33,6 @@ import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.
     FooterComponent,
     LandingComponent,
     PrivacyComponent,
-    DialogInfoCardsComponent,
     CtaButtonComponent,
     FeaturesComponent,
     HowToComponent,

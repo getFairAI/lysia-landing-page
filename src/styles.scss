@@ -294,7 +294,7 @@ body {
 .snackbar-custom-css {
   .mdc-snackbar__surface {
     background-color: white !important;
-    border-radius: 40px !important;
+    border-radius: 0.75rem;
 
     .mat-mdc-snack-bar-label {
       color: rgb(70, 70, 70) !important;

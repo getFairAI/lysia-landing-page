@@ -1,8 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
-import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import gsap from 'gsap';
@@ -36,7 +34,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
   });
 
   submittingForm = false; // triggers submitting animation
-  constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
+  constructor(private translateService: TranslateService, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
@@ -64,7 +62,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
         console.log(error);
       },
     });
-
   }
 
   ngAfterViewInit() {
@@ -126,6 +123,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   submitContactForm() {
     if (this.formGroupContactUs.valid) {
+
       this.formGroupContactUs.disable();
       this.submittingForm = true;
       emailjs.send('service_5s8jchq', 'template_231dukm', this.formGroupContactUs.getRawValue(), { publicKey: '4HHqO-lLCP9kvCE2z' }).then(
@@ -153,13 +151,5 @@ export class LandingComponent implements OnInit, AfterViewInit {
         }
       );
     }
-  }
-
-  clickInfoCardOpenDialog(infoCardId: string) {
-    this.dialog.open(DialogInfoCardsComponent, {
-      data: {
-        infoCardId: infoCardId,
-      },
-    });
   }
 }

@@ -1,18 +1,8 @@
 const plugin = require('tailwindcss/plugin');
-const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ['src/app/**/*.html', 'src/app/*.html', 'src/app/**/*.ts', 'src/app/*.ts'],
-    options: {
-      safelist: [],
-    },
-  },
+  content: ['src/app/**/*.html', 'src/app/*.html', 'src/app/**/*.ts', 'src/app/*.ts'],
   theme: {
-    colors: {
-      ...colors,
-    },
     extend: {
       minHeight: {
         'screen-75': '75vh',
