@@ -45,9 +45,6 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
     // const currentBr = event.target.
     gsap.to(event.target, {
       scale: 1.2,
-     /*  opacity: 1, */
-      xPercent: 10,
-      // borderRadius: '1.5rem',
     });
     // animateText
 
@@ -74,13 +71,6 @@ export class FeaturesComponent implements OnInit, AfterViewInit {
   animateHoverEnd(event: globalThis.Observer, idx: number) {
     gsap.to(event.target, {
       scale: 1,
-      xPercent: 0,
-      // borderRadius: 0,
-      /* ...(idx === 0 && { borderRadius: '1.5rem 0 0 0' }),
-      ...(idx === 1 && { borderRadius: '0 1.5rem 0 0' }),
-      ...(idx === 2 && { borderRadius: '0 0 0 1.5rem' }),
-      ...(idx === 3 && { borderRadius: 0 }),
-      ...(idx === 4 && { borderRadius: '0 0 1.5rem 0' }), */
     });
   }
 }

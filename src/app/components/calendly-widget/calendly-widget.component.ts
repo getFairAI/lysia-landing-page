@@ -19,7 +19,7 @@ export class CalendlyWidgetComponent implements OnInit {
     if (script && !!window.Calendly) {
       // script already loaded
       window.Calendly.initInlineWidget({
-        url: 'https://calendly.com/getfairai/30min',
+        url: 'https://calendly.com/getfairai/30min' + '?text_color=464646&' + 'primary_color=3aaaaa&' + 'background_color=f8fafc&' + 'hide_gdpr_banner=1&' + 'hide_event_type_details=1',
         parentElement: document.getElementById('calendly-embed'),
         prefill: {},
         utm: {},
@@ -27,7 +27,7 @@ export class CalendlyWidgetComponent implements OnInit {
     } else if (script) {
       script.onload = () => {
         window.Calendly.initInlineWidget({
-          url: 'https://calendly.com/getfairai/30min',
+          url: 'https://calendly.com/getfairai/30min' + '?text_color=464646&' + 'primary_color=3aaaaa&' + 'background_color=f8fafc&' + 'hide_gdpr_banner=1&' + 'hide_event_type_details=1',
           parentElement: document.getElementById('calendly-embed'),
           prefill: {},
           utm: {},
