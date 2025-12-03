@@ -25,17 +25,17 @@
           <ul class="list-unstyled footer-list-items">
             <li class="list-item text-start">
               <a class="text-blueGray-600 bg-transparent hover:bg-[#3aaaaa] hover:text-white rounded-md font-semibold block p-2 text-sm plausible-event-name=Privacy+Footer+Click" routerLink="/privacy">
-                Privacy
+                {{'FOOTER.LINKS_LIST.LINK1' | translate}}
               </a>
             </li>
             <li class="list-item text-start">
               <a class="text-blueGray-600 bg-transparent hover:bg-[#3aaaaa] hover:text-white rounded-md font-semibold block p-2 text-sm plausible-event-name=Blog+Footer+Click" href="https://blog.getfair.ai/" target="_blank">
-                Blog
+                {{'FOOTER.LINKS_LIST.LINK2' | translate}}
               </a>
             </li>
             <li class="list-item text-start">
-              <a class="text-blueGray-600 bg-transparent hover:bg-[#3aaaaa] hover:text-white rounded-md font-semibold block p-2 text-sm plausible-event-name=Contact+Footer+Click" href="https://blog.getfair.ai/" target="_blank">
-                Contact
+              <a class="text-blueGray-600 bg-transparent hover:bg-[#3aaaaa] hover:text-white rounded-md font-semibold block p-2 text-sm plausible-event-name=Contact+Footer+Click" (click)="scrollDownLearnMore()">
+                {{'FOOTER.LINKS_LIST.LINK3' | translate}}
               </a>
             </li>
           </ul>

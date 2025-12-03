@@ -4,24 +4,24 @@
     "MESSAGE_SUBMIT_ERROR": "Ocorreu um erro. Por favor, tente novamente."
   },
   "CONTACT_SECTION": {
-    "SECTION_TITLE": "Vamos conversar ?",
-    "SECTION_DESCRIPTION": "Juntos poderemos discutir ideias e oportunidades de crescimento para que a sua empresa aumente exponencialmente a sua eficiência operacional.",
+    "SECTION_TITLE": "Vamos conversar!",
+    "SECTION_DESCRIPTION": "Juntos podemos explorar caminhos e ideias que podem melhorar de forma significativa a eficiência operacional da sua empresa.",
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
-        "TITLE": "Que tal uma reunião rápida?",
-        "SUBTITLE": "Escolha um horário conveniente para si."
+        "TITLE": "Vamos marcar uma reunião rápida?",
+        "SUBTITLE": "Escolha um horário que funcione para si."
       },
       "CARD2": {
-        "TITLE": "Se preferir, envie-nos mensagem.",
-        "SUBTITLE": "Normalmente, respondemos dentro de algumas horas."
+        "TITLE": "Ainda não quer fazer uma chamada? Envie-nos uma mensagem.",
+        "SUBTITLE": "Responderemos o mais breve possível, normalmente dentro de algumas horas."
       },
       "CONTACT_FORM_INPUTS": {
         "FULLNAME": "NOME COMPLETO",
-        "FULLNAMEPLACEHOLDER": "Como o(a) devemos chamar?",
+        "FULLNAMEPLACEHOLDER": "Como devemos chamá-lo?",
         "EMAIL": "EMAIL",
-        "EMAILPLACEHOLDER": "Para onde o(a) devemos contactar?",
+        "EMAILPLACEHOLDER": "Onde podemos contactá-lo?",
         "MESSAGE": "MENSAGEM",
-        "MESSAGEPLACEHOLDER": "Como podemos ajudar? Esteja à vontade para partilhar quaisquer detalhes."
+        "MESSAGEPLACEHOLDER": "Como podemos ajudar? Fique à vontade para partilhar quaisquer detalhes."
       },
       "CONTACT_FORM_BUTTONS": {
         "SEND": "Enviar Mensagem"
@@ -30,29 +30,35 @@
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Pare de Perder Dados",
-      "DESCRIPTION": "Capte automaticamente todos os detalhes de projetos, reuniões e propostas para que preços históricos, razões de ganho/perda e padrões de clientes nunca mais se percam."
+      "BUTTON": "Capturar",
+      "TITLE": "Pare de Perder Informação",
+      "DESCRIPTION": "Capte automaticamente todos os detalhes de projetos, reuniões e propostas, garantindo que históricos de preços, motivos de sucesso/derrota e padrões de clientes nunca mais se percam."
     },
     "CARD2": {
-      "TITLE": "Transforme Relatórios em Ações",
-      "DESCRIPTION": "Centralize e analise relatórios de produção, qualidade e financeiros com IA que extrai insights acionáveis. Passe de documentos ignorados para oportunidades reais e quantificadas de melhoria."
+      "BUTTON": "Transformar",
+      "TITLE": "Transforme Relatórios em Ação",
+      "DESCRIPTION": "Centralize e analise relatórios de produção, qualidade e financeiros com IA capaz de extrair insights acionáveis. Deixe de ter documentos esquecidos e passe a ter oportunidades reais e quantificadas de melhoria."
     },
     "CARD3": {
+      "BUTTON": "Evoluir",
       "TITLE": "Dê Vida ao Seu Conhecimento",
-      "DESCRIPTION": "Transforme o know-how da sua empresa em inteligência pesquisável e em constante evolução. A nossa IA aprende e melhora com o conhecimento existente, tornando os seus processos melhores a cada projeto."
+      "DESCRIPTION": "Transforme o know-how da sua empresa numa inteligência dinâmica e pesquisável. A nossa IA aprende e evolui com o conhecimento existente, melhorando os seus processos a cada novo projeto."
     }
   },
   "TECH_STACK": {
-    "TITLE": "As nossas tecnologias"
+    "TITLE": "A nossa stack tecnológica"
   },
   "FOOTER": {
-    "SLOGAN": "Siga a nossa jornada.",
-    "SLOGAN_SUBTITLE": "Mantenha-se em contacto com FairAI.",
+    "SLOGAN": "Acompanhe a nossa jornada.",
+    "SLOGAN_SUBTITLE": "Fique em contacto com a FairAI.",
     "LINKS_LIST": {
-      "TITLE": "Ligações Úteis"
+      "TITLE": "Empresa",
+      "LINK1": "Privacidade",
+      "LINK2": "Blog",
+      "LINK3": "Contacte-nos"
     }
   },
-  "HERO_HEADLINE": "Faça com que cada peça de conhecimento trabalhe para si",
+  "HERO_HEADLINE": "Faça o conhecimento trabalhar a seu favor",
   "HERO_SUBTITLE": {
     "SECTION1": "Transforme",
     "SECTION2": "dados perdidos ",
@@ -61,29 +67,29 @@
   },
   "HERO_CTA": "Fale connosco",
   "HERO_CTA_ALTERNATIVE": "Entre em contacto",
-  "PROBLEM_HEADLINE": "Is your factory's technical knowledge falling through the cracks?",
-  "PROBLEM_SUBTITLE": "Scattered notes. Silent experts. Constant rework. Your team is stuck chasing missing details instead of fixing problems and improving throughput.",
-  "SOLUTION_HEADLINE": "Automate Knowledge Capture, Save Hours, and Eliminate Expertise Gaps",
-  "SOLUTION_SUBTITLE": "Let your team focus on production and innovation while your AI agents retain, update, and share the technical know-how that keeps your factory moving.",
+  "PROBLEM_HEADLINE": "O conhecimento técnico da sua fábrica está a perder-se pelo caminho?",
+  "PROBLEM_SUBTITLE": "Notas dispersas. Especialistas silenciosos. Retrabalho constante. A sua equipa perde tempo a procurar informações em falta em vez de resolver problemas e aumentar a produtividade.",
+  "SOLUTION_HEADLINE": "Automatize a Captura de Conhecimento, Poupe Horas e Elimine Lacunas de Especialização",
+  "SOLUTION_SUBTITLE": "Deixe a sua equipa focar-se na produção e inovação enquanto os seus agentes de IA retêm, atualizam e partilham o know-how técnico que mantém a fábrica a funcionar.",
   "BACK": "Voltar",
   "FEATURES_SECTION": {
     "FEATURE1": "Captura automática de dados em projetos, relatórios e documentos",
     "FEATURE1DESCRIPTION": "Automação",
-    "FEATURE2": "Insights e dashboards alimentados por IA",
+    "FEATURE2": "Insights e dashboards potenciados por IA",
     "FEATURE2DESCRIPTION": "Visualização",
-    "FEATURE3": "Repositório de conhecimento para processos, preços e histórico operacional",
-    "FEATURE3DESCRIPTION": "Núcleo",
+    "FEATURE3": "Repositório de conhecimento com histórico de processos, preços e operações",
+    "FEATURE3DESCRIPTION": "Arquivo",
     "FEATURE4": "Integrações com sistemas ERP e CRM",
     "FEATURE4DESCRIPTION": "Interoperabilidade",
     "FEATURE5": "Colaboração segura entre múltiplas localizações",
     "FEATURE5DESCRIPTION": "Segurança"
   },
   "HOW_TO": {
-    "STEP1": "1. Ligue o seu ERP ou CRM existente e carregue ficheiros históricos",
-    "STEP2": "2. Se não tiver qualquer tipo de dados, ajudamo-lo a obter o que falta",
+    "STEP1": "1. Conecte o seu ERP ou CRM existente e carregue os ficheiros históricos",
+    "STEP2": "2. Se não possuir dados suficientes, ajudamo-lo a obter o que falta",
     "STEP3": "3. A IA processa e estrutura todos os dados passados e atuais",
-    "STEP4": "4. Obtenha dashboards, oportunidades e insights de processos instantaneamente",
-    "STEP5": "5. Deixe a sua IA aprender todos estes insights e formar a sua equipa para que possa expandir globalmente com confiança"
+    "STEP4": "4. Receba dashboards, oportunidades e insights de processo imediatamente",
+    "STEP5": "5. Deixe a sua IA aprender com estes insights e capacitar a sua equipa para que possa expandir globalmente com confiança"
   },
   "NAVBAR": {
     "CONTACT": "Contacte-nos"

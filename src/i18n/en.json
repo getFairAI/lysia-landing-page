@@ -30,14 +30,17 @@
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
+      "BUTTON": "Capture",
       "TITLE": "Stop Losing Data",
       "DESCRIPTION": "Automatically capture every detail from projects, meetings, and proposals so historical pricing, win/loss reasons, and customer patterns are never lost again."
     },
     "CARD2": {
+      "BUTTON": "Transform",
       "TITLE": "Turn Reports Into Action",
       "DESCRIPTION": "Centralize and analyze production, quality, and financial reports with AI that extracts insights you can act on. Move from unread documents to real, quantified improvement opportunities."
     },
     "CARD3": {
+      "BUTTON": "Evolve",
       "TITLE": "Bring Your Knowledge to Life",
       "DESCRIPTION": "Transform your company's know-how into evolving, searchable intelligence. Our AI learns and improves with existing knowledge, so your processes get better with every project."
     }
@@ -49,7 +52,10 @@
     "SLOGAN": "Follow our journey.",
     "SLOGAN_SUBTITLE": "Stay in touch with FairAI.",
     "LINKS_LIST": {
-      "TITLE": "Company"
+      "TITLE": "Company",
+      "LINK1": "Privacy",
+      "LINK2": "Blog",
+      "LINK3": "Contact Us"
     }
   },
   "HERO_HEADLINE": "Make every piece of knowledge work for you",
