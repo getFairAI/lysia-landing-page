@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import gsap from 'gsap';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
-
+import Observer from 'gsap/Observer';
+import SplitText from 'gsap/SplitText';
 
 @Component({
   selector: 'app-auth-navbar',
   styleUrl: './auth-navbar.component.scss',
   templateUrl: './auth-navbar.component.html',
 })
-export class AuthNavbarComponent implements OnInit {
+export class AuthNavbarComponent implements OnInit, AfterViewInit {
   menuOpen = false;
   currentLanguage = 'en';
   menuClosingAnimation = false; // setting to true will trigger the close animation - set it to false after that.
@@ -18,10 +19,28 @@ export class AuthNavbarComponent implements OnInit {
 
   ngOnInit(): void {
 
-     gsap.registerPlugin(ScrollToPlugin);
     this.translate.onLangChange.subscribe(newTranslationData => {
       // this observable fires immediately when first run
-      this.currentLanguage = newTranslationData?.lang ?? 'en';
+      this.currentLanguage = newTranslationData?.lang || 'en';
+    });
+    gsap.registerPlugin(ScrollToPlugin, Observer, SplitText);
+  }
+
+  ngAfterViewInit(): void {
+
+    const btn = document.querySelector('#navbar-contact-btn');
+    // animate CTA button
+    Observer.create({
+      target: btn,
+      type: 'pointer',
+      onHover: () => {
+        const split = new SplitText(btn, { type: 'lines' });
+        gsap.from(split.lines, {
+          ease: 'back',
+          yPercent: -100,
+          opacity: 0
+        });
+      },
     });
   }
 

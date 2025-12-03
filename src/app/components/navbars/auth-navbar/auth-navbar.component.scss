@@ -37,7 +37,6 @@
     overflow-y: auto;
     background-color: white;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -68,7 +67,6 @@
       width: 40px;
       height: 40px;
       background-color: #3aaaaa;
-      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -92,7 +90,6 @@
       box-sizing: border-box;
       background-color: rgb(70, 70, 70);
       color: white;
-      border-radius: 30px;
       font-weight: 600;
       font-size: 16px;
       display: flex;
@@ -134,8 +131,7 @@
     position: absolute;
     top: 0;
     z-index: -1;
-    background-color: #3aaaaa;
-    border-radius: 50%;
+    color: #3aaaaa;
     width: 30px;
     height: 30px;
     transition: 0.2s all;
@@ -152,7 +148,6 @@
   .lang-selector {
     flex: none;
     color: rgb(71 85 105);
-    border-radius: 50%;
     width: 30px;
     height: 30px;
     font-size: 12px;
@@ -166,7 +161,7 @@
     transition: 0.2s all;
 
     &.selected {
-      color: white;
+      color: #3aaaaa;
     }
 
     &:hover,

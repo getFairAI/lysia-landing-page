@@ -13,9 +13,17 @@ import { HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LandingComponent } from './views/landing/landing.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { DialogInfoCardsComponent } from './components/dialog-info-cards/dialog-info-cards.component';
 import { TrustedByComponent } from './components/trusted-by/trusted-by.component';
 import { PrivacyComponent } from './views/privacy/privacy.component';
+import { CtaButtonComponent } from './components/cta-button/cta-button.component';
+import { FeaturesComponent } from './components/features/features.component';
+import { DatabasesIconSvgComponent } from './components/databases-icon/databases-icon.component';
+import { HowToComponent } from './components/how-to/how-to.component';
+import { DataImportIconComponent } from './components/data-import-icon/data-import-icon.component';
+import { DataParsingIconComponent } from './components/data-parsing-icon/data-parsing-icon.component';
+import { DashboardsIconComponent } from './components/dashboards-icon/dashboards-icon.component';
+import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learning-icon.component';
+import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +33,16 @@ import { PrivacyComponent } from './views/privacy/privacy.component';
     FooterComponent,
     LandingComponent,
     PrivacyComponent,
-    DialogInfoCardsComponent,
+    CtaButtonComponent,
+    FeaturesComponent,
+    HowToComponent,
+    // icons
+    AiLearningIconComponent,
+    DatabasesIconSvgComponent,
+    DataImportIconComponent,
+    DataParsingIconComponent,
+    DashboardsIconComponent,
+    BenefitCardsComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,
@@ -62,14 +79,14 @@ import { PrivacyComponent } from './views/privacy/privacy.component';
     SharedModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
-      defaultLanguage: 'en',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient],
-      },
+        defaultLanguage: 'en',
+        loader: {
+            provide: TranslateLoader,
+            useFactory: HttpLoaderFactory,
+            deps: [HttpClient],
+        },
     }),
-  ],
+],
   providers: [provideHttpClient(withInterceptorsFromDi())],
   bootstrap: [AppComponent],
 })

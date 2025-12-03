@@ -3,33 +3,9 @@
     "MESSAGE_SUBMIT_SUCCESS": "Message sent succesfully. We will be in touch very soon!",
     "MESSAGE_SUBMIT_ERROR": "An error occurred. Please, try again."
   },
-  "ABOUT_US_TITLE": "About us",
-  "ABOUT_US_DESCRIPTION1": "FairAI was founded by three software engineers who have been passionate about AI since they began their degrees in 2016.",
-  "ABOUT_US_DESCRIPTION2": "While working in banking, logistics, and telecom, they noticed that the way knowledge was captured, stored, and shared was highly inefficient, even within some of the world's leading organizations.",
-  "ABOUT_US_DESCRIPTION3": "This problem became even more apparent in the manufacturing industry, where operational know-how is often undocumented and siloed.",
-  "ABOUT_US_DESCRIPTION4": "With that mission, they started FairAI in 2023. Backed by Techstars and international investors, and having published research papers on the topic, they now help manufacturing teams improve operational efficiency by up to 10x by making expert know-how accessible across the organization.",
   "CONTACT_SECTION": {
     "SECTION_TITLE": "Let's talk !",
     "SECTION_DESCRIPTION": "Together we can research ways and ideas that can massively improve the overall operating efficiency of your company.",
-    "SECTION_CARDS": {
-      "CARD1": {
-        "TITLE": "Sell smarter, not harder.",
-        "DESCRIPTION": "Find new leads automatically while you focus on what you do best.",
-        "DESCRIPTION2": "Stay ahead of competitors with real-time market insight.",
-        "DESCRIPTION3": "Save time with personalised, automated emails."
-      },
-      "CARD2": {
-        "TITLE": "Bring all your knowledge into one place.",
-        "DESCRIPTION": "Gather your files in a single trusted space so nothing gets lost.",
-        "DESCRIPTION2": "Find what you need quickly and keep your work moving.",
-        "DESCRIPTION3": "Collaborate with your team without wasting time searching."
-      },
-      "CARD3": {
-        "TITLE": "Technology that grows with your business.",
-        "DESCRIPTION": "Your system becomes smarter over time.",
-        "DESCRIPTION2": "It adapts to your workflows and improves insights with every use."
-      }
-    },
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
         "TITLE": "Let's do a quick meeting?",
@@ -46,62 +22,27 @@
         "EMAILPLACEHOLDER": "Where can we reach you?",
         "MESSAGE": "MESSAGE",
         "MESSAGEPLACEHOLDER": "How can we help? Fell free to share any details."
+      },
+      "CONTACT_FORM_BUTTONS": {
+        "SEND": "Send Message"
       }
     }
   },
-  "WHAT_WE_DO_SECTION": {
-    "TITLE": "Maximize Your Manufacturing Potential",
-    "DESCRIPTION": "FairAI enables you to accelerate sales and R&D by accessing your hard-earned insights from previous factory floor experiments with AI."
-  },
   "KNOWMORE_CARDS": {
     "CARD1": {
-      "TITLE": "Turn raw numbers into a clear direction",
-      "DESCRIPTION": "Turn your data into clear, actionable insight.",
-      "DESCRIPTION2": "Spot opportunities early instead of chasing them late.",
-      "DESCRIPTION3": "Make confident decisions without digging through spreadsheets or documents."
+      "BUTTON": "Capture",
+      "TITLE": "Stop Losing Data",
+      "DESCRIPTION": "Automatically capture every detail from projects, meetings, and proposals so historical pricing, win/loss reasons, and customer patterns are never lost again."
     },
     "CARD2": {
-      "TITLE": "Collect information effortlessly",
-      "DESCRIPTION": "Voice-driven AI instantly turns conversations into structured data.",
-      "DESCRIPTION2": "No more wasted time on manual entry or scattered notes.",
-      "DESCRIPTION3": "Teams get the operational clarity they need in seconds, not hours."
+      "BUTTON": "Transform",
+      "TITLE": "Turn Reports Into Action",
+      "DESCRIPTION": "Centralize and analyze production, quality, and financial reports with AI that extracts insights you can act on. Move from unread documents to real, quantified improvement opportunities."
     },
     "CARD3": {
-      "TITLE": "AI you own, not rent",
-      "DESCRIPTION": "The AI runs on your infrastructure. Your data remains in your hands, and nothing is processed elsewhere.",
-      "DESCRIPTION2": "There are no subscriptions or recurring fees. You get a solution you can rely on without being locked into someone else's platform."
-    }
-  },
-  "CARDS": {
-    "CARD1": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Never Lose Critical Know-How Again",
-          "SUBTITLE": "Retain what matters, even when people are absent.",
-          "DESCRIPTION_TEXT": "Keep track of key decisions and why things were built the way they were.\n\nAvoid lost context and repeated mistakes by making knowledge available beyond the people who originally held it.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/guy-monitor.jpg"
-        }
-      ]
-    },
-    "CARD2": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Don't waste time on reports",
-          "SUBTITLE": "Sales teams lose time every week gathering data instead of acting on it.",
-          "DESCRIPTION_TEXT": "Your data is automatically structured, analyzed, and clearly presented.\n\nLess time on repetitive tasks, more focus on strategic decisions.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/research.jpg"
-        }
-      ]
-    },
-    "CARD3": {
-      "INNER_CARDS": [
-        {
-          "TITLE": "Quoting shouldn't take this long",
-          "SUBTITLE": "Elaborating a proposal shouldn't feel like starting from scratch every time.",
-          "DESCRIPTION_TEXT": "Avoid the chaos of disorganized folders and scattered notes.\n\nOur technology automatically indexes your team's content, making everything easy to find, share, and reuse without manual effort.",
-          "CARD_IMAGE_LOCAL_PATH": "./assets/img/landing-page-cards/product-brief.jpg"
-        }
-      ]
+      "BUTTON": "Evolve",
+      "TITLE": "Bring Your Knowledge to Life",
+      "DESCRIPTION": "Transform your company's know-how into evolving, searchable intelligence. Our AI learns and improves with existing knowledge, so your processes get better with every project."
     }
   },
   "TECH_STACK": {
@@ -110,21 +51,47 @@
   "FOOTER": {
     "SLOGAN": "Follow our journey.",
     "SLOGAN_SUBTITLE": "Stay in touch with FairAI.",
-    "LINKS_LIST1": {
-      "TITLE": "Related Projects"
-    },
-    "LINKS_LIST2": {
-      "TITLE": "Company"
+    "LINKS_LIST": {
+      "TITLE": "Company",
+      "LINK1": "Privacy",
+      "LINK2": "Blog",
+      "LINK3": "Contact Us"
     }
   },
-  "HERO_HEADLINE": "Set the pace of your industry",
+  "HERO_HEADLINE": "Make every piece of knowledge work for you",
   "HERO_SUBTITLE": {
-    "SECTION1": "Harness AI to outpace your competition and",
-    "SECTION2": "achieve more",
-    "SECTION3": "with the resources",
-    "SECTION4": "you already have."
+    "SECTION1": "Turn",
+    "SECTION2": "lost data ",
+    "SECTION3": "and undocumented processes into your",
+    "SECTION4": "competitive edge."
   },
   "HERO_CTA": "Talk to us",
   "HERO_CTA_ALTERNATIVE": "Get in touch",
-  "BACK": "Back"
+  "PROBLEM_HEADLINE": "Is your factory's technical knowledge falling through the cracks?",
+  "PROBLEM_SUBTITLE": "Scattered notes. Silent experts. Constant rework. Your team is stuck chasing missing details instead of fixing problems and improving throughput.",
+  "SOLUTION_HEADLINE": "Automate Knowledge Capture, Save Hours, and Eliminate Expertise Gaps",
+  "SOLUTION_SUBTITLE": "Let your team focus on production and innovation while your AI agents retain, update, and share the technical know-how that keeps your factory moving.",
+  "BACK": "Back",
+  "FEATURES_SECTION": {
+    "FEATURE1": "Automated data capture across projects, reports, and documents",
+    "FEATURE1DESCRIPTION": "Automation",
+    "FEATURE2": "AI-powered insights and dashboards",
+    "FEATURE2DESCRIPTION": "Visualization",
+    "FEATURE3": "Knowledge repository for process, pricing, and operational history",
+    "FEATURE3DESCRIPTION": "Archive",
+    "FEATURE4": "Integrations with ERP and CRM systems",
+    "FEATURE4DESCRIPTION": "Interoperability",
+    "FEATURE5": "Secure multi-location collaboration",
+    "FEATURE5DESCRIPTION": "Security"
+  },
+  "HOW_TO": {
+    "STEP1": "1. Connect your existing ERP or CRM and upload historical files",
+    "STEP2": "2. If you don't have any kind of data, we help you obtain what is missing",
+    "STEP3": "3. AI ingests and structures all past and current data",
+    "STEP4": "4. Get dashboards, opportunities, and process insights instantly",
+    "STEP5": "5. Let your AI learn all these insights and train your team so you can expand globally with confidence"
+  },
+  "NAVBAR": {
+    "CONTACT": "Contact Us"
+  }
 }

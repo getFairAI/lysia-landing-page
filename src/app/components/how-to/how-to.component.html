@@ -1,0 +1,55 @@
+<!-- <div class="flex flex-wrap">
+  <div class="flex basis-full w-full justify-center">
+    <app-databases-icon-svg class="w-1/12 h-1/12"></app-databases-icon-svg>
+  </div>
+
+  <div class="flex basis-1/2 w-full justify-center">
+    <app-data-import-icon-svg class="w-1/12 h-1/12"></app-data-import-icon-svg>
+  </div>
+  <div class="flex basis-1/2 w-full justify-center">
+    <app-data-parsing-icon-svg class="w-1/12 h-1/12"></app-data-parsing-icon-svg>
+  </div>
+  <div class="flex basis-1/2 justify-center">
+    <app-dashboards-icon-svg class="w-1/12 h-1/12"></app-dashboards-icon-svg>
+  </div>
+  <div class="flex basis-1/2 justify-center">
+    <app-ai-learning-icon-svg class="w-1/12 h-1/12"></app-ai-learning-icon-svg>
+  </div>
+</div>
+ -->
+
+<section id="features" class="w-full flex justify-center mt-24">
+  <div class="flex sm:flex-wrap relative w-full max-w-[1400px] gap-y-8" #iconsContainer>
+    <ng-container *ngFor="let icon of icons; let i = index">
+      <div
+        #iconEl
+        class="flex flex-col items-center text-center justify-center"
+        [ngClass]="{
+          'w-full basis-full': i === 0,
+          'opacity-0 absolute -z-10 sm:opacity-100 sm:flex sm:relative sm:basis-1/2 sm:w-full': i !== 0
+        }">
+        <ng-container [ngSwitch]="icon.type">
+          <app-databases-icon-svg *ngSwitchCase="'db'" class="w-1/4 h-3/4 sm:w-1/12 sm:h-1/12"></app-databases-icon-svg>
+
+          <app-data-import-icon-svg *ngSwitchCase="'import'" class="w-1/4 h-3/4 sm:w-1/12 sm:h-1/12"></app-data-import-icon-svg>
+
+          <app-ai-learning-icon-svg *ngSwitchCase="'ai'" class="w-1/4 h-3/4 sm:w-1/12 sm:h-1/12"></app-ai-learning-icon-svg>
+
+          <app-data-parsing-icon-svg *ngSwitchCase="'parse'" class="w-1/4 h-3/4 sm:w-1/12 sm:h-1/12"></app-data-parsing-icon-svg>
+
+          <app-dashboards-icon-svg *ngSwitchCase="'dash'" class="w-1/4 h-3/4 sm:w-1/12 sm:h-1/12"></app-dashboards-icon-svg>
+        </ng-container>
+
+        <div *ngIf="i === 0" class="mt-2 px-4 sm:px-0 text-lg font-semibold icon-label text-center h-10 flex items-center justify-center" data-flip-id="feature-label">
+          {{ icon.translationKey | translate }}
+        </div>
+      </div>
+    </ng-container>
+    <div class="hidden absolute top-1/2 left-[10%] sm:flex items-center justify-center bg-white text-[#3aaaaa] shadow-md text-2xl w-fit rounded-full p-2 cursor-pointer" (click)="rotate(true)">
+      <i class="fas left-fas fa-arrow-left"></i>
+    </div>
+    <div class="hidden absolute top-1/2 right-[10%] sm:flex items-center justify-center bg-white text-[#3aaaaa] shadow-md text-2xl w-fit rounded-full p-2 cursor-pointer" (click)="rotate()">
+      <i class="fas right-fas fa-arrow-right"></i>
+    </div>
+  </div>
+</section>

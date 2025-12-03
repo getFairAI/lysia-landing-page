@@ -1,14 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
-import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
-import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
-import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-import ScrollSmoother from 'gsap/ScrollSmoother';
-import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-privacy',
@@ -30,7 +20,6 @@ export class PrivacyComponent {
 
   onIframeLoaded() {
     const iframe = document.querySelector('iframe');
-    console.log(iframe)
     if (iframe) {
       const iframeDoc = iframe.contentDocument;
       if (iframeDoc) {

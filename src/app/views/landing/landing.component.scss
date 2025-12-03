@@ -46,17 +46,6 @@
   height: 100dvh;
   justify-content: center;
   align-items: center;
-
-  @media only screen and (max-height: 800px) {
-    height: fit-content !important;
-    justify-content: start !important;
-  }
-
-  .dynamic-height-sponsors-div {
-    @media only screen and (max-height: 800px) {
-      position: static !important;
-    }
-  }
 }
 
 .logo-img-wrapper {
@@ -381,4 +370,32 @@
       text-align: center;
     }
   }
+}
+
+.carbon-fiber-texture {
+  background:
+    radial-gradient(#cbd5e1 15%, transparent 20%) 0 0,
+    radial-gradient(#cbd5e1 15%, transparent 10%) 24px 24px;
+    // radial-gradient(#f1f5f9 15%, transparent 20%) 0 1px;
+    // radial-gradient(#f1f5f9 15%, transparent 20%) 24px 24px;
+    background-color: transparent;
+    background-size: 24px 24px;
+}
+
+.test-x {
+  /* fade 0→60px on left and last 60px on right */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    black 20px,
+    black calc(100% - 20px),
+    transparent 100%
+  );
 }

@@ -1,8 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { MatDialog } from '@angular/material/dialog';
 import { TranslateService, TranslationChangeEvent } from '@ngx-translate/core';
-import { DialogInfoCardsComponent } from 'src/app/components/dialog-info-cards/dialog-info-cards.component';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import gsap from 'gsap';
@@ -17,14 +15,6 @@ import ScrollToPlugin from 'gsap/ScrollToPlugin';
 })
 export class LandingComponent implements OnInit, AfterViewInit {
   abVersion: string;
-  videoCardsUrls = {
-    card1: '',
-    card2: '',
-    card3: '',
-    card4: '',
-    card5: '',
-  };
-
   contactSectionInputsTexts = {
     fullNamePlaceholder: '',
     emailPlaceholder: '',
@@ -44,10 +34,11 @@ export class LandingComponent implements OnInit, AfterViewInit {
   });
 
   submittingForm = false; // triggers submitting animation
-
-  constructor(private translateService: TranslateService, private dialog: MatDialog, private _snackBar: MatSnackBar) {}
+  constructor(private translateService: TranslateService, private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+
     const abTestVersion = localStorage.getItem('ab-version');
     if (abTestVersion) {
       this.abVersion = abTestVersion;
@@ -55,16 +46,9 @@ export class LandingComponent implements OnInit, AfterViewInit {
       this.abVersion = gsap.utils.random(0, 1) ? 'B' : 'A'; // random 1 -> version B; random 2 -> version A
       localStorage.setItem('ab-version', this.abVersion); // save to local storage so user doesn't see. different versions on same device
     }
-    gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
     // this event fires at the first page open so it will bring the default language files on page open
     this.translateService.onLangChange.subscribe({
       next: (newLangData: TranslationChangeEvent) => {
-        this.videoCardsUrls.card1 = newLangData.translations?.CARDS?.CARD1?.VIDEO_URL ?? '';
-        this.videoCardsUrls.card2 = newLangData.translations?.CARDS?.CARD2?.VIDEO_URL ?? '';
-        this.videoCardsUrls.card3 = newLangData.translations?.CARDS?.CARD3?.VIDEO_URL ?? '';
-        this.videoCardsUrls.card4 = newLangData.translations?.CARDS?.CARD4?.VIDEO_URL ?? '';
-        this.videoCardsUrls.card5 = newLangData.translations?.CARDS?.CARD5?.VIDEO_URL ?? '';
-
         this.contactSectionInputsTexts.fullNamePlaceholder = newLangData.translations?.CONTACT_SECTION?.CONTACT_FORMS_CARDS?.CONTACT_FORM_INPUTS?.FULLNAMEPLACEHOLDER ?? '';
         this.contactSectionInputsTexts.emailPlaceholder = newLangData.translations?.CONTACT_SECTION?.CONTACT_FORMS_CARDS?.CONTACT_FORM_INPUTS?.EMAILPLACEHOLDER ?? '';
         this.contactSectionInputsTexts.messagePlaceholder = newLangData.translations?.CONTACT_SECTION?.CONTACT_FORMS_CARDS?.CONTACT_FORM_INPUTS?.MESSAGEPLACEHOLDER ?? '';
@@ -81,7 +65,6 @@ export class LandingComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit() {
-
     ScrollSmoother.create({
       smooth: 1, // how long (in seconds) it takes to "catch up" to the native scroll position
       effects: true, // looks for data-speed and data-lag attributes on elements
@@ -92,7 +75,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
     gsap.set('#second-benefit-card', { zIndex: 11 });
     gsap.set('#third-benefit-card', { zIndex: 12 });
 
-    const tl = gsap.timeline({
+    /* const tl = gsap.timeline({
       scrollTrigger: {
         trigger: '.top-info-cards',
         start: 'top top',
@@ -106,22 +89,19 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
 
     tl.to(['#second-benefit-card', '#third-benefit-card', '#first-benefit-card'], {
-     /*  duration: 1, */
-      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
+
       yPercent: (i) => i < 2 ? -130 : 0,
       scale: (i) => i === 2 ? 0.85 : 1,
       opacity: (i) => i === 2 ? 0 : 1,
     }, "+=2"); // start 1s earlier
 
     tl.to(['#second-benefit-card', '#third-benefit-card'], {
-      /* duration: 1, */
-      /* y: (i) => i === 0 ? -(currentFirstCardSroll) : i === 1 ? -(currentFirstCardSroll) : 0, */
       yPercent: (i) => i < 1 ? -130 : -240,
       scale: (i) => i === 0 ? 0.85 : 1,
       opacity: (i) => i === 0 ? 0 : 1,
     }, "+=2"); // start 1s earlier
 
-    tl.to('#benefits-extra', { opacity: 1 });
+    tl.to('#benefits-extra', { opacity: 1 }); */
   }
 
   scrollDownLearnMore() {
@@ -143,6 +123,7 @@ export class LandingComponent implements OnInit, AfterViewInit {
 
   submitContactForm() {
     if (this.formGroupContactUs.valid) {
+
       this.formGroupContactUs.disable();
       this.submittingForm = true;
       emailjs.send('service_5s8jchq', 'template_231dukm', this.formGroupContactUs.getRawValue(), { publicKey: '4HHqO-lLCP9kvCE2z' }).then(
@@ -170,13 +151,5 @@ export class LandingComponent implements OnInit, AfterViewInit {
         }
       );
     }
-  }
-
-  clickInfoCardOpenDialog(infoCardId: string) {
-    this.dialog.open(DialogInfoCardsComponent, {
-      data: {
-        infoCardId: infoCardId,
-      },
-    });
   }
 }

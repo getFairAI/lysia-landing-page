@@ -9,6 +9,7 @@ body {
 }
 body {
   font-family: 'Noto Sans', Noto, sans-serif !important;
+  color: #464646;
 }
 
 @keyframes fadeIn {
@@ -152,7 +153,7 @@ body {
     z-index: -1;
     bottom: 0;
     height: 100%;
-    border-radius: 60px;
+    border-radius: 0.75rem;
     background-color: rgb(70, 70, 70);
     opacity: 0;
     width: 4px;
@@ -261,130 +262,6 @@ body {
   animation-delay: 0.6s;
 }
 
-.glasspane-card {
-  padding: 40px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.3);
-
-  &.strong-bg {
-    backdrop-filter: blur(16px);
-    background-color: rgba(255, 255, 255, 0.65);
-  }
-
-  @media only screen and (max-width: 600px) {
-    padding: 20px;
-  }
-
-  &.smaller-card {
-    padding: 15px;
-
-    @media only screen and (max-width: 600px) {
-      padding: 10px;
-    }
-  }
-}
-
-.glasspane-card-dark {
-  padding: 40px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  background-color: rgba(0, 0, 0, 0.08);
-  color: white;
-
-  @media only screen and (max-width: 600px) {
-    padding: 15px;
-  }
-
-  &.smaller-card {
-    padding: 15px;
-
-    @media only screen and (max-width: 600px) {
-      padding: 10px;
-    }
-  }
-}
-
-.button-lysia {
-  padding: 6px 15px;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  transition: 0.2s all;
-
-  &.primary-color {
-    background-color: #3aaaaa;
-    color: white;
-  }
-
-  &.outlined-primary-color {
-    border: 2px solid #3aaaaa;
-    color: #3aaaaa;
-  }
-
-  &.outlined-secondary-color {
-    border: 2px solid rgb(70, 70, 70);
-    color: rgb(70, 70, 70);
-  }
-
-  &.bigger-button {
-    font-weight: 700;
-    border-radius: 40px;
-    padding: 10px 20px;
-    font-size: 18px;
-
-    &.outlined-primary-color {
-      padding: 8px 18px;
-      border: 4px solid #3aaaaa;
-    }
-
-    &.outlined-secondary-color {
-      padding: 8px 18px;
-      border: 4px solid rgb(70, 70, 70);
-    }
-
-    @media only screen and (max-width: 600px) {
-      padding: 8px 15px;
-      font-size: 14px;
-    }
-  }
-
-  &:hover,
-  &:focus-within {
-    transform: scale(1.04);
-
-    &.bigger-button {
-      transform: scale(1.02);
-    }
-
-    &.primary-color {
-      background-color: #53cbcb;
-      color: white;
-    }
-
-    &.outlined-primary-color {
-      background-color: #3aaaaa;
-      color: white;
-    }
-
-    &.outlined-secondary-color {
-      background-color: rgb(70, 70, 70);
-      color: white;
-    }
-  }
-
-  &:disabled {
-    opacity: 0.6 !important;
-    pointer-events: none !important;
-  }
-}
-
 .primary-text-color {
   color: #3aaaaa !important;
 }
@@ -417,7 +294,7 @@ body {
 .snackbar-custom-css {
   .mdc-snackbar__surface {
     background-color: white !important;
-    border-radius: 40px !important;
+    border-radius: 0.75rem;
 
     .mat-mdc-snack-bar-label {
       color: rgb(70, 70, 70) !important;
@@ -450,9 +327,50 @@ body {
   }
 }
 
-.background-wrapper {
-  .bg-cover {
-    background-image: url('/assets/img/backgrounds/blurred_asbtract_bg.jpg');
-    opacity: 0.4;
+.button-lysia {
+  padding: 6px 15px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  // box-shadow: 2px 7px 10px 0px rgba(58,170,170, 0.7);
+  box-shadow: 2px 7px 10px 0px darken(#3aaaaa, 10%);
+
+  &.primary-color {
+    background-color: #3aaaaa;
+    color: white;
+  }
+
+  &.outlined-primary-color {
+    border: 2px solid #3aaaaa;
+    color: #3aaaaa;
+  }
+
+  &.outlined-secondary-color {
+    border: 2px solid rgb(70, 70, 70);
+    color: rgb(70, 70, 70);
+  }
+
+  &.bigger-button {
+    font-weight: 700;
+    padding: 10px 20px;
+    font-size: 26px;
+
+    &.outlined-primary-color {
+      padding: 8px 18px;
+      border: 4px solid #3aaaaa;
+    }
+
+    &.outlined-secondary-color {
+      padding: 8px 18px;
+      border: 4px solid rgb(70, 70, 70);
+    }
+  }
+
+  &:disabled {
+    opacity: 0.6 !important;
+    pointer-events: none !important;
   }
 }

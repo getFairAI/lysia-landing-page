@@ -21,21 +21,12 @@ export class TrustedByComponent implements AfterViewInit {
 
   constructor() {}
 
-  @HostListener('window:resize', ['$event']) onResize(event: Event) {
-    console.log(event);
-  }
-
   ngAfterViewInit(): void {
-    console.log(window.innerWidth);
     const trackAEl = this.trackA.nativeElement;
     const trackBEl = this.trackB.nativeElement;
     const trackCEl = this.trackC.nativeElement;
 
     const width = trackAEl.scrollWidth; // width of one full set
-    /* console.log(trackAEl.offsetWidth);
-    const speed = 20; // px per second → adjust as you like
-    const duration = width / speed;
-    console.log(width); */
 
     // Place A starting at 0, B immediately to its right
     gsap.set(trackAEl, { x: 0 });

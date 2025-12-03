@@ -1,0 +1,67 @@
+<section id="benefits-section" class="py-24 w-full">
+  <div class="w-full flex justify-center gap-6 sm:gap-12 py-8 px-24">
+    <button class="ring-[1px] ring-[#3aaaaa] rounded-xl px-4 sm:px-8 py-1 track-button" (click)="goToCard(0)">
+      <p class="text-[#3aaaaa]">{{'KNOWMORE_CARDS.CARD1.BUTTON' | translate }}</p>
+      <span class="track-button-fill"></span>
+    </button>
+    <button class="ring-[1px] ring-[#3aaaaa] rounded-xl px-4 sm:px-8 track-button" (click)="goToCard(1)">
+      <p class="text-[#3aaaaa]">{{'KNOWMORE_CARDS.CARD2.BUTTON' | translate }}</p>
+      <span class="track-button-fill"></span>
+    </button>
+    <button class="ring-[1px] ring-[#3aaaaa] rounded-xl px-4 sm:px-8 track-button" (click)="goToCard(2)">
+      <p class="text-[#3aaaaa]">{{'KNOWMORE_CARDS.CARD3.BUTTON' | translate }}</p>
+      <span class="track-button-fill"></span>
+    </button>
+  </div>
+
+  <div class="w-full max-w-[1400px] mx-auto flex justify-center overflow-hidden benefitsWrapper">
+    <!-- <div class="pointer-events-none absolute top-0 left-0 h-full w-[80px]
+              bg-gradient-to-r from-black/30 to-transparent z-10"></div>
+
+    <div class="pointer-events-none absolute top-0 right-0 h-full w-[80px]
+              bg-gradient-to-l from-black/30 to-transparent z-10"></div> -->
+    <div #benefitsTrack id="benefits-track" class="flex py-8 gap-12 w-max relative">
+      <!-- Card 0 -->
+      <div
+        class="benefit-card relative shrink-0 w-[80vw] max-w-[900px] h-[550px] flex flex-col-reverse sm:flex-row rounded-2xl bg-[url(/assets/img/landing-page-cards/research-papers.jpg)] bg-cover bg-center"
+        id="first-benefit-card">
+        <div class="flex flex-col w-full sm:w-1/2 items-center justify-end sm:justify-center h-1/2 sm:h-full rounded-b-2xl sm:rounded-l-2xl sm:rounded-br-none backdrop-blur-md backdrop-brightness-[65%] px-4 py-8">
+          <h6 class="text-4xl text-slate-50 font-semibold w-full">
+            {{ 'KNOWMORE_CARDS.CARD1.TITLE' | translate }}
+          </h6>
+          <p class="mt-6 w-full text-slate-100">
+            {{ 'KNOWMORE_CARDS.CARD1.DESCRIPTION' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 1 -->
+      <div
+        class="benefit-card relative shrink-0 w-[80vw] max-w-[900px] h-[550px] flex flex-col-reverse sm:flex-row rounded-2xl bg-[url(/assets/img/landing-page-cards/books_horizontal.jpg)] bg-cover bg-center"
+        id="second-benefit-card">
+        <div class="flex flex-col w-full sm:w-1/2 items-center justify-end sm:justify-center h-1/2 sm:h-full rounded-b-2xl sm:rounded-l-2xl sm:rounded-br-none backdrop-blur-md backdrop-brightness-[65%] px-4 py-8">
+          <h6 class="text-4xl font-semibold w-full text-slate-50">
+            {{ 'KNOWMORE_CARDS.CARD2.TITLE' | translate }}
+          </h6>
+          <p class="mt-6 w-full text-slate-100">
+            {{ 'KNOWMORE_CARDS.CARD2.DESCRIPTION' | translate }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="benefit-card relative shrink-0 w-[80vw] max-w-[900px] h-[550px] flex flex-col-reverse sm:flex-row rounded-2xl bg-[url(/assets/img/landing-page-cards/local_ai.png)] bg-cover bg-center"
+        id="third-benefit-card">
+        <div class="flex flex-col w-full sm:w-1/2 items-center justify-end sm:justify-center h-1/2 sm:h-full rounded-b-2xl sm:rounded-l-2xl sm:rounded-br-none backdrop-blur-md backdrop-brightness-[65%] px-4 py-8">
+          <h6 class="text-4xl font-semibold w-full text-slate-50">
+            {{ 'KNOWMORE_CARDS.CARD3.TITLE' | translate }}
+          </h6>
+          <p class="mt-6 w-full text-slate-100">
+            {{ 'KNOWMORE_CARDS.CARD3.DESCRIPTION' | translate }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
