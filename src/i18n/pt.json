@@ -93,5 +93,8 @@
   },
   "NAVBAR": {
     "CONTACT": "Contacte-nos"
+  },
+  "CALCULATOR_SECTION": {
+    "TITLE": "Quantify the cost of not automating"
   }
 }

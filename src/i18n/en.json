@@ -93,5 +93,13 @@
   },
   "NAVBAR": {
     "CONTACT": "Contact Us"
+  },
+  "CALCULATOR_SECTION": {
+    "TITLE": "Quantify the cost of not automating",
+    "SLIDER1_LABEL": "Team Size",
+    "SLIDER2_LABEL": "Hours",
+    "SLIDER3_LABEL": "Avg. Hourly cost",
+    "HEADLINE": "You're losing ~ {amountHours} in ....; That is {amountMoney} /month",
+    "DESCRIPTION": "FairAI could reclaim 80% of that, saving {ammountMoneySaved} /month"
   }
 }
