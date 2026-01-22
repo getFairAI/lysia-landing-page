@@ -10,3 +10,14 @@
 
   --mdc-slider-inactive-tick-mark-color: rgba(58, 170, 170, 0.5);
 }
+
+.calculator-btn {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  // box-shadow: 2px 7px 10px 0px rgba(58,170,170, 0.7);
+  box-shadow: 2px 7px 10px 0px darken(#3aaaaa, 10%);
+}

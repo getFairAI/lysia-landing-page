@@ -2,7 +2,9 @@ import { Component, computed, OnChanges, OnInit, signal } from '@angular/core';
 import { MatSliderDragEvent } from '@angular/material/slider';
 import { TranslateService } from '@ngx-translate/core';
 import gsap from 'gsap';
+import Observer from 'gsap/Observer';
 import ScrollToPlugin from 'gsap/ScrollToPlugin';
+import SplitText from 'gsap/SplitText';
 
 declare global {
   interface Window {
@@ -23,8 +25,8 @@ export class LossCalculatorComponent implements OnInit {
 
   currentLanguage;
 
-  teamSize = signal(20);
-  wastedHours = signal(10);
+  teamSize = signal(15);
+  wastedHours = signal(8);
   hourCost = signal(10);
 
   wastedHoursPerMonth = computed(() => this.teamSize() * this.wastedHours() * this.weeksInMonth);
@@ -40,7 +42,36 @@ export class LossCalculatorComponent implements OnInit {
       // this observable fires immediately when first run
       this.currentLanguage = newTranslationData?.lang || 'en';
     });
-     gsap.registerPlugin(ScrollToPlugin);
+    gsap.registerPlugin(ScrollToPlugin, Observer, SplitText);
+
+    const currentBtn = document.querySelector('.calculator-btn');
+
+    Observer.create({
+      target: currentBtn,
+      type: 'pointer',
+      onHover: () => {
+        gsap.to(currentBtn, {
+          scale: 1.02,
+        });
+        const currentText = currentBtn.querySelector('.cta-animated-text');
+
+        const split = new SplitText(currentText, { type: 'lines, words' });
+
+        gsap.from(split.words, {
+          duration: 0.5, // animate from 100px below
+          yPercent: -100,
+          opacity: 0,
+          // rotation: 'random(-100, 100)',
+          ease: 'back',
+          stagger: 0.05,
+        });
+      },
+      onHoverEnd: () => {
+        gsap.to(currentBtn, {
+          scale: 1,
+        });
+      },
+    });
   }
 
   handleEvent(): void {}

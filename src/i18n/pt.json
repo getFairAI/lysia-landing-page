@@ -95,11 +95,11 @@
     "CONTACT": "Contacte-nos"
   },
   "CALCULATOR_SECTION": {
-    "TITLE": "Calcula o custo de Não Automatizar",
-    "SLIDER1_LABEL": "Tamanho da equipa",
-    "SLIDER2_LABEL": "Número de horas",
+    "TITLE": "Calcula o custo de não Automatizar",
+    "SLIDER1_LABEL": "Numero de trabalhadores",
+    "SLIDER2_LABEL": "Número de horas por semana gasto por trabalhador em tarefas repetitivas",
     "SLIDER2_LABEL_SUBTITLE": "Quantas horas por semana cada membro da equipa gasta em relatórios (aproximadamente).",
-    "SLIDER3_LABEL": "Custo Médio de cada colaborador por hora",
+    "SLIDER3_LABEL": "Custo médio de cada colaborador por hora",
     "HEADLINE": "Estás a perder ~ {{amountHours}} horas/mês em tarefas repetitivas.",
     "HEADLINE_BOLD": "Estas horas traduzem-se em ~ {{amountMoney}} /mês em custos",
     "DESCRIPTION": "FairAI could reclaim 80% of that, saving {{amountMoneySaved}} /month",

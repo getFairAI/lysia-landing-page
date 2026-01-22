@@ -96,10 +96,10 @@
   },
   "CALCULATOR_SECTION": {
     "TITLE": "Quantify the cost of not automating",
-    "SLIDER1_LABEL": "Team Size",
-    "SLIDER2_LABEL": "Hours",
+    "SLIDER1_LABEL": "Number of collaborators",
+    "SLIDER2_LABEL": "Hours per week each collaborator spents on repetitive tasks",
     "SLIDER2_LABEL_SUBTITLE": "How many hours per week each team member spends on manual tasks (estimated).",
-    "SLIDER3_LABEL": "Avg. Hourly cost of team member",
+    "SLIDER3_LABEL": "Avg. Hourly cost of collaborators",
     "HEADLINE": "You're losing ~ {{amountHours}} hours/month to repetitve tasks.",
     "HEADLINE_BOLD": "That is ~ {{amountMoney}} /month in time costs",
     "DESCRIPTION": "FairAI could reclaim 80% of that, saving {{amountMoneySaved}} /month",
