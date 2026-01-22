@@ -1,7 +1,7 @@
 <main id="smooth-content">
   <div>
     <div class="w-full flex flex-col first-screen-wrapper h-screen">
-      <div class="flex flex-col justify-center items-center w-full h-full pt-24">
+      <div class="flex flex-col justify-center items-center w-full h-full pt-48 sm:pt-24">
         <div class="items-center flex flex-wrap gap-24">
           <div class="w-full flex flex-col items-center px-4 text-center">
             <div class="logo-img-wrapper">
@@ -100,7 +100,7 @@
           <app-cta-button class="w-full" [pagePosition]="'top'"></app-cta-button>
         </div>
       </div>
-      <app-trusted-by></app-trusted-by>
+      <app-trusted-by class="mt-32 sm:mt-0"></app-trusted-by>
     </div>
 
     <div class="bg-slate-100 shadow-[0px_3px_10px_0px_rgba(10,0,0,0.3)] shadow-slate-500 w-full flex flex-col items-center mt-48" data-lag="0.2">
@@ -123,8 +123,13 @@
       </div> -->
       <app-benefit-cards></app-benefit-cards>
 
-      <div class="w-full">
+      <!--  <div class="w-full">
         <app-cta-button [pagePosition]="'bottom-center'"></app-cta-button>
+      </div> -->
+      <div class="flex flex-col items-center w-full mt-20 bg-slate-200 shadow-[0px_3px_10px_0px_rgba(10,0,0,0.3)] shadow-slate-400">
+        <section>
+          <app-loss-calculator></app-loss-calculator>
+        </section>
       </div>
       <div class="w-full py-24">
         <app-features></app-features>
@@ -190,6 +195,7 @@
           </form>
         </div>
       </section>
+
       <div class="mt-20 w-full">
         <app-footer></app-footer>
       </div>

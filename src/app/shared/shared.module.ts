@@ -5,11 +5,12 @@ import { CalendlyWidgetComponent } from '../components/calendly-widget/calendly-
 import { SafeHtmlPipe } from 'src/pipes/safeHtml.pipe';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { FormsModule } from '@angular/forms';
+import {MatSliderModule} from '@angular/material/slider';
 
 @NgModule({
   declarations: [CalendlyWidgetComponent, SafeHtmlPipe],
-  imports: [ FormsModule, MatProgressSpinnerModule, MatIconModule],
+  imports: [ FormsModule, MatProgressSpinnerModule, MatIconModule, MatSliderModule],
   providers: [provideAnimationsAsync()],
-  exports: [CalendlyWidgetComponent, SafeHtmlPipe, FormsModule,MatProgressSpinnerModule, MatIconModule],
+  exports: [CalendlyWidgetComponent, SafeHtmlPipe, FormsModule,MatProgressSpinnerModule, MatIconModule, MatSliderModule],
 })
 export class SharedModule {}

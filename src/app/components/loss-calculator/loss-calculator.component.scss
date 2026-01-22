@@ -1,0 +1,23 @@
+.custom-slider {
+  width: 100%;
+  --mdc-slider-active-track-color: #3aaaaa;
+  --mdc-slider-inactive-track-color: rgba(58, 170, 170, 0.35);
+
+  --mdc-slider-handle-color: #3aaaaa;
+  --mdc-slider-focus-handle-color: #3aaaaa;
+  --mdc-slider-pressed-handle-color: #3aaaaa;
+  --mdc-slider-hover-handle-color: #5fc4c4;
+
+  --mdc-slider-inactive-tick-mark-color: rgba(58, 170, 170, 0.5);
+}
+
+.calculator-btn {
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  // box-shadow: 2px 7px 10px 0px rgba(58,170,170, 0.7);
+  box-shadow: 2px 7px 10px 0px darken(#3aaaaa, 10%);
+}

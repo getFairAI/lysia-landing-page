@@ -24,6 +24,7 @@ import { DataParsingIconComponent } from './components/data-parsing-icon/data-pa
 import { DashboardsIconComponent } from './components/dashboards-icon/dashboards-icon.component';
 import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learning-icon.component';
 import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.component';
+import { LossCalculatorComponent } from './components/loss-calculator/loss-calculator.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.
     DataParsingIconComponent,
     DashboardsIconComponent,
     BenefitCardsComponent,
+    LossCalculatorComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,

@@ -1,38 +1,142 @@
-@use '@angular/material' as mat;
-@use './path/to/copied/palettes';
+@use "@angular/material" as mat;
 
-$my-primary: mat.define-palette(palettes.$m2-primary);
-$my-accent: mat.define-palette(palettes.$m2-accent, A200, A100, A400);
 
-// The "warn" palette is optional and defaults to red if not specified.
-$my-warn: mat.define-palette(palettes.$m2-error);
+/* Light Theme */
+:root, :host {
+  @include mat.theme-overrides((
+    primary: #006a6a,
+    on-primary: #ffffff,
+    primary-container: #8bf3f3,
+    on-primary-container: #002020,
+    inverse-primary: #6dd7d7,
+    primary-fixed: #8bf3f3,
+    primary-fixed-dim: #6dd7d7,
+    on-primary-fixed: #002020,
+    on-primary-fixed-variant: #004f50,
+    secondary: #406564,
+    on-secondary: #ffffff,
+    secondary-container: #c2eae9,
+    on-secondary-container: #002020,
+    secondary-fixed: #c2eae9,
+    secondary-fixed-dim: #a7cecd,
+    on-secondary-fixed: #002020,
+    on-secondary-fixed-variant: #284d4c,
+    tertiary: #72508f,
+    on-tertiary: #ffffff,
+    tertiary-container: #f1daff,
+    on-tertiary-container: #2b0747,
+    tertiary-fixed: #f1daff,
+    tertiary-fixed-dim: #dfb7ff,
+    on-tertiary-fixed: #2b0747,
+    on-tertiary-fixed-variant: #593876,
+    background: #fcf9f8,
+    on-background: #1c1b1b,
+    surface: #fcf9f8,
+    surface-dim: #dcd9d9,
+    surface-bright: #fcf9f8,
+    surface-container-lowest: #ffffff,
+    surface-container-low: #f6f3f2,
+    surface-container: #f0edec,
+    surface-container-high: #ebe7e7,
+    surface-container-highest: #e5e2e1,
+    on-surface: #1c1b1b,
+    shadow: #000000,
+    scrim: #000000,
+    surface-tint: #5a5f5f,
+    inverse-surface: #313030,
+    inverse-on-surface: #f3f0ef,
+    outline: #747878,
+    outline-variant: #c3c7c7,
+    neutral: #787776,
+    neutral10: #1c1b1b,
+    error: #ba1a1a,
+    error-container: #ffdad6,
+    on-error: #ffffff,
+    on-error-container: #410002,
+    surface-variant: #dfe3e3,
+    on-surface-variant: #424848,
+    neutral-variant: #737878,
+    neutral-variant20: #2c3131,
+    inverse-secondary: #a7cecd,
+    inverse-tertiary: #dfb7ff,
+  ));
+}
 
-$my-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $my-primary,
-      accent: $my-accent,
-      warn: $my-warn,
-    ),
-    typography: mat.define-typography-config(),
-    density: 0,
-  )
-);
-
-$my-dark-theme: mat.define-dark-theme(
-  (
-    color: (
-      primary: $my-primary,
-      accent: $my-accent,
-      warn: $my-warn,
-    ),
-  )
-);
-
-@include mat.core();
-
-@include mat.all-component-themes($my-theme);
-
+/* Dark Theme */
 .dark {
-  @include mat.all-component-colors($my-dark-theme);
+  @include mat.theme-overrides((
+    primary: #6dd7d7,
+    on-primary: #003737,
+    primary-container: #004f50,
+    on-primary-container: #8bf3f3,
+    inverse-primary: #006a6a,
+    primary-fixed: #8bf3f3,
+    primary-fixed-dim: #6dd7d7,
+    on-primary-fixed: #002020,
+    on-primary-fixed-variant: #004f50,
+    secondary: #a7cecd,
+    on-secondary: #0e3636,
+    secondary-container: #284d4c,
+    on-secondary-container: #c2eae9,
+    secondary-fixed: #c2eae9,
+    secondary-fixed-dim: #a7cecd,
+    on-secondary-fixed: #002020,
+    on-secondary-fixed-variant: #284d4c,
+    tertiary: #dfb7ff,
+    on-tertiary: #41215e,
+    tertiary-container: #593876,
+    on-tertiary-container: #f1daff,
+    tertiary-fixed: #f1daff,
+    tertiary-fixed-dim: #dfb7ff,
+    on-tertiary-fixed: #2b0747,
+    on-tertiary-fixed-variant: #593876,
+    background: #131313,
+    on-background: #e5e2e1,
+    surface: #131313,
+    surface-dim: #131313,
+    surface-bright: #3a3939,
+    surface-container-lowest: #0e0e0e,
+    surface-container-low: #1c1b1b,
+    surface-container: #201f1f,
+    surface-container-high: #2a2a2a,
+    surface-container-highest: #353534,
+    on-surface: #e5e2e1,
+    shadow: #000000,
+    scrim: #000000,
+    surface-tint: #c3c7c7,
+    inverse-surface: #e5e2e1,
+    inverse-on-surface: #313030,
+    outline: #8d9191,
+    outline-variant: #424848,
+    neutral: #787776,
+    neutral10: #1c1b1b,
+    error: #ffb4ab,
+    error-container: #93000a,
+    on-error: #690005,
+    on-error-container: #ffdad6,
+    surface-variant: #424848,
+    on-surface-variant: #c3c7c7,
+    neutral-variant: #737878,
+    neutral-variant20: #2c3131,
+    inverse-secondary: #406564,
+    inverse-tertiary: #72508f,
+  ));
+}
+
+/* Typography */
+:root, :host {
+  /* core typography tokens are not generating css variables, hence below */
+  --mat-sys-brand-font-family: Roboto;
+  --mat-sys-plain-font-family: Roboto;
+  --mat-sys-bold-font-weight: 700;
+  --mat-sys-medium-font-weight: 500;
+  --mat-sys-regular-font-weight: 400;
+
+  @include mat.theme-overrides((
+    brand-family: Roboto,
+    plain-family: Roboto,
+    bold-weight: 700,
+    medium-weight: 500,
+    regular-weight: 400,
+  ));
 }
