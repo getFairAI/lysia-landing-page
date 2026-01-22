@@ -98,8 +98,11 @@
     "TITLE": "Quantify the cost of not automating",
     "SLIDER1_LABEL": "Team Size",
     "SLIDER2_LABEL": "Hours",
-    "SLIDER3_LABEL": "Avg. Hourly cost",
-    "HEADLINE": "You're losing ~ {amountHours} in ....; That is {amountMoney} /month",
-    "DESCRIPTION": "FairAI could reclaim 80% of that, saving {ammountMoneySaved} /month"
+    "SLIDER2_LABEL_SUBTITLE": "How many hours per week each team member spends on manual tasks (estimated).",
+    "SLIDER3_LABEL": "Avg. Hourly cost of team member",
+    "HEADLINE": "You're losing ~ {{amountHours}} hours/month to repetitve tasks.",
+    "HEADLINE_BOLD": "That is ~ {{amountMoney}} /month in time costs",
+    "DESCRIPTION": "FairAI could reclaim 80% of that, saving {{amountMoneySaved}} /month",
+    "BUTTON": "Book a free Demo now"
   }
 }

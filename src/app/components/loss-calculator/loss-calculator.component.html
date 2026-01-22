@@ -1,32 +1,45 @@
-<div class="w-full">
+<div class="w-full pb-12">
   <h2 class="text-3xl md:text-5xl font-bold text-center p-12">{{ 'CALCULATOR_SECTION.TITLE' | translate }}</h2>
-  <div class="w-full bg-slate-200 p-8 rounded-xl">
-    <div class="w-full flex justify-between">
-      <label>{{ 'CALCULATOR_SECTION.SLIDER1_LABEL' | translate }}</label>
-      <label>{{ slider.value }}</label>
+  <div class="w-full p-8 flex flex-col gap-4 bg-slate-200">
+    <div>
+      <div class="w-full flex justify-between">
+        <label class="font-semibold">{{ 'CALCULATOR_SECTION.SLIDER1_LABEL' | translate }}</label>
+        <label class="font-semibold">{{ slider.value }}</label>
+      </div>
+      <mat-slider class="w-full custom-slider" [max]="50" [min]="1" [step]="1">
+        <input matSliderThumb [(ngModel)]="teamSize" #slider class="w-full" (dragEnd)="handleDragStop($event, 'team-size')"/>
+      </mat-slider>
     </div>
-    <mat-slider class="w-full">
-      <input matSliderThumb [(ngModel)]="teamSize" #slider class="w-full" />
-    </mat-slider>
-    <div class="w-full flex justify-between">
-      <label>{{ 'CALCULATOR_SECTION.SLIDER2_LABEL' | translate }}</label>
-      <label>{{ slider2.value }}</label>
-    </div>
-    <mat-slider>
-      <input matSliderThumb [(ngModel)]="wastedHours" #slider2 />
-    </mat-slider>
-    <div class="w-full flex justify-between">
-      <label>{{ 'CALCULATOR_SECTION.SLIDER3_LABEL' | translate }}</label>
-      <label>{{ slider3.value }}</label>
-    </div>
-    <mat-slider>
-      <input matSliderThumb [(ngModel)]="hourCost" #slider3 />
-    </mat-slider>
-    <p>{{ 'CALCULATOR_SECTION.HEADLINE' | translate : { amountHours: '2', amountMoney: '9' } }}</p>
-    <p>{{ 'CALCULATOR_SECTION.DESCRIPTION' | translate : { amountMoneySaved: '9' } }}</p>
 
-    <div class="w-full flex justify-center">
-      <button class="rounded-xl py-2 px-8 bg-[#3aaaaa] mt-8 justify-self-center text-white">{{ 'CALCULATOR_SECTION.BUTTON' | translate }}</button>
+    <div>
+      <div class="w-full flex justify-between">
+        <div class="flex flex-col gap-1">
+          <label class="font-semibold">{{ 'CALCULATOR_SECTION.SLIDER2_LABEL' | translate }}</label>
+          <label class="font-medium text-sm text-slate-400">{{ 'CALCULATOR_SECTION.SLIDER2_LABEL_SUBTITLE' | translate }}</label>
+        </div>
+        <label class="font-semibold">{{ slider2.value }}</label>
+      </div>
+      <mat-slider class="w-full custom-slider" [max]="40" [min]="1" [step]="1">
+        <input matSliderThumb [(ngModel)]="wastedHours" #slider2  (dragEnd)="handleDragStop($event, 'hours')"/>
+      </mat-slider>
+    </div>
+
+    <div>
+      <div class="w-full flex justify-between">
+        <label class="font-semibold">{{ 'CALCULATOR_SECTION.SLIDER3_LABEL' | translate }}</label>
+        <label class="font-semibold">{{ slider3.value  | currency: currentLanguage === 'pt' ? 'EUR' : 'USD' }}</label>
+      </div>
+      <mat-slider class="w-full custom-slider" [max]="100" [min]="5" [step]="1" >
+        <input matSliderThumb [(ngModel)]="hourCost" #slider3 (dragEnd)="handleDragStop($event, 'avg-hour-cost')"/>
+      </mat-slider>
+    </div>
+
+    <p class="text-2xl pt-4">{{ 'CALCULATOR_SECTION.HEADLINE' | translate: { amountHours: wastedHoursPerMonth() | number } }}</p>
+    <p class="text-2xl pb-2 font-bold">{{ 'CALCULATOR_SECTION.HEADLINE_BOLD' | translate: { amountMoney: totalCost() | currency: currentLanguage === 'pt' ? 'EUR': 'USD' } }}</p>
+
+    <div class="w-full flex justify-center flex-col">
+      <!-- <p class="textsm font-medium text-slate-400">{{ 'CALCULATOR_SECTION.DESCRIPTION' | translate: { amountMoneySaved: potentialSaved() | currency: currentLanguage === 'pt' ? 'EUR': 'USD' } }}</p> -->
+      <button class="rounded-xl py-2 px-8 bg-[#3aaaaa] mt-2 justify-self-center text-white plausible-event-name=Calculator+CTA+Click" (click)="contactUsScrollToDiv()">{{ 'CALCULATOR_SECTION.BUTTON' | translate }}</button>
     </div>
   </div>
 </div>

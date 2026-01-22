@@ -246,7 +246,7 @@
       }
 
       .card-title-div {
-       /*  background-color: rgba(80, 80, 80, 0.5);
+        /*  background-color: rgba(80, 80, 80, 0.5);
         backdrop-filter: blur(3px); */
         padding: 20px 25px;
         /* box-sizing: border-box; */
@@ -376,26 +376,14 @@
   background:
     radial-gradient(#cbd5e1 15%, transparent 20%) 0 0,
     radial-gradient(#cbd5e1 15%, transparent 10%) 24px 24px;
-    // radial-gradient(#f1f5f9 15%, transparent 20%) 0 1px;
-    // radial-gradient(#f1f5f9 15%, transparent 20%) 24px 24px;
-    background-color: transparent;
-    background-size: 24px 24px;
+  // radial-gradient(#f1f5f9 15%, transparent 20%) 0 1px;
+  // radial-gradient(#f1f5f9 15%, transparent 20%) 24px 24px;
+  background-color: transparent;
+  background-size: 24px 24px;
 }
 
 .test-x {
   /* fade 0→60px on left and last 60px on right */
-  -webkit-mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black 20px,
-    black calc(100% - 20px),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    to right,
-    transparent 0,
-    black 20px,
-    black calc(100% - 20px),
-    transparent 100%
-  );
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
 }
