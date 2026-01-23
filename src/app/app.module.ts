@@ -25,6 +25,7 @@ import { DashboardsIconComponent } from './components/dashboards-icon/dashboards
 import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learning-icon.component';
 import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.component';
 import { LossCalculatorComponent } from './components/loss-calculator/loss-calculator.component';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { LossCalculatorComponent } from './components/loss-calculator/loss-calcu
     DashboardsIconComponent,
     BenefitCardsComponent,
     LossCalculatorComponent,
+    FaqComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,
