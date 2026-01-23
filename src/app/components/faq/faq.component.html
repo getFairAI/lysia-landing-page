@@ -11,7 +11,7 @@
         [attr.aria-expanded]="accordionItem.expanded"
         [attr.aria-controls]="'accordion-body-' + index">
         <div class="flex w-full justify-between">
-          <span class="text-lg font-medium text-slate-500">{{ item | translate }}</span>
+          <span class="text-lg font-medium text-slate-400">{{ item | translate }}</span>
           <mat-icon class="text-md font-medium text-slate-400">add</mat-icon>
         </div>
         <div class="py-4" role="region" [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index" [attr.aria-labelledby]="'accordion-header-' + index">
