@@ -59,14 +59,14 @@
     }
   },
   "HERO_HEADLINE": "Make every piece of knowledge work for you",
+  "HERO_CTA": "Talk to us",
+  "HERO_CTA_ALTERNATIVE": "Get in touch",
   "HERO_SUBTITLE": {
     "SECTION1": "Turn",
-    "SECTION2": "lost data ",
+    "SECTION2": "lost data",
     "SECTION3": "and undocumented processes into your",
     "SECTION4": "competitive edge."
   },
-  "HERO_CTA": "Talk to us",
-  "HERO_CTA_ALTERNATIVE": "Get in touch",
   "PROBLEM_HEADLINE": "Is your factory's technical knowledge falling through the cracks?",
   "PROBLEM_SUBTITLE": "Scattered notes. Silent experts. Constant rework. Your team is stuck chasing missing details instead of fixing problems and improving throughput.",
   "SOLUTION_HEADLINE": "Automate Knowledge Capture, Save Hours, and Eliminate Expertise Gaps",
@@ -85,7 +85,7 @@
     "FEATURE5DESCRIPTION": "Security"
   },
   "HOW_TO": {
-    "STEP1": "1. Connect your existing ERP or CRM and upload historical files",
+    "STEP1": "1. Connect your existing ERP or CRM and upload historical files HIHI",
     "STEP2": "2. If you don't have any kind of data, we help you obtain what is missing",
     "STEP3": "3. AI ingests and structures all past and current data",
     "STEP4": "4. Get dashboards, opportunities, and process insights instantly",
