@@ -5,7 +5,7 @@
   },
   "CONTACT_SECTION": {
     "SECTION_TITLE": "Let's talk!",
-    "SECTION_DESCRIPTION": "Together we can research ways and ideas that can massively improve the overall operating efficiency of your company.",
+    "SECTION_DESCRIPTION": "Together we can research ways and ideas that can massively improve the overall operating efficiency of your company",
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
         "TITLE": "Let's do a quick meeting?",
@@ -65,7 +65,7 @@
     "SECTION1": "Turn",
     "SECTION2": "lost data",
     "SECTION3": "and undocumented processes into your",
-    "SECTION4": "competitive edge."
+    "SECTION4": "competitive edge"
   },
   "PROBLEM_HEADLINE": "Is your factory's technical knowledge falling through the cracks?",
   "PROBLEM_SUBTITLE": "Scattered notes. Silent experts. Constant rework. Your team is stuck chasing missing details instead of fixing problems and improving throughput.",
@@ -104,5 +104,57 @@
     "HEADLINE_BOLD": "That is ~ {{amountMoney}} /month in time costs",
     "DESCRIPTION": "FairAI could reclaim 80% of that, saving {{amountMoneySaved}} /month",
     "BUTTON": "Book a free Demo now"
+  },
+  "COMPARE": {
+    "TITLE": "Why Work With Us",
+    "DESCRIPTION": "We don't sell generic AI tools. We build solutions that fit your operations, your people, and your infrastructure.",
+    "US": {
+      "TITLE": "Our Approach",
+      "FEATURES1": "Custom-built solutions tailored to your business processes",
+      "FEATURES2": "We work on-premises alongside your team",
+      "FEATURES3": "Locally hosted AI — your data stays under your control",
+      "FEATURES4": "Integrated directly into your existing workflows"
+    },
+    "OTHERS": {
+      "TITLE": "Typical Vendors",
+      "FEATURES1": "Generic off-the-shelf platforms",
+      "FEATURES2": "Remote setup with minimal operational understanding",
+      "FEATURES3": "Cloud-only models requiring data transfer",
+      "FEATURES4": "Forces teams to adapt to new workflows"
+    }
+  },
+  "PRICING": {
+    "TITLE": "Flexible Engagement Plans",
+    "PLAN1": {
+      "TITLE": "Pilot / Minimal",
+      "DESCRIPTION": "A fast way to validate value with minimal disruption",
+      "FEATURES1": "Quick integration into one workflow",
+      "FEATURES2": "On-site setup and training",
+      "FEATURES3": "Local AI deployment",
+      "FEATURES4": "Clear ROI evaluation",
+      "BUTTON": "Start Pilot"
+    },
+    "PLAN2": {
+      "TITLE": "Full Integration",
+      "DESCRIPTION": "Deep integration designed to transform operations",
+      "FEATURES1": "Multiple workflows automated and connected",
+      "FEATURES2": "Custom models trained for your business",
+      "FEATURES3": "Infrastructure and process redesign",
+      "FEATURES4": "Potential replacement of manual or legacy systems",
+      "BUTTON": "Request Consultation"
+    }
+  },
+  "FAQ": {
+    "TITLE": "Frequently Asked Questions",
+    "QUESTION0": "Will this disrupt our current operations?",
+    "ANSWER0": "No. The system is introduced gradually and works alongside your existing processes. Your team keeps working normally while automation is added step by step.",
+    "QUESTION1": "Do we need structured data to start?",
+    "ANSWER1": "Not at all. We can ingest documents, reports, emails, spreadsheets, and even undocumented workflows. If data is missing, we help you capture it from daily operations.",
+    "QUESTION2": "Where does our data go?",
+    "ANSWER2": "Your data stays under your control. The AI runs locally or inside your infrastructure, so sensitive operational knowledge never needs to be sent to external providers.",
+    "QUESTION3": "How long before we see results?",
+    "ANSWER3": "A pilot can start delivering insights within weeks. The goal is quick operational value first, followed by deeper automation once impact is proven.",
+    "QUESTION4": "Will employees need training or technical skills?",
+    "ANSWER4": "No technical expertise is required. The system integrates into familiar tools and we train the team so knowledge becomes easier to access, not harder to use."
   }
 }
