@@ -27,6 +27,7 @@ import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.
 import { LossCalculatorComponent } from './components/loss-calculator/loss-calculator.component';
 import { FaqComponent } from './components/faq/faq.component';
 import { PricingComponent } from './components/pricing/pricing.component';
+import { CompareComponent } from './components/compare/compare.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { PricingComponent } from './components/pricing/pricing.component';
     LossCalculatorComponent,
     FaqComponent,
     PricingComponent,
+    CompareComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,
