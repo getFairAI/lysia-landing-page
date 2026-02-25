@@ -24,10 +24,7 @@ export class FaqComponent implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
-    console.log(this.accordionItems);
     this.accordionElements = document.querySelectorAll('.accordion-item');
-
-    console.log(this.accordionElements);
 
     this.accordionElements.forEach((el, idx) => {
       const expandIcon = el.querySelector('div > mat-icon');
@@ -63,7 +60,6 @@ export class FaqComponent implements AfterViewInit, OnDestroy {
   }
 
   toggleRow(idx: number): void {
-    /* console.log(this.accordionItems.toArray()); */
     this.accordionItems.toArray()[idx].toggle();
     const el = this.accordionElements[idx];
     const expandIcon = el.querySelector('div > mat-icon');

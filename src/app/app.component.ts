@@ -28,7 +28,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     const browserLang = this.detectBrowserLang();
 
-    console.log(browserLang);
     if (browserLang === 'pt') {
       this.defaultLang = 'pt';
     } else {
