@@ -95,7 +95,7 @@
     "CONTACT": "Contacte-nos"
   },
   "CALCULATOR_SECTION": {
-    "TITLE": "Calcula o custo de não Automatizar",
+    "TITLE": "Descubra quanto está a perder sem automação",
     "SLIDER1_LABEL": "Numero de trabalhadores",
     "SLIDER2_LABEL": "Número de horas por semana gasto por trabalhador em tarefas repetitivas",
     "SLIDER2_LABEL_SUBTITLE": "Quantas horas por semana cada membro da equipa gasta em relatórios (aproximadamente).",
@@ -106,7 +106,7 @@
     "BUTTON": "Marca a tua Demonstração gratuita"
   },
   "COMPARE": {
-    "TITLE": "Porque trabalhar connosco",
+    "TITLE": "Porquê trabalhar connosco?",
     "DESCRIPTION": "Não vendemos ferramentas genéricas de IA. Criamos soluções ajustadas à sua operação, equipa e infraestrutura.",
     "US": {
       "TITLE": "A nossa abordagem",
