@@ -1,4 +1,4 @@
-
-<div class="w-full h-[720px] min-w-[720px] min-h-[720px] md:min-h-[680px] lg:min-h-[640px]">
-  <div #container id="calendly-embed" class="calendly-inline-widget w-full h-full min-h-full" data-auto-load="false"></div>
+<div class="relative w-full h-[720px] min-w-[720px] min-h-[720px] md:min-h-[680px] lg:min-h-[640px]">
+  <div #container id="calendly-embed" class="calendly-inline-widget w-full h-full min-h-full" data-auto-load="false" [ngClass]="{ 'opacity-0': loading }"></div>
+  <mat-spinner *ngIf="loading" class="custom-spinner"></mat-spinner>
 </div>

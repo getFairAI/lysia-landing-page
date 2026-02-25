@@ -28,6 +28,8 @@ import { LossCalculatorComponent } from './components/loss-calculator/loss-calcu
 import { FaqComponent } from './components/faq/faq.component';
 import { PricingComponent } from './components/pricing/pricing.component';
 import { CompareComponent } from './components/compare/compare.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,7 @@ import { CompareComponent } from './components/compare/compare.component';
     FaqComponent,
     PricingComponent,
     CompareComponent,
+    ContactComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,
@@ -85,6 +88,7 @@ import { CompareComponent } from './components/compare/compare.component';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    CommonModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
         defaultLanguage: 'en',

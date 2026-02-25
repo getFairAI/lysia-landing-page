@@ -8,10 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import { CdkAccordionModule } from '@angular/cdk/accordion';
 import {MatTabsModule} from '@angular/material/tabs';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [CalendlyWidgetComponent, SafeHtmlPipe],
-  imports: [FormsModule, MatProgressSpinnerModule, MatIconModule, MatSliderModule, CdkAccordionModule, MatTabsModule],
+  imports: [FormsModule, MatProgressSpinnerModule, MatIconModule, MatSliderModule, CdkAccordionModule, MatTabsModule, CommonModule],
   providers: [provideAnimationsAsync()],
   exports: [CalendlyWidgetComponent, SafeHtmlPipe, FormsModule, MatProgressSpinnerModule, MatIconModule, MatSliderModule, CdkAccordionModule, MatTabsModule],
 })
