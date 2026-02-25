@@ -13,8 +13,10 @@ declare global {
 })
 export class CalendlyWidgetComponent implements OnInit {
   @ViewChild('container') container: ElementRef;
+  loading = true;
 
   ngOnInit() {
+    window.addEventListener('message', this.handleCalendlyEvent);
     const script = document.getElementById('calendly-script');
     if (script && !!window.Calendly) {
       // script already loaded
@@ -35,4 +37,13 @@ export class CalendlyWidgetComponent implements OnInit {
       };
     }
   }
+
+  handleCalendlyEvent = (e: MessageEvent) => {
+    if (!e.origin.includes('calendly.com')) return;
+
+    if (e.data?.event === 'calendly.profile_page_viewed' || e.data?.event === 'calendly.event_type_viewed') {
+      // this.loading = false;
+      this.loading = false;
+    }
+  };
 }

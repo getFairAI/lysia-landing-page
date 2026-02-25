@@ -374,3 +374,43 @@ body {
     pointer-events: none !important;
   }
 }
+
+.slate-carbon-fiber {
+  background-color: rgb(32, 32, 32);
+  background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black), linear-gradient(to bottom, rgb(8, 8, 8), rgb(32, 32, 32));
+  background-size: 10px 10px, 10px 10px, 10px 5px;
+  background-position: 0px 0px, 5px 5px, 0px 0px;
+}
+
+.blur-fade {
+  -webkit-mask-image:
+    linear-gradient(to right,
+      transparent 0,
+      black 30px,
+      black calc(100% - 30px),
+      transparent 100%
+    ),
+    linear-gradient(to bottom,
+      transparent 0,
+      black 30px,
+      black calc(100% - 30px),
+      transparent 100%
+    );
+
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+
+  mask-image:
+    linear-gradient(to right,
+      transparent 0,
+      black 30px,
+      black calc(100% - 30px),
+      transparent 100%
+    ),
+    linear-gradient(to bottom,
+      transparent 0,
+      black 30px,
+      black calc(100% - 30px),
+      transparent 100%
+    );
+}

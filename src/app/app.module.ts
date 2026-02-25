@@ -25,6 +25,11 @@ import { DashboardsIconComponent } from './components/dashboards-icon/dashboards
 import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learning-icon.component';
 import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.component';
 import { LossCalculatorComponent } from './components/loss-calculator/loss-calculator.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { PricingComponent } from './components/pricing/pricing.component';
+import { CompareComponent } from './components/compare/compare.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -45,6 +50,10 @@ import { LossCalculatorComponent } from './components/loss-calculator/loss-calcu
     DashboardsIconComponent,
     BenefitCardsComponent,
     LossCalculatorComponent,
+    FaqComponent,
+    PricingComponent,
+    CompareComponent,
+    ContactComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,
@@ -79,6 +88,7 @@ import { LossCalculatorComponent } from './components/loss-calculator/loss-calcu
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    CommonModule,
     ReactiveFormsModule,
     TranslateModule.forRoot({
         defaultLanguage: 'en',

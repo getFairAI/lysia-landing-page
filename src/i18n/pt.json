@@ -104,5 +104,57 @@
     "HEADLINE_BOLD": "Estas horas traduzem-se em ~ {{amountMoney}} /mês em custos",
     "DESCRIPTION": "FairAI could reclaim 80% of that, saving {{amountMoneySaved}} /month",
     "BUTTON": "Marca a tua Demonstração gratuita"
+  },
+  "COMPARE": {
+    "TITLE": "Porque trabalhar connosco",
+    "DESCRIPTION": "Não vendemos ferramentas genéricas de IA. Criamos soluções ajustadas à sua operação, equipa e infraestrutura.",
+    "US": {
+      "TITLE": "A nossa abordagem",
+      "FEATURES1": "Soluções feitas à medida dos seus processos",
+      "FEATURES2": "Trabalhamos no local com a sua equipa",
+      "FEATURES3": "IA alojada localmente — os seus dados ficam sob o seu controlo",
+      "FEATURES4": "Integração direta nos fluxos de trabalho atuais"
+    },
+    "OTHERS": {
+      "TITLE": "Fornecedores típicos",
+      "FEATURES1": "Plataformas genéricas pré-feitas",
+      "FEATURES2": "Implementação remota sem conhecer a operação",
+      "FEATURES3": "Modelos apenas cloud com transferência de dados",
+      "FEATURES4": "Obrigam a mudar processos internos"
+    }
+  },
+  "PRICING": {
+    "TITLE": "Planos de colaboração flexíveis",
+    "PLAN1": {
+      "TITLE": "Piloto / Inicial",
+      "DESCRIPTION": "Valide valor rapidamente com impacto mínimo",
+      "FEATURES1": "Integração rápida num fluxo de trabalho",
+      "FEATURES2": "Instalação e formação no local",
+      "FEATURES3": "IA local",
+      "FEATURES4": "Avaliação clara de retorno",
+      "BUTTON": "Iniciar piloto"
+    },
+    "PLAN2": {
+      "TITLE": "Integração completa",
+      "DESCRIPTION": "Integração profunda para transformar a operação",
+      "FEATURES1": "Automatização de múltiplos processos",
+      "FEATURES2": "Modelos personalizados para o seu negócio",
+      "FEATURES3": "Redesenho de processos e infraestrutura",
+      "FEATURES4": "Possível substituição de sistemas manuais ou antigos",
+      "BUTTON": "Pedir avaliação"
+    }
+  },
+  "FAQ": {
+    "TITLE": "Perguntas frequentes",
+    "QUESTION0": "Isto vai interromper a operação atual?",
+    "ANSWER0": "Não. A introdução é gradual e funciona em paralelo com os processos existentes. A equipa continua a trabalhar normalmente enquanto a automação é adicionada passo a passo.",
+    "QUESTION1": "Precisamos de dados estruturados para começar?",
+    "ANSWER1": "Não. Conseguimos ler documentos, relatórios, emails, folhas de cálculo e até processos não documentados. Se faltar informação, ajudamos a capturá-la no dia-a-dia.",
+    "QUESTION2": "Onde ficam os nossos dados?",
+    "ANSWER2": "Os dados permanecem sob o seu controlo. A IA corre localmente ou dentro da sua infraestrutura, sem necessidade de enviar conhecimento sensível para terceiros.",
+    "QUESTION3": "Quanto tempo até vermos resultados?",
+    "ANSWER3": "Um piloto começa a gerar valor em poucas semanas. Primeiro garantimos impacto operacional rápido e depois avançamos para automação mais profunda.",
+    "QUESTION4": "A equipa precisa de formação técnica?",
+    "ANSWER4": "Não. O sistema integra-se nas ferramentas habituais e nós tratamos da formação para tornar o conhecimento mais acessível, não mais complexo."
   }
 }

@@ -381,9 +381,3 @@
   background-color: transparent;
   background-size: 24px 24px;
 }
-
-.test-x {
-  /* fade 0→60px on left and last 60px on right */
-  -webkit-mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
-  mask-image: linear-gradient(to right, transparent 0, black 20px, black calc(100% - 20px), transparent 100%);
-}
