@@ -1,0 +1,23 @@
+<div class="w-full pb-12 flex flex-col items-center">
+  <h2 class="text-3xl md:text-5xl font-bold text-center p-12">{{ 'FAQ.TITLE' | translate }}</h2>
+  <cdk-accordion class="w-full flex flex-col items-center max-w-screen-sm gap-2">
+    @for (item of items; track item; let index = $index) {
+      <cdk-accordion-item
+        #accordionItem="cdkAccordionItem"
+        class="accordion-item border-b-2 border-slate-200 border-solid w-full py-4"
+        role="button"
+        tabindex="0"
+        [attr.id]="'accordion-header-' + index"
+        [attr.aria-expanded]="accordionItem.expanded"
+        [attr.aria-controls]="'accordion-body-' + index">
+        <div class="flex w-full justify-between">
+          <span class="text-lg font-medium text-slate-500">{{ item | translate }}</span>
+          <mat-icon class="text-md font-medium text-slate-400">add</mat-icon>
+        </div>
+        <div class="py-4" role="region" [style.display]="accordionItem.expanded ? '' : 'none'" [attr.id]="'accordion-body-' + index" [attr.aria-labelledby]="'accordion-header-' + index">
+          <span class="text-lg font-medium">{{ 'FAQ.QUESTION' + index | translate }}</span>
+        </div>
+      </cdk-accordion-item>
+    }
+  </cdk-accordion>
+</div>
