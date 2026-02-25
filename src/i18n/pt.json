@@ -1,83 +1,83 @@
 {
   "SNACKBAR": {
-    "MESSAGE_SUBMIT_SUCCESS": "Mensagem enviada com sucesso. Entraremos em contacto muito em breve!",
-    "MESSAGE_SUBMIT_ERROR": "Ocorreu um erro. Por favor tente novamente."
+    "MESSAGE_SUBMIT_SUCCESS": "Mensagem enviada. Iremos entrar em contacto o mais brevemente possível!",
+    "MESSAGE_SUBMIT_ERROR": "Ocorreu um erro. Por favor, tente novamente."
   },
   "CONTACT_SECTION": {
-    "SECTION_TITLE": "Vamos falar!",
-    "SECTION_DESCRIPTION": "Juntos podemos encontrar formas e ideias para melhorar significativamente a eficiência operacional da sua empresa",
+    "SECTION_TITLE": "Vamos conversar!",
+    "SECTION_DESCRIPTION": "Juntos podemos explorar caminhos e ideias que podem melhorar de forma significativa a eficiência operacional da sua empresa.",
     "CONTACT_FORMS_CARDS": {
       "CARD1": {
-        "TITLE": "Marcamos uma reunião rápida?",
-        "SUBTITLE": "Escolha um horário que lhe dê jeito."
+        "TITLE": "Vamos marcar uma reunião rápida?",
+        "SUBTITLE": "Escolha um horário que funcione para si."
       },
       "CARD2": {
-        "TITLE": "Ainda não quer marcar chamada? Envie-nos uma mensagem.",
-        "SUBTITLE": "Respondemos rapidamente, normalmente em poucas horas."
+        "TITLE": "Ainda não quer fazer uma chamada? Envie-nos uma mensagem.",
+        "SUBTITLE": "Responderemos o mais breve possível, normalmente dentro de algumas horas."
       },
       "CONTACT_FORM_INPUTS": {
-        "FULLNAME": "NOME",
-        "FULLNAMEPLACEHOLDER": "Como prefere ser tratado?",
+        "FULLNAME": "NOME COMPLETO",
+        "FULLNAMEPLACEHOLDER": "Como devemos chamá-lo?",
         "EMAIL": "EMAIL",
         "EMAILPLACEHOLDER": "Onde podemos contactá-lo?",
         "MESSAGE": "MENSAGEM",
-        "MESSAGEPLACEHOLDER": "Como podemos ajudar? Partilhe os detalhes que achar relevantes."
+        "MESSAGEPLACEHOLDER": "Como podemos ajudar? Fique à vontade para partilhar quaisquer detalhes."
       },
       "CONTACT_FORM_BUTTONS": {
-        "SEND": "Enviar mensagem"
+        "SEND": "Enviar Mensagem"
       }
     }
   },
   "KNOWMORE_CARDS": {
     "CARD1": {
       "BUTTON": "Capturar",
-      "TITLE": "Deixe de perder informação",
-      "DESCRIPTION": "Capture automaticamente todos os detalhes de projetos, reuniões e propostas para nunca mais perder histórico de preços, motivos de ganho/perda ou padrões de clientes."
+      "TITLE": "Pare de Perder Informação",
+      "DESCRIPTION": "Capte automaticamente todos os detalhes de projetos, reuniões e propostas, garantindo que históricos de preços, motivos de sucesso/derrota e padrões de clientes nunca mais se percam."
     },
     "CARD2": {
       "BUTTON": "Transformar",
-      "TITLE": "Transforme relatórios em ação",
-      "DESCRIPTION": "Centralize e analise relatórios de produção, qualidade e financeiros com IA que extrai conclusões acionáveis. Passe de documentos ignorados para oportunidades reais de melhoria."
+      "TITLE": "Transforme Relatórios em Ação",
+      "DESCRIPTION": "Centralize e analise relatórios de produção, qualidade e financeiros com IA capaz de extrair insights acionáveis. Deixe de ter documentos esquecidos e passe a ter oportunidades reais e quantificadas de melhoria."
     },
     "CARD3": {
       "BUTTON": "Evoluir",
-      "TITLE": "Dê vida ao conhecimento da sua empresa",
-      "DESCRIPTION": "Transforme o know-how da sua empresa numa inteligência pesquisável e evolutiva. A IA aprende com o conhecimento existente e melhora os processos a cada projeto."
+      "TITLE": "Dê Vida ao Seu Conhecimento",
+      "DESCRIPTION": "Transforme o know-how da sua empresa numa inteligência dinâmica e pesquisável. A nossa IA aprende e evolui com o conhecimento existente, melhorando os seus processos a cada novo projeto."
     }
   },
   "TECH_STACK": {
-    "TITLE": "A nossa tecnologia"
+    "TITLE": "A nossa stack tecnológica"
   },
   "FOOTER": {
-    "SLOGAN": "Acompanhe o nosso percurso.",
-    "SLOGAN_SUBTITLE": "Mantenha-se ligado à FairAI.",
+    "SLOGAN": "Acompanhe a nossa jornada.",
+    "SLOGAN_SUBTITLE": "Fique em contacto com a FairAI.",
     "LINKS_LIST": {
       "TITLE": "Empresa",
       "LINK1": "Privacidade",
       "LINK2": "Blog",
-      "LINK3": "Contactos"
+      "LINK3": "Contacte-nos"
     }
   },
-  "HERO_HEADLINE": "Faça cada pedaço de conhecimento trabalhar para si",
+  "HERO_HEADLINE": "Faça o conhecimento trabalhar a seu favor",
   "HERO_SUBTITLE": {
     "SECTION1": "Transforme",
     "SECTION2": "dados perdidos ",
     "SECTION3": "e processos não documentados na sua",
-    "SECTION4": "vantagem competitiva"
+    "SECTION4": "vantagem competitiva."
   },
   "HERO_CTA": "Fale connosco",
-  "HERO_CTA_ALTERNATIVE": "Entrar em contacto",
-  "PROBLEM_HEADLINE": "O conhecimento técnico da sua fábrica está a perder-se?",
-  "PROBLEM_SUBTITLE": "Notas dispersas. Especialistas silenciosos. Retrabalho constante. A equipa passa mais tempo a procurar informação do que a resolver problemas e melhorar a produção.",
-  "SOLUTION_HEADLINE": "Automatize a captura de conhecimento, poupe horas e elimine lacunas de experiência",
-  "SOLUTION_SUBTITLE": "Deixe a sua equipa focar-se na produção e inovação enquanto os agentes de IA retêm, atualizam e partilham o conhecimento técnico que mantém a fábrica a funcionar.",
+  "HERO_CTA_ALTERNATIVE": "Entre em contacto",
+  "PROBLEM_HEADLINE": "O conhecimento técnico da sua fábrica está a perder-se pelo caminho?",
+  "PROBLEM_SUBTITLE": "Notas dispersas. Especialistas silenciosos. Retrabalho constante. A sua equipa perde tempo a procurar informações em falta em vez de resolver problemas e aumentar a produtividade.",
+  "SOLUTION_HEADLINE": "Automatize a Captura de Conhecimento, Poupe Horas e Elimine Lacunas de Especialização",
+  "SOLUTION_SUBTITLE": "Deixe a sua equipa focar-se na produção e inovação enquanto os seus agentes de IA retêm, atualizam e partilham o know-how técnico que mantém a fábrica a funcionar.",
   "BACK": "Voltar",
   "FEATURES_SECTION": {
     "FEATURE1": "Captura automática de dados em projetos, relatórios e documentos",
     "FEATURE1DESCRIPTION": "Automação",
-    "FEATURE2": "Insights e dashboards com IA",
+    "FEATURE2": "Insights e dashboards potenciados por IA",
     "FEATURE2DESCRIPTION": "Visualização",
-    "FEATURE3": "Repositório de conhecimento de processos, preços e histórico operacional",
+    "FEATURE3": "Repositório de conhecimento com histórico de processos, preços e operações",
     "FEATURE3DESCRIPTION": "Arquivo",
     "FEATURE4": "Integrações com sistemas ERP e CRM",
     "FEATURE4DESCRIPTION": "Interoperabilidade",
@@ -85,25 +85,25 @@
     "FEATURE5DESCRIPTION": "Segurança"
   },
   "HOW_TO": {
-    "STEP1": "1. Ligue o seu ERP ou CRM e carregue ficheiros históricos",
-    "STEP2": "2. Se não tiver dados organizados, ajudamos a capturar o que falta",
-    "STEP3": "3. A IA estrutura dados passados e atuais",
+    "STEP1": "1. Conecte o seu ERP ou CRM existente e carregue os ficheiros históricos",
+    "STEP2": "2. Se não possuir dados suficientes, ajudamo-lo a obter o que falta",
+    "STEP3": "3. A IA processa e estrutura todos os dados passados e atuais",
     "STEP4": "4. Receba dashboards, oportunidades e insights de processo imediatamente",
-    "STEP5": "5. A IA aprende continuamente e prepara a equipa para crescer com confiança"
+    "STEP5": "5. Deixe a sua IA aprender com estes insights e capacitar a sua equipa para que possa expandir globalmente com confiança"
   },
   "NAVBAR": {
-    "CONTACT": "Contactos"
+    "CONTACT": "Contacte-nos"
   },
   "CALCULATOR_SECTION": {
-    "TITLE": "Descubra quanto está a perder sem automação",
-    "SLIDER1_LABEL": "Número de colaboradores",
-    "SLIDER2_LABEL": "Horas semanais gastas em tarefas repetitivas",
-    "SLIDER2_LABEL_SUBTITLE": "Estimativa de horas semanais que cada colaborador dedica a tarefas manuais.",
-    "SLIDER3_LABEL": "Custo médio por hora",
-    "HEADLINE": "Está a perder ~ {{amountHours}} horas/mês em tarefas repetitivas.",
-    "HEADLINE_BOLD": "Isso representa ~ {{amountMoney}} /mês em custos de tempo",
-    "DESCRIPTION": "A FairAI pode recuperar 80% disso, poupando {{amountMoneySaved}} /mês",
-    "BUTTON": "Agendar demonstração gratuita"
+    "TITLE": "Calcula o custo de não Automatizar",
+    "SLIDER1_LABEL": "Numero de trabalhadores",
+    "SLIDER2_LABEL": "Número de horas por semana gasto por trabalhador em tarefas repetitivas",
+    "SLIDER2_LABEL_SUBTITLE": "Quantas horas por semana cada membro da equipa gasta em relatórios (aproximadamente).",
+    "SLIDER3_LABEL": "Custo médio de cada colaborador por hora",
+    "HEADLINE": "Estás a perder ~ {{amountHours}} horas/mês em tarefas repetitivas.",
+    "HEADLINE_BOLD": "Estas horas traduzem-se em ~ {{amountMoney}} /mês em custos",
+    "DESCRIPTION": "FairAI could reclaim 80% of that, saving {{amountMoneySaved}} /month",
+    "BUTTON": "Marca a tua Demonstração gratuita"
   },
   "COMPARE": {
     "TITLE": "Porque trabalhar connosco",
