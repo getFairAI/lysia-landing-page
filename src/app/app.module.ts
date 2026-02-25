@@ -26,6 +26,7 @@ import { AiLearningIconComponent } from './components/ai-learning-icon/ai-learni
 import { BenefitCardsComponent } from './components/benefit-cards/benefit-cards.component';
 import { LossCalculatorComponent } from './components/loss-calculator/loss-calculator.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { PricingComponent } from './components/pricing/pricing.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { FaqComponent } from './components/faq/faq.component';
     BenefitCardsComponent,
     LossCalculatorComponent,
     FaqComponent,
+    PricingComponent,
     // DashboardComponent,
     // CardBarChartComponent,
     // CardLineChartComponent,
